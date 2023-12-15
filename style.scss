@@ -309,14 +309,14 @@ body {
     width: 400px;
     height: 696px;
     .swiper-slide-prev {
-        transform: scale(0.84);
+        transform: scale(0.84) translateY(5%);
         transition: 0.52s;
           .swipe__description-container {
             display: none;
         }
     }
     .swiper-slide-next {
-        transform: scale(0.84); 
+        transform: scale(0.84) translateY(5%);
         transition: 0.5s;
         left: -50%;
         z-index: -10;
@@ -354,15 +354,18 @@ body {
 }
 .swipe__description-container a{
     margin-top: 24px;
+    padding-top: 4px;
 }
-.swipe__collection-link {
+.swipe__collection-link a {
     color: black;
     text-decoration: none;
+    
 }
 
 .swipe__collection-link a:hover,
 .swipe__collection-link a:active {
-    color: black;
+    border-bottom: 1px solid $textBlack10;
+    transform: 1s;
 }
 .swipe__image-description {
     font-size: 20px;
@@ -426,14 +429,12 @@ body {
         margin: auto;
     }
 }
-#last-cont {
-    margin-bottom: 0;
-}
+
 //Изображение по размеру контейнера
 .collections__photo-container {
     width: 100%;
     height: auto;
-    margin: 0px auto 0px auto;
+    margin: 0px auto -40px auto;
     overflow: hidden;
     img {
         width: 100%;
@@ -450,11 +451,29 @@ body {
     position: relative;
     bottom: 90px;
     z-index: 1;
-
     a {
         @include links;
         color: #fff;
     }
+}
+.marquee {
+    color: $textWhite100;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+
+
+}
+.marq-dot {
+    background: $accentred;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    margin: 4px 20px;
+
 }
 //////////*************MOBILE**********//////////
 @media screen and (max-width: 376px) {
@@ -478,6 +497,7 @@ body {
         right: 0;
         width: 100vw;
         height: 100vh;
+        overflow: hidden;
     }
 
     .main-nav {
