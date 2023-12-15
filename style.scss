@@ -429,10 +429,15 @@ body {
 #last-cont {
     margin-bottom: 0;
 }
+//Изображение по размеру контейнера
 .collections__photo-container {
-    width: 80.8%;
+    width: 100%;
     height: auto;
-    margin: 0px auto 36px auto;
+    margin: 0px auto 0px auto;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
     
 }
 .collections__photo-description {
@@ -443,7 +448,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     position: relative;
-    bottom: 84px;
+    bottom: 90px;
     z-index: 1;
 
     a {
