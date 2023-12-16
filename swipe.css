@@ -486,10 +486,6 @@ button.swiper-pagination-bullet {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
-.swiper-slide-prev,
-.swiper-slide-next {
-
-}
 .swiper-container-cube .swiper-cube-shadow {
   position: absolute;
   left: 0;
