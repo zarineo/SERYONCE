@@ -4,8 +4,16 @@ let closeMenu = document.querySelector('#close-menu');
 let logo = document.querySelectorAll('.logo');
 let map = document.querySelector('#modal-map');
 let openMap = document.querySelector('#open-map');
+let closeMap = document.querySelector('.close-map');
 
 openMap.addEventListener ('click', openMapFunction);
+closeMap.addEventListener ('click', closeMapFunction);
+
+
+function closeMapFunction () {
+  document.querySelector('#modal-map').style.display = 'none';
+}
+
 function openMapFunction () {
   document.querySelector('#modal-map').style.display = 'block';
 }

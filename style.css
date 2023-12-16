@@ -471,6 +471,12 @@ body {
   width: 100vw;
   height: 100vh; }
 
+.close-map {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 1; }
+
 @media screen and (max-width: 376px) {
   .body {
     width: 100%; }
