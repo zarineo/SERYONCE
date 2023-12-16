@@ -2,6 +2,13 @@ let openMenu = document.querySelector ('#open-menu');
 let mobileMenu = document.querySelector('.mobile-nav');
 let closeMenu = document.querySelector('#close-menu');
 let logo = document.querySelectorAll('.logo');
+let map = document.querySelector('#modal-map');
+let openMap = document.querySelector('#open-map');
+
+openMap.addEventListener ('click', openMapFunction);
+function openMapFunction () {
+  document.querySelector('#modal-map').style.display = 'block';
+}
 
 openMenu.addEventListener ('click', openMobileMenu);
 closeMenu.addEventListener ('click', closeMobileMenu);

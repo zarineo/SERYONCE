@@ -73,6 +73,9 @@ $textWhite50: rgba(255, 255, 255, 0.5);
         left: 0;
     }
 }
+.bold {
+    font-weight: 600;
+}
     
 @mixin list {
     list-style: none;
@@ -526,9 +529,22 @@ body {
     }
 }
 .style__text {
-    margin: 24px 0 118px 0;
+    margin: 24px 0 37px 0;
     text-align: left;
 }
+.style__link {
+    text-align: left;
+}
+#modal-map {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
 //////////*************MOBILE**********//////////
 @media screen and (max-width: 376px) {
     .body {
