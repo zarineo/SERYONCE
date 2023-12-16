@@ -86,7 +86,6 @@ $textWhite50: rgba(255, 255, 255, 0.5);
     line-height: 14px;
     letter-spacing: -0.01em;
     text-align: center;
-
 }
 
 //////////////* Главная *///////////////
@@ -142,8 +141,6 @@ body {
     height: 536px;
     z-index: -1;
     
-}
-.main__back {
 }
 
 .main__title {
@@ -337,7 +334,7 @@ body {
     width: 400px;
     height: 696px;
     .swiper-slide-prev {
-        transform: scale(0.84) translateY(5%);
+        -webkit-transform: scale(0.84) translateY(5%);
         transition: 0.52s;
           .swipe__description-container {
             display: none;
