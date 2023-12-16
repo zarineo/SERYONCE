@@ -329,6 +329,15 @@ body {
 .swiper-pagination-bullet:active {
     background-color: $accentred;
 }
+.swiper-slide {
+    flex-shrink: 0;
+    width: 77.6%;
+    height: 80%;
+    position: relative;
+    // left: 50%;
+    transform: translateX(-50%);
+    transition-property: transform;
+}
 
 .image-slider__wrapper {
     width: 400px;
@@ -349,16 +358,6 @@ body {
             display: none;
         }
     }
-
-}
-.swiper-slide {
-    flex-shrink: 0;
-    width: 77.6%;
-    height: 80%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    transition-property: transform;
 }
 
 .image-slider__slide {
