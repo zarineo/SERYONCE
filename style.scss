@@ -45,7 +45,24 @@ $textWhite50: rgba(255, 255, 255, 0.5);
     font-display: swap;
 }
 
-
+.links {
+    font-family: Tilda Sans;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $textBlack10;
+    }
+    a:hover {
+        border-bottom: 1px solid $textBlack10;
+        transition-duration: 1.5s;
+        text-decoration: none;
+    }
+}
 @mixin list {
     list-style: none;
     padding: 0;
@@ -62,6 +79,15 @@ $textWhite50: rgba(255, 255, 255, 0.5);
 * {
     box-sizing: border-box;
 }
+.links {
+    font-family: Tilda Sans;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: -0.01em;
+    text-align: center;
+
+}
 
 //////////////* Главная *///////////////
 body {
@@ -69,6 +95,8 @@ body {
     font-family: "Tilda Sans";
     padding: 0;
     margin: 0;
+    color: $textBlack10;
+    background: #fff;
 }
 .wrapper {
     margin: auto;
@@ -358,14 +386,16 @@ body {
 }
 .swipe__collection-link a {
     color: black;
+    font-size: 14px;
     text-decoration: none;
-    
+    transition-duration: 1.5s;
+    text-transform: uppercase;
 }
 
-.swipe__collection-link a:hover,
-.swipe__collection-link a:active {
+.swipe__collection-link a:hover {
     border-bottom: 1px solid $textBlack10;
-    transform: 1s;
+    transition-duration: 1.5s;
+    text-decoration: none;
 }
 .swipe__image-description {
     font-size: 20px;
@@ -377,13 +407,17 @@ body {
 }
 ////////HISTORY////////
 .history__photo-container {
-    position: relative;
-    left: -16px;
-    top: 48px;
+    margin-top: 46px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
 }
 .history__logo-container {
     text-align: center;
-    margin: 88px 0 32px 0;
+    margin: 40px 0 40px 0;
 }
 .history__title {
     font-size: 20px;
@@ -403,8 +437,10 @@ body {
     text-align: left;
     color: #0F0E0E;
 }
-
 .history__link {
+    margin: 64px 0 49px 0;
+}
+.history__link a {
     font-size: 14px;
     font-weight: 500;
     line-height: 17px;
@@ -414,11 +450,9 @@ body {
     text-transform: uppercase;
     margin-top: 56px;
     margin-bottom: 12px;
-    a {
     border-bottom: 1px solid #0C0C0C;
-    padding: 4px;
+    padding-bottom: 4px;
     @include links;
-    }
 }
 /////////////////////////Collections////////////////
 .collections {
@@ -464,7 +498,6 @@ body {
     letter-spacing: 0em;
     text-align: center;
 
-
 }
 .marq-dot {
     background: $accentred;
@@ -473,7 +506,37 @@ body {
     height: 6px;
     display: inline-block;
     margin: 4px 20px;
+}
 
+
+////////////////////STYLE//////////////////
+.style__title {
+    font-family: Tilda Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 104px;
+    margin-bottom: 36px;
+}
+#gifts-title {
+    text-align: left;
+}
+.style__video-container,
+.style__photo-container {
+    width: 100%;
+    height: auto;
+    margin: 0px auto 0px auto;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+}
+.style__text {
+    margin: 24px 0 118px 0;
+    text-align: left;
 }
 //////////*************MOBILE**********//////////
 @media screen and (max-width: 376px) {
