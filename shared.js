@@ -5,17 +5,20 @@ let logo = document.querySelectorAll('.logo');
 let map = document.querySelector('#modal-map');
 let openMap = document.querySelector('#open-map');
 let closeMap = document.querySelector('.close-map');
+let backdrop = document.querySelector('#backdrop');
 
 openMap.addEventListener ('click', openMapFunction);
 closeMap.addEventListener ('click', closeMapFunction);
-
+backdrop.addEventListener ('click', closeMapFunction);
 
 function closeMapFunction () {
   document.querySelector('#modal-map').style.display = 'none';
+  document.querySelector('#backdrop').style.display = 'none';
 }
 
 function openMapFunction () {
   document.querySelector('#modal-map').style.display = 'block';
+  document.querySelector('#backdrop').style.display = 'block';
 }
 
 openMenu.addEventListener ('click', openMobileMenu);
