@@ -534,6 +534,7 @@ body {
 }
 .style__link {
     text-align: left;
+    margin-bottom: 120px;
 }
 #modal-map {
     display: none;
@@ -566,6 +567,12 @@ body {
     z-index: 1;
 }
 
+.footer {
+    background: $graphicBlack;
+    .logo-container {
+        margin: 64px 0 120px 0;
+    }
+}
 //////////*************MOBILE**********//////////
 @media screen and (max-width: 376px) {
     .body {
