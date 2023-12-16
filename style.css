@@ -15,32 +15,32 @@
   font-weight: 300;
   font-style: normal;
   font-display: swap; }
-.links {
+.links a {
   font-family: Tilda Sans;
   font-size: 14px;
   font-weight: 500;
   line-height: 14px;
+  color: #0f0e0e;
   letter-spacing: -0.01em;
-  text-align: center; }
-  .links a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #0f0e0e; }
-  .links a:hover {
-    border-bottom: 1px solid #0f0e0e;
-    transition-duration: 1.5s;
-    text-decoration: none; }
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  position: relative; }
+.links a::before {
+  content: '';
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background: #0f0e0e;
+  transition: 0.2s; }
+.links a:hover::before {
+  width: 100%;
+  left: 0; }
 
 * {
   box-sizing: border-box; }
-
-.links {
-  font-family: Tilda Sans;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 14px;
-  letter-spacing: -0.01em;
-  text-align: center; }
 
 body {
   background: white;
@@ -140,7 +140,8 @@ body {
 .main-nav--mobile__items {
   list-style: none;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  text-transform: uppercase; }
   .main-nav__items a,
   .main-nav--mobile__items a {
     color: white;
@@ -330,11 +331,6 @@ body {
   transition-duration: 1.5s;
   text-transform: uppercase; }
 
-.swipe__collection-link a:hover {
-  border-bottom: 1px solid #0f0e0e;
-  transition-duration: 1.5s;
-  text-decoration: none; }
-
 .swipe__image-description {
   font-size: 20px;
   font-weight: 400;
@@ -385,7 +381,6 @@ body {
   text-transform: uppercase;
   margin-top: 56px;
   margin-bottom: 12px;
-  border-bottom: 1px solid #0C0C0C;
   padding-bottom: 4px;
   text-decoration: none; }
 
