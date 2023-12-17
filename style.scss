@@ -20,6 +20,7 @@ $backWhite: rgba(255, 255, 255, 1);
 $backGrey: rgba(255, 255, 255, 1);
 
 $graphicWhite100: rgba(255, 255, 255, 1);
+$graphicWhite80: rgba(255, 255, 255, 0.8);
 $graphicWhite50: rgba(255, 255, 255, 0.5);
 $graphicWhite50: rgba(255, 255, 255, 0.3);
 $textWhite100: rgba(255, 255, 255, 1);
@@ -126,6 +127,12 @@ body {
     text-align: center;
     padding: 6px;
 }
+.main-header {
+    position: fixed;
+    width: 100%;
+    background: $graphicWhite100;
+    padding-bottom: 50px;
+}
 .logo {
     position: relative;
     color: var(--g-color-foreground);
@@ -147,18 +154,19 @@ body {
     transform: translate3d(0px, 2px, 0px);
     height: auto;
 }
+.logo-position {
+    position: relative;
+    top: 56px;
+    left: 16px;
+}
 
 .smalli {
     text-align: left;
-    width: 123px;
-    height: 28px;
+    // width: 123px;
+    // height: 28px;
     will-change: width, transform;
-    transform: translate3d(0px, -24px, 0px);
+    transform: translate3d(0px, -24px, 0px) scale(50%);
     transition: 1s;
-
-        opacity: 1;
-        transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1) 0s;
-    
 }
 
 .main__photo-container {
@@ -230,6 +238,9 @@ body {
 .main-nav--mobile__items {
     @include list;
     text-transform: uppercase;
+    width: 100%;
+    text-align: right;
+    position: relative;
 }
 
 .main-nav--mobile__item {
@@ -371,7 +382,11 @@ body {
     width: 400px;
     height: 696px;
     .swiper-slide-prev {
-        -webkit-transform: scale(0.84) translateY(5%);
+        -ms-transform: scale(0.84) translateY(5%);
+        -moz-transform:  scale(0.84) translateY(5%); 
+        -o-transform:  scale(0.84) translateY(5%); 
+        -webkit-transform: scale(0.84) translateY(5%);  
+        transform: scale(0.84) translateY(5%);
         transition: 0.52s;
           .swipe__description-container {
             display: none;

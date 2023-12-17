@@ -51,6 +51,8 @@ if (animItems.length > 0) {
       let animItemPoint = window.innerHeight - animItemHeight / animStart;
       if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
         animItem.classList.add ('smalli');
+        animItem.classList.remove ('logo-position');
+        
       } else {
         animItem.classList.remove ('.smalli');
       }
