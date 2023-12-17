@@ -9,6 +9,8 @@ let backdrop = document.querySelector('#backdrop');
 let body = document.querySelector ('body');
 let mainHeader = document.querySelector ('.main-header');
 let animItems = document.querySelectorAll ('.animItems');
+let historyPhCont = document.querySelector ('.history__photo-container');
+let animBlocks = document.querySelectorAll ('.anim-blocks');
 
 openMap.addEventListener ('click', openMapFunction);
 closeMap.addEventListener ('click', closeMapFunction);
@@ -35,6 +37,7 @@ function openMobileMenu () {
 
 function closeMobileMenu () {  
     document.querySelector('.mobile-nav').style.display= 'none';
+    document.querySelector('body').style.overflow = 'visible';
 }
 
 
@@ -69,7 +72,35 @@ function offset(el) {
 }
 }
 
+//Появление блоков при прокрутке
+//const animItem = animItems.length; //для себя запись сделала
+if (animBlocks.length > 0) {
+  window.addEventListener ('scroll', animOnScroll);
+  function animOnScroll (params) {
+    for (let index = 0; index < animBlocks.length; index++) {
+      const animBlock = animBlocks[index];
+      const animBlockHeight = animBlock.offsetHeight;
+      const animBlockOffset =  offset(animBlock).top;
+      const animStartBlock = 4;
 
+      let animBlockPoint = window.innerHeight - animBlockHeight / animStart;
+      if ((pageYOffset > animBlockOffset - animBlockPoint) && pageYOffset < (animBlockOffset + animBlockHeight)) {
+        animBlock.classList.add ('active');
+        animBlock.classList.remove ('logo-position');
+        
+      } else {
+        animBlock.classList.remove ('.smalli');
+      }
+    }
+}
+
+function offset(el) {
+  const rect = el.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
+}
+}
 
 
 new Swiper('.image-slider', {

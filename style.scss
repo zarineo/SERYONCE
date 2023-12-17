@@ -590,13 +590,13 @@ body {
     width: 100vw;
     height: 100vh;
     margin: auto;
-    z-index: 2;
+    z-index: 40;
 }
 .close-map {
     position: absolute;
     right: 10px;
     top: 10px;
-    z-index: 10;
+    z-index: 45;
     width: 20px;
     height: 20px;
     
