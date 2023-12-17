@@ -109,7 +109,7 @@ body {
 .smalli {
   text-align: left;
   will-change: width, transform;
-  transform: translate3d(0px, -57px, 0px) scale(48%);
+  transform: translate3d(-76px, -57px, 0px) scale(48%);
   transition: 1s; }
 
 .main__photo-container {
