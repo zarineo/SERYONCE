@@ -109,7 +109,7 @@ body {
 .smalli {
   text-align: left;
   will-change: width, transform;
-  transform: translate3d(0px, -24px, 0px) scale(50%);
+  transform: translate3d(0px, -57px, 0px) scale(48%);
   transition: 1s; }
 
 .main__photo-container {
@@ -162,7 +162,7 @@ body {
 .main-nav--mobile {
   display: none; }
   .main-nav--mobile .main-nav--mobile__item {
-    margin-left: 25px; }
+    margin-left: 16px; }
 
 .main-nav--mobile-header {
   display: flex;
