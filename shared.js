@@ -8,6 +8,8 @@ let closeMap = document.querySelector('.close-map');
 let backdrop = document.querySelector('#backdrop');
 let body = document.querySelector ('body');
 
+let animItems = document.querySelectorAll ('.animItems');
+
 openMap.addEventListener ('click', openMapFunction);
 closeMap.addEventListener ('click', closeMapFunction);
 backdrop.addEventListener ('click', closeMapFunction);
@@ -37,19 +39,34 @@ function closeMobileMenu () {
 
 
 //const animItem = animItems.length; //для себя запись сделала
+if (animItems.length > 0) {
+  window.addEventListener ('scroll', animOnScroll);
+  function animOnScroll (params) {
+    for (let index = 0; index < animItems.length; index++) {
+      const animItem = animItems[index];
+      const animItemHeight = animItem.offsetHeight;
+      const animItemOffset =  offset(animItem).top;
+      const animStart = 0.5;
 
-window.addEventListener ('scroll', scrollFunction);
+      let animItemPoint = window.innerHeight - animItemHeight / animStart;
+      if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+        animItem.classList.add ('smalli');
+      } else {
+        animItem.classList.remove ('.smalli');
+      }
+    }
+}
 
-function scrollFunction() {
-  if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
-    logo.classList.add ('smalli');
-    logo.classList.remote ('biggi');
-  } else {
-      logo.classList.remote ('smalli');
-  }
-} 
+function offset(el) {
+  const rect = el.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
+}
+}
 
-console.log (logo.classList);
+
+
 
 new Swiper('.image-slider', {
   pagination: {
