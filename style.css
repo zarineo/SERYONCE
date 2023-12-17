@@ -45,6 +45,23 @@
 * {
   box-sizing: border-box; }
 
+h3 {
+  font-family: Tilda Sans;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  text-transform: uppercase; }
+
+h5 {
+  font-family: Tilda Sans;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left; }
+
 body {
   background: white;
   font-family: "Tilda Sans";
@@ -56,7 +73,7 @@ body {
 .wrapper {
   margin: auto;
   text-align: center;
-  padding: 0 16px; }
+  padding: 6px; }
 
 .logo {
   position: relative;
@@ -494,9 +511,126 @@ body {
   z-index: 1; }
 
 .footer {
-  background: #0C0C0C; }
+  background: #0C0C0C;
+  color: white;
+  position: relative; }
   .footer .logo-container {
     margin: 64px 0 120px 0; }
+
+.footer__title {
+  color: white;
+  margin-bottom: 30px; }
+
+.footer__logo-container {
+  margin-top: 64px;
+  margin-bottom: 120px; }
+
+form {
+  position: relative; }
+
+.send-mail {
+  background: #0C0C0C;
+  border: none;
+  border-bottom: 0.5px solid white;
+  width: 100%;
+  height: 34px;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 6.5px 0;
+  outline: none; }
+
+#send-mail__button {
+  background: #0C0C0C;
+  border: none;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 33px;
+  height: 33px;
+  box-sizing: border-box;
+  padding: 0;
+  opacity: 0;
+  z-index: 1; }
+
+.arrow-right {
+  position: absolute;
+  right: 0px;
+  top: 0px; }
+
+.footer__text {
+  font-family: Tilda Sans;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 82px; }
+  .footer__text a {
+    color: rgba(255, 255, 255, 0.5); }
+
+.footer__items {
+  text-align: left;
+  text-transform: uppercase; }
+
+.footer__item {
+  height: 72px;
+  width: 100%;
+  border-top: 0.5px rgba(255, 255, 255, 0.3) solid;
+  overflow: hidden;
+  padding: 0 16px; }
+
+.footer__contacts {
+  padding: 80px 16px 0 16px;
+  color: white;
+  text-align: center; }
+
+.footer__contacts-flex {
+  display: flex;
+  justify-content: center; }
+  .footer__contacts-flex a {
+    color: white;
+    text-decoration: underline;
+    margin: 0 12px; }
+
+.footer__mail,
+.footer__phone {
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin-top: 12px; }
+
+.seryonse {
+  text-align: left;
+  margin-top: 80px;
+  margin-bottom: 33px; }
+  .seryonse a {
+    color: white;
+    text-decoration: underline; }
+
+.copyright {
+  padding: 24px 8.5px 20px 8.5px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.5);
+  border-top: 0.5px rgba(255, 255, 255, 0.3) solid; }
+  .copyright a {
+    color: rgba(255, 255, 255, 0.5);
+    display: inline-block; }
+
+.copyright__text {
+  margin: 0; }
+
+.arrow-up {
+  position: absolute;
+  bottom: 68px;
+  right: 8px;
+  width: 56px;
+  height: 56px; }
 
 @media screen and (max-width: 376px) {
   .body {

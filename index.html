@@ -12,7 +12,7 @@
     <link type="image/x-icon" href="images/favicon.png" rel="shortcut icon">
 </head>
 <body>
-    <header class="main-header">
+    <header class="main-header" id="home">
         <div class="wrapper">
             <nav class="main-nav">
                 <ul class="main-nav__items">
@@ -262,7 +262,7 @@
             </p>
             <p class="style__text"> Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж</p>
             <p class="style__link links">
-                <a href="#modal-map" id="open-map"> Показать на карте </a>
+                <a href="#modal-map" id="open-map"> Посмотреть на карте </a>
                 <div id="backdrop"></div>
                 <div id="modal-map">
                     <div class="close-map">
@@ -279,8 +279,101 @@
             <div class="footer__logo-container">
                 <img src="images/logo-white.png" alt="AMAT">
             </div>
-
+            <h3 class="footer__title">
+                Узнавайте первыми о новинках
+            </h3>
+            <form class="flex-box" method="post" action="http://localhost/dashboard/send.php">
+                <input type="email" class="send-mail" name="email" placeholder="Эл. почта"/>
+                <input id="send-mail__button" type="submit">
+                <img src="images/arrow-right.svg" class="arrow-right">
+            </form>
+            <p class="footer__text">
+                Нажимая на кнопку «Подписаться», вы соглашаетесь c 
+                <a href="policy.html">Политикой конфиденциальности</a> и <a href="oferta.html">офертой</a>. 
+            </p>
         </div>
+            <div class="footer__items">
+                <div class="footer__item limited">
+                    <h5>Уход за изделиями</h5>
+                    <input type="checkbox" class="read-more" id="read-more>
+
+                    </div>                   
+                    <div id="footer__product-care">
+                        Чтобы сохранить изделие в превосходном состоянии, храните его в 
+                        развязанном виде и избегайте соприкосновения с украшениями 
+                        и аксессуарами, которые могут оставить зацепки. 
+                        Берегите изделие от дождя, избегайте контакта с агрессивными 
+                        веществами и желательно осуществляйте уход за изделием 
+                        в специализированных химчистках.
+                    </div>
+                </div>
+                <div class="footer__item limited">
+                    <h5>Доставка и оплата</h5>
+                    <div id="footer__product-care">
+                        Чтобы сохранить изделие в превосходном состоянии, храните его в 
+                        развязанном виде и избегайте соприкосновения с украшениями 
+                        и аксессуарами, которые могут оставить зацепки. 
+                        Берегите изделие от дождя, избегайте контакта с агрессивными 
+                        веществами и желательно осуществляйте уход за изделием 
+                        в специализированных химчистках.
+                    </div>
+                </div>
+                <div class="footer__item limited">
+                    <h5>Возврат</h5>
+                    <div id="footer__product-care">
+                        Чтобы сохранить изделие в превосходном состоянии, храните его в 
+                        развязанном виде и избегайте соприкосновения с украшениями 
+                        и аксессуарами, которые могут оставить зацепки. 
+                        Берегите изделие от дождя, избегайте контакта с агрессивными 
+                        веществами и желательно осуществляйте уход за изделием 
+                        в специализированных химчистках.
+                    </div>
+                </div>
+                <div class="footer__item limited">
+                    <h5>Помощь</h5>
+                    <div id="footer__product-care">
+                        Чтобы сохранить изделие в превосходном состоянии, храните его в 
+                        развязанном виде и избегайте соприкосновения с украшениями 
+                        и аксессуарами, которые могут оставить зацепки. 
+                        Берегите изделие от дождя, избегайте контакта с агрессивными 
+                        веществами и желательно осуществляйте уход за изделием 
+                        в специализированных химчистках.
+                    </div>
+                </div>
+                <div class="footer__item limited" id="adress-title">
+                    <h5>Адрес</h5>
+                    <div id="footer__product-care">
+                        <p class="style__text bold">
+                            12:00−21:00 ежедневно
+                        </p>
+                        <p class="style__text"> Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__contacts-flex links">
+                    <a href="#">WhatsApp</a> 
+                    <a href="#">Telegram</a> 
+                    <a href="#">VK</a> 
+                </div>
+                <a href="mailto:amat.textile@gmail.com" class="footer__mail">amat.textile@gmail.com </a>
+                <a href="tel:79889088787" class="footer__phone"> +7 988 908-87-87</a>
+                <div class="seryonse">
+                    Сайт разработан с любовью <br> в веб-студии <a href="https://seryonse.ru/">SERYONSE</a> 
+                </div>
+            </div>
+            <div class="copyright">
+                <p class="copyright__text">© АМАТ. Все права защищены</p>
+                <p class="copyright__text">
+                    <a href="policy.html">Политика конфиденциальности</p>
+                </p>
+                
+            </div>
+            <div class="arrow-up">
+                <a href="#home"><img src="images/arrow-up.svg"></a>
+            </div>
+
+    
     </footer>
 
 
