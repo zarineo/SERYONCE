@@ -109,6 +109,7 @@ h5 {
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
+    text-transform: uppercase;
 }
 
 //////////////* Главная *///////////////
@@ -553,6 +554,7 @@ body {
     text-align: left;
     margin-bottom: 120px;
 }
+///////////////////MAP/////////////
 #modal-map {
     display: none;
     position: fixed;
@@ -583,7 +585,7 @@ body {
     background: $graphicBlack50;
     z-index: 1;
 }
-
+////////////////FOOTER///////////////
 .footer {
     background: $graphicBlack;
     color: $textWhite100;
@@ -596,6 +598,15 @@ body {
     color: $textWhite100;
     margin-bottom: 30px;
 }
+.footer__item-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-bottom: 16px;
+}
+
 .footer__logo-container {
     margin-top: 64px;
     margin-bottom: 120px;
@@ -647,14 +658,12 @@ form {
 
 .footer__items {
     text-align: left;
-    text-transform: uppercase;
 }
 
 .footer__item {
-    height: 72px;
     width: 100%;
+    position: relative;
     border-top:  0.5px $graphicWhite50 solid;
-    overflow: hidden;
     padding: 0 16px;
 }
 .footer__contacts {
@@ -713,6 +722,44 @@ form {
     width: 56px;
     height: 56px;
 }
+
+//////////////read more////////////
+.read-more-checker {
+    position: absolute;
+    opacity: 0;
+}
+.limited {
+    position: relative;
+    max-height: 72px;
+    overflow: hidden;
+}
+.read-more {
+    width: 32px;
+    height: 33px;
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    padding: auto;
+}
+
+ .read-more-checker:checked ~ .limited {
+    max-height: none; 
+}
+.read-more::before {
+    font-size: 24px;
+    font-weight: 100;
+
+}
+
+.read-more-checker ~ .read-more:before {
+    content: '+';
+}
+.read-more-checker:checked ~ .read-more:before {
+    content: '-';
+}
+ 
+
+
 //////////*************MOBILE**********//////////
 @media screen and (max-width: 376px) {
     .body {
