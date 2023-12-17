@@ -7,7 +7,7 @@ let openMap = document.querySelector('#open-map');
 let closeMap = document.querySelector('.close-map');
 let backdrop = document.querySelector('#backdrop');
 let body = document.querySelector ('body');
-
+let mainHeader = document.querySelector ('.main-header');
 let animItems = document.querySelectorAll ('.animItems');
 
 openMap.addEventListener ('click', openMapFunction);
@@ -52,6 +52,8 @@ if (animItems.length > 0) {
       if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
         animItem.classList.add ('smalli');
         animItem.classList.remove ('logo-position');
+        mainHeader.classList.add ('main-header-mobile')
+
         
       } else {
         animItem.classList.remove ('.smalli');
