@@ -6,6 +6,7 @@ let map = document.querySelector('#modal-map');
 let openMap = document.querySelector('#open-map');
 let closeMap = document.querySelector('.close-map');
 let backdrop = document.querySelector('#backdrop');
+let body = document.querySelector ('body');
 
 openMap.addEventListener ('click', openMapFunction);
 closeMap.addEventListener ('click', closeMapFunction);
@@ -19,6 +20,7 @@ function closeMapFunction () {
 function openMapFunction () {
   document.querySelector('#modal-map').style.display = 'block';
   document.querySelector('#backdrop').style.display = 'block';
+  document.querySelector('body').style.overflow = 'hidden';
 }
 
 openMenu.addEventListener ('click', openMobileMenu);
@@ -26,6 +28,7 @@ closeMenu.addEventListener ('click', closeMobileMenu);
 
 function openMobileMenu () {  
     document.querySelector('.mobile-nav').style.display= 'block';
+    document.querySelector('body').style.overflow = 'hidden';
 }
 
 function closeMobileMenu () {  
