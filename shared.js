@@ -118,10 +118,13 @@ new Swiper('.image-slider', {
   scrollbar: {
     el: '.swipper-scrollbar',
 //возможность перетаскивать скролл
-    
   },  
   draggable: true,
-    loop: true,
+  loop: true,
+  autoplay: {
+    delay: 1000,
+  }
+
 } );
 
 
