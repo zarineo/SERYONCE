@@ -11,6 +11,9 @@ let mainHeader = document.querySelector ('.main-header');
 let animItems = document.querySelectorAll ('.animItems');
 let historyPhCont = document.querySelector ('.history__photo-container');
 let animBlocks = document.querySelectorAll ('.anim-blocks');
+let videoPosition = document.querySelector ('.main__photo-container');
+let mainTitle = document.querySelector ('.main__title');
+let mainButton = document.querySelector ('.main__button');
 
 openMap.addEventListener ('click', openMapFunction);
 closeMap.addEventListener ('click', closeMapFunction);
@@ -19,6 +22,7 @@ backdrop.addEventListener ('click', closeMapFunction);
 function closeMapFunction () {
   document.querySelector('#modal-map').style.display = 'none';
   document.querySelector('#backdrop').style.display = 'none';
+  document.querySelector('body').style.overflow = 'visible';
 }
 
 function openMapFunction () {
@@ -39,8 +43,6 @@ function closeMobileMenu () {
     document.querySelector('.mobile-nav').style.display= 'none';
     document.querySelector('body').style.overflow = 'visible';
 }
-
-
 //const animItem = animItems.length; //для себя запись сделала
 if (animItems.length > 0) {
   window.addEventListener ('scroll', animOnScroll);
@@ -49,20 +51,41 @@ if (animItems.length > 0) {
       const animItem = animItems[index];
       const animItemHeight = animItem.offsetHeight;
       const animItemOffset =  offset(animItem).top;
-      const animStart = 0.5;
+      const animStart = 4;
+
+      //animItemOffset -- расстрояние элемента от верха
 
       let animItemPoint = window.innerHeight - animItemHeight / animStart;
       if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
         animItem.classList.add ('smalli');
         animItem.classList.remove ('logo-position');
-        mainHeader.classList.add ('main-header-mobile')
-
+        mainHeader.classList.add ('main-header-mobile');
+        videoPosition.classList.add ('main__photo-container--scroll');
+        mainTitle.classList.add ('main__title--scroll');
+        mainButton.classList.add ('main__button--scroll');
+        document.querySelector('.main__title').style.color = '#0F0E0E';
         
       } else {
-        animItem.classList.remove ('.smalli');
+      
       }
     }
 }
+}
+
+if (animItems.length > 0) {
+  window.addEventListener ('scrollTop', obratno);
+  function obratno (params) {
+    if (animItemOffset < animItemHeight / animStart) {
+        animItem.classList.remove ('smalli');
+        mainHeader.classList.remove ('main-header-mobile');
+        videoPosition.classList.remove ('main__photo-container--scroll');
+        mainTitle.classList.remove ('main__title--scroll');
+        mainButton.classList.remove ('main__button--scroll');
+    } else {
+
+    }
+}
+
 
 function offset(el) {
   const rect = el.getBoundingClientRect(),
