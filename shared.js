@@ -58,7 +58,7 @@ if (animItems.length > 0) {
       //animItemOffset -- расстрояние элемента от верха
 
       let animItemPoint = window.innerHeight - animItemHeight / animStart;
-      if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+      if ((scrollY > animItemOffset - animItemPoint) && scrollY < (animItemOffset + animItemHeight)) {
         animItem.classList.add ('smalli');
         animItem.classList.remove ('logo-position');
         mainHeader.classList.add ('main-header-mobile');
