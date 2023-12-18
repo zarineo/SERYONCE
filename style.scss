@@ -517,7 +517,7 @@ body {
     background: #0C0C0C;
     .wrapper {
         padding: 36px;
-        padding-bottom: 36px;
+        padding-bottom: 60px;
         margin: auto;
     }
 }
@@ -555,6 +555,9 @@ body {
     line-height: 22px;
     letter-spacing: 0em;
     text-align: center;
+    position: absolute;
+    right: 0;
+    left: 0;
 
 }
 .marq-dot {
