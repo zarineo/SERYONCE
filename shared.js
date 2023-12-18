@@ -68,27 +68,9 @@ if (animItems.length > 0) {
         document.querySelector('.main__title').style.color = '#0F0E0E';
         
       } else {
-      
       }
     }
 }
-}
-
-if (animItems.length > 0) {
-  window.addEventListener ('scrollTop', obratno);
-  function obratno (params) {
-    if (animItemOffset < animItemHeight / animStart) {
-        animItem.classList.remove ('smalli');
-        mainHeader.classList.remove ('main-header-mobile');
-        videoPosition.classList.remove ('main__photo-container--scroll');
-        mainTitle.classList.remove ('main__title--scroll');
-        mainButton.classList.remove ('main__button--scroll');
-    } else {
-
-    }
-}
-
-
 function offset(el) {
   const rect = el.getBoundingClientRect(),
     scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
@@ -108,13 +90,12 @@ if (animBlocks.length > 0) {
       const animBlockOffset =  offset(animBlock).top;
       const animStartBlock = 4;
 
-      let animBlockPoint = window.innerHeight - animBlockHeight / animStart;
+      let animBlockPoint = window.innerHeight - animBlockHeight / animStartBlock;
       if ((pageYOffset > animBlockOffset - animBlockPoint) && pageYOffset < (animBlockOffset + animBlockHeight)) {
         animBlock.classList.add ('active');
-        animBlock.classList.remove ('logo-position');
         
       } else {
-        animBlock.classList.remove ('.smalli');
+ 
       }
     }
 }
