@@ -46,7 +46,6 @@ function closeMobileMenu () {
 //const animItem = animItems.length; //для себя запись сделала
 if (animItems.length > 0) {
   window.addEventListener ('scroll', animOnScroll);
-  window.addEventListener ('touchstart', animOnScroll);
   
   function animOnScroll (params) {
     for (let index = 0; index < animItems.length; index++) {
@@ -60,7 +59,7 @@ if (animItems.length > 0) {
       let animItemPoint = window.innerHeight - animItemHeight / animStart;
       if ((scrollY > animItemOffset - animItemPoint) && scrollY < (animItemOffset + animItemHeight)) {
         animItem.classList.add ('smalli');
-        animItem.classList.remove ('logo-position');
+        //animItem.classList.remove ('logo-position');
         mainHeader.classList.add ('main-header-mobile');
         videoPosition.classList.add ('main__photo-container--scroll');
         mainTitle.classList.add ('main__title--scroll');
@@ -119,17 +118,11 @@ new Swiper('.image-slider', {
   scrollbar: {
     el: '.swipper-scrollbar',
 //возможность перетаскивать скролл
-    draggable: true,
-  },
-
-    slideToClickedSlide: true,
-   
-});
-
-
-
-
-
+    
+  },  
+  draggable: true,
+    loop: true,
+} );
 
 
 
