@@ -46,6 +46,8 @@ function closeMobileMenu () {
 //const animItem = animItems.length; //для себя запись сделала
 if (animItems.length > 0) {
   window.addEventListener ('scroll', animOnScroll);
+  window.addEventListener ('touchstart', animOnScroll);
+  
   function animOnScroll (params) {
     for (let index = 0; index < animItems.length; index++) {
       const animItem = animItems[index];
