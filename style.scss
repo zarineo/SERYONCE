@@ -197,7 +197,7 @@ body {
     text-align: center;
     color: white;
     text-transform: uppercase;
-    padding-top: 538px;
+    padding: 538px 32px 0 32px;
     margin: 0;
 }
 .main__title--scroll {
@@ -364,8 +364,8 @@ body {
 .image-slider {
     padding: 30px 0 70px 0;
     .swiper-pagination-bullet {
-        width: 6px;
-        height: 6px;
+        width: 4px;
+        height: 4px;
         line-height: 4px;
         font-size: 4px;
         background-color: $graphicBlack;
@@ -373,8 +373,11 @@ body {
     }
     .swiper-pagination-bullet-active {
         background-color: $accentred;
+        width: 6px;
+        height: 6px;
     } 
 }
+
 .swiper-pagination-bullet {
     width: 4px;
     height: 4px;

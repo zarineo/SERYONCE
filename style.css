@@ -140,7 +140,7 @@ body {
   text-align: center;
   color: white;
   text-transform: uppercase;
-  padding-top: 538px;
+  padding: 538px 32px 0 32px;
   margin: 0; }
 
 .main__title--scroll {
@@ -316,14 +316,16 @@ body {
 .image-slider {
   padding: 30px 0 70px 0; }
   .image-slider .swiper-pagination-bullet {
-    width: 6px;
-    height: 6px;
+    width: 4px;
+    height: 4px;
     line-height: 4px;
     font-size: 4px;
     background-color: #0C0C0C;
     opacity: 1; }
   .image-slider .swiper-pagination-bullet-active {
-    background-color: #CC4958; }
+    background-color: #CC4958;
+    width: 6px;
+    height: 6px; }
 
 .swiper-pagination-bullet {
   width: 4px;

@@ -108,12 +108,11 @@ function offset(el) {
 }
 }
 
-
 new Swiper('.image-slider', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
-    dynamicBullets: true,
+    //dynamicBullets: true,
     centeredSlides: true,
   },
 
