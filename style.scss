@@ -94,14 +94,8 @@ $textWhite50: rgba(255, 255, 255, 0.5);
 * {
     box-sizing: border-box;
 }
-h3 {
-    font-family: Tilda Sans;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: -0.01em;
-    text-align: left;
-    text-transform: uppercase;
+ul {
+    padding: 0;
 }
 h5 {
     font-family: Tilda Sans;
@@ -125,7 +119,7 @@ body {
 .wrapper {
     margin: auto;
     text-align: center;
-    padding: 6px;
+    padding: 16px 24px;
 }
 .main-header {
     position: absolute;
@@ -147,6 +141,16 @@ body {
     will-change: min-height;
     z-index: 22;
 }
+.logo-white {
+    display: none;
+}
+
+.display-none {
+    display: none;
+}
+.icons-white {
+    display: none;
+}
 .logo-container {
     text-align: left;
 }
@@ -158,6 +162,7 @@ body {
     transform: translate3d(0px, 2px, 0px);
     height: auto;
 }
+////////НУЖЕН ЛИ ЭТОТ КЛАСС?
 .logo-position {
     position: relative;
     top: 56px;
@@ -183,10 +188,6 @@ body {
     width: 100%;
     height: 536px;
     z-index: -100;
-}
-.main__photo-container--scroll {
-    transform: translateY(-129px);
-    transition: 1s; 
 }
 
 .main__title {
@@ -243,6 +244,16 @@ body {
 }
 
 ///////////////////MENU/////////////////
+ 
+.main-nav {
+    display: flex;
+    width: 100%;
+}
+.flex-child {
+    flex-grow: 1;
+    flex-basis: 0;
+
+}
 .main-nav--mobile {
     display: none;
     .main-nav--mobile__item {
@@ -254,14 +265,29 @@ body {
     display: flex;
     justify-content: space-between;
 }
-
 .main-nav__items,
 .main-nav--mobile__items {
     @include list;
     text-transform: uppercase;
     width: 100%;
     text-align: right;
-    position: relative;
+}
+.main-nav__items--left {
+    text-align: left;
+    width: 100%;
+    padding: 0;
+    display: flex;
+}
+.main-nav__items--right {
+    text-align: left;
+    width: 100%;
+    @include list;
+}
+.main-nav__item {
+    display: inline-block;
+}
+.main-nav--mobile__items {
+    display: none;
 }
 
 .main-nav--mobile__item {
@@ -837,37 +863,39 @@ form {
 .read-more-checker:checked ~ .read-more:before {
     content: '-';
 }
- 
 
-
-//////////*************MOBILE**********//////////
-@media screen and (max-width: 376px) {
-    .body {
+@media screen and (max-width: 768px) {
+    .main-nav__items--left {
+        text-align: left;
         width: 100%;
-    }
-
-    .wrapper {
-        padding: 1rem;
-        text-align: center;
-    }
-
-    .main-nav--mobile {
+        padding: 0;
         display: flex;
-        justify-content: end;
+        a {
+            color: $textWhite100;
+        }
     }
-
-    .mobile-nav {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
+    .main-nav__items--right {
+        text-align: right;
+        width: 100%;
+        @include list;
     }
-
-    .main-nav {
-        display: none;
+    #brand {
+        margin-left: 24px;
     }
+    .smalli {
+        text-align: left;
+        will-change: width, transform;
+        transform: translate3d(27px, 2px, 0px) scale(100%);
+        transition: 1s;
+    }
+    .main__photo-container--scroll {
+        transform: translateY(-269px);
+        transition: 1s;
+    }
+    .main-header {
+        position: fixed; 
+     }
+    
 }
 
 @media screen and (max-width: 528px) {
@@ -896,7 +924,101 @@ form {
     .main-nav {
         display: none;
     }
+
+    .smalli {
+        text-align: left;
+        // width: 123px;
+        // height: 28px;
+        will-change: width, transform;
+        transform: translate3d(-76px, -57px, 0px) scale(48%);
+        transition: 1s;
+    }
+
+    .main-nav--mobile__items {
+        display: none;
+    }
 }
+//////////*************MOBILE**********//////////
+@media screen and (max-width: 376px) {
+    .body {
+        width: 100%;
+    }
+    .wrapper {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .main-nav--mobile {
+        display: flex;
+        justify-content: end;
+    }
+
+    .mobile-nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .smalli {
+        text-align: left;
+        // width: 123px;
+        // height: 28px;
+        will-change: width, transform;
+        transform: translate3d(-76px, -57px, 0px) scale(48%);
+        transition: 1s;
+    }
+
+    .main-nav {
+        display: none;
+    }
+    h3 {
+        font-family: Tilda Sans;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    h5 {
+        font-family: Tilda Sans;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    .main__photo-container {
+        position: absolute;
+        top: 189px;
+        left: 0;
+        right: 0;
+        background-image: url('images/main.png');
+        background-size: cover;
+        width: 100%;
+        height: 536px;
+        z-index: -100;
+    }
+
+    .main__photo-container--scroll {
+        transform: translateY(-129px);
+        transition: 1s;
+    }
+    .main-nav--mobile__items {
+        display: block;
+        @include list;
+        text-transform: uppercase;
+        width: 100%;
+        text-align: right;
+    }
+}
+
+
 
 
 .active {

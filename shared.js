@@ -15,6 +15,12 @@ let videoPosition = document.querySelector ('.main__photo-container');
 let mainTitle = document.querySelector ('.main__title');
 let mainButton = document.querySelector ('.main__button');
 
+let logoBlack = document.querySelector ('#logo');
+let logoWhite = document.querySelector ('#logo-white');
+let iconsWhite = document.querySelector ('.icons-white');
+let iconsBlack = document.querySelector ('.icons-black');
+
+
 openMap.addEventListener ('click', openMapFunction);
 closeMap.addEventListener ('click', closeMapFunction);
 backdrop.addEventListener ('click', closeMapFunction);
@@ -65,6 +71,11 @@ if (animItems.length > 0) {
         mainTitle.classList.add ('main__title--scroll');
         mainButton.classList.add ('main__button--scroll');
         document.querySelector('.main__title').style.color = '#0F0E0E';
+        logoBlack.classList.add('display-none');
+        logoWhite.classList.remove('logo-white');
+        iconsBlack.classList.add('display-none');
+        iconsWhite.classList.remove('icons-white');
+        
         
       } else {
       }
