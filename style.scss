@@ -205,6 +205,7 @@ body {
 .main__title--scroll {
     transform: translateY(+100px);
     transition: 1s;
+    color: $textWhite100;
 }
 
 .main__button {
@@ -222,14 +223,12 @@ body {
     letter-spacing: -0.02em;
     text-align: center;
     margin: auto;
-    margin-top: 24px;
+    margin-top: 53px;
 }
 .main__button--scroll {
     transform: translateY(+100px);
     transition: 1s;
-    background: $graphicBlack;
-    color: $textWhite100;
-    margin-top: 8px;
+    margin-top: 40px;
 }
 
 .main__block-title {
@@ -561,22 +560,44 @@ body {
 .collections {
     background: #0C0C0C;
     .wrapper {
-        padding: 36px;
+        padding: 0px;
         padding-bottom: 60px;
         margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        column-count: 2;
+        position: relative;
     }
+}
+.collections__flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    column-count: 2;
+    
 }
 
 //Изображение по размеру контейнера
 .collections__photo-container {
-    width: 100%;
+    width: 42%;
     height: auto;
-    margin: 0px auto -40px auto;
+    margin: 24px 24px -40px 20px;
     overflow: hidden;
     img {
         width: 100%;
     }
 }
+// .collections__photo-container:nth-child(1),
+// .collections__photo-container:nth-child(3),
+// .collections__photo-container:nth-child(5) {
+//     margin: 20px 10px 20px 24px;
+// }
+// .collections__photo-container:nth-child(2),
+// .collections__photo-container:nth-child(4),
+// .collections__photo-container:nth-child(6) {
+//     margin: 20px 24px 20px 10px;
+// }
+
+
 .collections__photo {
     opacity: 0;
     transform: scale(120%);
@@ -611,7 +632,7 @@ body {
     position: absolute;
     right: 0;
     left: 0;
-
+    bottom: 40px;
 }
 .marq-dot {
     background: $accentred;
@@ -1048,6 +1069,78 @@ form {
     .logo-container {
         text-align: left;
     }
+    .collections__photo-container {
+        width: 100%;
+        height: auto;
+        margin: 0px auto -40px auto;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+    .collections {
+        background: #0C0C0C;
+        .wrapper {
+            padding: 0px;
+            padding-bottom: 25px;
+            margin: auto;
+            display: block;
+            flex-wrap: wrap;
+            column-count: 1;
+        }
+        .marquee {
+            color: $textWhite100;
+            text-transform: uppercase;
+            font-weight: 600;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: center;
+            position: absolute;
+            right: 0;
+            left: 0;
+        }
+
+        .main__title--scroll {
+            transform: translateY(+100px);
+            transition: 1s;
+            color: $textBlack10;
+        }
+        .main__button--scroll {
+            transform: translateY(+100px);
+            transition: 1s;
+            background: $graphicBlack;
+            color: $textWhite100;
+            margin-top: 8px;
+        }
+    }
+
+
+    // .collections__photo-container:nth-child(1),
+    // .collections__photo-container:nth-child(3),
+    // .collections__photo-container:nth-child(5) {
+    //     margin: 24px 24px -40px 20px;
+    // }
+    // .collections__photo-container:nth-child(2),
+    // .collections__photo-container:nth-child(4),
+    // .collections__photo-container:nth-child(6) {
+    //     margin: 24px 24px -40px 20px;
+    // }
+
+    // .collections__flex-box {
+    //     display: block;
+    //     column-count: 1;
+    //     margin: 0;
+    //     padding: 0;
+    //     box-sizing: border-box;
+    // }
+    .collections {
+        background: #0C0C0C;
+        .wrapper {
+            padding: 36px;
+            padding-bottom: 60px;
+            margin: auto;
+        }
+    }
     // .body {
     //     width: 100%;
     // }
@@ -1189,6 +1282,11 @@ form {
         padding: 538px 32px 0 32px;
         margin: 0;
     }
+    .main__title--scroll {
+        transform: translateY(+100px);
+        transition: 1s;
+        color: $textBlack10;
+    }
     .logo-mobile {
         position: relative;
         color: var(--g-color-foreground);
@@ -1203,6 +1301,41 @@ form {
     .logo-container {
         text-align: left;
     }
+    .collections__photo-container {
+        width: 100%;
+        height: auto;
+        margin: 0px auto -40px auto;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+    .collections {
+        background: #0C0C0C;
+        .wrapper {
+            padding: 36px;
+            padding-bottom: 25px;
+            margin: auto;
+        }
+    }
+    .main__button--scroll {
+        transform: translateY(+100px);
+        transition: 1s;
+        background: $graphicBlack;
+        color: $textWhite100;
+        margin-top: 8px;
+    }
+    // .collections__photo-container:nth-child(1),
+    // .collections__photo-container:nth-child(3),
+    // .collections__photo-container:nth-child(5) {
+    //     margin: 24px 24px -40px 20px;
+    // }
+    // .collections__photo-container:nth-child(2),
+    // .collections__photo-container:nth-child(4),
+    // .collections__photo-container:nth-child(6) {
+    //     margin: 24px 24px -40px 20px;
+    // }
+
 
 }
 

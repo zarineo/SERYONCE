@@ -72,7 +72,6 @@ if (animItems.length > 0) {
         videoPosition.classList.add ('main__photo-container--scroll');
         mainTitle.classList.add ('main__title--scroll');
         mainButton.classList.add ('main__button--scroll');
-        document.querySelector('.main__title').style.color = '#0F0E0E';
         //logoBlack.classList.add('display-none');
         logoWhite.classList.remove('logo-white');
         iconsBlack.classList.add('display-none');
@@ -108,7 +107,6 @@ setTimeout(()=> {
         videoPosition.classList.add ('main__photo-container--scroll');
         mainTitle.classList.add ('main__title--scroll');
         mainButton.classList.add ('main__button--scroll');
-        document.querySelector('.main__title').style.color = '#0F0E0E';
       
       } else {
       }
