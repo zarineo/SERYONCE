@@ -134,6 +134,7 @@ body {
     transition: 2s;
     background: none;
 }
+
 .logo {
     position: relative;
     color: var(--g-color-foreground);
@@ -152,7 +153,7 @@ body {
     display: none;
 }
 .logo-container {
-    text-align: left;
+    text-align: center;
 }
 
 .biggi {
@@ -882,25 +883,23 @@ form {
     #brand {
         margin-left: 24px;
     }
-    .smalli {
-        text-align: left;
-        will-change: width, transform;
-        transform: translate3d(27px, 2px, 0px) scale(100%);
-        transition: 1s;
-    }
+   
     .main__photo-container--scroll {
-        // transform: translateY(-269px);
-        transform: translateY(-189px);
-        height: 1002px;
-        transition: 1s;
+        transform: translateY(-269px);
+        //transform: translateY(-189px);
+        /*transform: scaleY(1002px);*/
+       /* height: 1002px;*/
+        transition: 2.5s;
     }
     .main__photo-container {
+        top: 269px;
         height: 1002px;
     }
     .main-header {
-        position: fixed; 
+        position: absolute;
         height: 269px;
-     }
+        background: $graphicWhite50;
+    }
      .main__title {
         font-size: 40px;
         font-weight: 300;
@@ -913,7 +912,6 @@ form {
         margin: 0;
     }
     .main__title--scroll {
-        
         transition: 1s;
     }
     .logo {
@@ -923,7 +921,13 @@ form {
         top: 60px;
         left: 50%;
         transform: translateX(-50%);
-        
+    }
+    .smalli {
+        text-align: left;
+        will-change: width, transform;
+        opacity: 0;
+        transform: translate3d(-238px, -83px, 0px) scale(31%);
+        transition: 2.5s;
     }
     
     
@@ -978,6 +982,14 @@ form {
         padding: 1rem;
         text-align: center;
     }
+    .main-header {
+        position: absolute;
+        width: 100%;
+        background: $graphicWhite100;
+        padding-bottom: 50px;
+        z-index: 20;
+        margin: 0;
+    }
 
     .main-nav--mobile {
         display: flex;
@@ -992,15 +1004,6 @@ form {
         height: 100vh;
         overflow: hidden;
     }
-    .smalli {
-        text-align: left;
-        // width: 123px;
-        // height: 28px;
-        will-change: width, transform;
-        transform: translate3d(-76px, -57px, 0px) scale(48%);
-        transition: 1s;
-    }
-
     .main-nav {
         display: none;
     }
@@ -1013,6 +1016,7 @@ form {
         text-align: left;
         text-transform: uppercase;
     }
+
 
     h5 {
         font-family: Tilda Sans;
@@ -1038,7 +1042,7 @@ form {
 
     .main__photo-container--scroll {
         transform: translateY(-129px);
-        transition: 1s;
+        transition: 2s;
     }
     .main-nav--mobile__items {
         display: block;
@@ -1047,6 +1051,45 @@ form {
         width: 100%;
         text-align: right;
     }
+    .main-header-mobile {
+        max-height: 60px;
+        transition: 2s;
+        background: none;
+    }
+    .logo-mobile--scroll {
+        text-align: left;
+        // width: 123px;
+        // height: 28px;
+        will-change: width, transform;
+        transform: translate3d(-76px, -57px, 0px) scale(48%);
+        transition: 1s;
+    }
+    .main__title {
+        font-size: 40px;
+        font-weight: 300;
+        line-height: 44px;
+        letter-spacing: -0.04em;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        padding: 538px 32px 0 32px;
+        margin: 0;
+    }
+    .logo-mobile {
+        position: relative;
+        color: var(--g-color-foreground);
+        transition: 1.8s;
+        will-change: min-height;
+        z-index: 22;
+    }
+    .main-header {
+        position: absolute;
+        height: 189px;
+    }
+    .logo-container {
+        text-align: left;
+    }
+
 }
 
 

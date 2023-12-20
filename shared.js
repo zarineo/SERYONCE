@@ -19,6 +19,8 @@ let logoBlack = document.querySelector ('#logo');
 let logoWhite = document.querySelector ('#logo-white');
 let iconsWhite = document.querySelector ('.icons-white');
 let iconsBlack = document.querySelector ('.icons-black');
+//класс мобильного логотипа вместо анимАйтемс
+let logoMobile = document.querySelector ('.logo-mobile');
 
 
 openMap.addEventListener ('click', openMapFunction);
@@ -71,12 +73,10 @@ if (animItems.length > 0) {
         mainTitle.classList.add ('main__title--scroll');
         mainButton.classList.add ('main__button--scroll');
         document.querySelector('.main__title').style.color = '#0F0E0E';
-        logoBlack.classList.add('display-none');
+        //logoBlack.classList.add('display-none');
         logoWhite.classList.remove('logo-white');
         iconsBlack.classList.add('display-none');
         iconsWhite.classList.remove('icons-white');
-        
-        
       } else {
       }
     }
@@ -87,7 +87,55 @@ function offset(el) {
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
 }
+setTimeout(()=> {
+    animOnScroll();
+}, 600);
 }
+
+
+
+//Отдельная функция для мобильной версии
+  window.addEventListener ('scroll', animOnScrollMob);
+  function animOnScrollMob (params) {
+      const logoMobileHeight = logoMobile.offsetHeight;
+      const logoMobileOffset =  offset(logoMobile).top;
+      const logoMobileStart = 4;
+
+      let logoMobilePoint = window.innerHeight - logoMobileHeight / logoMobileStart;
+      if ((scrollY > logoMobileOffset - logoMobilePoint) && scrollY < (logoMobileOffset + logoMobileHeight)) {
+        logoMobile.classList.add ('logo-mobile--scroll');
+        mainHeader.classList.add ('main-header-mobile');
+        videoPosition.classList.add ('main__photo-container--scroll');
+        mainTitle.classList.add ('main__title--scroll');
+        mainButton.classList.add ('main__button--scroll');
+        document.querySelector('.main__title').style.color = '#0F0E0E';
+      
+      } else {
+      }
+      function offset(el) {
+        const rect = el.getBoundingClientRect(),
+          scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+          scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
+      }
+    
+
+    }
+
+    setTimeout(()=> {
+      animOnScrollMob();
+    }, 600);
+
+
+
+
+
+
+
+
+
+
+
 
 //Появление блоков при прокрутке
 //const animItem = animItems.length; //для себя запись сделала
@@ -116,6 +164,8 @@ function offset(el) {
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
 }
+
+
 }
 
 new Swiper('.image-slider', {
