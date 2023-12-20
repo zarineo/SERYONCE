@@ -199,11 +199,11 @@ body {
     text-align: center;
     color: white;
     text-transform: uppercase;
-    padding: 538px 32px 0 32px;
+    padding: 738px 32px 0 32px;
     margin: 0;
 }
 .main__title--scroll {
-    transform: translateY(+100px);
+    // transform: translateY(+100px);
     transition: 1s;
     color: $textWhite100;
 }
@@ -226,7 +226,7 @@ body {
     margin-top: 53px;
 }
 .main__button--scroll {
-    transform: translateY(+100px);
+    // transform: translateY(+100px);
     transition: 1s;
     margin-top: 40px;
 }
@@ -919,7 +919,7 @@ form {
     .main-header {
         position: absolute;
         height: 269px;
-        background: $graphicWhite50;
+        background: none;
     }
      .main__title {
         font-size: 40px;
@@ -929,7 +929,7 @@ form {
         text-align: center;
         color: white;
         text-transform: uppercase;
-        padding: 700px 32px 0 32px;
+        padding: 801px 32px 0 32px;
         margin: 0;
     }
     .main__title--scroll {
