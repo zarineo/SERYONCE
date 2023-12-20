@@ -578,7 +578,7 @@ body {
 
 //Изображение по размеру контейнера
 .collections__photo-container {
-    width: 42%;
+    width: 48%;
     height: auto;
     margin: 24px 24px -40px 20px;
     overflow: hidden;
@@ -950,6 +950,24 @@ form {
         transform: translate3d(-238px, -83px, 0px) scale(31%);
         transition: 2.5s;
     }
+    .collections {
+        .wrapper {
+            margin: auto;
+            padding: 24px;
+            padding-bottom: 60px;
+        }
+    }
+    .collections__photo-container:nth-child(1),
+    .collections__photo-container:nth-child(3),
+    .collections__photo-container:nth-child(5) {
+        margin: 0px 10px -40px 0px;
+    }
+    .collections__photo-container:nth-child(2),
+    .collections__photo-container:nth-child(4),
+    .collections__photo-container:nth-child(6) {
+        margin: 0px 0px -40px 10px;
+    }
+    
     
     
 }
@@ -1088,31 +1106,34 @@ form {
             flex-wrap: wrap;
             column-count: 1;
         }
-        .marquee {
-            color: $textWhite100;
-            text-transform: uppercase;
-            font-weight: 600;
-            line-height: 22px;
-            letter-spacing: 0em;
-            text-align: center;
-            position: absolute;
-            right: 0;
-            left: 0;
-        }
-
-        .main__title--scroll {
-            transform: translateY(+100px);
-            transition: 1s;
-            color: $textBlack10;
-        }
-        .main__button--scroll {
-            transform: translateY(+100px);
-            transition: 1s;
-            background: $graphicBlack;
-            color: $textWhite100;
-            margin-top: 8px;
-        }
     }
+    .marquee {
+        color: $textWhite100;
+        text-transform: uppercase;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: center;
+        position: absolute;
+        right: 0;
+        left: 0;
+    }
+    .main__title--scroll {
+        transform: translateY(+100px);
+        transition: 1s;
+        color: $textBlack10;
+    }
+    .main__button {
+        margin-top: 8px;
+    }
+    .main__button--scroll {
+        transform: translateY(+100px);
+        transition: 1s;
+        background: $graphicBlack;
+        color: $textWhite100;
+        margin-top: 8px;
+    }
+    
 
 
     // .collections__photo-container:nth-child(1),
