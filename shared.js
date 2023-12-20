@@ -124,7 +124,7 @@ setTimeout(()=> {
 
     setTimeout(()=> {
       animOnScrollMob();
-    }, 600);
+    }, 800);
 
 
 
