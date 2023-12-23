@@ -636,7 +636,8 @@ body {
 }
 
 ////////////////////STYLE//////////////////
-.style__title {
+.style__title,
+.style__title--elegance {
     font-family: Tilda Sans;
     font-size: 20px;
     font-weight: 400;
@@ -668,7 +669,7 @@ body {
     transition: 0.5s;
 }
 .style__link {
-    text-align: left;
+    text-align: center;
     margin-bottom: 120px;
 }
 ///////////////////MAP/////////////
@@ -1283,6 +1284,10 @@ form {
         .style__text {
             text-align: left;
         }
+        .style__link {
+            text-align: left;
+            margin-bottom: 120px;
+        }
     }
     //////////*************MOBILE**********//////////
     @media screen and (max-width: 376px) {
@@ -1492,7 +1497,8 @@ form {
         .collections__photo-container:nth-child(6) {
             margin: 0px 0px -40px 0px;
         }
-        .style__title {
+        .style__title,
+        .style__title--elegance {
             font-family: Tilda Sans;
             font-size: 20px;
             font-weight: 400;
@@ -1505,6 +1511,9 @@ form {
             opacity: 0;
             transform: translate(0px, 120%);
             transition: 0.5s;
+        }
+        .style__title--elegance {
+            margin-bottom: 16px;
         }
 
 
