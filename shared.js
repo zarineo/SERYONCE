@@ -11,6 +11,18 @@ let mainHeader = document.querySelector ('.main-header');
 let animItems = document.querySelectorAll ('.animItems');
 let historyPhCont = document.querySelector ('.history__photo-container');
 let animBlocks = document.querySelectorAll ('.anim-blocks');
+let videoPosition = document.querySelector ('.main__photo-container');
+let mainTitle = document.querySelector ('.main__title');
+let mainButton = document.querySelector ('.main__button');
+
+let logoBlack = document.querySelector ('#logo');
+let logoWhite = document.querySelector ('#logo-white');
+let iconsWhite = document.querySelector ('.icons-white');
+let iconsBlack = document.querySelector ('.icons-black');
+//класс мобильного логотипа вместо анимАйтемс
+let logoMobile = document.querySelector ('.logo-mobile');
+
+
 
 openMap.addEventListener ('click', openMapFunction);
 closeMap.addEventListener ('click', closeMapFunction);
@@ -19,6 +31,7 @@ backdrop.addEventListener ('click', closeMapFunction);
 function closeMapFunction () {
   document.querySelector('#modal-map').style.display = 'none';
   document.querySelector('#backdrop').style.display = 'none';
+  document.querySelector('body').style.overflow = 'visible';
 }
 
 function openMapFunction () {
@@ -39,38 +52,80 @@ function closeMobileMenu () {
     document.querySelector('.mobile-nav').style.display= 'none';
     document.querySelector('body').style.overflow = 'visible';
 }
-
-
 //const animItem = animItems.length; //для себя запись сделала
 if (animItems.length > 0) {
   window.addEventListener ('scroll', animOnScroll);
+  
   function animOnScroll (params) {
     for (let index = 0; index < animItems.length; index++) {
       const animItem = animItems[index];
       const animItemHeight = animItem.offsetHeight;
       const animItemOffset =  offset(animItem).top;
-      const animStart = 0.5;
+      const animStart = 4;
+
+      //animItemOffset -- расстрояние элемента от верха
 
       let animItemPoint = window.innerHeight - animItemHeight / animStart;
-      if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+      if ((scrollY > animItemOffset - animItemPoint) && scrollY < (animItemOffset + animItemHeight)) {
         animItem.classList.add ('smalli');
-        animItem.classList.remove ('logo-position');
-        mainHeader.classList.add ('main-header-mobile')
-
-        
+        //animItem.classList.remove ('logo-position');
+        mainHeader.classList.add ('main-header-mobile');
+        videoPosition.classList.add ('main__photo-container--scroll');
+        mainTitle.classList.add ('main__title--scroll');
+        mainButton.classList.add ('main__button--scroll');
+        //logoBlack.classList.add('display-none');
+        logoWhite.classList.remove('logo-white');
+        iconsBlack.classList.add('display-none');
+        iconsWhite.classList.remove('icons-white');
       } else {
-        animItem.classList.remove ('.smalli');
       }
     }
 }
-
 function offset(el) {
   const rect = el.getBoundingClientRect(),
     scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
 }
+setTimeout(()=> {
+    animOnScroll();
+}, 600);
 }
+
+
+
+//Отдельная функция для мобильной версии
+  window.addEventListener ('scroll', animOnScrollMob);
+  function animOnScrollMob (params) {
+      const logoMobileHeight = logoMobile.offsetHeight;
+      const logoMobileOffset =  offset(logoMobile).top;
+      const logoMobileStart = 4;
+
+      let logoMobilePoint = window.innerHeight - logoMobileHeight / logoMobileStart;
+      if ((scrollY > logoMobileOffset - logoMobilePoint) && scrollY < (logoMobileOffset + logoMobileHeight)) {
+        logoMobile.classList.add ('logo-mobile--scroll');
+        mainHeader.classList.add ('main-header-mobile');
+        videoPosition.classList.add ('main__photo-container--scroll');
+        mainTitle.classList.add ('main__title--scroll');
+        mainButton.classList.add ('main__button--scroll');
+      
+      } else {
+      }
+      function offset(el) {
+        const rect = el.getBoundingClientRect(),
+          scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+          scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
+      }
+    
+
+    }
+
+    setTimeout(()=> {
+      animOnScrollMob();
+    }, 800);
+
+
 
 //Появление блоков при прокрутке
 //const animItem = animItems.length; //для себя запись сделала
@@ -83,13 +138,12 @@ if (animBlocks.length > 0) {
       const animBlockOffset =  offset(animBlock).top;
       const animStartBlock = 4;
 
-      let animBlockPoint = window.innerHeight - animBlockHeight / animStart;
+      let animBlockPoint = window.innerHeight - animBlockHeight / animStartBlock;
       if ((pageYOffset > animBlockOffset - animBlockPoint) && pageYOffset < (animBlockOffset + animBlockHeight)) {
         animBlock.classList.add ('active');
-        animBlock.classList.remove ('logo-position');
         
       } else {
-        animBlock.classList.remove ('.smalli');
+ 
       }
     }
 }
@@ -100,31 +154,29 @@ function offset(el) {
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
 }
-}
 
+
+}
 
 new Swiper('.image-slider', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
-    dynamicBullets: true,
+    //dynamicBullets: true,
     centeredSlides: true,
   },
 
   scrollbar: {
     el: '.swipper-scrollbar',
 //возможность перетаскивать скролл
-    draggable: true,
-  },
+  },  
+  draggable: true,
+  loop: true,
+  autoplay: {
+    delay: 1000,
+  }
 
-    slideToClickedSlide: true,
-   
-});
-
-
-
-
-
+} );
 
 
 
