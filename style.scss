@@ -643,13 +643,16 @@ body {
     font-weight: 400;
     line-height: 24px;
     letter-spacing: -0.01em;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
     margin-top: 104px;
     margin-bottom: 36px;
     opacity: 0;
     transform: translate(0px, 120%);
     transition: 0.5s;
+}
+#gifts-title {
+    text-align: left;
 }
 .style__video-container,
 .style__photo-container {
@@ -960,6 +963,31 @@ form {
             }
         }
 
+        /*.collections__photo-container {
+            width: 48.3%;
+            height: 470px;*/
+            /*height: auto;*/
+            /*margin: 24px 24px -40px 20px;*/
+            /*margin: 24px 24px 20px 20px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .collections__photo-container:nth-child(1),
+        .collections__photo-container:nth-child(3),
+        .collections__photo-container:nth-child(5) {
+            margin: 0px 10px 20px 0px;
+        }
+
+        .collections__photo-container:nth-child(2),
+        .collections__photo-container:nth-child(4),
+        .collections__photo-container:nth-child(6) {
+            margin: 0px 0px 20px 10px;
+        }*/
+
         .collections__photo-container {
             width: 44.2vw;
             height: 67.71vw;
@@ -976,13 +1004,13 @@ form {
         .collections__photo-container:nth-child(1),
         .collections__photo-container:nth-child(3),
         .collections__photo-container:nth-child(5) {
-            margin: 0 2.604vw -10px 0;
+            margin: 0 2.604vw 2.604vw 0;
         }
 
         .collections__photo-container:nth-child(2),
         .collections__photo-container:nth-child(4),
         .collections__photo-container:nth-child(6) {
-            margin: 0 0 -10px 0;
+            margin: 0 0 2.604vw 0;
         }
 
         .collections__photo-description {
@@ -1008,23 +1036,6 @@ form {
         .description-top {
             bottom: 170px;
         }
-        .style__video-container {
-            width: 100%;
-            height: auto;
-            margin: 0px auto 0px auto;
-            padding: 0 24px;
-            overflow: hidden;
-            img {
-                width: 100%;
-            }
-        }
-        .style {
-            text-align: center;
-        }
-        #gifts-title {
-
-        }
-
     }
 
     @media screen and (max-width: 528px) {
@@ -1226,17 +1237,6 @@ form {
                 color: #fff;
             }
         }
-        .style__video-container,
-        .style__photo-container {
-            width: 100%;
-            height: auto;
-            margin: 0px auto 0px auto;
-            overflow: hidden;
-            padding: 0;
-            img {
-                width: 100%;
-            }
-}
 
 
 
@@ -1259,25 +1259,6 @@ form {
                 padding-bottom: 60px;
                 margin: auto;
             }
-        }
-        .collections__photo-container:nth-child(1),
-        .collections__photo-container:nth-child(3),
-        .collections__photo-container:nth-child(5) {
-             margin: 0px 0px -40px 0px;
-         }
-        .collections__photo-container:nth-child(2),
-        .collections__photo-container:nth-child(4),
-        .collections__photo-container:nth-child(6) {
-            margin: 0px 0px -40px 0px;
-        }  .collections__photo-container:nth-child(1),
-        .collections__photo-container:nth-child(3),
-        .collections__photo-container:nth-child(5) {
-             margin: 0px 0px -40px 0px;
-         }
-        .collections__photo-container:nth-child(2),
-        .collections__photo-container:nth-child(4),
-        .collections__photo-container:nth-child(6) {
-            margin: 0px 0px -40px 0px;
         }
         // .body {
         //     width: 100%;
