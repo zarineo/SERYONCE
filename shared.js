@@ -69,7 +69,7 @@ if (animItems.length > 0) {
       if ((scrollY > animItemOffset - animItemPoint) && scrollY < (animItemOffset + animItemHeight)) {
         animItem.classList.add ('smalli');
         //animItem.classList.remove ('logo-position');
-        mainHeader.classList.add ('main-header-mobile');
+        mainHeader.classList.add ('main-header--scroll');
         videoPosition.classList.add ('main__photo-container--scroll');
         mainTitle.classList.add ('main__title--scroll');
         mainButton.classList.add ('main__button--scroll');
@@ -104,7 +104,7 @@ setTimeout(()=> {
       let logoMobilePoint = window.innerHeight - logoMobileHeight / logoMobileStart;
       if ((scrollY > logoMobileOffset - logoMobilePoint) && scrollY < (logoMobileOffset + logoMobileHeight)) {
         logoMobile.classList.add ('logo-mobile--scroll');
-        mainHeader.classList.add ('main-header-mobile');
+        mainHeader.classList.add ('main-header--scroll');
         videoPosition.classList.add ('main__photo-container--scroll');
         mainTitle.classList.add ('main__title--scroll');
         mainButton.classList.add ('main__button--scroll');
