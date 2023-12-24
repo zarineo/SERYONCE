@@ -150,7 +150,7 @@ body {
   text-align: center;
   color: white;
   text-transform: uppercase;
-  padding: 738px 32px 0 32px;
+  padding: 74.2vh 32px 0 32px;
   margin: 0; }
 
 .main__title--scroll {
@@ -171,7 +171,18 @@ body {
   letter-spacing: -0.02em;
   text-align: center;
   margin: auto;
-  margin-top: 53px; }
+  margin-top: 53px;
+  cursor: pointer; }
+
+.main__button:hover {
+  background: rgba(255, 255, 255, 0.5); }
+
+.main__button:active {
+  background: rgba(255, 255, 255, 0.3); }
+
+.main__button:disabled {
+  background: rgba(255, 255, 255, 0.5);
+  color: rgba(15, 14, 14, 0.6); }
 
 .main__button--scroll {
   transition: 1s;
@@ -733,7 +744,7 @@ form {
 .footer__item {
   width: 100%;
   position: relative;
-  border-top: 0.5px rgba(255, 255, 255, 0.3) solid;
+  border-top: 0.5px rgba(255, 255, 255, 0.5) solid;
   padding: 0 16px; }
 
 .footer__contacts {
@@ -774,7 +785,7 @@ form {
   letter-spacing: 0em;
   text-align: left;
   color: rgba(255, 255, 255, 0.5);
-  border-top: 0.5px rgba(255, 255, 255, 0.3) solid; }
+  border-top: 0.5px rgba(255, 255, 255, 0.5) solid; }
   .copyright a {
     color: rgba(255, 255, 255, 0.5);
     display: inline-block; }

@@ -22,7 +22,7 @@ $backGrey: rgba(255, 255, 255, 1);
 $graphicWhite100: rgba(255, 255, 255, 1);
 $graphicWhite65: rgba(255, 255, 255, 0.65);
 $graphicWhite50: rgba(255, 255, 255, 0.5);
-$graphicWhite50: rgba(255, 255, 255, 0.3);
+$graphicWhite30: rgba(255, 255, 255, 0.3);
 $textWhite100: rgba(255, 255, 255, 1);
 $textWhite50: rgba(255, 255, 255, 0.5);
 
@@ -216,7 +216,7 @@ body {
     text-align: center;
     color: white;
     text-transform: uppercase;
-    padding: 738px 32px 0 32px;
+    padding: 74.2vh 32px 0 32px;
     margin: 0;
 }
 .main__title--scroll {
@@ -240,7 +240,19 @@ body {
     text-align: center;
     margin: auto;
     margin-top: 53px;
+    cursor: pointer;
 }
+.main__button:hover {
+    background: $graphicWhite50;
+}
+.main__button:active {
+    background: $graphicWhite30;
+}
+.main__button:disabled {
+    background: $graphicWhite50;
+    color: $textBlack60;
+}
+
 .main__button--scroll {
     // transform: translateY(+100px);
     transition: 1s;
