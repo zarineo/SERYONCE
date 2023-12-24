@@ -117,7 +117,9 @@ body {
 .smalli {
   text-align: left;
   will-change: width, transform;
-  transform: translate3d(-418px, -247px, 0px) scale(18%);
+  left: 50%;
+  top: -30vh;
+  transform: translateX(-50%) scale(18%);
   transition: 1.5s;
   opacity: 0; }
 
@@ -222,7 +224,9 @@ body {
   text-align: left;
   width: 100%;
   padding: 0;
-  display: flex; }
+  display: flex;
+  opacity: 0;
+  transition: 3s; }
   .main-nav__items--left a {
     font-family: Tilda Sans;
     font-size: 14px;
@@ -250,6 +254,8 @@ body {
 .main-nav__items--right {
   text-align: right;
   width: 100%;
+  opacity: 0;
+  transition: 3s;
   list-style: none;
   padding: 0;
   margin: 0; }
