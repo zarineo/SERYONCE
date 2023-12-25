@@ -87,9 +87,9 @@ function offset(el) {
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
 }
-setTimeout(()=> {
-    animOnScroll();
-}, 600);
+//setTimeout(()=> {
+//    animOnScroll();
+//}, 600);
 }
 
 
@@ -156,7 +156,7 @@ function offset(el) {
 }
 setTimeout(()=> {
   animOnScroll();
-}, 2000);
+}, 1500);
 
 }
 
