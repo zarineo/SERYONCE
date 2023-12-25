@@ -733,7 +733,11 @@ body {
 }
 
 ////////////////////STYLE//////////////////
-
+.style {
+    .wrapper {
+        padding: 0px 0px;
+    }
+}
 h3 {
     font-size: 40px;
     font-weight: 300;
@@ -758,18 +762,22 @@ h3 {
     }
 }
 .style__text {
-    margin: 24px 0 0px 0;
+    margin: 0px 0 0px 0;
     text-align: center;
+    width: 660px;
+    margin: auto;
     opacity: 0;
     transform: translate(0px, 120%);
     transition: 0.5s;
 }
 .style__link {
     text-align: center;
-    margin-bottom: 120px;
+    margin-top: 64px;
 }
 
-.style__flex-box {
+.style__flex-box--elegance,
+.style__flex-box--gifts,
+.style__flex-box--fitting  {
     display: flex;
     flex-direction: column;
     column-count: 1;
@@ -779,6 +787,17 @@ h3 {
     .style__video-container {
         order: -1;
     }
+}
+.style__flex-box--elegance {
+    margin: 80px;
+}
+.style__flex-box--gifts {
+    margin: 120px 242px 104px 242px;
+}
+.style__flex-box--fitting {
+    // column-count: 2;
+    flex-direction: row;
+    margin: 80px 80px 62px 80px;
 }
 ///////////////////MAP/////////////
 #modal-map {
@@ -1117,7 +1136,7 @@ form {
     }
     .style {
         .wrapper {
-            padding: 80px 24px;
+            padding: 0px 24px;
         }
     }
     h3 {
@@ -1487,7 +1506,9 @@ form {
             padding: 0px; //ДОПИСАТЬ ПАДДИНГ НА ТОП И БАТТОН
         }
 
-        .style__flex-box {
+        .style__flex-box--elegance,
+        .style__flex-box--gifts,
+        .style__flex-box--gfitting {
             display: block;
             column-count: 1;
             padding: 0;
