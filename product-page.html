@@ -5,14 +5,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="swipe.css">
+    <link rel="stylesheet" href="swipe--pp.css">
     <link rel="stylesheet" href="fonts/font/stylesheet.css">
     <link rel="preload" href="fonts/font/TildaSans-Light.woff2" as="font" type="font/woff2" crossorigin>
     <title>AMAT</title>
     <link type="image/x-icon" href="images/favicon.png" rel="shortcut icon">
 </head>
 <body>
-    <header class="main-header">
+    <header class="main-header main-header--scroll">
         <div class="wrapper">
             <nav class="main-nav">
                 <ul class="main-nav__items--left flex-child anim-blocks">
@@ -56,13 +56,13 @@
                 <ul class="main-nav--mobile__items">
                    
                     <li class="main-nav--mobile__item">
-                        <a href="/index.html"><img src="images/shopping-bag.svg" /></a>
+                        <a href="/index.html"><img src="images/shopping-bag-white.svg" /></a>
                     </li>
                     <li class="main-nav--mobile__item">
-                        <img src="images/hamburger.svg" id="open-menu" />
+                        <img src="images/hamburger-white.svg" id="open-menu" />
                     </li>
                     <div class="logo-container">
-                        <a href="/index.html"><img src="images/logo-b.svg" class="logo-mobile" id="logo" /></a>
+                        <a href="/index.html"><img src="images/logo-white.png" class="logo-mobile logo-mobile--scroll" id="logo" /></a>
                     </div>
                 </ul>
             </nav>
@@ -102,84 +102,28 @@
                     <li class="mobile-nav__item links"><a href="/help.html">Помощь</a></li>
                     <li class="mobile-nav__item links"><a href="/contacts.html">Контакты</a></li>
                 </ul>
-
             </nav>
         </div>
     </header>
-    <main class="main" id="home">
-        <div class="main__photo-container"><!--<img src="images/main.png" class="main__back" />--></div>
-            <h1 class="main__title"> Коллекция твилли </h1>
-            <p class="main__button button--white"> Откройте для себя коллекцию </p>
-            <h2 class="main__block-title">
-                Избранные платки
-            </h2>
-            <div class="image-slider swiper-container">
-                <div class="image-slider__wrapper swiper-wrapper">
-                    <div class="image-slider__slide swiper-slide">
-                        <div class="swiper__flex">
-                            <img src="images/main.png">
-                            <div class="swipe__description-container">
-                                <p class="swipe__image-description">
-                                    «Даймохк»
-                                </p>
-                                <p class="swipe__collection-link  links">
-                                    <a href="product-page.html"> Смотреть </a>
-                                </p>
-                            </div>
-                        </div>
+    <main class="main" id="home">       
+            <div class="image-slider--pp swiper-container">
+                <div class="image-slider__wrapper--pp swiper-wrapper">
+                    <div class="image-slider__slide--pp swiper-slide swiper-slide--pp">
+                        <img src="images/main.png">
                     </div>
-                    <div class="image-slider__slide swiper-slide">
-                        <div class="swiper__flex">
-                            <img src="images/carousel-middle.png">
-                            <div class="swipe__description-container">
-                                <p class="swipe__image-description">
-                                    «Даймохк»
-                                </p>
-                                <p class="swipe__collection-link links">
-                                    <a href="product-page.html"> Смотреть </a>
-                                </p>
-                            </div>
-                        </div>
+                    <div class="image-slider__slide--pp swiper-slide swiper-slide--pp">
+                        <img src="images/main.png">
                     </div>
-                    <div class="image-slider__slide swiper-slide">
-                        <div class="swiper__flex">
-                            <img src="images/main.png">
-                            <div class="swipe__description-container">
-                                <p class="swipe__image-description">
-                                    «Даймохк»
-                                </p>
-                                <p class="swipe__collection-link links">
-                                    <a href="product-page.html"> Смотреть </a>
-                                </p>
-                            </div>
-                        </div>
+                    <div class="image-slider__slide--pp swiper-slide swiper-slide--pp">
+                        <img src="images/main.png">
                     </div>
-                    <div class="image-slider__slide swiper-slide">
-                        <div class="swiper__flex">
-                            <img src="images/carousel-middle.png">
-                            <div class="swipe__description-container">
-                                <p class="swipe__image-description">
-                                    «Даймохк»
-                                </p>
-                                <p class="swipe__collection- links links">
-                                    <a href="product-page.html"> Смотреть </a>
-                                </p>
-                            </div>
-                        </div>
+                    <div class="image-slider__slide-pp swiper-slide swiper-slide--pp">
+                        <img src="images/main.png">
                     </div>
-                    <div class="image-slider__slide swiper-slide">
-                        <div class="swiper__flex">
-                            <img src="images/main.png">
-                            <div class="swipe__description-container">
-                                <p class="swipe__image-description">
-                                    «Даймохк»
-                                </p>
-                                <p class="swipe__collection-link links links">
-                                    <a href="product-page.html"> Смотреть </a>
-                                </p>
-                            </div>
-                        </div>
+                    <div class="image-slider__slide--pp swiper-slide swiper-slide--pp">
+                        <img src="images/main.png">
                     </div>
+
                 </div>
                 <!-- <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div> -->
@@ -438,7 +382,7 @@
         </div>
     </footer>
 
-    <script src="swipe.js"></script>
-    <script src="shared.js"></script>
+    <script src="swipe-star.js"></script>
+    <script src="product.js"></script>
 </body>
 </html>
