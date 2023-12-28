@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="swipe.css">
+    <link rel="stylesheet" href="_varyables.css">
     <link rel="stylesheet" href="fonts/font/stylesheet.css">
     <link rel="preload" href="fonts/font/TildaSans-Light.woff2" as="font" type="font/woff2" crossorigin>
     <title>AMAT</title>
@@ -106,8 +107,9 @@
             </nav>
         </div>
     </header>
-    <main class="main" id="home">
-        <div class="main__photo-container"><!--<img src="images/main.png" class="main__back" />--></div>
+    <main>
+        <section class="main" id="home">
+            <div class="main__photo-container"><!--<img src="images/main.png" class="main__back" />--></div>
             <h1 class="main__title"> Коллекция твилли </h1>
             <p class="main__button button--white"> Откройте для себя коллекцию </p>
             <h2 class="main__block-title">
@@ -185,30 +187,30 @@
             <div class="swiper-button-next"></div> -->
                 <div class="swiper-pagination"></div>
             </div>
-    </main>
-    <section class="history">
-        <div class="history__photo-container anim-blocks">
-            <!-- <img src="images/history.png" /> -->
-        </div>
-        <div class="wrapper">
-            <div class="history__logo-container anim-blocks">
-                <img src="images/logo-pic.svg" />
+        </section>
+        <section class="history">
+            <div class="history__photo-container anim-blocks">
+                <!-- <img src="images/history.png" /> -->
             </div>
-            <h2 class="history__title anim-blocks">
-                История и видение Амат
-            </h2>
-            <p class="history__description anim-blocks">
-                «АМАТ» — это не просто коллекция шёлковых аксессуаров 
-                премиального качества, но и отражение внутреннего мира художника. 
-                Автор создаёт образы, которые навеяны чувством любви к родине, 
-                матери, природе — ко всему прекрасному.
-            </p>
-            <p class="history__link links">
-                <a href="/index.html">  Откройте для себя мир Амат </a>
-            </p>
-        </div>
-    </section>
-    <section class="collections">
+            <div class="wrapper">
+                <div class="history__logo-container anim-blocks">
+                    <img src="images/logo-pic.svg" />
+                </div>
+                <h2 class="history__title anim-blocks">
+                    История и видение Амат
+                </h2>
+                <p class="history__description anim-blocks">
+                    «АМАТ» — это не просто коллекция шёлковых аксессуаров
+                    премиального качества, но и отражение внутреннего мира художника.
+                    Автор создаёт образы, которые навеяны чувством любви к родине,
+                    матери, природе — ко всему прекрасному.
+                </p>
+                <p class="history__link links">
+                    <a href="/index.html">  Откройте для себя мир Амат </a>
+                </p>
+            </div>
+        </section>
+        <section class="collections">
             <nav class="main-nav main-nav--collections  anim-blocks">
                 <ul class="main-nav__items--left flex-child anim-blocks">
                     <li class="main-nav__item links">
@@ -236,105 +238,138 @@
                     </li>
                 </ul>
             </nav>
-        <div class="wrapper">
-            <div class="collections__photo-container">
-                <img src="images/title1.png" class="collections__photo anim-blocks" />
-                <h3 class="collections__photo-description anim-blocks description-top">
-                    <a href="/index.html">Базовые платки</a>
-                </h3>
-            </div>
-            <div class="collections__photo-container">
-                <img src="images/title2.png" class="collections__photo anim-blocks" />
-                <h3 class="collections__photo-description anim-blocks description-top">
-                    <a href="/index.html">Тематические платки</a>
-                </h3>
-            </div>
-            <div class="collections__photo-container">
-                <img src="images/title3.png" class="collections__photo anim-blocks" />
-                <h3 class="collections__photo-description anim-blocks">
-                    <a href="/index.html">Шали</a>
-                </h3>
-            </div>
-            <div class="collections__photo-container">
-                <img src="images/title4.png" class="collections__photo anim-blocks" />
-                <h3 class="collections__photo-description anim-blocks">
-                    <a href="/index.html">Градиенты</a>
-                </h3>
-            </div>
-            <div class="collections__photo-container">
-                <img src="images/title1.png" class="collections__photo anim-blocks" />
-                <h3 class="collections__photo-description anim-blocks">
-                    <a href="/index.html">Твилли</a>
-                </h3>
-            </div>
-            <div class="collections__photo-container" id="last-cont">
-                <img src="images/title1.png" class="collections__photo anim-blocks" />
-                <h3 class="collections__photo-description anim-blocks">
-                    <a href="/index.html">Шарфы</a>
-                </h3>
-            </div>
-            <marquee class="marquee">
+            <div class="wrapper">
+                <a href="/index.html">
+                    <div class="collections__photo-container">
+                        <img src="images/title1.png" class="collections__photo anim-blocks" />
+                        <h3 class="collections__photo-description anim-blocks description-top">
+                            Базовые платки
+                        </h3>
+                    </div>
+                </a>
+                <a href="/index.html">
+                    <div class="collections__photo-container">
+                        <img src="images/title2.png" class="collections__photo anim-blocks" />
+                        <h3 class="collections__photo-description anim-blocks description-top">
+                            Тематические платки
+                        </h3>
+                    </div>
+                </a>
+                <a href="/index.html">
+                    <div class="collections__photo-container">
+                        <img src="images/title3.png" class="collections__photo anim-blocks" />
+                        <h3 class="collections__photo-description anim-blocks">
+                            Шали
+                        </h3>
+                    </div>
+                </a>
+                <a href="/index.html">
+                    <div class="collections__photo-container">
+                        <img src="images/title4.png" class="collections__photo anim-blocks" />
+                        <h3 class="collections__photo-description anim-blocks">
+                            Градиенты
+                        </h3>
+                    </div>
+                </a>
+                <a href="/index.html">
+                    <div class="collections__photo-container">
+                        <img src="images/title1.png" class="collections__photo anim-blocks" />
+                        <h3 class="collections__photo-description anim-blocks">
+                            Твилли
+                        </h3>
+                    </div>
+                </a>
+                <a href="/index.html">
+                    <div class="collections__photo-container" id="last-cont">
+                        <img src="images/title1.png" class="collections__photo anim-blocks" />
+                        <h3 class="collections__photo-description anim-blocks">
+                            Шарфы
+                        </h3>
+                    </div>
+                </a>
+                <div class="block">
+                    <div class="runnung-text__cont">
+                        <div class="runnung-text">
+                            <div class="marq-dot"></div> гармония
+                            <div class="marq-dot"></div> классика
+                            <div class="marq-dot"></div> индивидуальность
+                        </div>
+                        <div class="runnung-text-2">
+                            <div class="marq-dot"></div> гармония
+                            <div class="marq-dot"></div> классика
+                            <div class="marq-dot"></div> индивидуальность
+                        </div>
+                    </div>
+                </div>
+                <!--<marquee class="marquee">
                 индивидуальность
                 <div class="marq-dot"></div> гармония
                 <div class="marq-dot"></div> классика
-            </marquee>
-        </div>
-    </section>
-    <section class="style">
-        <div class="wrapper">
-            <div class="style__flex-box--elegance">
-                <h3 class="style__title--elegance anim-blocks">Элегантный стиль с Амат</h3>
-                <div class="style__video-container">
-                <!-- <video></video> -->
-                <img src="images/style.png" alt="Элегантный стиль с Амат">
-        </div>
-    
-            <p class="style__text anim-blocks">
-                Стилист Aurea Donna рассказывает о модных трендах 2023
-            </p>
+                <div class="marq-dot"></div> индивидуальность
+                <div class="marq-dot"></div> гармония
+                <div class="marq-dot"></div> классика
+                <div class="marq-dot"></div> индивидуальность
+            </marquee>-->
             </div>
-        
-        <div class="style__flex-box--gifts">
-            <h3 class="style__title anim-blocks"> Искусство дарить</h3>
-            <div class="style__photo-container">
-                <img src="images/gifts.png" alt="Платки на подарки">
-            </div>
-            <p class="style__text anim-blocks"> Платки AMAT — это эксклюзив, это сувенир. 
-                Это ценный и желанный подарок для прекрасной половины человечества.
-            </p>
-            <p class="style__link links">
-                <a href="/index.html">  Выбрать подарок </a>
-            </p>
-        </div>
-
-        <div class="style__flex-box--fitting">
-            <h3 class="style__title anim-blocks style__title--mobile "> Примерка платков </h3>
-            <div class="style__photo-container">
-                <img src="images/store.png" alt="Магазин">
-            </div>
-            <div class="flex-box">
-                <h3 class="style__title anim-blocks style__title--desktop"> Примерка платков </h3>
-                <p class="style__text anim-blocks bold">
-                    12:00−21:00 ежедневно
-                </p>
-                <p class="style__text anim-blocks"> Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж</p>
-                <p class="style__link links">
-                    <a href="#modal-map" id="open-map"> Посмотреть на карте </a>
-                    <div id="backdrop"></div>
-                    <div id="modal-map">
-                        <div class="close-map">
-                            <img src="images/close.svg">
-                        </div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1152.1486041971975!2d45.69956996964888!3d43.30939049464909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4051d3f76825b0bf%3A0xb4639001e07cfd29!2sGrand%20Park!5e0!3m2!1sru!2sru!4v1702750981293!5m2!1sru!2sru"
-                                width="100%" height="100%" style="border:0;" allowfullscreen=""
-                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <section class="style">
+            <div class="wrapper">
+                <div class="style__flex-box">
+                    <h3 class="style__title--elegance anim-blocks">Элегантный стиль с Амат</h3>
+                    <div class="style__video-container">
+                        <!-- <video></video> -->
+                        <img src="images/style.png" alt="Элегантный стиль с Амат">
                     </div>
+
+                    <p class="style__text anim-blocks">
+                        Стилист Aurea Donna рассказывает о модных трендах 2023
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="gifts">
+            <div class="wrapper gifts__flex-box">
+                <h3 class="style__title anim-blocks"> Искусство дарить</h3>
+                <div class="style__photo-container">
+                    <img src="images/gifts.png" alt="Платки на подарки">
+                </div>
+                <p class="style__text anim-blocks">
+                    Платки AMAT — это эксклюзив, это сувенир.
+                    Это ценный и желанный подарок для прекрасной половины человечества.
+                </p>
+                <p class="style__link links">
+                    <a href="/index.html">  Выбрать подарок </a>
                 </p>
             </div>
-        </div>
-
-        </div>
-    </section>
+        </section>
+        <section class="fitting">
+            <div class="fitting__flex-box wrapper">
+                <h3 class="style__title anim-blocks style__title--mobile "> Примерка платков </h3>
+                <div class="style__photo-container">
+                    <img src="images/store.png" alt="Магазин">
+                </div>
+                <div class="flex-box">
+                    <h3 class="style__title anim-blocks style__title--desktop"> Примерка платков </h3>
+                    <p class="style__text anim-blocks bold">
+                        12:00−21:00 ежедневно
+                    </p>
+                    <p class="style__text anim-blocks"> Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж</p>
+                    <p class="style__link links">
+                        <a href="#modal-map" id="open-map"> Посмотреть на карте </a>
+                        <div id="backdrop"></div>
+                        <div id="modal-map">
+                            <div class="close-map">
+                                <img src="images/close.svg">
+                            </div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1152.1486041971975!2d45.69956996964888!3d43.30939049464909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4051d3f76825b0bf%3A0xb4639001e07cfd29!2sGrand%20Park!5e0!3m2!1sru!2sru!4v1702750981293!5m2!1sru!2sru"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen=""
+                                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer class="footer">
         <div class="wrapper">
             <div class="footer__logo-container">
@@ -354,8 +389,8 @@
             </p>
         </div>
            
-        <div class="footer__items">
-        <div class="footer__item">
+        <div class="footer__accordion-items">
+        <div class="footer__accordion-item">
             <input type="checkbox" class="read-more-checker" id="product-care"/>
             <div class="limited">
                 <h5>Уход за изделиями</h5>
@@ -371,7 +406,7 @@
             <label for="product-care" class="read-more"></label>                    
         </div>
 
-        <div class="footer__item">
+        <div class="footer__accordion-item">
             <input type="checkbox" class="read-more-checker" id="pay"/>
             <div class="limited">
                 <h5>Доставка и оплата</h5>
@@ -382,7 +417,7 @@
             <label for="pay" class="read-more"></label>                    
         </div>
         
-        <div class="footer__item">
+        <div class="footer__accordion-item">
             <input type="checkbox" class="read-more-checker" id="return"/>
             <div class="limited">
                 <h5>Возврат</h5>
@@ -392,7 +427,7 @@
             </div>  
             <label for="return" class="read-more"></label>                    
         </div>
-        <div class="footer__item">
+        <div class="footer__accordion-item">
             <input type="checkbox" class="read-more-checker" id="help"/>
             <div class="limited">
                 <h5>Помощь</h5>
@@ -402,7 +437,7 @@
             </div>  
             <label for="help" class="read-more"></label>                    
         </div>
-        <div class="footer__item">
+        <div class="footer__accordion-item">
             <input type="checkbox" class="read-more-checker" id="adress"/>
             <div class="limited">
                 <h5>Адрес</h5>
@@ -425,13 +460,12 @@
             <a href="mailto:amat.textile@gmail.com" class="footer__mail">amat.textile@gmail.com </a>
             <a href="tel:79889088787" class="footer__phone"> +7 988 908-87-87</a>
             <div class="seryonse">
-                 Сайт разработан с любовью <br> в веб-студии <a href="https://seryonse.ru/">SERYONSE</a> 
+                 Сайт разработан с любовью <br> в веб-студии <a href="https://seryonse.com/">SERYONSE</a> 
             </div>
         </div>
         <div class="copyright">
             <p class="copyright__text">© АМАТ. Все права защищены</p>
-            <p class="copyright__text">
-            <a href="policy.html">Политика конфиденциальности</p>
+            <a href="policy.html">Политика конфиденциальности</a>
         </div>
         <div class="arrow-up">
           <a href="#home"><img src="images/arrow-up.svg"></a>

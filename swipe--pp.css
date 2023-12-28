@@ -290,7 +290,7 @@ button.swiper-pagination-bullet {
   transition: 200ms transform, 200ms top;
 }
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 18px 18px 4px 0;
+  margin: 18px 18px 40px 0;
 }
 .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   left: 50%;
