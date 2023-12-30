@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="swipe.css">
     <link rel="stylesheet" href="_varyables.css">
     <link rel="stylesheet" href="fonts/font/stylesheet.css">
-    <link rel="preload" href="fonts/font/TildaSans-Light.woff2" as="font" type="font/woff2" crossorigin>
     <title>AMAT</title>
     <link type="image/x-icon" href="images/favicon.png" rel="shortcut icon">
 </head>
@@ -239,54 +238,55 @@
                 </ul>
             </nav>
             <div class="wrapper">
-                <a href="/index.html">
-                    <div class="collections__photo-container">
+                <div class="collections__photo-container">
+                    <a href="/index.html">
                         <img src="images/title1.png" class="collections__photo anim-blocks" />
                         <h3 class="collections__photo-description anim-blocks description-top">
                             Базовые платки
                         </h3>
-                    </div>
-                </a>
-                <a href="/index.html">
-                    <div class="collections__photo-container">
+                        </a>
+                </div>
+                <div class="collections__photo-container">
+                    <a href="/index.html">
                         <img src="images/title2.png" class="collections__photo anim-blocks" />
                         <h3 class="collections__photo-description anim-blocks description-top">
                             Тематические платки
                         </h3>
-                    </div>
-                </a>
-                <a href="/index.html">
-                    <div class="collections__photo-container">
+                    </a>
+                </div>
+                <div class="collections__photo-container">
+                    <a href="/index.html">
                         <img src="images/title3.png" class="collections__photo anim-blocks" />
                         <h3 class="collections__photo-description anim-blocks">
                             Шали
                         </h3>
-                    </div>
+                    </a>
+                </div>
+                <div class="collections__photo-container">
+                    <a href="/index.html">
+                    <img src="images/title4.png" class="collections__photo anim-blocks" />
+                    <h3 class="collections__photo-description anim-blocks">
+                        Градиенты
+                    </h3>
+                    </a>
+                </div>
+            
+                <div class="collections__photo-container">
+                    <a href="/index.html">
+                    <img src="images/title1.png" class="collections__photo anim-blocks" />
+                    <h3 class="collections__photo-description anim-blocks">
+                        Твилли
+                    </h3>
                 </a>
-                <a href="/index.html">
-                    <div class="collections__photo-container">
-                        <img src="images/title4.png" class="collections__photo anim-blocks" />
-                        <h3 class="collections__photo-description anim-blocks">
-                            Градиенты
-                        </h3>
-                    </div>
-                </a>
-                <a href="/index.html">
-                    <div class="collections__photo-container">
-                        <img src="images/title1.png" class="collections__photo anim-blocks" />
-                        <h3 class="collections__photo-description anim-blocks">
-                            Твилли
-                        </h3>
-                    </div>
-                </a>
-                <a href="/index.html">
-                    <div class="collections__photo-container" id="last-cont">
-                        <img src="images/title1.png" class="collections__photo anim-blocks" />
-                        <h3 class="collections__photo-description anim-blocks">
-                            Шарфы
-                        </h3>
-                    </div>
-                </a>
+                </div>
+                <div class="collections__photo-container" id="last-cont">
+                    <a href="/index.html">
+                    <img src="images/title1.png" class="collections__photo anim-blocks" />
+                    <h3 class="collections__photo-description anim-blocks">
+                        Шарфы
+                    </h3>
+                    </a>
+                </div>
                 <div class="block">
                     <div class="runnung-text__cont">
                         <div class="runnung-text">
@@ -344,17 +344,17 @@
         </section>
         <section class="fitting">
             <div class="fitting__flex-box wrapper">
-                <h3 class="style__title anim-blocks style__title--mobile "> Примерка платков </h3>
-                <div class="style__photo-container">
+                <h3 class="fitting__title anim-blocks fitting__title--mobile "> Примерка платков </h3>
+                <div class="fitting__photo-container">
                     <img src="images/store.png" alt="Магазин">
                 </div>
                 <div class="flex-box">
-                    <h3 class="style__title anim-blocks style__title--desktop"> Примерка платков </h3>
-                    <p class="style__text anim-blocks bold">
+                    <h3 class="fitting__title anim-blocks fitting__title--desktop"> Примерка платков </h3>
+                    <p class="fitting__text anim-blocks bold">
                         12:00−21:00 ежедневно
                     </p>
-                    <p class="style__text anim-blocks"> Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж</p>
-                    <p class="style__link links">
+                    <p class="fitting__text anim-blocks"> Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж</p>
+                    <p class="fitting__links links">
                         <a href="#modal-map" id="open-map"> Посмотреть на карте </a>
                         <div id="backdrop"></div>
                         <div id="modal-map">
@@ -375,9 +375,10 @@
             <div class="footer__logo-container">
                 <img src="images/logo-white.png" alt="AMAT">
             </div>
-            <h3 class="footer__title">
+            <h3 class="footer__title anim-blocks">
                 Узнавайте первыми о новинках
             </h3>
+    
             <form class="flex-box" method="post" action="http://localhost/dashboard/send.php">
                 <input type="email" class="send-mail" name="email" placeholder="Эл. почта"/>
                 <input id="send-mail__button" type="submit">

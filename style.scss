@@ -777,7 +777,8 @@ h3 {
     transition: 0.5s;
 }
 .style__video-container,
-.style__photo-container {
+.style__photo-container,
+.fitting__photo-container {
     width: 100%;
     height: auto;
     margin: 0px auto 0px auto;
@@ -786,15 +787,10 @@ h3 {
         width: 100%;
     }
 }
-.style__title--mobile {
-    display: none;
-}
 
-.style__title--desktop {
-    display: block;
-}
 
-.style__text {
+.style__text,
+.fitting__text {
     margin: 0px 0 0px 0;
     text-align: center;
     width: 660px;
@@ -803,6 +799,7 @@ h3 {
     transform: translate(0px, 120%);
     transition: 0.5s;
 }
+
 .style__link {
     text-align: center;
     margin-top: 64px;
@@ -837,9 +834,7 @@ h3 {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 80px 80px 62px 80px;
-    p {
-        margin: 0;
-    }
+   
    
     .style__photo-container {
         order: -1;
@@ -891,6 +886,7 @@ h3 {
 }
 .footer__title {
     color: $textWhite100;
+    margin: 0;
     margin-bottom: 30px;
 }
 .footer__item-description {
@@ -905,6 +901,10 @@ h3 {
 .footer__logo-container {
     margin-top: 64px;
     margin-bottom: 120px;
+    width: 100%;
+    img {
+        width: 100%;
+    }
 }
 form {
     position: relative;
@@ -1143,6 +1143,7 @@ form {
             padding: 24px;
             padding-bottom: 77px;
         }
+        a {display: block;}
     }
 
     .collections__photo-container {
@@ -1310,7 +1311,6 @@ form {
             font-weight: 400;
             line-height: 24px;
             letter-spacing: -0.01em;
-            // margin-top: 120px;
             margin-bottom: 36px;
             text-align: left;
             text-transform: uppercase;
@@ -1519,31 +1519,26 @@ form {
             }
         }
         
-        // .collections {
-        //     background: #0C0C0C;
-        //     .wrapper {
-        //         padding-bottom: 25px;
-        //         margin: auto;
-        //         display: block;
-        //         flex-wrap: wrap;
-        //         column-count: 1;
-        //     }
-        // }
         .style {
             .wrapper {
                 padding: 120px 16px 0px 16px;
             }
         }
-        .style__text {
+        .style__text,
+        .fitting__text  {
             text-align: left;
-            margin: 24px 0 0px 0;
             opacity: 0;
+            margin: 0px 0 0px 0;
             transform: translate(0px, 120%);
             transition: 0.5s;
             width: auto;
         }
+        .fitting__text {
+            margin: 7px 0 38px 0;
+        }
         .style__video-container {
             padding: 0;
+            margin-bottom: 24px;
         }
         .style__link {
             text-align: left;
@@ -1568,7 +1563,7 @@ form {
         }
         .fitting {
             .wrapper {
-                padding: 120px 16px 0px 16px;
+                padding: 120px 16px 120px 16px;
             }
         }
 
@@ -1585,6 +1580,7 @@ form {
         .fitting__flex-box {
             // column-count: 2;
             flex-direction: row;
+            height: auto;
             flex-wrap: wrap;
             margin: 0;
             .style__photo-container {
@@ -1593,13 +1589,27 @@ form {
                 margin: 0;
             }
         }
-        .style__title--mobile {
+        .fitting__title--mobile {
             display: block;
         }
-
-        .style__title--desktop {
+        
+        .fitting__title--desktop {
             display: none;
         }
+        .fitting__photo-container {
+            height: 235px;
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+        .fitting__links {
+            text-align: left;
+            margin-top: 38px;
+        }
+        .bold {
+            margin-bottom: 7px !important;
+        }
+        
+       
     }
     //////////*************MOBILE**********//////////
     @media screen and (max-width: 376px) {
@@ -1654,17 +1664,6 @@ form {
         .main-nav {
             display: none;
         }
-
-        h3 {
-            font-family: Tilda Sans;
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 24px;
-            letter-spacing: -0.01em;
-            text-align: left;
-            text-transform: uppercase;
-        }
-
 
         h5 {
             font-family: Tilda Sans;
@@ -1807,15 +1806,15 @@ form {
             margin: 0px 0px 10px 0px;
         }
         h3 {
-            font-family: Tilda Sans;
+            font-family: 'Tilda Sans';
             font-size: 20px;
             font-weight: 400;
             line-height: 24px;
             letter-spacing: -0.01em;
             text-align: left;
             text-transform: uppercase;
-            margin-top: 104px;
             margin-bottom: 36px;
+            margin-top: 0;
             opacity: 0;
             transform: translate(0px, 120%);
             transition: 0.5s;
