@@ -649,21 +649,7 @@ body {
   bottom: 132px;
   margin-bottom: -55px; }
 
-.marquee {
-  color: white;
-  text-transform: uppercase;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 38.4px;
-  letter-spacing: 0em;
-  text-align: center;
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 65px;
-  animation: 7s linear infinite running line; }
-
-.block {
+.srting {
   color: white;
   text-transform: uppercase;
   font-size: 16px;
@@ -671,40 +657,59 @@ body {
   line-height: 38.4px;
   letter-spacing: 0em;
   text-align: center;
-  position: absolute;
-  right: 0;
-  left: 0;
+  color: white;
+  height: 30px;
   bottom: 65px;
-  display: inline;
+  width: 100vw;
   overflow: hidden; }
 
-.runnung-text__cont {
-  animation: running-text 5s linear infinite;
-  display: inline-block; }
+.sliding-text {
+  color: whitesmoke; }
 
-.runnung-text {
+.sliding-text .elementor-widget-wrap {
+  display: block !important; }
+
+.sliding-text .elementor-widget {
+  overflow: hidden;
+  width: 10000vw;
+  max-width: 10000vw; }
+
+.sliding-text .sliding .elementor-widget-container {
+  -webkit-animation: sliding var(--speed) linear infinite; }
+
+.sliding-text .elementor-widget-container {
+  float: left; }
+
+.running-text__wrap {
+  display: flex; }
+
+.running-text {
+  animation: running-text 9s linear infinite;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
   position: absolute;
-  animation: running-text 5s linear infinite;
-  bottom: 65px;
-  width: 600px;
   z-index: 5; }
 
-.runnung-text-2 {
+.running-text-2 {
+  animation: running-text-2 9s linear infinite;
   position: absolute;
-  bottom: 65px;
-  width: 600px;
-  animation: running-text 5s linear infinite; }
+  z-index: 5;
+  display: flex;
+  left: 109%;
+  flex-wrap: nowrap;
+  align-items: center; }
 
 @keyframes running-text {
   0% {
-    transform: translateX(100%); }
+    transform: translateX(0%); }
   100% {
     transform: translateX(-100%); } }
 .marq-dot {
   background: #CC4958;
   border-radius: 50%;
-  width: 6px;
-  height: 6px;
+  width: 6px !important;
+  height: 6px !important;
   display: inline-block;
   margin: 4px 20px; }
 
@@ -1058,7 +1063,7 @@ form {
   .collections .wrapper {
     margin: auto;
     padding: 24px;
-    padding-bottom: 77px; }
+    padding-bottom: 45px; }
   .collections a {
     display: block; }
 
@@ -1382,7 +1387,7 @@ form {
     background: #0C0C0C; }
     .collections .wrapper {
       padding: 40px;
-      padding-bottom: 60px;
+      padding-bottom: 43px;
       margin: auto; }
 
   .style .wrapper {
