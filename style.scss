@@ -6,7 +6,6 @@ a {
 }
 .links {
     a {
-        font-family: Tilda Sans;
         font-size: 14px;
         font-weight: 500;
         line-height: 14px;
@@ -17,12 +16,12 @@ a {
         text-decoration: none;
         position: relative;
     }
-    a::before {
+    a:before {
         content: '';
         right: 0;
         bottom: 0;
         position: absolute;
-        width: 0%;
+        width: 0;
         height: 1px;
         background: $textBlack10;
         transition: 0.2s;
@@ -43,19 +42,18 @@ ul {
     padding: 0;
 }
 h5 {
-    font-family: Tilda Sans;
     font-size: 16px;
     font-weight: 500;
     line-height: 21px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: left;
     text-transform: uppercase;
 }
 
 //////////////* Главная *///////////////
 body {
+    font-family: "Tilda Sans", sans-serif;
     background: $backWhite;
-    font-family: "Tilda Sans";
     padding: 0;
     margin: 0;
     color: $textBlack10;
@@ -183,7 +181,6 @@ body {
     border-radius: 2px;
     gap: 8px;
     text-transform: uppercase;
-    font-family: Tilda Sans;
     font-size: 14px;
     font-weight: 500;
     line-height: 17px;
@@ -212,7 +209,6 @@ body {
 
 .slider__block-title {
     //styleName: Desktop/Heading 3;
-    font-family: Tilda Sans;
     font-size: 40px;
     font-weight: 300;
     line-height: 48px;
@@ -265,7 +261,6 @@ body {
     opacity: 0;
     transition: 3s;
     a {
-        font-family: Tilda Sans;
         font-size: 14px;
         font-weight: 500;
         line-height: 14px;
@@ -281,7 +276,7 @@ body {
         right: 0;
         bottom: 0;
         position: absolute;
-        width: 0%;
+        width: 0;
         height: 1px;
         background: $textWhite100;
         transition: 0.2s;
@@ -335,10 +330,9 @@ body {
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: left;
     margin-top: 62px;
-    font-family: 'Tilda Sans';
     text-transform: uppercase;
     a {
         color: $textBlack10;
@@ -353,11 +347,11 @@ body {
     border: none;
     border-bottom: #121111 solid 1px;
     padding: 14px 14px 14px 56px;
-    font-family: 'Tilda Sans';
+    font-family: "Tilda Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: left;
     width: 100%;
     box-sizing: border-box;
@@ -374,7 +368,7 @@ body {
     padding: 0;
     font-size: 16px;
     line-height: 20px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: left;
     margin-top: 20px;
     position: absolute;
@@ -525,7 +519,7 @@ body {
     font-size: 20px;
     font-weight: 400;
     line-height: 20px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: center;
     color: #0F0E0E;
 }
@@ -535,7 +529,7 @@ body {
     padding: 40px 80px;
 }
 .history__photo-container {
-    margin-top: 0px;
+    margin-top: 0;
     width: 180%;
     height: 634px;
     overflow: hidden;
@@ -575,7 +569,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: center;
     color: #0F0E0E;
     opacity: 0;
@@ -717,7 +711,7 @@ body {
     font-size: 16px;
     font-weight: 600;
     line-height: 38.4px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: center;
     color: $textWhite100;
     height: 30px;
@@ -800,7 +794,7 @@ body {
 ////////////////////STYLE//////////////////
 .style {
     .wrapper {
-        padding: 0px 0px;
+        padding: 0 0;
     }
 }
 h3 {
@@ -821,7 +815,7 @@ h3 {
 .fitting__photo-container {
     width: 100%;
     height: auto;
-    margin: 0px auto 0px auto;
+    margin: 0 auto 0 auto;
     overflow: hidden;
     img {
         width: 100%;
@@ -831,7 +825,7 @@ h3 {
 
 .style__text,
 .fitting__text {
-    margin: 0px 0 0px 0;
+    //margin: 0;
     text-align: center;
     width: 660px;
     margin: auto;
@@ -869,7 +863,6 @@ h3 {
 }
 .fitting__flex-box {
     // column-count: 2;
-    margin: 80px;
     height: 855px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -933,7 +926,7 @@ h3 {
     font-size: 16px;
     font-weight: 400;
     line-height: 21px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: left;
     padding-bottom: 16px;
 }
@@ -963,8 +956,8 @@ form {
     background: $graphicBlack;
     border: none;
     position: absolute;
-    right: 0px;
-    top: 0px;
+    right: 0;
+    top: 0;
     width: 33px;
     height: 33px;
     box-sizing: border-box;
@@ -974,15 +967,14 @@ form {
 }
 .arrow-right {
     position: absolute;
-    right: 0px;
-    top: 0px;
+    right: 0;
+    top: 0;
 }
 .footer__text {
-    font-family: Tilda Sans;
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: left;
     color: $textWhite50;
     margin-bottom: 82px;
@@ -1038,7 +1030,7 @@ form {
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: left;
     color: $textWhite50;
     border-top:  0.5px $graphicWhite50 solid;
@@ -1074,7 +1066,6 @@ form {
     position: absolute;
     top: 20px;
     right: 16px;
-    padding: auto;
 }
 
  .read-more-checker:checked ~ .limited {
@@ -1083,7 +1074,6 @@ form {
 .read-more::before {
     font-size: 24px;
     font-weight: 100;
-
 }
 
 .read-more-checker ~ .read-more:before {
@@ -1202,13 +1192,13 @@ form {
     .collections__photo-container:nth-child(1),
     .collections__photo-container:nth-child(3),
     .collections__photo-container:nth-child(5) {
-        margin: 0 0 0px 0;
+        margin: 0 0 0 0;
     }
 
     .collections__photo-container:nth-child(2),
     .collections__photo-container:nth-child(4),
     .collections__photo-container:nth-child(6) {
-        margin: 0 0 0px 0;
+        margin: 0 0 0 0;
     }
 
     .collections__photo-description {
@@ -1232,11 +1222,10 @@ form {
     }
     .style {
         .wrapper {
-            padding: 0px 24px;
+            padding: 0 24px;
         }
     }
     h3 {
-        font-family: Tilda Sans;
         font-size: 40px;
         font-weight: 400;
         line-height: 48px;
@@ -1346,7 +1335,6 @@ form {
         }
 
         h3 {
-            font-family: Tilda Sans;
             font-size: 20px;
             font-weight: 400;
             line-height: 24px;
@@ -1358,11 +1346,10 @@ form {
 
 
         h5 {
-            font-family: Tilda Sans;
             font-size: 16px;
             font-weight: 500;
             line-height: 21px;
-            letter-spacing: 0em;
+            letter-spacing: 0;
             text-align: left;
             text-transform: uppercase;
         }
@@ -1382,6 +1369,7 @@ form {
         .main__photo-container--scroll {
             transform: translateY(-129px);
             transition: 2s;
+            height: 70vh;
         }
 
         .main-nav--mobile__items {
@@ -1415,7 +1403,7 @@ form {
             text-align: center;
             color: white;
             text-transform: uppercase;
-            padding: 50 32px 0 32px;
+            padding: 50px 32px 0 32px;
             margin: 0;
             position: absolute;
             bottom: 111px;
@@ -1469,7 +1457,7 @@ form {
         .collections__photo-container {
             width: 100%;
             height: auto;
-            margin: 0px auto -40px auto;
+            margin: 0 auto -40px auto;
             overflow: hidden;
 
             img {
@@ -1482,7 +1470,7 @@ form {
             text-transform: uppercase;
             font-weight: 600;
             line-height: 22px;
-            letter-spacing: 0em;
+            letter-spacing: 0;
             text-align: center;
             position: absolute;
             font-size: 18px;
@@ -1503,7 +1491,6 @@ form {
             border-radius: 2px;
             gap: 8px;
             text-transform: uppercase;
-            font-family: Tilda Sans;
             font-size: 14px;
             font-weight: 500;
             line-height: 17px;
@@ -1544,33 +1531,32 @@ form {
         .collections__photo-container:nth-child(1),
         .collections__photo-container:nth-child(3),
         .collections__photo-container:nth-child(5) {
-            margin: 0px auto 0px auto;
+            margin: 0 auto 0 auto;
         }
         .collections__photo-container:nth-child(2),
         .collections__photo-container:nth-child(4),
         .collections__photo-container:nth-child(6) {
-            margin: 0px auto 0px auto;
+            margin: 0 auto 0 auto;
         }
 
         .collections {
             background: #0C0C0C;
             .wrapper {
-                padding: 40px;
-                padding-bottom: 43px;
+                padding: 40px 40px 43px 40px;
                 margin: auto;
             }
         }
         
         .style {
             .wrapper {
-                padding: 120px 16px 0px 16px;
+                padding: 120px 16px 0 16px;
             }
         }
         .style__text,
         .fitting__text  {
             text-align: left;
             opacity: 0;
-            margin: 0px 0 0px 0;
+            margin: 0 0 0 0;
             transform: translate(0px, 120%);
             transition: 0.5s;
             width: auto;
@@ -1596,11 +1582,11 @@ form {
             transition: 1s;
         }
         .footer {
-            padding: 0px; //ДОПИСАТЬ ПАДДИНГ НА ТОП И БАТТОН
+            padding: 0; //ДОПИСАТЬ ПАДДИНГ НА ТОП И БАТТОН
         }
         .gifts {
             .wrapper {
-                padding: 120px 16px 0px 16px;
+                padding: 120px 16px 0 16px;
             }
         }
         .fitting {
@@ -1693,7 +1679,6 @@ form {
             border-radius: 2px;
             gap: 8px;
             text-transform: uppercase;
-            font-family: Tilda Sans;
             font-size: 14px;
             font-weight: 500;
             line-height: 17px;
@@ -1709,11 +1694,10 @@ form {
         }
 
         h5 {
-            font-family: Tilda Sans;
             font-size: 16px;
             font-weight: 500;
             line-height: 21px;
-            letter-spacing: 0em;
+            letter-spacing: 0;
             text-align: left;
             text-transform: uppercase;
         }
@@ -1796,7 +1780,7 @@ form {
         .collections__photo-container {
             width: 100%;
             height: auto;
-            margin: 0px auto -40px auto;
+            margin: 0 auto -40px auto;
             overflow: hidden;
             img {
                 width: 100%;
@@ -1841,15 +1825,14 @@ form {
         .collections__photo-container:nth-child(1),
         .collections__photo-container:nth-child(3),
         .collections__photo-container:nth-child(5) {
-             margin: 0px 0px 10px 0px;
+             margin: 0 0 10px 0;
          }
         .collections__photo-container:nth-child(2),
         .collections__photo-container:nth-child(4),
         .collections__photo-container:nth-child(6) {
-            margin: 0px 0px 10px 0px;
+            margin: 0 0 10px 0;
         }
         h3 {
-            font-family: 'Tilda Sans';
             font-size: 20px;
             font-weight: 400;
             line-height: 24px;
@@ -1873,5 +1856,5 @@ form {
     .active {
         opacity: 1;
         transform: scale(100%);
-        transform: translate(0, 0);
+        transform: translate(0,0);
     }
