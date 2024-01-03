@@ -23,17 +23,14 @@ let iconsBlack = document.querySelector ('.icons-black');
 let logoMobile = document.querySelector ('.logo-mobile');
 
 
-
 openMap.addEventListener ('click', openMapFunction);
 closeMap.addEventListener ('click', closeMapFunction);
 backdrop.addEventListener ('click', closeMapFunction);
-
 function closeMapFunction () {
   document.querySelector('#modal-map').style.display = 'none';
   document.querySelector('#backdrop').style.display = 'none';
   document.querySelector('body').style.overflow = 'visible';
 }
-
 function openMapFunction () {
   document.querySelector('#modal-map').style.display = 'block';
   document.querySelector('#backdrop').style.display = 'block';
@@ -54,15 +51,13 @@ function closeMobileMenu () {
 }
 //const animItem = animItems.length; //для себя запись сделала
 if (animItems.length > 0) {
-  window.addEventListener ('scroll', animOnScroll);
-  
-  function animOnScroll (params) {
+  window.addEventListener ('scroll', animOnScrollLogo);
+  function animOnScrollLogo (params) {
     for (let index = 0; index < animItems.length; index++) {
       const animItem = animItems[index];
       const animItemHeight = animItem.offsetHeight;
       const animItemOffset =  offset(animItem).top;
       const animStart = 4;
-
       //animItemOffset -- расстрояние элемента от верха
 
       let animItemPoint = window.innerHeight - animItemHeight / animStart;
@@ -87,9 +82,9 @@ function offset(el) {
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
 }
-//setTimeout(()=> {
-//    animOnScroll();
-//}, 600);
+setTimeout(()=> {
+   animOnScrollLogo();
+}, 600);
 }
 
 
@@ -108,6 +103,11 @@ function offset(el) {
         videoPosition.classList.add ('main__photo-container--scroll');
         mainTitle.classList.add ('main__title--scroll');
         mainButton.classList.add ('main__button--scroll');
+        logoWhite.classList.remove('logo-white');
+        iconsBlack.classList.add('display-none');
+        iconsWhite.classList.remove('icons-white');
+
+
       
       } else {
       }
@@ -117,21 +117,21 @@ function offset(el) {
           scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
       }
-    
-
-    }
 
     setTimeout(()=> {
       animOnScrollMob();
-    }, 800)
+    }, 800);
+    }
+
+
 
 
 
 //Появление блоков при прокрутке
 //const animItem = animItems.length; //для себя запись сделала
 if (animBlocks.length > 0) {
-  window.addEventListener ('scroll', animBlocksScroll);
-  function animBlocksScroll (params) {
+  window.addEventListener ('scroll', animOnScroll);
+  function animOnScroll (params) {
     for (let index = 0; index < animBlocks.length; index++) {
       const animBlock = animBlocks[index];
       const animBlockHeight = animBlock.offsetHeight;
@@ -148,12 +148,10 @@ if (animBlocks.length > 0) {
     }
 }
 
-setTimeout(()=> {
-  animOnScroll();
-}, 1500);
+//тут был таймаут туда сюда
 
 }
-//Свайпер на главной странице
+
 new Swiper('.image-slider', {
   pagination: {
     el: '.swiper-pagination',
@@ -174,7 +172,7 @@ new Swiper('.image-slider', {
 
 } );
 
-//бегущая строка
+
 $(function() {
 	var marquee = $("#marquee"); 
 	marquee.css({"overflow": "hidden", "width": "200%"});
@@ -192,8 +190,8 @@ $(function() {
 });
 
 
-//Свайп наверх стрелкой с футера
 const btn = document.getElementById('arrow-up');
+
 btn.addEventListener('click', () => window.scrollTo({
   top: 0,
   behavior: 'smooth',

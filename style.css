@@ -1049,6 +1049,9 @@ form {
     margin: 0;
     transform: translateX(-50%); }
 
+  #white-logo-mobile {
+    display: none; }
+
   .smalli {
     text-align: left;
     will-change: width, transform;
@@ -1222,12 +1225,16 @@ form {
     background-size: cover;
     width: 100%;
     height: 100vh;
-    z-index: -100; }
+    z-index: -100;
+    margin: 0; }
 
   .main__photo-container--scroll {
-    transform: translateY(-129px);
+    transform: translateY(-189px);
     transition: 2s;
-    height: 70vh; }
+    height: 100vh; }
+
+  .icons-white {
+    display: none; }
 
   .main-nav--mobile__items {
     display: block;
@@ -1243,14 +1250,14 @@ form {
 
   .main-header--scroll {
     max-height: 60px;
-    transition: 2s;
-    background: none; }
+    transition: 2s; }
 
   .logo-mobile--scroll {
     text-align: left;
     will-change: width, transform;
     transform: translate3d(-76px, -57px, 0px) scale(48%);
-    transition: 1s; }
+    transition: 1s;
+    opacity: 0; }
 
   .main__title {
     font-size: 40px;
@@ -1272,9 +1279,10 @@ form {
     will-change: min-height;
     z-index: 22; }
 
-  .main-header {
+  #white-logo-mobile {
+    display: block;
     position: absolute;
-    height: 189px; }
+    top: 0; }
 
   .logo-container {
     text-align: left; }
@@ -1526,7 +1534,7 @@ form {
     z-index: -100; }
 
   .main__photo-container--scroll {
-    transform: translateY(-129px);
+    transform: translateY(-189px);
     transition: 2s; }
 
   .main-nav--mobile__items {
@@ -1644,7 +1652,10 @@ form {
     transition: 0.5s; }
 
   .style__title--elegance {
-    margin-bottom: 16px; } }
+    margin-bottom: 16px; }
+
+  .display-none {
+    display: none; } }
 .active {
   opacity: 1;
   transform: scale(100%);
