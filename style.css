@@ -240,7 +240,8 @@ body {
     color: white;
     text-decoration: none; }
 
-#brand {
+#brand,
+#brand--col {
   margin-left: 86px; }
 
 .main-nav__items--left {

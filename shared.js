@@ -108,6 +108,10 @@ function offset(el) {
         videoPosition.classList.add ('main__photo-container--scroll');
         mainTitle.classList.add ('main__title--scroll');
         mainButton.classList.add ('main__button--scroll');
+
+        logoWhite.classList.remove('logo-white');
+        iconsBlack.classList.add('display-none');
+        iconsWhite.classList.remove('icons-white');
       
       } else {
       }
