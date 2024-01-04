@@ -303,23 +303,15 @@
              
                     </div>
                 </div> -->
-                <div class="elementor-widget-container">
-                    <div class="srting">
-                        <div id="marquee">
-                            <span class="marq-dot"></span> индивидуальность
-                            <span class="marq-dot"></span> гармония
-                            <span class="marq-dot"></span> классика
-                            <span class="marq-dot"></span> индивидуальность
-                            <span class="marq-dot"></span> гармония
-                            <span class="marq-dot"></span> классика
-                            <span class="marq-dot"></span> индивидуальность
-                            <span class="marq-dot"></span> гармония
-                            <span class="marq-dot"></span> классика
-                            <span class="marq-dot"></span> индивидуальность
-                            <span class="marq-dot"></span> гармония
-                        </div>
+
+                    <div id="marquee">
+                        <span class="marq-dot"></span> индивидуальность
+                        <span class="marq-dot"></span> гармония
+                        <span class="marq-dot"></span> классика
+
+                        <!-- Повторите элементы столько раз, сколько необходимо для заполнения ширины маркизы -->
                     </div>
-                </div>
+
                 <!--<marquee class="marquee">
                 индивидуальность
                 <div class="marq-dot"></div> гармония
@@ -410,66 +402,131 @@
         </div>
            
         <div class="footer__accordion-items">
-        <div class="footer__accordion-item">
-            <input type="checkbox" class="read-more-checker" id="product-care"/>
-            <div class="limited">
-                <h5>Уход за изделиями</h5>
-                <div class="footer__item-description">
-                Чтобы сохранить изделие в превосходном состоянии, храните его в 
-                развязанном виде и избегайте соприкосновения с украшениями 
-                и аксессуарами, которые могут оставить зацепки. 
-                Берегите изделие от дождя, избегайте контакта с агрессивными 
-                веществами и желательно осуществляйте уход за изделием 
-                в специализированных химчистках.
-                </div> 
-            </div>  
-            <label for="product-care" class="read-more"></label>                    
-        </div>
+            <div class="footer__accordion-item">
+                <div class="limited">
+                    <h5>Уход за изделиями</h5>
+                    <img src="images/read-more.svg" alt="read-more" class="read-more">
+                    <img src="images/read-less.svg" alt="read-less" class="read-less">
+                    <div class="footer__item-description">
+                        Чтобы сохранить изделие в превосходном состоянии, храните его в
+                        развязанном виде и избегайте соприкосновения с украшениями
+                        и аксессуарами, которые могут оставить зацепки.
+                        Берегите изделие от дождя, избегайте контакта с агрессивными
+                        веществами и желательно осуществляйте уход за изделием
+                        в специализированных химчистках.
+                    </div>
+                </div>
+            </div>
 
-        <div class="footer__accordion-item">
-            <input type="checkbox" class="read-more-checker" id="pay"/>
-            <div class="limited">
-                <h5>Доставка и оплата</h5>
-                <div class="footer__item-description">
-                    Длиннющий текст про доставку и оплату.
-                </div> 
-            </div>  
-            <label for="pay" class="read-more"></label>                    
-        </div>
-        
-        <div class="footer__accordion-item">
-            <input type="checkbox" class="read-more-checker" id="return"/>
-            <div class="limited">
-                <h5>Возврат</h5>
-                <div class="footer__item-description">
-                    Обидный текст, что возврата нет.
-                </div> 
-            </div>  
-            <label for="return" class="read-more"></label>                    
-        </div>
-        <div class="footer__accordion-item">
-            <input type="checkbox" class="read-more-checker" id="help"/>
-            <div class="limited">
-                <h5>Помощь</h5>
-                <div class="footer__item-description">
-                    Обидный текст, что ничем помочь не можем.
-                </div> 
-            </div>  
-            <label for="help" class="read-more"></label>                    
-        </div>
-        <div class="footer__accordion-item">
-            <input type="checkbox" class="read-more-checker" id="adress"/>
-            <div class="limited">
-                <h5>Адрес</h5>
-                <div class="footer__item-description">
-                    <p class="footer__text bold">
-                        12:00−21:00 ежедневно
-                    </p>
-                    <p class="footer__text"> Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж</p>
-                </div> 
-            </div>  
-            <label for="adress" class="read-more"></label>                    
-        </div>
+            <div class="footer__accordion-item">
+                <div class="limited">
+                    <img src="images/read-more.svg" alt="read-more" class="read-more">
+                    <img src="images/read-less.svg" alt="read-less" class="read-less">
+                    <h5>Доставка и оплата</h5>
+                    <div class="footer__item-description">
+                        Длиннющий текст про доставку и оплату.
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__accordion-item">
+                <div class="limited">
+                    <h5>Возврат</h5>
+                    <img src="images/read-more.svg" alt="read-more" class="read-more">
+                    <img src="images/read-less.svg" alt="read-less" class="read-less">
+                    <div class="footer__item-description">
+                        Обидный текст, что возврата нет.
+                    </div>
+                </div>
+            </div>
+            <div class="footer__accordion-item">
+                <input type="checkbox" class="read-more-checker" id="help"/>
+                <div class="limited">
+                    <h5>Помощь</h5>
+                    <div class="footer__item-description">
+                        Обидный текст, что ничем помочь не можем.
+                    </div>
+                </div>
+                <label for="help" class="read-more"></label>
+            </div>
+            <div class="footer__accordion-item">
+                <input type="checkbox" class="read-more-checker" id="adress"/>
+                <div class="limited">
+                    <h5>Адрес</h5>
+                    <div class="footer__item-description">
+                        <p class="footer__text bold">
+                            12:00−21:00 ежедневно
+                        </p>
+                        <p class="footer__text"> Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж</p>
+                    </div>
+                </div>
+                <label for="adress" class="read-more"></label>
+            </div>
+
+
+
+<!--            инпут иншмут и бокх г1урт-->
+<!--            -->
+<!--        <div class="footer__accordion-item">-->
+<!--            <input type="checkbox" class="read-more-checker" id="product-care"/>-->
+<!--            <div class="limited">-->
+<!--                <h5>Уход за изделиями</h5>-->
+<!--                <div class="footer__item-description">-->
+<!--                Чтобы сохранить изделие в превосходном состоянии, храните его в -->
+<!--                развязанном виде и избегайте соприкосновения с украшениями -->
+<!--                и аксессуарами, которые могут оставить зацепки. -->
+<!--                Берегите изделие от дождя, избегайте контакта с агрессивными -->
+<!--                веществами и желательно осуществляйте уход за изделием -->
+<!--                в специализированных химчистках.-->
+<!--                </div> -->
+<!--            </div>  -->
+<!--            <label for="product-care" class="read-more"></label>                    -->
+<!--        </div>-->
+
+<!--        <div class="footer__accordion-item">-->
+<!--            <input type="checkbox" class="read-more-checker" id="pay"/>-->
+<!--            <div class="limited">-->
+<!--                <h5>Доставка и оплата</h5>-->
+<!--                <div class="footer__item-description">-->
+<!--                    Длиннющий текст про доставку и оплату.-->
+<!--                </div> -->
+<!--            </div>  -->
+<!--            <label for="pay" class="read-more"></label>                    -->
+<!--        </div>-->
+<!--        -->
+<!--        <div class="footer__accordion-item">-->
+<!--            <input type="checkbox" class="read-more-checker" id="return"/>-->
+<!--            <div class="limited">-->
+<!--                <h5>Возврат</h5>-->
+<!--                <div class="footer__item-description">-->
+<!--                    Обидный текст, что возврата нет.-->
+<!--                </div> -->
+<!--            </div>  -->
+<!--            <label for="return" class="read-more"></label>                    -->
+<!--        </div>-->
+<!--        <div class="footer__accordion-item">-->
+<!--            <input type="checkbox" class="read-more-checker" id="help"/>-->
+<!--            <div class="limited">-->
+<!--                <h5>Помощь</h5>-->
+<!--                <div class="footer__item-description">-->
+<!--                    Обидный текст, что ничем помочь не можем.-->
+<!--                </div> -->
+<!--            </div>  -->
+<!--            <label for="help" class="read-more"></label>                    -->
+<!--        </div>-->
+<!--        <div class="footer__accordion-item">-->
+<!--            <input type="checkbox" class="read-more-checker" id="adress"/>-->
+<!--            <div class="limited">-->
+<!--                <h5>Адрес</h5>-->
+<!--                <div class="footer__item-description">-->
+<!--                    <p class="footer__text bold">-->
+<!--                        12:00−21:00 ежедневно-->
+<!--                    </p>-->
+<!--                    <p class="footer__text"> Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж</p>-->
+<!--                </div> -->
+<!--            </div>  -->
+<!--            <label for="adress" class="read-more"></label>                    -->
+<!--        </div>-->
         </div>
         <div class="footer__contacts">
             <div class="footer__contacts-flex links">

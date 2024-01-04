@@ -709,17 +709,28 @@ body {
 
 .srting {
     color: $textWhite100;
+
+    height: 30px;
+    bottom: 65px;
+    width: 100vw;
+    overflow: hidden;
+}
+#marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    color: $textWhite100;
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 600;
     line-height: 38.4px;
     letter-spacing: 0;
     text-align: center;
-    color: $textWhite100;
-    height: 30px;
-    bottom: 65px;
-    width: 100vw;
-    overflow: hidden;
+}
+
+.marq-dot {
+    /* Пример стилизации точек, можно адаптировать под свой дизайн */
+    display: inline-block;
+    margin-right: 5px; /* Расстояние между точкой и текстом */
 }
 
 .sliding-text {
@@ -1067,7 +1078,17 @@ form {
     height: 33px;
     position: absolute;
     top: 20px;
-    right: 16px;
+    right: 0;
+    cursor: pointer;
+}
+.read-less {
+    width: 32px;
+    height: 33px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    display: none;
+
 }
 
  .read-more-checker:checked ~ .limited {
