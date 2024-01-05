@@ -1,13 +1,5 @@
 
 
-
-
-
-
-
-
-
-
 const spollersArray = document.querySelectorAll('[data-spoller]');
 if(spollersArray.length > 0) {
     const spollersRegular = Array.from(spollersArray).filter(function (item, index, self) {
