@@ -42,7 +42,7 @@ function readLessFun () {
   document.querySelector('.limited').style.maxHeight = '72px';
 }
 
-function closeMapFunction () {
+function closeMapFunction (){
   document.querySelector('#modal-map').style.display = 'none';
   document.querySelector('#backdrop').style.display = 'none';
   document.querySelector('body').style.overflow = 'visible';
@@ -70,7 +70,7 @@ function closeMobileMenu () {
 if (animItems.length > 0) {
   window.addEventListener ('scroll', animOnScroll);
   
-  function animOnScroll() {
+  function animOnScroll () {
     for (let index = 0; index < animItems.length; index++) {
       const animItem = animItems[index];
       const animItemHeight = animItem.offsetHeight;
@@ -93,7 +93,7 @@ if (animItems.length > 0) {
         iconsWhite.classList.remove('icons-white');
       }
     }
-  }
+}
 
 function offset(el) {
   const rect = el.getBoundingClientRect(),
@@ -131,8 +131,6 @@ function offset(el) {
     //   animOnScrollMob();
     // }, 800);
 
-
-
 //Появление блоков при прокрутке
 //const animItem = animItems.length; //для себя запись сделала
 if (animBlocks.length > 0) {
@@ -152,9 +150,10 @@ if (animBlocks.length > 0) {
     }
   }
 
-  setTimeout(()=> {
-    animOnScrolling();
-  }, 1500);
+setTimeout(()=> {
+  animOnScroll();
+}, 1500);
+
 }
 
 new Swiper('.image-slider', {
@@ -175,7 +174,7 @@ new Swiper('.image-slider', {
     delay: 1000,
   }
 
-});
+} );
 
 
 $(function() {
@@ -193,6 +192,7 @@ $(function() {
 	};
 	reset.call(marquee.find("div"));
 });
+
 
 const btn = document.getElementById('arrow-up');
 

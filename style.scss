@@ -2,7 +2,6 @@
 
 a {
     text-decoration: none;
-
 }
 .links {
     a {
@@ -935,14 +934,6 @@ h3 {
     margin: 0;
     margin-bottom: 30px;
 }
-.footer__item-description {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 21px;
-    letter-spacing: 0;
-    text-align: left;
-    padding-bottom: 16px;
-}
 
 .footer__logo-container {
     margin-top: 64px;
@@ -996,16 +987,6 @@ form {
     }
 }
 
-.footer__accordion-items {
-    text-align: left;
-}
-
-.footer__accordion-item {
-    width: 100%;
-    position: relative;
-    border-top:  0.5px $graphicWhite50 solid;
-    padding: 0 16px;
-}
 .footer__contacts {
     padding: 80px 16px 0 16px;
     color: $textWhite100;
@@ -1064,15 +1045,73 @@ form {
 }
 
 //////////////read more////////////
-.read-more-checker {
-    position: absolute;
-    opacity: 0;
-}
-.limited {
+.footer__accordion-title {
+    background: $graphicBlack10;
+    width: 100%;
+    color: $textWhite100;
+    font-family: "Tilda Sans", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: none;
+    padding: 21.5px 0;
+    text-align: left;
     position: relative;
-    max-height: 72px;
-    overflow: hidden;
+
 }
+.footer__item-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0;
+    text-align: left;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.footer__accordion-items {
+    text-align: left;
+}
+
+.footer__accordion-item {
+    width: 100%;
+    position: relative;
+    border-top:  0.5px $graphicWhite50 solid;
+    padding: 0 16px;
+}
+//.block._init {
+//    .footer__accordion-title {
+//        cursor: pointer;
+//    }
+//    .footer__accordion-title:before,
+//    .footer__accordion-title:after {
+//        content: "";
+//        width: 20px;
+//        height: 1px;
+//        background-color: #fff;
+//        position: absolute;
+//        right: 10px;
+//        top: 20px;
+//        transition: transform 0.3s ease 0s;
+//    }
+//    .footer__accordion-title:after {
+//        transform: rotate(-90deg);
+//    }
+//    .footer__accordion-title._active:after {
+//        transform: rotate(0deg);
+//    }
+//}
+//.read-more-checker {
+//    position: absolute;
+//    opacity: 0;
+//}
+//.limited {
+//    position: relative;
+//    max-height: 72px;
+//    overflow: hidden;
+//}
 .read-more {
     width: 32px;
     height: 33px;
@@ -1091,20 +1130,20 @@ form {
 
 }
 
- .read-more-checker:checked ~ .limited {
-    max-height: none; 
-}
-.read-more::before {
-    font-size: 24px;
-    font-weight: 100;
-}
-
-.read-more-checker ~ .read-more:before {
-    content: '+';
-}
-.read-more-checker:checked ~ .read-more:before {
-    content: '-';
-}
+// .read-more-checker:checked ~ .limited {
+//    max-height: none;
+//}
+//.read-more::before {
+//    font-size: 24px;
+//    font-weight: 100;
+//}
+//
+//.read-more-checker ~ .read-more:before {
+//    content: '+';
+//}
+//.read-more-checker:checked ~ .read-more:before {
+//    content: '-';
+//}
 
 @media screen and (max-width: 800px) {
     .wrapper {

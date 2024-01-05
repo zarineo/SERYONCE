@@ -28,7 +28,6 @@ $textWhite50: rgba(255, 255, 255, 0.5);
 
 
 
-
 /*** fonts ***/
 
 @font-face {
@@ -39,11 +38,13 @@ $textWhite50: rgba(255, 255, 255, 0.5);
     font-style: normal;
     font-display: swap;
 }
+
+
 $main-sans: 'Tilda Sans';
 
 
 
-/*** mixims ***/ 
+/*** mixins ***/
 
 @mixin list {
     list-style: none;
@@ -60,11 +61,11 @@ $main-sans: 'Tilda Sans';
 }
 
 h5 {
-    font-family: Tilda Sans;
+    font-family: 'Tilda Sans';
     font-size: 16px;
     font-weight: 500;
     line-height: 21px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: left;
     text-transform: uppercase;
 }

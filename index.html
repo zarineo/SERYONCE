@@ -57,12 +57,12 @@
                     <li class="main-nav--mobile__item">
                         <a href="/index.html">
                             <img src="images/shopping-bag.svg"  class="icons-black anim-blocks"/>
-                            <img src="images/shopping-bag-white.svg" class="icons-white  anim-blocks" />
+                            <img src="images/shopping-bag-white.svg" class="icons-white anim-blocks" />
                         </a>
                     </li>
                     <li class="main-nav--mobile__item">
-                        <img src="images/hamburger.svg" id="open-menu-b" class="icons-black anim-blocks"/>
-                        <img src="images/hamburger-white.svg" id="open-menu" class="icons-white anim-blocks"/>
+                        <img src="images/hamburger.svg" id="open-menu" class="icons-black anim-blocks"/>
+                        <img src="images/hamburger-white.svg" id="open-menu-w" class="icons-white anim-blocks"/>
                     </li>
                     <div class="logo-container">
                         <a href="/index.html"><img src="images/logo-b.svg" class="logo-mobile"/></a>
@@ -400,68 +400,85 @@
                 <a href="policy.html">Политикой конфиденциальности</a> и <a href="oferta.html">офертой</a>. 
             </p>
         </div>
-           
-        <div class="footer__accordion-items">
+        <div data-spollers class="footer__accordion-items block">
             <div class="footer__accordion-item">
-                <div class="limited">
-                    <h5>Уход за изделиями</h5>
+                <button tabindex="-1" type="button" data-spoller data-one-spoller class="footer__accordion-title">Уход за изделиями
                     <img src="images/read-more.svg" alt="read-more" class="read-more">
                     <img src="images/read-less.svg" alt="read-less" class="read-less">
-                    <div class="footer__item-description">
-                        Чтобы сохранить изделие в превосходном состоянии, храните его в
-                        развязанном виде и избегайте соприкосновения с украшениями
-                        и аксессуарами, которые могут оставить зацепки.
-                        Берегите изделие от дождя, избегайте контакта с агрессивными
-                        веществами и желательно осуществляйте уход за изделием
-                        в специализированных химчистках.
-                    </div>
+                </button>
+                <div class="footer__item-description">
+                    Чтобы сохранить изделие в превосходном состоянии, храните его в
+                    развязанном виде и избегайте соприкосновения с украшениями
+                    и аксессуарами, которые могут оставить зацепки.
+                    Берегите изделие от дождя, избегайте контакта с агрессивными
+                    веществами и желательно осуществляйте уход за изделием
+                    в специализированных химчистках.
+                </div>
+            </div>
+            <div class="footer__accordion-item">
+                <button tabindex="-1" type="button" data-spoller data-one-spoller
+                        class="footer__accordion-title">Доставка и оплата
+                </button>
+                <div class="footer__item-description">
+                    Длиннющий текст про доставкуи оплату.
+                </div>
+            </div>
+            <div class="footer__accordion-item">
+                <button tabindex="-1" type="button" data-spoller data-one-spoller
+                        class="footer__accordion-title">Возврат
+                </button>
+                <div class="footer__item-description">
+                    Обидный текст, что возврата нет.
+                </div>
+            </div>
+            <div class="footer__accordion-item">
+                <button tabindex="-1" type="button" data-spoller data-one-spoller
+                        class="footer__accordion-title">Адрес
+                </button>
+                <div class="footer__item-description">
+                    <p class="bold">
+                        12:00−21:00 ежедневно
+                    </p>
+                    <p> Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж</p>
                 </div>
             </div>
 
-            <div class="footer__accordion-item">
-                <div class="limited">
-                    <img src="images/read-more.svg" alt="read-more" class="read-more">
-                    <img src="images/read-less.svg" alt="read-less" class="read-less">
-                    <h5>Доставка и оплата</h5>
-                    <div class="footer__item-description">
-                        Длиннющий текст про доставку и оплату.
-                    </div>
-                </div>
-            </div>
 
-            <div class="footer__accordion-item">
-                <div class="limited">
-                    <h5>Возврат</h5>
-                    <img src="images/read-more.svg" alt="read-more" class="read-more">
-                    <img src="images/read-less.svg" alt="read-less" class="read-less">
-                    <div class="footer__item-description">
-                        Обидный текст, что возврата нет.
-                    </div>
-                </div>
-            </div>
-            <div class="footer__accordion-item">
-                <input type="checkbox" class="read-more-checker" id="help"/>
-                <div class="limited">
-                    <h5>Помощь</h5>
-                    <div class="footer__item-description">
-                        Обидный текст, что ничем помочь не можем.
-                    </div>
-                </div>
-                <label for="help" class="read-more"></label>
-            </div>
-            <div class="footer__accordion-item">
-                <input type="checkbox" class="read-more-checker" id="adress"/>
-                <div class="limited">
-                    <h5>Адрес</h5>
-                    <div class="footer__item-description">
-                        <p class="footer__text bold">
-                            12:00−21:00 ежедневно
-                        </p>
-                        <p class="footer__text"> Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж</p>
-                    </div>
-                </div>
-                <label for="adress" class="read-more"></label>
-            </div>
+
+
+<!--            <div class="footer__accordion-item">-->
+<!--                <div class="limited">-->
+<!--                    <h5>Возврат</h5>-->
+<!--                    <img src="images/read-more.svg" alt="read-more" class="read-more">-->
+<!--                    <img src="images/read-less.svg" alt="read-less" class="read-less">-->
+<!--                    <div class="footer__item-description">-->
+<!--                        Обидный текст, что возврата нет.-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="footer__accordion-item">-->
+<!--                <input type="checkbox" class="read-more-checker" id="help"/>-->
+<!--                <div class="limited">-->
+<!--                    <h5>Помощь</h5>-->
+<!--                    <div class="footer__item-description">-->
+<!--                        Обидный текст, что ничем помочь не можем.-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <label for="help" class="read-more"></label>-->
+<!--            </div>-->
+<!--            <div class="footer__accordion-item">-->
+<!--                <input type="checkbox" class="read-more-checker" id="adress"/>-->
+<!--                <div class="limited">-->
+<!--                    <h5>Адрес</h5>-->
+<!--                    <div class="footer__item-description">-->
+<!--                        <p class="footer__text bold">-->
+<!--                            12:00−21:00 ежедневно-->
+<!--                        </p>-->
+<!--                        <p class="footer__text"> Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <label for="adress" class="read-more"></label>-->
+<!--            </div>-->
 
 
 
@@ -551,5 +568,6 @@
 
     <script src="swipe.js"></script>
     <script src="shared.js"></script>
+    <script src="spollersss.js"></script>
 </body>
 </html>
