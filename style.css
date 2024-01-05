@@ -1282,6 +1282,8 @@ form {
     padding: 0 32px 0 32px;
     margin: 0;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 111px; }
 
   .logo-mobile {
@@ -1345,7 +1347,7 @@ form {
     left: 0; }
 
   .main__title--scroll {
-    transform: translateY(68px);
+    transform: translateY(68px) translateX(-50%);
     transition: 1s;
     color: #0f0e0e; }
 

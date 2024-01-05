@@ -12,7 +12,6 @@ document.querySelectorAll('.footer__accordion-title').forEach((el)=> {
             readMoreFun();
             //accordionDescription.style.paddingBottom = '0';
 
-
         } else {
             document.querySelectorAll('.footer__item-description').forEach((el) => el.style.maxHeight = null);
             accordionDescription.style.maxHeight = accordionDescription.scrollHeight + 'px';
@@ -22,8 +21,6 @@ document.querySelectorAll('.footer__accordion-title').forEach((el)=> {
             }
             readLessFun();
             //accordionDescription.style.paddingBottom = '16px';
-
-
         }
     })
 })
