@@ -59,6 +59,9 @@
     height: 100%;
     position: relative;
     transition-property: transform;
+  img{
+    width: 100%;
+  }
 }
 .swiper-slide-invisible-blank {
   visibility: hidden;

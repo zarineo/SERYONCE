@@ -21,28 +21,14 @@ let iconsWhite = document.querySelector ('.icons-white');
 let iconsBlack = document.querySelector ('.icons-black');
 //класс мобильного логотипа вместо анимАйтемс
 let logoMobile = document.querySelector ('.logo-mobile');
-let readMore = document.querySelector ('.read-more');
-let readLess = document.querySelector ('.read-less');
-let limited = document.querySelector ('.limited');
 
 
-readMore.addEventListener('click', readMoreFun);
-readLess.addEventListener('click', readLessFun);
+
 openMap.addEventListener ('click', openMapFunction);
 closeMap.addEventListener ('click', closeMapFunction);
 backdrop.addEventListener ('click', closeMapFunction);
-function readMoreFun () {
-  document.querySelector('.read-more').style.display = 'none';
-  document.querySelector('.read-less').style.display = 'block';
-  document.querySelector('.limited').style.maxHeight = 'none';
-}
-function readLessFun () {
-  document.querySelector('.read-more').style.display = 'block';
-  document.querySelector('.read-less').style.display = 'none';
-  document.querySelector('.limited').style.maxHeight = '72px';
-}
 
-function closeMapFunction (){
+function closeMapFunction () {
   document.querySelector('#modal-map').style.display = 'none';
   document.querySelector('#backdrop').style.display = 'none';
   document.querySelector('body').style.overflow = 'visible';
@@ -70,7 +56,7 @@ function closeMobileMenu () {
 if (animItems.length > 0) {
   window.addEventListener ('scroll', animOnScroll);
   
-  function animOnScroll () {
+  function animOnScroll (params) {
     for (let index = 0; index < animItems.length; index++) {
       const animItem = animItems[index];
       const animItemHeight = animItem.offsetHeight;
@@ -91,25 +77,24 @@ if (animItems.length > 0) {
         logoWhite.classList.remove('logo-white');
         iconsBlack.classList.add('display-none');
         iconsWhite.classList.remove('icons-white');
+      } else {
       }
     }
 }
-
 function offset(el) {
   const rect = el.getBoundingClientRect(),
     scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
 }
-
-// setTimeout(()=> {
+//setTimeout(()=> {
 //    animOnScroll();
-// }, 600);
+//}, 600);
 }
 
 //Отдельная функция для мобильной версии
   window.addEventListener ('scroll', animOnScrollMob);
-  function animOnScrollMob () {
+  function animOnScrollMob (params) {
       const logoMobileHeight = logoMobile.offsetHeight;
       const logoMobileOffset =  offset(logoMobile).top;
       const logoMobileStart = 4;
@@ -121,21 +106,28 @@ function offset(el) {
         videoPosition.classList.add ('main__photo-container--scroll');
         mainTitle.classList.add ('main__title--scroll');
         mainButton.classList.add ('main__button--scroll');
-        iconsBlack.classList.add('display-none');
-        iconsWhite.classList.remove('icons-white');
       
+      } else {
+      }
+      function offset(el) {
+        const rect = el.getBoundingClientRect(),
+          scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+          scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
       }
     }
 
-    // setTimeout(()=> {
-    //   animOnScrollMob();
-    // }, 800);
+    setTimeout(()=> {
+      animOnScrollMob();
+    }, 800);
+
+
 
 //Появление блоков при прокрутке
 //const animItem = animItems.length; //для себя запись сделала
 if (animBlocks.length > 0) {
   window.addEventListener ('scroll', animOnScrolling);
-  function animOnScrolling() {
+  function animOnScrolling (params) {
     for (let index = 0; index < animBlocks.length; index++) {
       const animBlock = animBlocks[index];
       const animBlockHeight = animBlock.offsetHeight;
@@ -146,17 +138,25 @@ if (animBlocks.length > 0) {
       if ((pageYOffset > animBlockOffset - animBlockPoint) && pageYOffset < (animBlockOffset + animBlockHeight)) {
         animBlock.classList.add ('active');
         
+      } else {
+ 
       }
     }
-  }
+}
 
+function offset(el) {
+  const rect = el.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
+}
 setTimeout(()=> {
   animOnScroll();
 }, 1500);
 
 }
 
-new Swiper('.image-slider', {
+new Swiper('.image-slider--pp', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -170,33 +170,13 @@ new Swiper('.image-slider', {
   },  
   draggable: true,
   loop: true,
-  autoplay: {
-    delay: 1000,
-  }
+ // autoplay: {
+ //  delay: 1000,
+ // }
 
 } );
 
 
-$(function() {
-	var marquee = $("#marquee"); 
-	marquee.css({"overflow": "hidden", "width": "200%"});
-	// оболочка для текста ввиде span (IE не любит дивы с inline-block)
-	marquee.wrapInner("<span>");
-	marquee.find("span").css({ "width": "50%", "display": "inline-block", "text-align":"center" }); 
-	marquee.append(marquee.find("span").clone()); // тут у нас два span с текстом
-	marquee.wrapInner("<div>");
-	marquee.find("div").css("width", "200%");
-	var reset = function() {
-		$(this).css("margin-left", "0%");
-		$(this).animate({ "margin-left": "-100%" }, 14000, 'linear', reset);
-	};
-	reset.call(marquee.find("div"));
-});
 
 
-const btn = document.getElementById('arrow-up');
 
-btn.addEventListener('click', () => window.scrollTo({
-  top: 0,
-  behavior: 'smooth',
-}));

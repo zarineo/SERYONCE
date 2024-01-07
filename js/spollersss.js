@@ -25,4 +25,29 @@ document.querySelectorAll('.footer__accordion-title').forEach((el)=> {
     })
 })
 
+document.querySelectorAll('.accordion__title').forEach((accord)=> {
+    accord.addEventListener('click', ()=> {
+        let accordDescription = accord.nextElementSibling;
+        let readMore = accord.firstElementChild;
+        let readLess = accord.lastElementChild;
+        if(accordDescription.style.maxHeight) {
+            document.querySelectorAll('.accordion__description').forEach((accord) => accord.style.maxHeight = null)
+            readMoreFun();
+            accordDescription.style.paddingBottom = '0';
+
+        } else {
+            document.querySelectorAll('.-accordion__description').forEach((accord) => accord.style.maxHeight = null);
+            accordDescription.style.maxHeight = accordDescription.scrollHeight + 16 + 'px';
+            readLessFun();
+            accordDescription.style.paddingBottom = '16px';
+        }
+    })
+})
+
+
+
+
+
+
+
 
