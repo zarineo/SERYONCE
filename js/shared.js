@@ -23,7 +23,9 @@ let iconsBlack = document.querySelector ('.icons-black');
 let logoMobile = document.querySelector ('.logo-mobile');
 let readMore = document.querySelector ('.read-more');
 let readLess = document.querySelector ('.read-less');
-let limited = document.querySelector ('.limited');
+let arrowUp = document.querySelector ('#arrow-up');
+console.log(arrowUp);
+
 
 
 readMore.addEventListener('click', readMoreFun);
@@ -155,46 +157,58 @@ setTimeout(()=> {
 }, 1500);
 
 }
+//
+// new Swiper('.image-slider', {
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: true,
+//     //dynamicBullets: true,
+//     centeredSlides: true,
+//   },
+//
+//   scrollbar: {
+//     el: '.swiper-scrollbar',
+// //возможность перетаскивать скролл
+//   },
+//   draggable: true,
+//   loop: true,
+//   autoplay: {
+//     delay: 1000,
+//   }
+// });
+//
+document.addEventListener('DOMContentLoaded', (event) => {
+  const marquee = document.getElementById('marquee');
+  let marqueeContent = marquee.innerHTML;
+  marquee.innerHTML = marqueeContent + marqueeContent; // Дублируем контент для непрерывности
 
-new Swiper('.image-slider', {
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    //dynamicBullets: true,
-    centeredSlides: true,
-  },
+  let marqueePos = 0;
+  const speed = 1; // Скорость движения
 
-  scrollbar: {
-    el: '.swiper-scrollbar',
-//возможность перетаскивать скролл
-  },  
-  draggable: true,
-  loop: true,
-  autoplay: {
-    delay: 1000,
+  function moveMarquee() {
+    marqueePos -= speed;
+
+    // Проверяем, достиг ли текст конца
+    if (-marqueePos >= marquee.offsetWidth / 3) {
+      marqueePos = 0;
+    }
+
+    marquee.style.transform = `translateX(${marqueePos}px)`;
+
+    requestAnimationFrame(moveMarquee);
   }
+
+  moveMarquee();
 });
 
 
-$(function() {
-	var marquee = $("#marquee"); 
-	marquee.css({"overflow": "hidden", "width": "200%"});
-	// оболочка для текста ввиде span (IE не любит дивы с inline-block)
-	marquee.wrapInner("<span>");
-	marquee.find("span").css({ "width": "50%", "display": "inline-block", "text-align":"center" }); 
-	marquee.append(marquee.find("span").clone()); // тут у нас два span с текстом
-	marquee.wrapInner("<div>");
-	marquee.find("div").css("width", "200%");
-	var reset = function() {
-		$(this).css("margin-left", "0%");
-		$(this).animate({ "margin-left": "-100%" }, 14000, 'linear', reset);
-	};
-	reset.call(marquee.find("div"));
-});
 
-
-const btn = document.getElementById('arrow-up');
-btn.addEventListener('click', () => window.scrollTo({
+arrowUp.addEventListener('click', () => {
+  window.scrollTo({
   top: 0,
   behavior: 'smooth',
-}));
+})
+      console.log('hi');
+
+    }
+);
