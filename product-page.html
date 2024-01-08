@@ -1,239 +1,330 @@
 ﻿<!DOCTYPE html>
 
 <html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="product.css">
-    <link rel="stylesheet" href="swipe--pp.css">
-    <link rel="stylesheet" href="fonts/font/stylesheet.css">
-    <link rel="preload" href="fonts/font/TildaSans-Light.woff2" as="font" type="font/woff2" crossorigin>
-    <title>AMAT</title>
-    <link type="image/x-icon" href="images/favicon.png" rel="shortcut icon">
-</head>
-<body>
-    <header class="main-header main-header--scroll">
-        <div class="wrapper">
-            <nav class="main-nav">
-                <ul class="main-nav__items--left flex-child anim-blocks">
-                    <li class="main-nav__item links">
-                        <a href="/index.html"> Коллекции </a>
-                    </li>
-                    <li class="main-nav__item links" id="brand">
-                        <a href="/index.html"> О бренде </a>
-                    </li>
-                </ul>
-                <div class="logo-container flex-child">
-                    <a href="/index.html"><img src="images/logo-b.svg" class="logo animItems" id="logo" /></a>
-                    <a href="/index.html"><img src="images/logo-white-small.svg" 
-                        class="logo-white" id="logo-white"/></a>
-                </div>
-                <ul class="main-nav__items--right flex-child icons-black">
-                    <li class="main-nav__item">
-                        <a href="/index.html"><img src="images/search-black.svg" /></a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="/index.html"><img src="images/favor-black.svg" /></a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="/index.html"><img src="images/shopping-bag.svg" /></a>
-                    </li>
-                </ul>
-                <ul class="main-nav__items--right flex-child icons-white anim-blocks">
-                    <li class="main-nav__item">
-                        <a href="/index.html"><img src="images/search-white.svg" /></a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="/index.html"><img src="images/favor-white.svg" /></a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="/index.html"><img src="images/shopping-bag-white.svg" /></a>
-                    </li>
-                </ul>
-            </nav>
-            <nav class="main-nav--mobile">
-                <!--верхнее меню в мобильной версии-->
-                <ul class="main-nav--mobile__items">
-                    <li class="main-nav--mobile__item">
-                        <a href="/index.html"><img src="images/shopping-bag-white.svg" /></a>
-                    </li>
-                    <li class="main-nav--mobile__item">
-                        <img src="images/hamburger-white.svg" id="open-menu" />
-                    </li>
-                    <div class="logo-container">
-                        <a href="/index.html"><img src="images/logo-white-small.svg" id="white-logo-mobile" /></a>
-                    </div>
-                </ul>
-            </nav>
-           
-            <!--Модальное окошко появляющегося меню-->
-            <nav class="mobile-nav">
-                <ul class="main-nav--mobile__items">
-                    <li class="main-nav--mobile__item">
-                        <a href="/index.html"><img src="images/logo-small.svg" class="logo-small" /></a>
-                    </li>
-                    <li class="main-nav--mobile__item">
-                        <img src="images/close.svg" id="close-menu" />
-                    </li>
-                </ul>
-                <div class="search-container">
-                    <form>
-                        <input type="text" name="text" class="search" 
-                               placeholder="Тип изделия, название...">
-                        <img src="images/search-in.svg" class="search-in">
-                    </form>
-                </div>
-                <ul class="main-nav--mobile-list__item">
-                    <li class="main-nav--mobile-list__items">
-                        <a href="/index.html"> Коллекции </a>
-                    </li>
-                    <li class="main-nav--mobile-list__items">
-                        <a href="/index.html"> О нас </a>
-                    </li>
-                    <li class="main-nav--mobile-list__items">
-                        <a href="/index.html"> Уход за изделиями </a>
-                    </li>
-                </ul>
-                <ul class="mobile-nav__items">
-                    <li class="mobile-nav__item links"><a href="/index.html"> Избранное </a>
-                        <img src="images/mobile-favor.png" class="mobile-favor" /></li>
-                    <li class="mobile-nav__item links"><a href="/adress.html"> Адрес </a></li>
-                    <li class="mobile-nav__item links"><a href="/help.html">Помощь</a></li>
-                    <li class="mobile-nav__item links"><a href="/contacts.html">Контакты</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main class="product-main" id="home">
-        <section>
-            <div class="image-slider--pp swiper-container">
-                <div class="image-slider__wrapper--pp swiper-wrapper">
-                    <div class="image-slider__slide--pp swiper-slide swiper-slide--pp">
-                        <img src="images/main.png">
-                    </div>
-                    <div class="image-slider__slide--pp swiper-slide swiper-slide--pp">
-                        <img src="images/main.png">
-                    </div>
-                    <div class="image-slider__slide--pp swiper-slide swiper-slide--pp">
-                        <img src="images/main.png">
-                    </div>
-                    <div class="image-slider__slide-pp swiper-slide swiper-slide--pp">
-                        <img src="images/main.png">
-                    </div>
-                    <div class="image-slider__slide--pp swiper-slide swiper-slide--pp">
-                        <img src="images/main.png">
-                    </div>
-
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
-        <section class="product">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="product.css" />
+        <link rel="stylesheet" href="swipe--pp.css" />
+        <link rel="stylesheet" href="fonts/font/stylesheet.css" />
+        <link
+            rel="preload"
+            href="fonts/font/TildaSans-Light.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <title>AMAT</title>
+        <link
+            type="image/x-icon"
+            href="images/favicon.png"
+            rel="shortcut icon"
+        />
+    </head>
+    <body>
+        <header class="main-header main-header--scroll">
             <div class="wrapper">
-                <div class="product__title">
-                    <h3 class="product__name">Платок "Алфавит"</h3>
-                    <p class="product__"></p>
-                </div>
-                <div class="product__characteristics"></div>
-                <div class="product__button black-button">Добавить в корзину</div>
-                <div class="product__description">Платок «Алфавит» с ручной подгибкой края платка.</div>
-            </div>
-
-        </section>
-        <section class="details">
-            <div class="wrapper">
-                <div class="details__accordion">
-                    <div class="details__accordion-title accordion__title">
-                        Детали
-                    </div>
-                    <ul class="details__accordion-items accordion__content">
-                        <li class="details__accorfion-item">Материал: Шёлк</li>
-                        <li class="details__accorfion-item">Ручная подгибка края</li>
+                <nav class="main-nav">
+                    <ul class="main-nav__items--left flex-child anim-blocks">
+                        <li class="main-nav__item links">
+                            <a href="/index.html"> Коллекции </a>
+                        </li>
+                        <li class="main-nav__item links" id="brand">
+                            <a href="/index.html"> О бренде </a>
+                        </li>
                     </ul>
-                </div>
-                <div class="details__accordion">
-                    <div class="details__accordion-title accordion__title">
-                        Значение рисунка
+                    <div class="logo-container flex-child">
+                        <a href="/index.html"
+                            ><img
+                                src="images/logo-b.svg"
+                                class="logo animItems"
+                                id="logo"
+                        /></a>
+                        <a href="/index.html"
+                            ><img
+                                src="images/logo-white-small.svg"
+                                class="logo-white"
+                                id="logo-white"
+                        /></a>
                     </div>
-                    <div class="details__accordion-items text accordion__content">
-                        Чеченский язык один из самых древнейших, красивейших
-                        и богатейших языков в мире. Скудным его может
-                        считать только тот, кто по‑настоящему не познал всю его
-                        глубину, изобилие и разнообразие. Язык этот, именуемый самими
-                        чеченцами языком матери, претерпел множество изменений за свою судьбу:
-                        с древних времён, с распространением ислама, использовался на основе
-                        арабской письменности, позднее, параллельно с арабской графикой
-                        в обиход была введена и письменность на кириллице, созданная
-                        П. Усларом, позже её сменила латиница, затем снова — кириллица.
-                        Но, сколько бы изменений не было, чеченцы никогда
-                        не оставляли и не забывали свой язык, из глубины
-                        веков берегли его, как зеницу ока.
-                        <p class="details__links links">
-                            <a href="#"> Читать полностью</a>
-                        </p>
-                        <div class="details__photo-container">
-                            <img src="images/picture-means.png">
+                    <ul class="main-nav__items--right flex-child icons-black">
+                        <li class="main-nav__item">
+                            <a href="/index.html"
+                                ><img src="images/search-black.svg"
+                            /></a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="/index.html"
+                                ><img src="images/favor-black.svg"
+                            /></a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="/index.html"
+                                ><img src="images/shopping-bag.svg"
+                            /></a>
+                        </li>
+                    </ul>
+                    <ul
+                        class="main-nav__items--right flex-child icons-white anim-blocks"
+                    >
+                        <li class="main-nav__item">
+                            <a href="/index.html"
+                                ><img src="images/search-white.svg"
+                            /></a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="/index.html"
+                                ><img src="images/favor-white.svg"
+                            /></a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="/index.html"
+                                ><img src="images/shopping-bag-white.svg"
+                            /></a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="main-nav--mobile">
+                    <!--верхнее меню в мобильной версии-->
+                    <ul class="main-nav--mobile__items">
+                        <li class="main-nav--mobile__item">
+                            <a href="/index.html"
+                                ><img src="images/shopping-bag-white.svg"
+                            /></a>
+                        </li>
+                        <li class="main-nav--mobile__item">
+                            <img
+                                src="images/hamburger-white.svg"
+                                id="open-menu"
+                            />
+                        </li>
+                        <div class="logo-container">
+                            <a href="/index.html"
+                                ><img
+                                    src="images/logo-white-small.svg"
+                                    id="white-logo-mobile"
+                            /></a>
+                        </div>
+                    </ul>
+                </nav>
+
+                <!--Модальное окошко появляющегося меню-->
+                <nav class="mobile-nav">
+                    <ul class="main-nav--mobile__items">
+                        <li class="main-nav--mobile__item">
+                            <a href="/index.html"
+                                ><img
+                                    src="images/logo-small.svg"
+                                    class="logo-small"
+                            /></a>
+                        </li>
+                        <li class="main-nav--mobile__item">
+                            <img src="images/close.svg" id="close-menu" />
+                        </li>
+                    </ul>
+                    <div class="search-container">
+                        <form>
+                            <input
+                                type="text"
+                                name="text"
+                                class="search"
+                                placeholder="Тип изделия, название..."
+                            />
+                            <img src="images/search-in.svg" class="search-in" />
+                        </form>
+                    </div>
+                    <ul class="main-nav--mobile-list__item">
+                        <li class="main-nav--mobile-list__items">
+                            <a href="/index.html"> Коллекции </a>
+                        </li>
+                        <li class="main-nav--mobile-list__items">
+                            <a href="/index.html"> О нас </a>
+                        </li>
+                        <li class="main-nav--mobile-list__items">
+                            <a href="/index.html"> Уход за изделиями </a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-nav__items">
+                        <li class="mobile-nav__item links">
+                            <a href="/index.html"> Избранное </a>
+                            <img
+                                src="images/mobile-favor.png"
+                                class="mobile-favor"
+                            />
+                        </li>
+                        <li class="mobile-nav__item links">
+                            <a href="/adress.html"> Адрес </a>
+                        </li>
+                        <li class="mobile-nav__item links">
+                            <a href="/help.html">Помощь</a>
+                        </li>
+                        <li class="mobile-nav__item links">
+                            <a href="/contacts.html">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="product" id="home">
+            <section>
+                <div class="image-slider--pp swiper-container">
+                    <div class="image-slider__wrapper--pp swiper-wrapper">
+                        <div
+                            class="image-slider__slide--pp swiper-slide swiper-slide--pp"
+                        >
+                            <img src="images/main.png" />
+                        </div>
+                        <div
+                            class="image-slider__slide--pp swiper-slide swiper-slide--pp"
+                        >
+                            <img src="images/main.png" />
+                        </div>
+                        <div
+                            class="image-slider__slide--pp swiper-slide swiper-slide--pp"
+                        >
+                            <img src="images/main.png" />
+                        </div>
+                        <div
+                            class="image-slider__slide-pp swiper-slide swiper-slide--pp"
+                        >
+                            <img src="images/main.png" />
+                        </div>
+                        <div
+                            class="image-slider__slide--pp swiper-slide swiper-slide--pp"
+                        >
+                            <img src="images/main.png" />
                         </div>
                     </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+            <section class="product">
+                <div class="section-wrapper">
+                    <div class="product__title">
+                        <h3 class="product__name">Платок "Алфавит"</h3>
+                        <p class="product__"></p>
+                    </div>
+                    <div class="product__characteristics"></div>
+                    <div class="product__button black-button">
+                        Добавить в корзину
+                    </div>
+                    <div class="product__description">
+                        Платок «Алфавит» с ручной подгибкой края платка.
+                    </div>
+                </div>
+            </section>
+            <section class="details">
+                <div class="wrapper">
+                    <div class="details__accordion">
+                        <div class="details__accordion-title accordion__title">
+                            Детали
+                        </div>
+                        <ul class="details__accordion-items accordion__content">
+                            <li class="details__accorfion-item">
+                                Материал: Шёлк
+                            </li>
+                            <li class="details__accorfion-item">
+                                Ручная подгибка края
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="details__accordion">
+                        <div class="details__accordion-title accordion__title">
+                            Значение рисунка
+                        </div>
+                        <div
+                            class="details__accordion-items text accordion__content"
+                        >
+                            Чеченский язык один из самых древнейших, красивейших
+                            и богатейших языков в мире. Скудным его может
+                            считать только тот, кто по‑настоящему не познал
+                            всю его глубину, изобилие и разнообразие. Язык этот,
+                            именуемый самими чеченцами языком матери, претерпел
+                            множество изменений за свою судьбу: с древних
+                            времён, с распространением ислама, использовался
+                            на основе арабской письменности, позднее,
+                            параллельно с арабской графикой в обиход была
+                            введена и письменность на кириллице, созданная
+                            П. Усларом, позже её сменила латиница, затем снова —
+                            кириллица. Но, сколько бы изменений не было, чеченцы
+                            никогда не оставляли и не забывали свой язык,
+                            из глубины веков берегли его, как зеницу ока.
+                            <p class="details__links links">
+                                <a href="#"> Читать полностью</a>
+                            </p>
+                            <div class="details__photo-container">
+                                <img src="images/picture-means.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="style">
+                <a href="#modal-map" id="open-map"> на карте </a>
+                <div id="backdrop"></div>
+                <div class="close-map"></div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="wrapper">
+                <div class="footer__logo-container">
+                    <img src="images/logo-white.png" alt="AMAT" />
+                </div>
+                <h3 class="footer__title">Узнавайте первыми о новинках</h3>
+                <form
+                    class="flex-box"
+                    method="post"
+                    action="http://localhost/dashboard/send.php"
+                >
+                    <input
+                        type="email"
+                        class="send-mail"
+                        name="email"
+                        placeholder="Эл. почта"
+                    />
+                    <input id="send-mail__button" type="submit" />
+                    <img src="images/arrow-right.svg" class="arrow-right" />
+                </form>
+                <p class="footer__text">
+                    Нажимая на кнопку «Подписаться», вы соглашаетесь c
+                    <a href="policy.html">Политикой конфиденциальности</a> и
+                    <a href="oferta.html">офертой</a>.
+                </p>
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__contacts-flex links">
+                    <a href="#">WhatsApp</a>
+                    <a href="#">Telegram</a>
+                    <a href="#">VK</a>
+                </div>
+                <a href="mailto:amat.textile@gmail.com" class="footer__mail"
+                    >amat.textile@gmail.com
+                </a>
+                <a href="tel:79889088787" class="footer__phone">
+                    +7 988 908-87-87</a
+                >
+                <div class="seryonse">
+                    Сайт разработан с любовью <br />
+                    в веб-студии <a href="https://seryonse.ru/">SERYONSE</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p class="copyright__text">© АМАТ. Все права защищены</p>
+                <p class="copyright__text">
+                    <a href="policy.html">Политика конфиденциальности</a>
+                </p>
             </div>
 
+            <div class="arrow-up">
+                <a href="#home"><img src="images/arrow-up.svg" /></a>
             </div>
-        </section>
+        </footer>
 
-        <section class="style">
-            <a href="#modal-map" id="open-map">  на карте </a>
-            <div id="backdrop"></div>
-            <div class="close-map"></div>
-        </section>
-    </main>
-
-
-
-    <footer class="footer">
-        <div class="wrapper">
-            <div class="footer__logo-container">
-                <img src="images/logo-white.png" alt="AMAT">
-            </div>
-            <h3 class="footer__title">
-                Узнавайте первыми о новинках
-            </h3>
-            <form class="flex-box" method="post" action="http://localhost/dashboard/send.php">
-                <input type="email" class="send-mail" name="email" placeholder="Эл. почта"/>
-                <input id="send-mail__button" type="submit">
-                <img src="images/arrow-right.svg" class="arrow-right">
-            </form>
-            <p class="footer__text">
-                Нажимая на кнопку «Подписаться», вы соглашаетесь c 
-                <a href="policy.html">Политикой конфиденциальности</a> и <a href="oferta.html">офертой</a>. 
-            </p>
-        </div>
-        <div class="footer__contacts">
-            <div class="footer__contacts-flex links">
-                <a href="#">WhatsApp</a> 
-                <a href="#">Telegram</a> 
-                <a href="#">VK</a> 
-            </div>
-            <a href="mailto:amat.textile@gmail.com" class="footer__mail">amat.textile@gmail.com </a>
-            <a href="tel:79889088787" class="footer__phone"> +7 988 908-87-87</a>
-            <div class="seryonse">
-                 Сайт разработан с любовью <br> в веб-студии <a href="https://seryonse.ru/">SERYONSE</a> 
-            </div>
-        </div>
-        <div class="copyright">
-            <p class="copyright__text">© АМАТ. Все права защищены</p>
-            <p class="copyright__text">
-            <a href="policy.html">Политика конфиденциальности</p>
-        </div>
-        <div class="arrow-up">
-          <a href="#home"><img src="images/arrow-up.svg"></a>
-        </div>
-    </footer>
-
-    <script src="swipe-star.js"></script>
-    <script src="product.js"></script>
-    <script src="shared.js"></script>
-    <script src="spollersss.js"></script>
-
-</body>
+        <script src="swipe-star.js"></script>
+        <script src="product.js"></script>
+        <script src="shared.js"></script>
+        <script src="spollersss.js"></script>
+    </body>
 </html>

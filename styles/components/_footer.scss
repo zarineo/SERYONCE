@@ -1,4 +1,4 @@
-﻿@import "../_varyables.scss";
+﻿
 .footer {
     background: $graphicBlack;
     color: $textWhite100;
@@ -105,7 +105,7 @@ form {
     letter-spacing: 0;
     text-align: left;
     color: $textWhite50;
-    border-top:  0.5px $graphicWhite50 solid;
+    border-top: 0.5px $graphicWhite50 solid;
     a {
         color: $textWhite50;
         display: inline-block;

@@ -1,566 +1,706 @@
 ﻿<!DOCTYPE html>
 
 <html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="swiper/css/swipe.css">
-    <link rel="stylesheet" href="fonts/font/stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="swiper/css/swipe.css" />
+    <link rel="stylesheet" href="fonts/font/stylesheet.css" />
     <title>AMAT</title>
-    <link type="image/x-icon" href="images/png/logo-white.png" rel="shortcut icon">
-</head>
-<body>
+    <link
+      type="image/x-icon"
+      href="images/png/logo-white.png"
+      rel="shortcut icon"
+    />
+  </head>
+  <body>
     <header class="main-header">
-        <div class="wrapper">
-            <nav class="main-nav">
-                <ul class="main-nav__items--left flex-child anim-blocks">
-                    <li class="main-nav__item links">
-                        <a href="/index.html"> Коллекции </a>
-                    </li>
-                    <li class="main-nav__item links" id="brand">
-                        <a href="/index.html"> О бренде </a>
-                    </li>
-                </ul>
-                <div class="logo-container flex-child">
-                    <a href="/index.html"><img src="images/svg/logo-b.svg" alt="logo" class="logo animItems" id="logo" /></a>
-                    <a href="/index.html"><img src="images/svg/logo-white-small.svg"
-                        class="logo-white" id="logo-white"/></a>
-                </div>
-                <ul class="main-nav__items--right flex-child icons-black anim-item">
-                    <li class="main-nav__item">
-                        <a href="/index.html"><img src="images/svg/search-black.svg" /></a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="/index.html"><img src="images/svg/favor-black.svg" /></a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="/index.html"><img src="images/svg/shopping-bag.svg" /></a>
-                    </li>
-                </ul>
-                <ul class="main-nav__items--right flex-child icons-white anim-blocks">
-                    <li class="main-nav__item">
-                        <a href="/index.html"><img src="images/svg/search-white.svg" /></a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="/index.html"><img src="images/svg/favor-white.svg" /></a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="/index.html"><img src="images/svg/shopping-bag-white.svg" /></a>
-                    </li>
-                </ul>
-            </nav>
-            <nav class="main-nav--mobile">
-                <!--верхнее меню в мобильной версии-->
-                <ul class="main-nav--mobile__items">
-                    <li class="main-nav--mobile__item">
-                        <a href="/index.html">
-                            <img src="images/svg/shopping-bag.svg"  class="icons-black anim-blocks"/>
-                            <img src="images/svg/shopping-bag-white.svg" class="icons-white anim-blocks" />
-                        </a>
-                    </li>
-                    <li class="main-nav--mobile__item">
-                        <img src="images/svg/hamburger.svg" id="open-menu" class="icons-black anim-blocks"/>
-                        <img src="images/svg/hamburger-white.svg" id="open-menu-w" class="icons-white anim-blocks"/>
-                    </li>
-                    <div class="logo-container">
-                        <a href="/index.html"><img src="images/svg/logo-b.svg" class="logo-mobile"/></a>
-                        <a href="/index.html"><img src="images/svg/logo-white-small.svg" class="logo-mobile" id="white-logo-mobile"/></a>
-                    </div>
-                </ul>
-            </nav>
+      <div class="wrapper">
+        <nav class="main-nav">
+          <ul class="main-nav__items--left flex-child anim-blocks">
+            <li class="main-nav__item links">
+              <a href="/index.html"> Коллекции </a>
+            </li>
+            <li class="main-nav__item links" id="brand">
+              <a href="/index.html"> О бренде </a>
+            </li>
+          </ul>
+          <div class="logo-container flex-child">
+            <a href="/index.html"
+              ><img
+                src="images/svg/logo-b.svg"
+                alt="logo"
+                class="logo animItems"
+                id="logo"
+            /></a>
+            <a href="/index.html"
+              ><img
+                src="images/svg/logo-white-small.svg"
+                class="logo-white"
+                id="logo-white"
+            /></a>
+          </div>
+          <ul class="main-nav__items--right flex-child icons-black anim-item">
+            <li class="main-nav__item">
+              <a href="/index.html"
+                ><img src="images/svg/search-black.svg"
+              /></a>
+            </li>
+            <li class="main-nav__item">
+              <a href="/index.html"><img src="images/svg/favor-black.svg" /></a>
+            </li>
+            <li class="main-nav__item">
+              <a href="/index.html"
+                ><img src="images/svg/shopping-bag.svg"
+              /></a>
+            </li>
+          </ul>
+          <ul class="main-nav__items--right flex-child icons-white anim-blocks">
+            <li class="main-nav__item">
+              <a href="/index.html"
+                ><img src="images/svg/search-white.svg"
+              /></a>
+            </li>
+            <li class="main-nav__item">
+              <a href="/index.html"><img src="images/svg/favor-white.svg" /></a>
+            </li>
+            <li class="main-nav__item">
+              <a href="/index.html"
+                ><img src="images/svg/shopping-bag-white.svg"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="main-nav--mobile">
+          <!--верхнее меню в мобильной версии-->
+          <ul class="main-nav--mobile__items">
+            <li class="main-nav--mobile__item">
+              <a href="/index.html">
+                <img
+                  src="images/svg/shopping-bag.svg"
+                  class="icons-black anim-blocks"
+                />
+                <img
+                  src="images/svg/shopping-bag-white.svg"
+                  class="icons-white anim-blocks"
+                />
+              </a>
+            </li>
+            <li class="main-nav--mobile__item">
+              <img
+                src="images/svg/hamburger.svg"
+                id="open-menu"
+                class="icons-black anim-blocks"
+              />
+              <img
+                src="images/svg/hamburger-white.svg"
+                id="open-menu-w"
+                class="icons-white anim-blocks"
+              />
+            </li>
+            <div class="logo-container">
+              <a href="/index.html"
+                ><img src="images/svg/logo-b.svg" class="logo-mobile"
+              /></a>
+              <a href="/index.html"
+                ><img
+                  src="images/svg/logo-white-small.svg"
+                  class="logo-mobile"
+                  id="white-logo-mobile"
+              /></a>
+            </div>
+          </ul>
+        </nav>
 
-            <!--Модальное окошко появляющегося меню-->
-            <nav class="mobile-nav">
-                <ul class="main-nav--mobile__items">
-                    <li class="main-nav--mobile__item">
-                        <a href="/index.html"><img src="images/svg/logo-small.svg" class="logo-small" /></a>
-                    </li>
-                    <li class="main-nav--mobile__item">
-                        <img src="images/svg/close.svg" id="close-menu" />
-                    </li>
-                </ul>
-                <div class="search-container">
-                    <form>
-                        <input type="text" name="text" class="search"
-                               placeholder="Тип изделия, название...">
-                        <img src="images/svg/search-in.svg" class="search-in">
-                    </form>
-                </div>
-                <ul class="main-nav--mobile-list__item">
-                    <li class="main-nav--mobile-list__items">
-                        <a href="/index.html"> Коллекции </a>
-                    </li>
-                    <li class="main-nav--mobile-list__items">
-                        <a href="/index.html"> О нас </a>
-                    </li>
-                    <li class="main-nav--mobile-list__items">
-                        <a href="/index.html"> Уход за изделиями </a>
-                    </li>
-                </ul>
-                <ul class="mobile-nav__items">
-                    <li class="mobile-nav__item links"><a href="/index.html"> Избранное </a>
-                        <img src="images/png/mobile-favor.png" class="mobile-favor" /></li>
-                    <li class="mobile-nav__item links"><a href="/adress.html"> Адрес </a></li>
-                    <li class="mobile-nav__item links"><a href="/help.html">Помощь</a></li>
-                    <li class="mobile-nav__item links"><a href="/contacts.html">Контакты</a></li>
-                </ul>
-
-            </nav>
-        </div>
+        <!--Модальное окошко появляющегося меню-->
+        <nav class="mobile-nav">
+          <ul class="main-nav--mobile__items">
+            <li class="main-nav--mobile__item">
+              <a href="/index.html"
+                ><img src="images/svg/logo-small.svg" class="logo-small"
+              /></a>
+            </li>
+            <li class="main-nav--mobile__item">
+              <img src="images/svg/close.svg" id="close-menu" />
+            </li>
+          </ul>
+          <div class="search-container">
+            <form>
+              <input
+                type="text"
+                name="text"
+                class="search"
+                placeholder="Тип изделия, название..."
+              />
+              <img src="images/svg/search-in.svg" class="search-in" />
+            </form>
+          </div>
+          <ul class="main-nav--mobile-list__item">
+            <li class="main-nav--mobile-list__items">
+              <a href="/index.html"> Коллекции </a>
+            </li>
+            <li class="main-nav--mobile-list__items">
+              <a href="/index.html"> О нас </a>
+            </li>
+            <li class="main-nav--mobile-list__items">
+              <a href="/index.html"> Уход за изделиями </a>
+            </li>
+          </ul>
+          <ul class="mobile-nav__items">
+            <li class="mobile-nav__item links">
+              <a href="/index.html"> Избранное </a>
+              <img src="images/png/mobile-favor.png" class="mobile-favor" />
+            </li>
+            <li class="mobile-nav__item links">
+              <a href="/adress.html"> Адрес </a>
+            </li>
+            <li class="mobile-nav__item links">
+              <a href="/help.html">Помощь</a>
+            </li>
+            <li class="mobile-nav__item links">
+              <a href="/contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
-        <section class="main" id="home">
-            <div class="main__photo-container"><!--<img src="images/main.png" class="main__back" />--></div>
-            <h1 class="main__title"> Коллекция твилли </h1>
-            <p class="main__button button--white"> Откройте для себя коллекцию </p>
-        </section>
-        <section class="slider">
-            <h2 class="slider__block-title">
-                Избранные платки
-            </h2>
-            <div class="image-slider swiper-container">
-                <div class="image-slider__wrapper swiper-wrapper">
-                    <div class="image-slider__slide swiper-slide">
-                        <div class="swiper__flex">
-                            <img src="images/png/carousel-middle.png">
-                            <div class="swipe__description-container">
-                                <p class="swipe__image-description">
-                                    «Даймохк»
-                                </p>
-                                <p class="swipe__collection-link  links">
-                                    <a href="product-page.html"> Смотреть </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="image-slider__slide swiper-slide">
-                        <div class="swiper__flex">
-                            <img src="images/png/carousel-middle.png">
-                            <div class="swipe__description-container">
-                                <p class="swipe__image-description">
-                                    «Даймохк»
-                                </p>
-                                <p class="swipe__collection-link links">
-                                    <a href="product-page.html"> Смотреть </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="image-slider__slide swiper-slide">
-                        <div class="swiper__flex">
-                            <img src="images/png/carousel-middle.png">
-                            <div class="swipe__description-container">
-                                <p class="swipe__image-description">
-                                    «Даймохк»
-                                </p>
-                                <p class="swipe__collection-link links">
-                                    <a href="product-page.html"> Смотреть </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="image-slider__slide swiper-slide">
-                        <div class="swiper__flex">
-                            <img src="images/png/carousel-middle.png">
-                            <div class="swipe__description-container">
-                                <p class="swipe__image-description">
-                                    «Даймохк»
-                                </p>
-                                <p class="swipe__collection- links links">
-                                    <a href="product-page.html"> Смотреть </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="image-slider__slide swiper-slide">
-                        <div class="swiper__flex">
-                            <img src="images/png/carousel-middle.png">
-                            <div class="swipe__description-container">
-                                <p class="swipe__image-description">
-                                    «Даймохк»
-                                </p>
-                                <p class="swipe__collection-link links links">
-                                    <a href="product-page.html"> Смотреть </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+      <section class="home-video">
+        <div class="home-video__container"></div>
+        <h1 class="home-video__title">Коллекция твилли</h1>
+        <button class="home-video__button button">
+          Откройте для себя коллекцию
+        </button>
+      </section>
+      <section class="slider">
+        <h2 class="slider__block-title">Избранные платки</h2>
+        <div class="image-slider swiper-container">
+          <div class="image-slider__wrapper swiper-wrapper">
+            <div class="image-slider__slide swiper-slide">
+              <div class="swiper__flex">
+                <img src="images/png/carousel-middle.png" />
+                <div class="swipe__description-container">
+                  <p class="swipe__image-description">«Даймохк»</p>
+                  <p class="swipe__collection-link links">
+                    <a href="product-page.html"> Смотреть </a>
+                  </p>
                 </div>
-                <div class="swiper-pagination"></div>
+              </div>
             </div>
-        </section>
-        <section class="history">
-            <div class="history__photo-container anim-blocks">
-                <!-- <img src="images/history.png" /> -->
+            <div class="image-slider__slide swiper-slide">
+              <div class="swiper__flex">
+                <img src="images/png/carousel-middle.png" />
+                <div class="swipe__description-container">
+                  <p class="swipe__image-description">«Даймохк»</p>
+                  <p class="swipe__collection-link links">
+                    <a href="product-page.html"> Смотреть </a>
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="wrapper">
-                <div class="history__logo-container anim-blocks">
-                    <img src="images/svg/logo-pic.svg" />
+            <div class="image-slider__slide swiper-slide">
+              <div class="swiper__flex">
+                <img src="images/png/carousel-middle.png" />
+                <div class="swipe__description-container">
+                  <p class="swipe__image-description">«Даймохк»</p>
+                  <p class="swipe__collection-link links">
+                    <a href="product-page.html"> Смотреть </a>
+                  </p>
                 </div>
-                <h2 class="history__title anim-blocks">
-                    История и видение Амат
-                </h2>
-                <p class="history__description anim-blocks">
-                    «АМАТ» — это не просто коллекция шёлковых аксессуаров
-                    премиального качества, но и отражение внутреннего мира художника.
-                    Автор создаёт образы, которые навеяны чувством любви к родине,
-                    матери, природе — ко всему прекрасному.
-                </p>
-                <p class="history__link links">
-                    <a href="/index.html">  Откройте для себя мир Амат </a>
-                </p>
+              </div>
             </div>
-        </section>
-        <section class="collections">
-            <nav class="main-nav main-nav--collections  anim-blocks">
-                <ul class="main-nav__items--left flex-child anim-blocks">
-                    <li class="main-nav__item links">
-                        <a href="/index.html"> Коллекции </a>
-                    </li>
-                    <li class="main-nav__item links" id="brand--col">
-                        <a href="/index.html"> О бренде </a>
-                    </li>
-                </ul>
-                <div class="logo-container flex-child">
-                    <a href="/index.html">
-                        <img src="images/svg/logo-white-small.svg"
-                             class="logo-white" id="logo-white--col" />
-                    </a>
+            <div class="image-slider__slide swiper-slide">
+              <div class="swiper__flex">
+                <img src="images/png/carousel-middle.png" />
+                <div class="swipe__description-container">
+                  <p class="swipe__image-description">«Даймохк»</p>
+                  <p class="swipe__collection- links links">
+                    <a href="product-page.html"> Смотреть </a>
+                  </p>
                 </div>
-                <ul class="main-nav__items--right flex-child icons-white--collections anim-blocks">
-                    <li class="main-nav__item">
-                        <a href="/index.html"><img src="images/svg/search-white.svg" /></a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="/index.html"><img src="images/svg/favor-white.svg" /></a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="/index.html"><img src="images/svg/shopping-bag-white.svg" /></a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="wrapper">
-                <div class="collections__photo-container">
-                    <a href="/index.html">
-                        <img src="images/png/title1.png" class="collections__photo anim-blocks" />
-                        <h3 class="collections__photo-description anim-blocks description-top">
-                            Базовые платки
-                        </h3>
-                        </a>
+              </div>
+            </div>
+            <div class="image-slider__slide swiper-slide">
+              <div class="swiper__flex">
+                <img src="images/png/carousel-middle.png" />
+                <div class="swipe__description-container">
+                  <p class="swipe__image-description">«Даймохк»</p>
+                  <p class="swipe__collection-link links links">
+                    <a href="product-page.html"> Смотреть </a>
+                  </p>
                 </div>
-                <div class="collections__photo-container">
-                    <a href="/index.html">
-                        <img src="images/png/title2.png" class="collections__photo anim-blocks" />
-                        <h3 class="collections__photo-description anim-blocks description-top">
-                            Тематические платки
-                        </h3>
-                    </a>
-                </div>
-                <div class="collections__photo-container">
-                    <a href="/index.html">
-                        <img src="images/png/title3.png" class="collections__photo anim-blocks" />
-                        <h3 class="collections__photo-description anim-blocks">
-                            Шали
-                        </h3>
-                    </a>
-                </div>
-                <div class="collections__photo-container">
-                    <a href="/index.html">
-                    <img src="images/png/title4.png" class="collections__photo anim-blocks" />
-                    <h3 class="collections__photo-description anim-blocks">
-                        Градиенты
-                    </h3>
-                    </a>
-                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <section class="history">
+        <div class="section-wrapper">
+          <div class="history-photo__container anim-blocks">
+            <img src="images/png/history.png">
+          </div>
+          <div class="flex-box">
+            <div class="history-logo__container anim-blocks">
+              <img src="images/svg/logo-pic.svg" />
+            </div>
+            <h2 class="history-title anim-blocks">История и видение Амат</h2>
+            <p class="history-description anim-blocks">
+              «АМАТ» — это не просто коллекция шёлковых аксессуаров премиального
+              качества, но и отражение внутреннего мира художника. Автор создаёт
+              образы, которые навеяны чувством любви к родине, матери, природе —
+              ко всему прекрасному.
+            </p>
+            <p class="history-link links">
+              <a href="/index.html"> Откройте для себя мир Амат </a>
+            </p>
+          </div>
 
-                <div class="collections__photo-container">
-                    <a href="/index.html">
-                    <img src="images/png/title1.png" class="collections__photo anim-blocks" />
-                    <h3 class="collections__photo-description anim-blocks">
-                        Твилли
-                    </h3>
-                </a>
-                </div>
-                <div class="collections__photo-container" id="last-cont">
-                    <a href="/index.html">
-                    <img src="images/png/title1.png" class="collections__photo anim-blocks" />
-                    <h3 class="collections__photo-description anim-blocks">
-                        Шарфы
-                    </h3>
-                    </a>
-                </div>
-                <div class="marquee-container">
-                    <div id="marquee">
-                        <span class="marq-dot"></span> индивидуальность
-                        <span class="marq-dot"></span> гармония
-                        <span class="marq-dot"></span> классика
-                        <span class="marq-dot"></span> индивидуальность
-                        <span class="marq-dot"></span> гармония
-                        <span class="marq-dot"></span> классика
-                        <span class="marq-dot"></span> индивидуальность
-                        <span class="marq-dot"></span> гармония
-                        <span class="marq-dot"></span> классика
-                        <!-- Повторите элементы столько раз, сколько необходимо для заполнения ширины маркизы -->
-                    </div>
-                </div>
+        </div>
+      </section>
 
-            </div>
+      <section class="collections">
+        <nav class="main-nav main-nav--collections anim-blocks">
+          <ul class="main-nav__items--left flex-child anim-blocks">
+            <li class="main-nav__item links">
+              <a href="/index.html"> Коллекции </a>
+            </li>
+            <li class="main-nav__item links" id="brand--col">
+              <a href="/index.html"> О бренде </a>
+            </li>
+          </ul>
+          <div class="logo-container flex-child">
+            <a href="/index.html">
+              <img
+                src="images/svg/logo-white-small.svg"
+                class="logo-white"
+                id="logo-white--col"
+              />
+            </a>
+          </div>
+          <ul
+            class="main-nav__items--right flex-child icons-white--collections anim-blocks"
+          >
+            <li class="main-nav__item">
+              <a href="/index.html"
+                ><img src="images/svg/search-white.svg"
+              /></a>
+            </li>
+            <li class="main-nav__item">
+              <a href="/index.html"><img src="images/svg/favor-white.svg" /></a>
+            </li>
+            <li class="main-nav__item">
+              <a href="/index.html"
+                ><img src="images/svg/shopping-bag-white.svg"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="section-wrapper">
+          <div class="collections__photo-container">
+            <a href="/index.html">
+              <img
+                src="images/png/title1.png"
+                class="collections__photo anim-blocks"
+              />
+              <h3
+                class="collections__photo-description anim-blocks description-top"
+              >
+                Базовые платки
+              </h3>
+            </a>
+          </div>
+          <div class="collections__photo-container">
+            <a href="/index.html">
+              <img
+                src="images/png/title2.png"
+                class="collections__photo anim-blocks"
+              />
+              <h3
+                class="collections__photo-description anim-blocks description-top"
+              >
+                Тематические <br> платки
+              </h3>
+            </a>
+          </div>
+          <div class="collections__photo-container">
+            <a href="/index.html">
+              <img
+                src="images/png/title3.png"
+                class="collections__photo anim-blocks"
+              />
+              <h3 class="collections__photo-description anim-blocks">Шали</h3>
+            </a>
+          </div>
+          <div class="collections__photo-container">
+            <a href="/index.html">
+              <img
+                src="images/png/title4.png"
+                class="collections__photo anim-blocks"
+              />
+              <h3 class="collections__photo-description anim-blocks">
+                Градиенты
+              </h3>
+            </a>
+          </div>
 
-        </section>
+          <div class="collections__photo-container">
+            <a href="/index.html">
+              <img
+                src="images/png/title1.png"
+                class="collections__photo anim-blocks"
+              />
+              <h3 class="collections__photo-description anim-blocks">Твилли</h3>
+            </a>
+          </div>
+          <div class="collections__photo-container" id="last-cont">
+            <a href="/index.html">
+              <img
+                src="images/png/title1.png"
+                class="collections__photo anim-blocks"
+              />
+              <h3 class="collections__photo-description anim-blocks">Шарфы</h3>
+            </a>
+          </div>
+          <div class="marquee-container">
+            <div id="marquee">
+              <span class="marq-dot"></span> индивидуальность
+              <span class="marq-dot"></span> гармония
+              <span class="marq-dot"></span> классика
+              <span class="marq-dot"></span> индивидуальность
+              <span class="marq-dot"></span> гармония
+              <span class="marq-dot"></span> классика
+              <span class="marq-dot"></span> индивидуальность
+              <span class="marq-dot"></span> гармония
+              <span class="marq-dot"></span> классика
+              <!-- Повторите элементы столько раз, сколько необходимо для заполнения ширины маркизы -->
+            </div>
+          </div>
+        </div>
+      </section>
 
-
-        <section class="style">
-            <div class="wrapper">
-                <div class="style__flex-box">
-                    <h3 class="style__title--elegance anim-blocks">Элегантный стиль с Амат</h3>
-                    <div class="style__video-container">
-                        <!-- <video></video> -->
-                        <img src="images/png/style.png" alt="Элегантный стиль с Амат">
-                    </div>
-
-                    <p class="style__text anim-blocks">
-                        Стилист Aurea Donna рассказывает о модных трендах 2023
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section class="gifts">
-            <div class="wrapper gifts__flex-box">
-                <h3 class="style__title anim-blocks"> Искусство дарить</h3>
-                <div class="style__photo-container">
-                    <img src="images/png/gifts.png" alt="Платки на подарки">
-                </div>
-                <p class="style__text anim-blocks">
-                    Платки AMAT — это эксклюзив, это сувенир.
-                    Это ценный и желанный подарок для прекрасной половины человечества.
-                </p>
-                <p class="style__link links">
-                    <a href="/index.html">  Выбрать подарок </a>
-                </p>
-            </div>
-        </section>
-        <section class="fitting">
-            <div class="fitting__flex-box wrapper">
-                <h3 class="fitting__title anim-blocks fitting__title--mobile "> Примерка платков </h3>
-                <div class="fitting__photo-container">
-                    <img src="images/png/store.png" alt="Магазин">
-                </div>
-                <div class="flex-box">
-                    <h3 class="fitting__title anim-blocks fitting__title--desktop"> Примерка платков </h3>
-                    <p class="fitting__text anim-blocks bold">
-                        12:00−21:00 ежедневно
-                    </p>
-                    <p class="fitting__text anim-blocks"> Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж</p>
-                    <p class="fitting__links links">
-                        <a href="#modal-map" id="open-map"> Посмотреть на карте </a>
-                        <div id="backdrop"></div>
-                        <div id="modal-map">
-                            <div class="close-map">
-                                <img src="images/svg/close.svg">
-                            </div>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1152.1486041971975!2d45.69956996964888!3d43.30939049464909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4051d3f76825b0bf%3A0xb4639001e07cfd29!2sGrand%20Park!5e0!3m2!1sru!2sru!4v1702750981293!5m2!1sru!2sru"
-                                    width="100%" height="100%" style="border:0;" allowfullscreen=""
-                                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="wrapper">
-            <div class="footer__logo-container">
-                <img src="images/svg/logo-white.svg" alt="AMAT">
-            </div>
-            <h3 class="footer__title anim-blocks">
-                Узнавайте первыми о новинках
+      <section class="style">
+        <div class="section-wrapper style__flex-box">
+            <h3 class="style__title--elegance anim-blocks">
+              Элегантный стиль с Амат
             </h3>
+            <div class="style__video-container">
+              <!-- <video></video> -->
+              <img src="images/png/style.png" alt="Элегантный стиль с Амат" />
+            </div>
 
-            <form class="flex-box" method="post" action="http://localhost/dashboard/send.php">
-                <input type="email" class="send-mail" name="email" placeholder="Эл. почта"/>
-                <input id="send-mail__button" type="submit">
-                <img src="images/svg/arrow-right.svg" class="arrow-right">
-            </form>
-            <p class="footer__text">
-                Нажимая на кнопку «Подписаться», вы соглашаетесь c
-                <a href="policy.html">Политикой конфиденциальности</a> и <a href="oferta.html">офертой</a>.
+            <p class="style__text anim-blocks">
+              Стилист Aurea Donna рассказывает о модных трендах 2023
             </p>
         </div>
-        <div data-spollers class="footer__accordion-items block">
-            <div class="footer__accordion-item">
-                <button tabindex="-1" type="button" data-spoller data-one-spoller class="footer__accordion-title">Уход за изделиями
-                    <img src="images/svg/read-more.svg" alt="read-more" class="read-more">
-                    <img src="images/svg/read-less.svg" alt="read-less" class="read-less">
-                </button>
-                <div class="footer__item-description">
-                    Чтобы сохранить изделие в превосходном состоянии, храните его в
-                    развязанном виде и избегайте соприкосновения с украшениями
-                    и аксессуарами, которые могут оставить зацепки.
-                    Берегите изделие от дождя, избегайте контакта с агрессивными
-                    веществами и желательно осуществляйте уход за изделием
-                    в специализированных химчистках.
-                </div>
-            </div>
-            <div class="footer__accordion-item">
-                <button tabindex="-1" type="button" data-spoller data-one-spoller
-                        class="footer__accordion-title">Доставка и оплата
-                    <img src="images/svg/read-more.svg" alt="read-more" class="read-more">
-                    <img src="images/svg/read-less.svg" alt="read-less" class="read-less">
-                </button>
-                <div class="footer__item-description">
-                    Длиннющий текст про доставкуи оплату.
-                </div>
-            </div>
-            <div class="footer__accordion-item">
-                <button tabindex="-1" type="button" data-spoller data-one-spoller
-                        class="footer__accordion-title">Возврат
-                    <img src="images/svg/read-more.svg" alt="read-more" class="read-more">
-                    <img src="images/svg/read-less.svg" alt="read-less" class="read-less">
-                </button>
-                <div class="footer__item-description">
-                    Обидный текст, что возврата нет.
-                </div>
-            </div>
-            <div class="footer__accordion-item">
-                <button tabindex="-1" type="button" data-spoller data-one-spoller
-                        class="footer__accordion-title">Адрес
-                    <img src="images/svg/read-more.svg" alt="read-more" class="read-more">
-                    <img src="images/svg/read-less.svg" alt="read-less" class="read-less">
-                </button>
-                <div class="footer__item-description">
-                    <p class="bold">
-                        12:00−21:00 ежедневно
-                    </p>
-                    <p> Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж</p>
-                </div>
-            </div>
-
-
-
-
-<!--            <div class="footer__accordion-item">-->
-<!--                <div class="limited">-->
-<!--                    <h5>Возврат</h5>-->
-<!--                    <img src="images/read-more.svg" alt="read-more" class="read-more">-->
-<!--                    <img src="images/read-less.svg" alt="read-less" class="read-less">-->
-<!--                    <div class="footer__item-description">-->
-<!--                        Обидный текст, что возврата нет.-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="footer__accordion-item">-->
-<!--                <input type="checkbox" class="read-more-checker" id="help"/>-->
-<!--                <div class="limited">-->
-<!--                    <h5>Помощь</h5>-->
-<!--                    <div class="footer__item-description">-->
-<!--                        Обидный текст, что ничем помочь не можем.-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <label for="help" class="read-more"></label>-->
-<!--            </div>-->
-<!--            <div class="footer__accordion-item">-->
-<!--                <input type="checkbox" class="read-more-checker" id="adress"/>-->
-<!--                <div class="limited">-->
-<!--                    <h5>Адрес</h5>-->
-<!--                    <div class="footer__item-description">-->
-<!--                        <p class="footer__text bold">-->
-<!--                            12:00−21:00 ежедневно-->
-<!--                        </p>-->
-<!--                        <p class="footer__text"> Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <label for="adress" class="read-more"></label>-->
-<!--            </div>-->
-
-
-
-<!--            инпут иншмут и бокх г1урт-->
-<!--            -->
-<!--        <div class="footer__accordion-item">-->
-<!--            <input type="checkbox" class="read-more-checker" id="product-care"/>-->
-<!--            <div class="limited">-->
-<!--                <h5>Уход за изделиями</h5>-->
-<!--                <div class="footer__item-description">-->
-<!--                Чтобы сохранить изделие в превосходном состоянии, храните его в -->
-<!--                развязанном виде и избегайте соприкосновения с украшениями -->
-<!--                и аксессуарами, которые могут оставить зацепки. -->
-<!--                Берегите изделие от дождя, избегайте контакта с агрессивными -->
-<!--                веществами и желательно осуществляйте уход за изделием -->
-<!--                в специализированных химчистках.-->
-<!--                </div> -->
-<!--            </div>  -->
-<!--            <label for="product-care" class="read-more"></label>                    -->
-<!--        </div>-->
-
-<!--        <div class="footer__accordion-item">-->
-<!--            <input type="checkbox" class="read-more-checker" id="pay"/>-->
-<!--            <div class="limited">-->
-<!--                <h5>Доставка и оплата</h5>-->
-<!--                <div class="footer__item-description">-->
-<!--                    Длиннющий текст про доставку и оплату.-->
-<!--                </div> -->
-<!--            </div>  -->
-<!--            <label for="pay" class="read-more"></label>                    -->
-<!--        </div>-->
-<!--        -->
-<!--        <div class="footer__accordion-item">-->
-<!--            <input type="checkbox" class="read-more-checker" id="return"/>-->
-<!--            <div class="limited">-->
-<!--                <h5>Возврат</h5>-->
-<!--                <div class="footer__item-description">-->
-<!--                    Обидный текст, что возврата нет.-->
-<!--                </div> -->
-<!--            </div>  -->
-<!--            <label for="return" class="read-more"></label>                    -->
-<!--        </div>-->
-<!--        <div class="footer__accordion-item">-->
-<!--            <input type="checkbox" class="read-more-checker" id="help"/>-->
-<!--            <div class="limited">-->
-<!--                <h5>Помощь</h5>-->
-<!--                <div class="footer__item-description">-->
-<!--                    Обидный текст, что ничем помочь не можем.-->
-<!--                </div> -->
-<!--            </div>  -->
-<!--            <label for="help" class="read-more"></label>                    -->
-<!--        </div>-->
-<!--        <div class="footer__accordion-item">-->
-<!--            <input type="checkbox" class="read-more-checker" id="adress"/>-->
-<!--            <div class="limited">-->
-<!--                <h5>Адрес</h5>-->
-<!--                <div class="footer__item-description">-->
-<!--                    <p class="footer__text bold">-->
-<!--                        12:00−21:00 ежедневно-->
-<!--                    </p>-->
-<!--                    <p class="footer__text"> Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж</p>-->
-<!--                </div> -->
-<!--            </div>  -->
-<!--            <label for="adress" class="read-more"></label>                    -->
-<!--        </div>-->
+      </section>
+      <section class="gifts">
+        <div class="section-wrapper gifts__flex-box">
+          <h3 class="style__title anim-blocks">Искусство дарить</h3>
+          <div class="style__photo-container">
+            <img src="images/png/gifts.png" alt="Платки на подарки" />
+          </div>
+          <p class="style__text anim-blocks">
+            Платки AMAT — это эксклюзив, это сувенир. Это ценный и желанный
+            подарок для прекрасной половины человечества.
+          </p>
+          <p class="style__link links">
+            <a href="/index.html"> Выбрать подарок </a>
+          </p>
         </div>
-        <div class="footer__contacts">
-            <div class="footer__contacts-flex links">
-                <a href="#">WhatsApp</a>
-                <a href="#">Telegram</a>
-                <a href="#">VK</a>
+      </section>
+      <section class="fitting">
+        <div class="fitting__flex-box section-wrapper">
+          <h3 class="fitting__title anim-blocks fitting__title--mobile">
+            Примерка платков
+          </h3>
+          <div class="fitting__photo-container">
+            <img src="images/png/store.png" alt="Магазин" />
+          </div>
+          <div class="flex-box">
+            <h3 class="fitting__title anim-blocks fitting__title--desktop">
+              Примерка платков
+            </h3>
+            <p class="fitting__text anim-blocks bold">12:00−21:00 ежедневно</p>
+            <p class="fitting__text anim-blocks">
+              Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж
+            </p>
+            <div class="fitting__links links">
+              <a href="#modal-map" id="open-map"> Посмотреть на карте </a>
+              <div id="backdrop"></div>
+              <div id="modal-map">
+                <div class="close-map">
+                  <img src="images/svg/close.svg" />
+                </div>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1152.1486041971975!2d45.69956996964888!3d43.30939049464909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4051d3f76825b0bf%3A0xb4639001e07cfd29!2sGrand%20Park!5e0!3m2!1sru!2sru!4v1702750981293!5m2!1sru!2sru"
+                  width="100%"
+                  height="100%"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
             </div>
-            <a href="mailto:amat.textile@gmail.com" class="footer__mail">amat.textile@gmail.com </a>
-            <a href="tel:79889088787" class="footer__phone"> +7 988 908-87-87</a>
-            <div class="seryonse">
-                 Сайт разработан с любовью <br> в веб-студии <a href="https://seryonse.com/">SERYONSE</a>
-            </div>
+          </div>
         </div>
-        <div class="copyright">
-            <p class="copyright__text">© АМАТ. Все права защищены</p>
-            <a href="policy.html">Политика конфиденциальности</a>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer__logo-container">
+          <img src="images/svg/logo-white.svg" alt="AMAT" />
         </div>
-        <div class="arrow-up"  id="arrow-up">
-          <img src="images/svg/arrow-up.svg" >
+        <h3 class="footer__title anim-blocks">Узнавайте первыми о новинках</h3>
+
+        <form
+          class="flex-box"
+          method="post"
+          action="http://localhost/dashboard/send.php"
+        >
+          <input
+            type="email"
+            class="send-mail"
+            name="email"
+            placeholder="Эл. почта"
+          />
+          <input id="send-mail__button" type="submit" />
+          <img src="images/svg/arrow-right.svg" class="arrow-right" />
+        </form>
+        <p class="footer__text">
+          Нажимая на кнопку «Подписаться», вы соглашаетесь c
+          <a href="policy.html">Политикой конфиденциальности</a> и
+          <a href="oferta.html">офертой</a>.
+        </p>
+      </div>
+      <div data-spollers class="footer__accordion-items block">
+        <div class="footer__accordion-item">
+          <button
+            tabindex="-1"
+            type="button"
+            data-spoller
+            data-one-spoller
+            class="footer__accordion-title"
+          >
+            Уход за изделиями
+            <img
+              src="images/svg/read-more.svg"
+              alt="read-more"
+              class="read-more"
+            />
+            <img
+              src="images/svg/read-less.svg"
+              alt="read-less"
+              class="read-less"
+            />
+          </button>
+          <div class="footer__item-description">
+            Чтобы сохранить изделие в превосходном состоянии, храните его в
+            развязанном виде и избегайте соприкосновения с украшениями
+            и аксессуарами, которые могут оставить зацепки. Берегите изделие
+            от дождя, избегайте контакта с агрессивными веществами и желательно
+            осуществляйте уход за изделием в специализированных химчистках.
+          </div>
         </div>
+        <div class="footer__accordion-item">
+          <button
+            tabindex="-1"
+            type="button"
+            data-spoller
+            data-one-spoller
+            class="footer__accordion-title"
+          >
+            Доставка и оплата
+            <img
+              src="images/svg/read-more.svg"
+              alt="read-more"
+              class="read-more"
+            />
+            <img
+              src="images/svg/read-less.svg"
+              alt="read-less"
+              class="read-less"
+            />
+          </button>
+          <div class="footer__item-description">
+            Длиннющий текст про доставкуи оплату.
+          </div>
+        </div>
+        <div class="footer__accordion-item">
+          <button
+            tabindex="-1"
+            type="button"
+            data-spoller
+            data-one-spoller
+            class="footer__accordion-title"
+          >
+            Возврат
+            <img
+              src="images/svg/read-more.svg"
+              alt="read-more"
+              class="read-more"
+            />
+            <img
+              src="images/svg/read-less.svg"
+              alt="read-less"
+              class="read-less"
+            />
+          </button>
+          <div class="footer__item-description">
+            Обидный текст, что возврата нет.
+          </div>
+        </div>
+        <div class="footer__accordion-item">
+          <button
+            tabindex="-1"
+            type="button"
+            data-spoller
+            data-one-spoller
+            class="footer__accordion-title"
+          >
+            Адрес
+            <img
+              src="images/svg/read-more.svg"
+              alt="read-more"
+              class="read-more"
+            />
+            <img
+              src="images/svg/read-less.svg"
+              alt="read-less"
+              class="read-less"
+            />
+          </button>
+          <div class="footer__item-description">
+            <p class="bold">12:00−21:00 ежедневно</p>
+            <p>Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж</p>
+          </div>
+        </div>
+
+        <!--            <div class="footer__accordion-item">-->
+        <!--                <div class="limited">-->
+        <!--                    <h5>Возврат</h5>-->
+        <!--                    <img src="images/read-more.svg" alt="read-more" class="read-more">-->
+        <!--                    <img src="images/read-less.svg" alt="read-less" class="read-less">-->
+        <!--                    <div class="footer__item-description">-->
+        <!--                        Обидный текст, что возврата нет.-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="footer__accordion-item">-->
+        <!--                <input type="checkbox" class="read-more-checker" id="help"/>-->
+        <!--                <div class="limited">-->
+        <!--                    <h5>Помощь</h5>-->
+        <!--                    <div class="footer__item-description">-->
+        <!--                        Обидный текст, что ничем помочь не можем.-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--                <label for="help" class="read-more"></label>-->
+        <!--            </div>-->
+        <!--            <div class="footer__accordion-item">-->
+        <!--                <input type="checkbox" class="read-more-checker" id="adress"/>-->
+        <!--                <div class="limited">-->
+        <!--                    <h5>Адрес</h5>-->
+        <!--                    <div class="footer__item-description">-->
+        <!--                        <p class="footer__text bold">-->
+        <!--                            12:00−21:00 ежедневно-->
+        <!--                        </p>-->
+        <!--                        <p class="footer__text"> Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж</p>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--                <label for="adress" class="read-more"></label>-->
+        <!--            </div>-->
+
+        <!--            инпут иншмут и бокх г1урт-->
+        <!--            -->
+        <!--        <div class="footer__accordion-item">-->
+        <!--            <input type="checkbox" class="read-more-checker" id="product-care"/>-->
+        <!--            <div class="limited">-->
+        <!--                <h5>Уход за изделиями</h5>-->
+        <!--                <div class="footer__item-description">-->
+        <!--                Чтобы сохранить изделие в превосходном состоянии, храните его в -->
+        <!--                развязанном виде и избегайте соприкосновения с украшениями -->
+        <!--                и аксессуарами, которые могут оставить зацепки. -->
+        <!--                Берегите изделие от дождя, избегайте контакта с агрессивными -->
+        <!--                веществами и желательно осуществляйте уход за изделием -->
+        <!--                в специализированных химчистках.-->
+        <!--                </div> -->
+        <!--            </div>  -->
+        <!--            <label for="product-care" class="read-more"></label>                    -->
+        <!--        </div>-->
+
+        <!--        <div class="footer__accordion-item">-->
+        <!--            <input type="checkbox" class="read-more-checker" id="pay"/>-->
+        <!--            <div class="limited">-->
+        <!--                <h5>Доставка и оплата</h5>-->
+        <!--                <div class="footer__item-description">-->
+        <!--                    Длиннющий текст про доставку и оплату.-->
+        <!--                </div> -->
+        <!--            </div>  -->
+        <!--            <label for="pay" class="read-more"></label>                    -->
+        <!--        </div>-->
+        <!--        -->
+        <!--        <div class="footer__accordion-item">-->
+        <!--            <input type="checkbox" class="read-more-checker" id="return"/>-->
+        <!--            <div class="limited">-->
+        <!--                <h5>Возврат</h5>-->
+        <!--                <div class="footer__item-description">-->
+        <!--                    Обидный текст, что возврата нет.-->
+        <!--                </div> -->
+        <!--            </div>  -->
+        <!--            <label for="return" class="read-more"></label>                    -->
+        <!--        </div>-->
+        <!--        <div class="footer__accordion-item">-->
+        <!--            <input type="checkbox" class="read-more-checker" id="help"/>-->
+        <!--            <div class="limited">-->
+        <!--                <h5>Помощь</h5>-->
+        <!--                <div class="footer__item-description">-->
+        <!--                    Обидный текст, что ничем помочь не можем.-->
+        <!--                </div> -->
+        <!--            </div>  -->
+        <!--            <label for="help" class="read-more"></label>                    -->
+        <!--        </div>-->
+        <!--        <div class="footer__accordion-item">-->
+        <!--            <input type="checkbox" class="read-more-checker" id="adress"/>-->
+        <!--            <div class="limited">-->
+        <!--                <h5>Адрес</h5>-->
+        <!--                <div class="footer__item-description">-->
+        <!--                    <p class="footer__text bold">-->
+        <!--                        12:00−21:00 ежедневно-->
+        <!--                    </p>-->
+        <!--                    <p class="footer__text"> Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж</p>-->
+        <!--                </div> -->
+        <!--            </div>  -->
+        <!--            <label for="adress" class="read-more"></label>                    -->
+        <!--        </div>-->
+      </div>
+      <div class="footer__contacts">
+        <div class="footer__contacts-flex links">
+          <a href="#">WhatsApp</a>
+          <a href="#">Telegram</a>
+          <a href="#">VK</a>
+        </div>
+        <a href="mailto:amat.textile@gmail.com" class="footer__mail"
+          >amat.textile@gmail.com
+        </a>
+        <a href="tel:79889088787" class="footer__phone"> +7 988 908-87-87</a>
+        <div class="seryonse">
+          Сайт разработан с любовью <br />
+          в веб-студии <a href="https://seryonse.com/">SERYONSE</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p class="copyright__text">© АМАТ. Все права защищены</p>
+        <a href="policy.html">Политика конфиденциальности</a>
+      </div>
+      <div class="arrow-up" id="arrow-up">
+        <img src="images/svg/arrow-up.svg" />
+      </div>
     </footer>
     <script src="./js/shared.js"></script>
     <script src="swiper/js/swipe.js"></script>
     <script src="swiper/js/swipe-star.js"></script>
     <script src="js/spollersss.js"></script>
-</body>
+  </body>
 </html>

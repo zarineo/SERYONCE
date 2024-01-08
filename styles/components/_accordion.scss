@@ -1,6 +1,4 @@
-﻿@import "../_varyables.scss";
-
-.footer__accordion-title {
+﻿.footer__accordion-title {
     background: $graphicBlack10;
     width: 100%;
     color: $textWhite100;
@@ -12,8 +10,8 @@
     padding: 21.5px 0;
     text-align: left;
     position: relative;
-
 }
+
 .footer__item-description {
     font-size: 16px;
     font-weight: 400;
@@ -33,7 +31,7 @@
 .footer__accordion-item {
     width: 100%;
     position: relative;
-    border-top:  0.5px $graphicWhite50 solid;
+    border-top: 0.5px $graphicWhite50 solid;
     padding: 0 16px;
 }
 
@@ -52,5 +50,4 @@
     top: 16px;
     right: 0;
     display: none;
-
 }
