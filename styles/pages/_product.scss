@@ -1,1 +1,150 @@
-﻿
+﻿.product-page {
+  .product {
+    display: flex;
+
+    &-photos {
+      width: 50%;
+      height: 100vh;
+      background-color: $textBlack60;
+      overflow: hidden;
+    }
+
+    &-properties {
+      width: 50%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__wrapper {
+        width: 375px;
+
+        .product {
+          &-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+          }
+
+          &-name {
+            font-size: 32px;
+            font-weight: 400;
+            letter-spacing: -0.32px;
+            text-transform: uppercase;
+          }
+
+          &-favorite {
+            cursor: pointer;
+          }
+
+          &-price {
+            color: $textBlack60;
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+
+        .properties {
+          width: 100%;
+          margin: 40px 0;
+        }
+
+        button {
+          margin-top: 0;
+          background-color: $textBlack10;
+          color: $backWhite;
+          width: 100%;
+
+          &:hover {
+            background-color: $textBlack60;
+          }
+        }
+
+        ul {
+          margin: 0;
+        }
+      }
+
+      .property {
+        &-items {
+        }
+
+        &-item {
+          display: flex;
+          justify-content: space-between;
+          padding: 12px;
+          border-bottom: 0.5px solid $graphicBlack10;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          &__value {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .product-description {
+    width: 50%;
+    padding: 48px 0 48px 80px;
+
+    &__title {
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 40px;
+    }
+
+    ul {
+      list-style: disc;
+      text-indent: -8px;
+      padding-left: 20px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      max-width: 519px;
+    }
+
+    &__more {
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      border-bottom: 1px solid $graphicBlack;
+      display: inline-block;
+      margin-right: auto;
+      padding: 2px 0;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+    }
+
+    .product {
+      &-picture {
+        img {
+          width: 320px;
+          height: 320px;
+          object-fit: cover;
+        }
+      }
+
+      &-fitting {
+        p {
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}

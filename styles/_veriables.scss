@@ -24,6 +24,8 @@ $graphicWhite50: rgba(255, 255, 255, 0.5);
 $graphicWhite30: rgba(255, 255, 255, 0.3);
 $textWhite100: rgba(255, 255, 255, 1);
 $textWhite50: rgba(255, 255, 255, 0.5);
+$grey: #F7F7F7;
+
 
 
 /*** fonts ***/
@@ -50,7 +52,7 @@ $main-sans: "Tilda Sans";
     padding: 0;
     margin: 0;
     a {
-        color: white;
+        color: inherit;
         @include links;
     }
 }

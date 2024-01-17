@@ -15,10 +15,10 @@
     />
   </head>
   <body>
-    <header class="main-header">
-      <div class="wrapper">
-        <nav class="main-nav">
-          <ul class="main-nav__items--left flex-child anim-blocks">
+    <!-- <header class="main-header"> -->
+    <!-- <div class="wrapper"> -->
+    <!-- <nav class="main-nav">
+          <ul class="main-nav__items--left flex-child">
             <li class="main-nav__item links">
               <a href="/index.html"> Коллекции </a>
             </li>
@@ -41,7 +41,7 @@
                 id="logo-white"
             /></a>
           </div>
-          <ul class="main-nav__items--right flex-child icons-black anim-item">
+          <ul class="main-nav__items--right flex-child icons-black">
             <li class="main-nav__item">
               <a href="/index.html"
                 ><img src="images/svg/search-black.svg"
@@ -56,7 +56,7 @@
               /></a>
             </li>
           </ul>
-          <ul class="main-nav__items--right flex-child icons-white anim-blocks">
+          <ul class="main-nav__items--right flex-child icons-white">
             <li class="main-nav__item">
               <a href="/index.html"
                 ><img src="images/svg/search-white.svg"
@@ -71,9 +71,9 @@
               /></a>
             </li>
           </ul>
-        </nav>
-        <nav class="main-nav--mobile">
-          <!--верхнее меню в мобильной версии-->
+        </nav> -->
+    <!-- <nav class="main-nav--mobile">
+          верхнее меню в мобильной версии
           <ul class="main-nav--mobile__items">
             <li class="main-nav--mobile__item">
               <a href="/index.html">
@@ -111,10 +111,10 @@
               /></a>
             </div>
           </ul>
-        </nav>
+        </nav> -->
 
-        <!--Модальное окошко появляющегося меню-->
-        <nav class="mobile-nav">
+    <!-- Модальное окошко появляющегося меню -->
+    <!-- <nav class="mobile-nav">
           <ul class="main-nav--mobile__items">
             <li class="main-nav--mobile__item">
               <a href="/index.html"
@@ -162,16 +162,78 @@
               <a href="/contacts.html">Контакты</a>
             </li>
           </ul>
+        </nav> -->
+    <!-- </div> -->
+    <!-- </header> -->
+
+    <header class="main-header home">
+      <div class="main-header__wrapper">
+        <nav class="main-nav">
+          <ul class="main-nav__items flex-child">
+            <li class="main-nav__item links">
+              <a href="/index.html"> Коллекции </a>
+            </li>
+            <li class="main-nav__item links" id="brand">
+              <a href="/index.html"> О бренде </a>
+            </li>
+          </ul>
+          <div class="logo-container">
+            <a href="/index.html">
+              <img
+                src="images/svg/logo-white.svg"
+                alt="logo"
+                class="logo-white"
+                id="logo"
+              />
+              <img
+                src="images/svg/logo-black.svg"
+                alt="logo"
+                class="logo-black"
+                id="logo-white"
+              />
+            </a>
+          </div>
+          <ul class="main-nav__items flex-child">
+            <li class="main-nav__item main-nav__item--icon icon-search">
+              <a href="/index.html">
+                <img src="images/svg/search-black.svg" />
+                <img src="images/svg/search-white.svg" />
+              </a>
+            </li>
+            <li class="main-nav__item main-nav__item--icon icon-favor">
+              <a href="/index.html">
+                <img src="images/svg/favor-black.svg" />
+                <img src="images/svg/favor-white.svg" />
+              </a>
+            </li>
+            <li class="main-nav__item main-nav__item--icon icon-bag">
+              <a href="/index.html">
+                <img src="images/svg/shopping-bag.svg" />
+                <img src="images/svg/shopping-bag-white.svg" />
+              </a>
+            </li>
+            <li class="main-nav__item main-nav__item--mobile">
+              <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </li>
+          </ul>
         </nav>
+        <div class="mobile-menu">
+          <nav>mobile-menu</nav>
+        </div>
       </div>
     </header>
-    <main>
+    <main class="home-page">
       <section class="home-video">
-        <div class="home-video__container"></div>
-        <h1 class="home-video__title">Коллекция твилли</h1>
-        <button class="home-video__button button">
-          Откройте для себя коллекцию
-        </button>
+        <div class="home-video__container">
+          <h1 class="home-video__title">Коллекция твилли</h1>
+          <button class="home-video__button button">
+            Откройте для себя коллекцию
+          </button>
+        </div>
       </section>
       <section class="slider">
         <h2 class="slider__block-title">Избранные платки</h2>
@@ -239,7 +301,7 @@
       <section class="history">
         <div class="section-wrapper">
           <div class="history-photo__container anim-blocks">
-            <img src="images/png/history.png">
+            <img src="images/png/history.png" />
           </div>
           <div class="flex-box">
             <div class="history-logo__container anim-blocks">
@@ -256,7 +318,6 @@
               <a href="/index.html"> Откройте для себя мир Амат </a>
             </p>
           </div>
-
         </div>
       </section>
 
@@ -320,7 +381,8 @@
               <h3
                 class="collections__photo-description anim-blocks description-top"
               >
-                Тематические <br> платки
+                Тематические <br />
+                платки
               </h3>
             </a>
           </div>
@@ -382,17 +444,17 @@
 
       <section class="style">
         <div class="section-wrapper style__flex-box">
-            <h3 class="style__title--elegance anim-blocks">
-              Элегантный стиль с Амат
-            </h3>
-            <div class="style__video-container">
-              <!-- <video></video> -->
-              <img src="images/png/style.png" alt="Элегантный стиль с Амат" />
-            </div>
+          <h3 class="style__title--elegance anim-blocks">
+            Элегантный стиль с Амат
+          </h3>
+          <div class="style__video-container">
+            <!-- <video></video> -->
+            <img src="images/png/style.png" alt="Элегантный стиль с Амат" />
+          </div>
 
-            <p class="style__text anim-blocks">
-              Стилист Aurea Donna рассказывает о модных трендах 2023
-            </p>
+          <p class="style__text anim-blocks">
+            Стилист Aurea Donna рассказывает о модных трендах 2023
+          </p>
         </div>
       </section>
       <section class="gifts">
@@ -698,7 +760,9 @@
         <img src="images/svg/arrow-up.svg" />
       </div>
     </footer>
-    <script src="./js/shared.js"></script>
+    <!-- <script src="./js/shared.js"></script> -->
+    <script src="./js/home.js"></script>
+    <script src="./js/script.js"></script>
     <script src="swiper/js/swipe.js"></script>
     <script src="swiper/js/swipe-star.js"></script>
     <script src="js/spollersss.js"></script>
