@@ -9,6 +9,7 @@
 @import "pages/modals";
 @import "pages/falls";
 @import "pages/thanks";
+@import "pages/cart";
 
 * {
   box-sizing: border-box;
@@ -96,7 +97,6 @@ a {
   margin-top: 53px;
   cursor: pointer;
   border: none;
-
   &:hover {
     background: $graphicWhite50;
   }

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог</title>
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="fonts/font/stylesheet.css" />
+    <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="stylesheet" href="fonts/font/stylesheet.css"/>
     <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -43,20 +43,20 @@
             <ul class="main-nav__items flex-child">
                 <li class="main-nav__item main-nav__item--icon icon-search">
                     <a href="/index.html">
-                        <img src="images/svg/search-black.svg" />
-                        <img src="images/svg/search-white.svg" />
+                        <img src="images/svg/search-black.svg"/>
+                        <img src="images/svg/search-white.svg"/>
                     </a>
                 </li>
                 <li class="main-nav__item main-nav__item--icon icon-favor">
-                    <a href="#" id="open-wishlist">
-                        <img src="images/svg/favor-black.svg" />
-                        <img src="images/svg/favor-white.svg" />
+                    <a href="#" class="open-wishlist">
+                        <img src="images/svg/favor-black.svg"/>
+                        <img src="images/svg/favor-white.svg"/>
                     </a>
                 </li>
                 <li class="main-nav__item main-nav__item--icon icon-bag">
-                    <a href="/index.html">
-                        <img src="images/svg/shopping-bag.svg" />
-                        <img src="images/svg/shopping-bag-white.svg" />
+                    <a href="#" class="open-cart">
+                        <img src="images/svg/shopping-bag.svg"/>
+                        <img src="images/svg/shopping-bag-white.svg"/>
                     </a>
                 </li>
                 <li class="main-nav__item main-nav__item--mobile">
@@ -74,662 +74,792 @@
     </div>
 </header>
 <main class="category-main">
-        <div class="modal__backdrop"></div>
-        <div class="section-wrapper">
-            <div class="category__subheader">
-                <div class="product-quantity"> 54 товара </div>
-                <div class="category__links">
-                    <a href="#">Главная</a> \ <a href="#"> Коллекции </a>
+    <div class="modal__backdrop"></div>
+    <div class="section-wrapper">
+        <div class="category__subheader">
+            <div class="category__product-quantity"> 54 товара</div>
+            <div class="category__links">
+                <a href="#">Главная</a> \ <a href="#"> Коллекции </a>
+            </div>
+            <div class="category__filters links">
+                <a href="#" id="open-filter">Фильтры</a>
+            </div>
+        </div>
+        <div class="category__collections">
+            <div class="category__main-flex">
+                <div class="category__collection-title flex-for-title-one">
+                    <div class="category__photo-container">
+                        <img src="images/png/title-collection.png" alt="Фото Коллекции"/>
+                    </div>
+                    <h2 class="category__title">Базовые платки</h2>
+                    <p class="category__description">Платок AMAT - это замечательное сочетание стиля, качества
+                        и оригинального дизайна.</p>
                 </div>
-                <div class="category__filters links">
-                    <a href="#" id="open-filter">Фильтры</a>
+                <div class="category-flex flex-for-title-two">
+                    <div class="category__product">
+                        <div class="category__photo-container">
+                            <!-- Slider main container -->
+                            <div class="swiper category-slider">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции"/>
+
+                                    </div>
+                                    <div class="swiper-slide">Slide 3</div>
+                                    ...
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+
+                                <!-- If we need scrollbar -->
+                                <div class="swiper-scrollbar"></div>
+                            </div>
+                        </div>
+                        <h5 class="category__product-title">Даймохк</h5>
+                        <p class="category__product-price">16 000 ₽</p>
+                    </div>
+                    <div class="category__product">
+                        <div class="category__photo-container">
+                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции"/>
+                        </div>
+                        <h5 class="category__product-title">Даймохк</h5>
+                        <p class="category__product-price">16 000 ₽</p>
+                    </div>
                 </div>
             </div>
-            <div class="category__collections">
-                <div class="category__main-flex">
-                    <div class="category__collection-title">
-                        <div class="category__photo-container">
-                            <img src="images/png/title-collection.png" alt="Фото Коллекции" />
-                        </div>
-                        <h2 class="category__title">Базовые платки</h2>
-                        <p class="category__description">Платок AMAT - это замечательное сочетание стиля, качества и оригинального дизайна.</p>
+            <div class="category-flex">
+                <div class="category__product">
+                    <div class="category__photo-container">
+                        <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции"/>
                     </div>
-                    <div class="category-flex tablet-flex-wrapper">
-                        <div class="category__product">
-                            <div class="category__photo-container">
-                                <!-- Slider main container -->
-                                <div class="swiper">
-                                    <!-- Additional required wrapper -->
-                                    <div class="swiper-wrapper">
-                                        <!-- Slides -->
-                                        <div class="swiper-slide">
-                                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
+                    <h5 class="category__product-title">Даймохк</h5>
+                    <p class="category__product-price">16 000 ₽</p>
+                </div>
+                <div class="category__product">
+                    <div class="category__photo-container">
+                        <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции"/>
+                    </div>
+                    <h5 class="category__product-title">Даймохк</h5>
+                    <p class="category__product-price">16 000 ₽</p>
+                </div>
+                <div class="category__product">
+                    <div class="category__photo-container">
+                        <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции"/>
+                    </div>
+                    <h5 class="category__product-title">Даймохк</h5>
+                    <p class="category__product-price">16 000 ₽</p>
+                </div>
+                <div class="category__product">
+                    <div class="category__photo-container">
+                        <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции"/>
+                    </div>
+                    <h5 class="category__product-title">Даймохк</h5>
+                    <p class="category__product-price">16 000 ₽</p>
+                </div>
+            </div>
+            <div class="category__button">Загрузить еще</div>
+        </div>
 
-                                        </div>
-                                        <div class="swiper-slide">Slide 3</div>
-                                        ...
-                                    </div>
-                                    <!-- If we need pagination -->
-                                    <div class="swiper-pagination"></div>
-
-                                    <!-- If we need navigation buttons -->
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-
-                                    <!-- If we need scrollbar -->
-                                    <div class="swiper-scrollbar"></div>
-                                </div>
-                            </div>
-                            <h5 class="category__product-title">Даймохк</h5>
-                            <p class="category__product-price">16 000 ₽</p>
+        <div class="category__collections">
+            <div class="category__main-flex">
+                <div class="category__collection-title flex-for-title-one">
+                    <div class="category__photo-container">
+                        <img src="images/png/title-collection.png" alt="Фото Коллекции"/>
+                    </div>
+                    <h2 class="category__title">Базовые платки</h2>
+                    <p class="category__description">Платок AMAT - это замечательное сочетание стиля, качества
+                        и оригинального дизайна.</p>
+                </div>
+                <div class="category-flex flex-for-title-two">
+                    <div class="category__product">
+                        <div class="category__photo-container">
+                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции"/>
                         </div>
-                        <div class="category__product">
-                            <div class="category__photo-container">
-                                <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
-                            </div>
-                            <h5 class="category__product-title">Даймохк</h5>
-                            <p class="category__product-price">16 000 ₽</p>
+                        <h5 class="category__product-title">Даймохк</h5>
+                        <p class="category__product-price">16 000 ₽</p>
+                    </div>
+                    <div class="category__product">
+                        <div class="category__photo-container">
+                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции"/>
                         </div>
+                        <h5 class="category__product-title">Даймохк</h5>
+                        <p class="category__product-price">16 000 ₽</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-flex">
+                <div class="category__product">
+                    <div class="category__photo-container">
+                        <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции"/>
+                    </div>
+                    <h5 class="category__product-title">Даймохк</h5>
+                    <p class="category__product-price">16 000 ₽</p>
+                </div>
+                <div class="category__product">
+                    <div class="category__photo-container">
+                        <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции"/>
+                    </div>
+                    <h5 class="category__product-title">Даймохк</h5>
+                    <p class="category__product-price">16 000 ₽</p>
+                </div>
+                <div class="category__product">
+                    <div class="category__photo-container">
+                        <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции"/>
+                    </div>
+                    <h5 class="category__product-title">Даймохк</h5>
+                    <p class="category__product-price">16 000 ₽</p>
+                </div>
+                <div class="category__product">
+                    <div class="category__photo-container">
+                        <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции"/>
+                    </div>
+                    <h5 class="category__product-title">Даймохк</h5>
+                    <p class="category__product-price">16 000 ₽</p>
+                </div>
+            </div>
+            <div class="category__button">Загрузить еще</div>
+        </div>
+
+        <div class="category__collections">
+            <div class="category__main-flex">
+                <div class="category__collection-title  flex-for-title-one">
+                    <div class="category__photo-container">
+                        <img src="images/png/title-collection.png" alt="Фото Коллекции"/>
+                    </div>
+                    <h2 class="category__title">Базовые платки</h2>
+                    <p class="category__description">Платок AMAT - это замечательное сочетание стиля, качества
+                        и оригинального дизайна.</p>
+                </div>
+                <div class="category-flex flex-for-title-two">
+                    <div class="category__product">
+                        <div class="category__photo-container">
+                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции"/>
+                        </div>
+                        <h5 class="category__product-title">Даймохк</h5>
+                        <p class="category__product-price">16 000 ₽</p>
+                    </div>
+                    <div class="category__product">
+                        <div class="category__photo-container">
+                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции"/>
+                        </div>
+                        <h5 class="category__product-title">Даймохк</h5>
+                        <p class="category__product-price">16 000 ₽</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-flex">
+                <div class="category__product">
+                    <div class="category__photo-container">
+                        <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции"/>
+                    </div>
+                    <h5 class="category__product-title">Даймохк</h5>
+                    <p class="category__product-price">16 000 ₽</p>
+                </div>
+                <div class="category__product">
+                    <div class="category__photo-container">
+                        <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции"/>
+                    </div>
+                    <h5 class="category__product-title">Даймохк</h5>
+                    <p class="category__product-price">16 000 ₽</p>
+                </div>
+                <div class="category__product">
+                    <div class="category__photo-container">
+                        <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции"/>
+                    </div>
+                    <h5 class="category__product-title">Даймохк</h5>
+                    <p class="category__product-price">16 000 ₽</p>
+                </div>
+                <div class="category__product">
+                    <div class="category__photo-container">
+                        <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции"/>
+                    </div>
+                    <h5 class="category__product-title">Даймохк</h5>
+                    <p class="category__product-price">16 000 ₽</p>
+                </div>
+            </div>
+            <div class="category__button">Загрузить еще</div>
+        </div>
+
+        <!-- Фильтр, модальное окно-->
+        <div class="modal" id="filter">
+            <div class="modal__title">
+                <div class="close" id="close-filter">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="modal__item">
+                <p class="modal__item-title">Материал</p>
+                <div class="modal__cross">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="modal__content">
+                <p class="modal__option">Шёлк</p>
+                <p class="modal__option">Шёлк/Твил</p>
+                <p class="modal__option">Хлопок/Шёлк</p>
+            </div>
+            <div class="modal__item">
+                <p class="modal__item-title">Тип изделия</p>
+                <div class="modal__cross">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="modal__content">
+                <p class="modal__option">Платок</p>
+                <p class="modal__option">Шаль</p>
+                <p class="modal__option">Твилли</p>
+            </div>
+            <div class="modal__item">
+                <p class="modal__item-title">Цвет</p>
+                <div class="modal__cross">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="modal__content">
+                <p class="modal__option">Бежевый</p>
+                <p class="modal__option">Небежевый</p>
+                <p class="modal__option">Фуксия</p>
+                <p class="modal__option">Изумрудный</p>
+            </div>
+            <div class="modal__item">
+                <p class="modal__item-title">Размер</p>
+                <div class="modal__cross">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="modal__content modal__content--block">
+                <p class="modal__option">65*65</p>
+                <p class="modal__option">90*90</p>
+                <p class="modal__option">135*135</p>
+            </div>
+
+            <div class="modal__item">
+                <p class="modal__item-title">Сортировка</p>
+                <div class="modal__cross">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="modal__content modal__content--block">
+                <ul class="modal__list">
+                    <li class="modal__list-item">По популярности</li>
+                    <li class="modal__list-item">По возрастанию цены</li>
+                    <li class="modal__list-item">По убыванию цены</li>
+                    <li class="modal__list-item">По новинкам</li>
+                </ul>
+            </div>
+            <div class="modal__wrapper">
+                <div class="position-bottom">
+                    <button class="modal__button modal__button--black" id="view-results" disabled>Показать результаты
+                    </button>
+                    <button class="modal__button modal__button--white" id="reset">Сбросить</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Оплпта и доставка, возврат, часто задаваемые --- перенести все на главную страницу (открываются с футера)-->
+        <div class="modal" id="ship-and-pay">
+            <div class="modal__title">
+                Доставка и оплата
+                <div class="close" id="close-info">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="modal__wrapper">
+                <div class="modal__text">
+                    Чеченский язык один из самых древнейших, красивейших
+                    и богатейших языков в мире. Скудным его может считать
+                    только тот, кто по-настоящему не познал всю его глубину,
+                    изобилие и разнообразие. Язык этот, именуемый самими
+                    чеченцами языком матери, претерпел множество изменений
+                    за свою судьбу: с древних времен, с распространением
+                    ислама, использовался на основе арабской письменности,
+                    позднее, параллельно с арабской графикой в обиход
+                    была введена и письменность на кириллице, созданная
+                    П.Усларом, позже ее сменила латиница, затем снова –
+                    кириллица. Но, сколько бы изменений не было,
+                    чеченцы никогда не оставляли и не забывали свой язык,
+                    из глубины веков берегли его, как зеницу ока.
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="info-return">
+            <div class="modal__title">
+                Возврат
+                <div class="close">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="modal__wrapper">
+                <div class="modal__text">
+                    Чеченский язык один из самых древнейших, красивейших
+                    и богатейших языков в мире. Скудным его может считать
+                    только тот, кто по-настоящему не познал всю его глубину,
+                    изобилие и разнообразие.
+                </div>
+            </div>
+        </div>
+        <!--Часто задаваемые вопросы-->
+        <div class="modal" id="faq">
+            <div class="modal__title">
+                Часто задаваемые вопросы
+                <div class="close">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="modal__wrapper">
+                <p class="modal__question">
+                    Зачем мне приобретать ваш товар?
+                </p>
+                <p class="modal__answer">
+                    У нас уникальные изделия, натуральный состав, ручная работа.
+                </p>
+                <p class="modal__question">
+                    Зачем мне приобретать ваш товар?
+                </p>
+                <p class="modal__answer">
+                    У нас уникальные изделия, натуральный состав, ручная работа.
+                </p>
+                <p class="modal__question">
+                    Зачем мне приобретать ваш товар?
+                </p>
+                <p class="modal__answer">
+                    У нас уникальные изделия, натуральный состав, ручная работа.
+                </p>
+                <p class="modal__question">
+                    Зачем мне приобретать ваш товар?
+                </p>
+                <p class="modal__answer">
+                    У нас уникальные изделия, натуральный состав, ручная работа.
+                </p>
+            </div>
+        </div>
+        <!--wishlist - избранное-->
+        <div class="modal" id="wishlist">
+            <div class="modal__title">
+                Избранное
+                <div class="close">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="modal__wrapper">
+                <!--modal__view-height - обертка для пустой корзины и пустого избранного-->
+                <div class="modal__view-height">
+                    <div class="flex-wrapper">
+                        <div class="photo__container">
+                            <img src="images/svg/favor-hearts.svg" alt="Сердечки">
+                        </div>
+                        <h5 class="modal__heading">
+                            Добавляйте понравивишиеся товары в избранное, чтобы не потерять.
+                        </h5>
+                    </div>
+                    <div class="flex-wrapper">
+                        <button class="modal__button modal__button--white">
+                            <a href="category.html">Посмотреть коллекции</a>
+                        </button>
                     </div>
                 </div>
                 <div class="category-flex">
                     <div class="category__product">
                         <div class="category__photo-container">
-                            <img src="images/png/scarves.png"  class="category__photo" alt="Фото Коллекции" />
-                        </div>
-                        <h5 class="category__product-title">Даймохк</h5>
-                        <p class="category__product-price">16 000 ₽</p>
-                    </div>
-                    <div class="category__product">
-                        <div class="category__photo-container">
-                            <img src="images/png/scarves.png"  class="category__photo" alt="Фото Коллекции" />
-                        </div>
-                        <h5 class="category__product-title">Даймохк</h5>
-                        <p class="category__product-price">16 000 ₽</p>
-                    </div>
-                    <div class="category__product">
-                        <div class="category__photo-container">
-                            <img src="images/png/scarves.png"  class="category__photo" alt="Фото Коллекции" />
-                        </div>
-                        <h5 class="category__product-title">Даймохк</h5>
-                        <p class="category__product-price">16 000 ₽</p>
-                    </div>
-                    <div class="category__product">
-                        <div class="category__photo-container">
-                            <img src="images/png/scarves.png"  class="category__photo"  alt="Фото Коллекции" />
-                        </div>
-                        <h5 class="category__product-title">Даймохк</h5>
-                        <p class="category__product-price">16 000 ₽</p>
-                    </div>
-                </div>
-                <div class="category__button">Загрузить еще</div>
-            </div>
+                            <!-- Slider main container -->
+                            <div class="swiper slider">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <img src="images/png/scarves.png" class="category__photo"
+                                             alt="Фото Коллекции"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/png/scarves.png" class="category__photo"
+                                             alt="Фото Коллекции"/>
 
-            <div class="category__collections">
-                <div class="category__main-flex">
-                    <div class="category__collection-title">
-                        <div class="category__photo-container">
-                            <img src="images/png/title-collection.png" alt="Фото Коллекции" />
-                        </div>
-                        <h2 class="category__title">Базовые платки</h2>
-                        <p class="category__description">Платок AMAT - это замечательное сочетание стиля, качества и оригинального дизайна.</p>
-                    </div>
-                    <div class="category-flex tablet-flex-wrapper">
-                        <div class="category__product">
-                            <div class="category__photo-container">
-                                <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
+                                    </div>
+                                    <div class="swiper-slide">Slide 3</div>
+                                    ...
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+
+                                <!-- If we need scrollbar -->
+                                <div class="swiper-scrollbar"></div>
                             </div>
-                            <h5 class="category__product-title">Даймохк</h5>
-                            <p class="category__product-price">16 000 ₽</p>
                         </div>
-                        <div class="category__product">
-                            <div class="category__photo-container">
-                                <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
+                        <h5 class="category__product-title">Даймохк</h5>
+                        <p class="category__product-price">16 000 ₽</p>
+                    </div>
+                    <div class="category__product">
+                        <div class="category__photo-container">
+                            <!-- Slider main container -->
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <img src="images/png/scarves.png" class="category__photo"
+                                             alt="Фото Коллекции"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/png/scarves.png" class="category__photo"
+                                             alt="Фото Коллекции"/>
+
+                                    </div>
+                                    <div class="swiper-slide">Slide 3</div>
+                                    ...
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+
+                                <!-- If we need scrollbar -->
+                                <div class="swiper-scrollbar"></div>
                             </div>
-                            <h5 class="category__product-title">Даймохк</h5>
-                            <p class="category__product-price">16 000 ₽</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="category-flex">
-                    <div class="category__product">
-                        <div class="category__photo-container">
-                            <img src="images/png/scarves.png"  class="category__photo" alt="Фото Коллекции" />
                         </div>
                         <h5 class="category__product-title">Даймохк</h5>
                         <p class="category__product-price">16 000 ₽</p>
                     </div>
                     <div class="category__product">
                         <div class="category__photo-container">
-                            <img src="images/png/scarves.png"  class="category__photo" alt="Фото Коллекции" />
-                        </div>
-                        <h5 class="category__product-title">Даймохк</h5>
-                        <p class="category__product-price">16 000 ₽</p>
-                    </div>
-                    <div class="category__product">
-                        <div class="category__photo-container">
-                            <img src="images/png/scarves.png"  class="category__photo" alt="Фото Коллекции" />
-                        </div>
-                        <h5 class="category__product-title">Даймохк</h5>
-                        <p class="category__product-price">16 000 ₽</p>
-                    </div>
-                    <div class="category__product">
-                        <div class="category__photo-container">
-                            <img src="images/png/scarves.png"  class="category__photo"  alt="Фото Коллекции" />
-                        </div>
-                        <h5 class="category__product-title">Даймохк</h5>
-                        <p class="category__product-price">16 000 ₽</p>
-                    </div>
-                </div>
-                <div class="category__button">Загрузить еще</div>
-            </div>
+                            <!-- Slider main container -->
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <img src="images/png/scarves.png" class="category__photo"
+                                             alt="Фото Коллекции"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/png/scarves.png" class="category__photo"
+                                             alt="Фото Коллекции"/>
 
-            <div class="category__collections">
-                <div class="category__main-flex">
-                    <div class="category__collection-title">
-                        <div class="category__photo-container">
-                            <img src="images/png/title-collection.png" alt="Фото Коллекции" />
-                        </div>
-                        <h2 class="category__title">Базовые платки</h2>
-                        <p class="category__description">Платок AMAT - это замечательное сочетание стиля, качества и оригинального дизайна.</p>
-                    </div>
-                    <div class="category-flex tablet-flex-wrapper">
-                        <div class="category__product">
-                            <div class="category__photo-container">
-                                <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
+                                    </div>
+                                    <div class="swiper-slide">Slide 3</div>
+                                    ...
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+
+                                <!-- If we need scrollbar -->
+                                <div class="swiper-scrollbar"></div>
                             </div>
-                            <h5 class="category__product-title">Даймохк</h5>
-                            <p class="category__product-price">16 000 ₽</p>
                         </div>
-                        <div class="category__product">
-                            <div class="category__photo-container">
-                                <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
+                        <h5 class="category__product-title">Даймохк</h5>
+                        <p class="category__product-price">16 000 ₽</p>
+                    </div>
+                    <div class="category__product">
+                        <div class="category__photo-container">
+                            <!-- Slider main container -->
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <img src="images/png/scarves.png" class="category__photo"
+                                             alt="Фото Коллекции"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/png/scarves.png" class="category__photo"
+                                             alt="Фото Коллекции"/>
+
+                                    </div>
+                                    <div class="swiper-slide">Slide 3</div>
+                                    ...
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+
+                                <!-- If we need scrollbar -->
+                                <div class="swiper-scrollbar"></div>
                             </div>
-                            <h5 class="category__product-title">Даймохк</h5>
-                            <p class="category__product-price">16 000 ₽</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="category-flex">
-                    <div class="category__product">
-                        <div class="category__photo-container">
-                            <img src="images/png/scarves.png"  class="category__photo" alt="Фото Коллекции" />
                         </div>
                         <h5 class="category__product-title">Даймохк</h5>
                         <p class="category__product-price">16 000 ₽</p>
                     </div>
                     <div class="category__product">
                         <div class="category__photo-container">
-                            <img src="images/png/scarves.png"  class="category__photo" alt="Фото Коллекции" />
-                        </div>
-                        <h5 class="category__product-title">Даймохк</h5>
-                        <p class="category__product-price">16 000 ₽</p>
-                    </div>
-                    <div class="category__product">
-                        <div class="category__photo-container">
-                            <img src="images/png/scarves.png"  class="category__photo" alt="Фото Коллекции" />
-                        </div>
-                        <h5 class="category__product-title">Даймохк</h5>
-                        <p class="category__product-price">16 000 ₽</p>
-                    </div>
-                    <div class="category__product">
-                        <div class="category__photo-container">
-                            <img src="images/png/scarves.png"  class="category__photo"  alt="Фото Коллекции" />
-                        </div>
-                        <h5 class="category__product-title">Даймохк</h5>
-                        <p class="category__product-price">16 000 ₽</p>
-                    </div>
-                </div>
-                <div class="category__button">Загрузить еще</div>
-            </div>
+                            <!-- Slider main container -->
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <img src="images/png/scarves.png" class="category__photo"
+                                             alt="Фото Коллекции"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/png/scarves.png" class="category__photo"
+                                             alt="Фото Коллекции"/>
 
-<!-- Фильтр, модальное окно-->
-            <div class="modal" id="filter">
-                <div class="modal__title">
-                    <div class="close" id="close-filter">
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                <div class="modal__item">
-                    <p class="modal__item-title">Материал</p>
-                    <div class="modal__cross">
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                <div class="modal__content">
-                    <p class="modal__option">Шёлк</p>
-                    <p class="modal__option">Шёлк/Твил</p>
-                    <p class="modal__option">Хлопок/Шёлк</p>
-                </div>
-                <div class="modal__item">
-                    <p class="modal__item-title">Тип изделия</p>
-                    <div class="modal__cross">
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                <div class="modal__content">
-                    <p class="modal__option">Платок</p>
-                    <p class="modal__option">Шаль</p>
-                    <p class="modal__option">Твилли</p>
-                </div>
-                <div class="modal__item">
-                    <p class="modal__item-title">Цвет</p>
-                    <div class="modal__cross">
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                <div class="modal__content">
-                    <p class="modal__option">Бежевый</p>
-                    <p class="modal__option">Небежевый</p>
-                    <p class="modal__option">Фуксия</p>
-                    <p class="modal__option">Изумрудный</p>
-                </div>
-                <div class="modal__item">
-                    <p class="modal__item-title">Размер</p>
-                    <div class="modal__cross">
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                <div class="modal__content modal__content--block">
-                    <p class="modal__option">65*65</p>
-                    <p class="modal__option">90*90</p>
-                    <p class="modal__option">135*135</p>
-                </div>
+                                    </div>
+                                    <div class="swiper-slide">Slide 3</div>
+                                    ...
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
 
-                <div class="modal__item">
-                    <p class="modal__item-title">Сортировка</p>
-                    <div class="modal__cross">
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                <div class="modal__content modal__content--block">
-                    <ul class="modal__list">
-                        <li class="modal__list-item">По популярности</li>
-                        <li class="modal__list-item">По возрастанию цены</li>
-                        <li class="modal__list-item">По убыванию цены</li>
-                        <li class="modal__list-item">По новинкам</li>
-                    </ul>
-                </div>
-                <div class="modal__wrapper">
-                    <div class="position-bottom">
-                        <button class="modal__button modal__button--black" id="view-results" disabled>Показать результаты</button>
-                        <button class="modal__button modal__button--white" id="reset">Сбросить</button>
-                    </div>
-                </div>
-            </div>
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
 
-            <!-- Оплпта и доставка, возврат, часто задаваемые --- перенести все на главную страницу (открываются с футера)-->
-            <div class="modal" id="ship-and-pay">
-                <div class="modal__title">
-                    Доставка и оплата
-                    <div class="close" id="close-info">
-                        <span></span>
-                        <span></span>
+                                <!-- If we need scrollbar -->
+                                <div class="swiper-scrollbar"></div>
+                            </div>
+                        </div>
+                        <h5 class="category__product-title">Даймохк</h5>
+                        <p class="category__product-price">16 000 ₽</p>
                     </div>
-                </div>
-                <div class="modal__wrapper">
-                    <div class="modal__text">
-                        Чеченский язык один из самых древнейших, красивейших
-                        и богатейших языков в мире. Скудным его может считать
-                        только тот, кто по-настоящему не познал всю его глубину,
-                        изобилие и разнообразие. Язык этот, именуемый самими
-                        чеченцами языком матери, претерпел множество изменений
-                        за свою судьбу: с древних времен, с распространением
-                        ислама, использовался на основе арабской письменности,
-                        позднее, параллельно с арабской графикой в обиход
-                        была введена и письменность на кириллице, созданная
-                        П.Усларом, позже ее сменила латиница, затем снова –
-                        кириллица. Но, сколько бы изменений не было,
-                        чеченцы никогда не оставляли и не забывали свой язык,
-                        из глубины веков берегли его, как зеницу ока.
+                    <div class="category__product">
+                        <div class="category__photo-container">
+                            <!-- Slider main container -->
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <img src="images/png/scarves.png" class="category__photo"
+                                             alt="Фото Коллекции"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/png/scarves.png" class="category__photo"
+                                             alt="Фото Коллекции"/>
+
+                                    </div>
+                                    <div class="swiper-slide">Slide 3</div>
+                                    ...
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+
+                                <!-- If we need scrollbar -->
+                                <div class="swiper-scrollbar"></div>
+                            </div>
+                        </div>
+                        <h5 class="category__product-title">Даймохк</h5>
+                        <p class="category__product-price">16 000 ₽</p>
                     </div>
-                </div>
-            </div>
-            <div class="modal" id="info-return">
-                <div class="modal__title">
-                    Возврат
-                    <div class="close">
-                        <span></span>
-                        <span></span>
+                    <div class="category__product">
+                        <div class="category__photo-container">
+                            <!-- Slider main container -->
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <img src="images/png/scarves.png" class="category__photo"
+                                             alt="Фото Коллекции"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/png/scarves.png" class="category__photo"
+                                             alt="Фото Коллекции"/>
+
+                                    </div>
+                                    <div class="swiper-slide">Slide 3</div>
+                                    ...
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+
+                                <!-- If we need scrollbar -->
+                                <div class="swiper-scrollbar"></div>
+                            </div>
+                        </div>
+                        <h5 class="category__product-title">Даймохк</h5>
+                        <p class="category__product-price">16 000 ₽</p>
                     </div>
-                </div>
-                <div class="modal__wrapper">
-                    <div class="modal__text">
-                        Чеченский язык один из самых древнейших, красивейших
-                        и богатейших языков в мире. Скудным его может считать
-                        только тот, кто по-настоящему не познал всю его глубину,
-                        изобилие и разнообразие.
+                    <div class="category__product">
+                        <div class="category__photo-container">
+                            <!-- Slider main container -->
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <img src="images/png/scarves.png" class="category__photo"
+                                             alt="Фото Коллекции"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/png/scarves.png" class="category__photo"
+                                             alt="Фото Коллекции"/>
+
+                                    </div>
+                                    <div class="swiper-slide">Slide 3</div>
+                                    ...
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+
+                                <!-- If we need scrollbar -->
+                                <div class="swiper-scrollbar"></div>
+                            </div>
+                        </div>
+                        <h5 class="category__product-title">Даймохк</h5>
+                        <p class="category__product-price">16 000 ₽</p>
                     </div>
                 </div>
             </div>
-            <!--Часто задаваемые вопросы-->
-            <div class="modal" id="faq">
-                <div class="modal__title">
-                    Часто задаваемые вопросы
-                    <div class="close">
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                <div class="modal__wrapper">
-                    <p class="modal__question">
-                        Зачем мне приобретать ваш товар?
-                    </p>
-                    <p class="modal__answer">
-                        У нас уникальные изделия, натуральный состав, ручная работа.
-                    </p>
-                    <p class="modal__question">
-                        Зачем мне приобретать ваш товар?
-                    </p>
-                    <p class="modal__answer">
-                        У нас уникальные изделия, натуральный состав, ручная работа.
-                    </p>
-                    <p class="modal__question">
-                        Зачем мне приобретать ваш товар?
-                    </p>
-                    <p class="modal__answer">
-                        У нас уникальные изделия, натуральный состав, ручная работа.
-                    </p>
-                    <p class="modal__question">
-                        Зачем мне приобретать ваш товар?
-                    </p>
-                    <p class="modal__answer">
-                        У нас уникальные изделия, натуральный состав, ручная работа.
-                    </p>
+        </div>
+        <div class="modal" id="cart">
+            <div class="modal__title">
+                Корзина
+                <div class="close">
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
-            <!--wishlist - избранное-->
-            <div class="modal" id="wishlist">
-                <div class="modal__title">
-                    Избранное
-                    <div class="close">
-                        <span></span>
-                        <span></span>
+            <div class="modal__wrapper">
+<!--modal__view-height - обертка для пустой корзины и пустого избранного-->
+                <div class="modal__view-height">
+                    <div class="flex-wrapper">
+                        <div class="photo__container">
+                            <img src="images/svg/cart.svg" alt="Корзина">
+                        </div>
+                        <h5 class="modal__heading">
+                            Наполните вашу корзину товарами, о которых давно мечтали.
+                        </h5>
+                    </div>
+                    <div class="flex-wrapper">
+                        <button class="modal__button modal__button--white">
+                            <a href="category.html">Продолжить покупки</a>
+                        </button>
                     </div>
                 </div>
-                <div class="modal__wrapper">
-                    <div class="modal__view-height">
-                        <div class="flex-wrapper">
-                            <div class="photo__container">
-                                <img src="images/svg/favor-hearts.svg" alt="Сердечки">
+            </div>
+            <div class="cart">
+                <div class="modal__wrapper cart__wrapper">
+                    <div class="cart__items">
+                        <div class="cart__item">
+                            <div class="cart__product-photo">
+                                <img src="images/png/scarves.png" alt="Платок">
                             </div>
-                            <h5 class="modal__heading">
-                                Добавляйте понравивишиеся товары в избранное, чтобы не потерять.
-                            </h5>
+                            <div class="cart__characteristics">
+                                <div class="cart__characteristics-scarve">
+                                    <div class="cart__product-name">Платок "Алфавит"</div>
+                                    <div class="cart__product-details">
+                                        <span class="cart__product-details-size">90*90 см</span>
+                                        <div class="cart__product-details-dott"></div>
+                                        <span class="cart__product-details-color">Синий</span>
+                                    </div>
+                                    <div class="counter" data-counter>
+                                        <div class="counter__button counter__button--minus">-</div>
+                                        <div class="counter__input"><input type="text" value="1" disabled></div>
+                                        <div class="counter__button counter__button--plus">+</div>
+                                    </div>
+                                </div>
+                                <div class="cart__characteristics-right">
+                                    <div class="cart__product-control">
+                                        <div class="cart__product-add-to-favorite"><img src="images/svg/add-to-favorite.svg"></div>
+                                        <div class="cart__product-delete">
+                                            <span> </span>
+                                            <span> </span>
+                                        </div>
+                                    </div>
+                                    <div class="cart__product-price">
+                                        16 000 ₽
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex-wrapper">
-                            <button class="modal__button modal__button--white">
-                                <a href="category.html">Посмотреть коллекции</a>
-                            </button>
+                        <div class="cart__item">
+                            <div class="cart__product-photo">
+                                <img src="images/png/scarves.png" alt="Платок">
+                            </div>
+                            <div class="cart__characteristics">
+                                <div class="cart__characteristics-scarve">
+                                    <div class="cart__product-name">Платок "Алфавит"</div>
+                                    <div class="cart__product-details">
+                                        <span class="cart__product-details-size">90*90 см</span>
+                                        <div class="cart__product-details-dott"></div>
+                                        <span class="cart__product-details-color">Синий</span>
+                                    </div>
+                                    <div class="counter" data-counter>
+                                        <div class="counter__button counter__button--minus">-</div>
+                                        <div class="counter__input"><input type="text" value="1" disabled></div>
+                                        <div class="counter__button counter__button--plus">+</div>
+                                    </div>
+                                </div>
+                                <div class="cart__characteristics-right">
+                                    <div class="cart__product-control">
+                                        <div class="cart__product-add-to-favorite"><img src="images/svg/add-to-favorite.svg"></div>
+                                        <div class="cart__product-delete">
+                                            <span> </span>
+                                            <span> </span>
+                                        </div>
+                                    </div>
+                                    <div class="cart__product-price">
+                                        <input class="cart__product-price-input" data-product-price value="16 000 ₽">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="category-flex">
-                        <div class="category__product">
-                            <div class="category__photo-container">
-                                <!-- Slider main container -->
-                                <div class="swiper">
-                                    <!-- Additional required wrapper -->
-                                    <div class="swiper-wrapper">
-                                        <!-- Slides -->
-                                        <div class="swiper-slide">
-                                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
-
-                                        </div>
-                                        <div class="swiper-slide">Slide 3</div>
-                                        ...
-                                    </div>
-                                    <!-- If we need pagination -->
-                                    <div class="swiper-pagination"></div>
-
-                                    <!-- If we need navigation buttons -->
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-
-                                    <!-- If we need scrollbar -->
-                                    <div class="swiper-scrollbar"></div>
-                                </div>
+                    <div class="modal__footer">
+                        <div class="cart__total-container">
+                            <div class="cart__total">
+                                <p class="cart__total-title">Сумма заказа</p>
+                                <p class="cart__total-subtitle">Без учета стоимости доставки</p>
                             </div>
-                            <h5 class="category__product-title">Даймохк</h5>
-                            <p class="category__product-price">16 000 ₽</p>
+                            <div class="cart__total-price">15 000 ₽</div>
                         </div>
-                        <div class="category__product">
-                            <div class="category__photo-container">
-                                <!-- Slider main container -->
-                                <div class="swiper">
-                                    <!-- Additional required wrapper -->
-                                    <div class="swiper-wrapper">
-                                        <!-- Slides -->
-                                        <div class="swiper-slide">
-                                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
-
-                                        </div>
-                                        <div class="swiper-slide">Slide 3</div>
-                                        ...
-                                    </div>
-                                    <!-- If we need pagination -->
-                                    <div class="swiper-pagination"></div>
-
-                                    <!-- If we need navigation buttons -->
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-
-                                    <!-- If we need scrollbar -->
-                                    <div class="swiper-scrollbar"></div>
-                                </div>
-                            </div>
-                            <h5 class="category__product-title">Даймохк</h5>
-                            <p class="category__product-price">16 000 ₽</p>
-                        </div>
-                        <div class="category__product">
-                            <div class="category__photo-container">
-                                <!-- Slider main container -->
-                                <div class="swiper">
-                                    <!-- Additional required wrapper -->
-                                    <div class="swiper-wrapper">
-                                        <!-- Slides -->
-                                        <div class="swiper-slide">
-                                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
-
-                                        </div>
-                                        <div class="swiper-slide">Slide 3</div>
-                                        ...
-                                    </div>
-                                    <!-- If we need pagination -->
-                                    <div class="swiper-pagination"></div>
-
-                                    <!-- If we need navigation buttons -->
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-
-                                    <!-- If we need scrollbar -->
-                                    <div class="swiper-scrollbar"></div>
-                                </div>
-                            </div>
-                            <h5 class="category__product-title">Даймохк</h5>
-                            <p class="category__product-price">16 000 ₽</p>
-                        </div>
-                        <div class="category__product">
-                            <div class="category__photo-container">
-                                <!-- Slider main container -->
-                                <div class="swiper">
-                                    <!-- Additional required wrapper -->
-                                    <div class="swiper-wrapper">
-                                        <!-- Slides -->
-                                        <div class="swiper-slide">
-                                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
-
-                                        </div>
-                                        <div class="swiper-slide">Slide 3</div>
-                                        ...
-                                    </div>
-                                    <!-- If we need pagination -->
-                                    <div class="swiper-pagination"></div>
-
-                                    <!-- If we need navigation buttons -->
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-
-                                    <!-- If we need scrollbar -->
-                                    <div class="swiper-scrollbar"></div>
-                                </div>
-                            </div>
-                            <h5 class="category__product-title">Даймохк</h5>
-                            <p class="category__product-price">16 000 ₽</p>
-                        </div>
-                        <div class="category__product">
-                            <div class="category__photo-container">
-                                <!-- Slider main container -->
-                                <div class="swiper">
-                                    <!-- Additional required wrapper -->
-                                    <div class="swiper-wrapper">
-                                        <!-- Slides -->
-                                        <div class="swiper-slide">
-                                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
-
-                                        </div>
-                                        <div class="swiper-slide">Slide 3</div>
-                                        ...
-                                    </div>
-                                    <!-- If we need pagination -->
-                                    <div class="swiper-pagination"></div>
-
-                                    <!-- If we need navigation buttons -->
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-
-                                    <!-- If we need scrollbar -->
-                                    <div class="swiper-scrollbar"></div>
-                                </div>
-                            </div>
-                            <h5 class="category__product-title">Даймохк</h5>
-                            <p class="category__product-price">16 000 ₽</p>
-                        </div>
-                        <div class="category__product">
-                            <div class="category__photo-container">
-                                <!-- Slider main container -->
-                                <div class="swiper">
-                                    <!-- Additional required wrapper -->
-                                    <div class="swiper-wrapper">
-                                        <!-- Slides -->
-                                        <div class="swiper-slide">
-                                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
-
-                                        </div>
-                                        <div class="swiper-slide">Slide 3</div>
-                                        ...
-                                    </div>
-                                    <!-- If we need pagination -->
-                                    <div class="swiper-pagination"></div>
-
-                                    <!-- If we need navigation buttons -->
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-
-                                    <!-- If we need scrollbar -->
-                                    <div class="swiper-scrollbar"></div>
-                                </div>
-                            </div>
-                            <h5 class="category__product-title">Даймохк</h5>
-                            <p class="category__product-price">16 000 ₽</p>
-                        </div>
-                        <div class="category__product">
-                            <div class="category__photo-container">
-                                <!-- Slider main container -->
-                                <div class="swiper">
-                                    <!-- Additional required wrapper -->
-                                    <div class="swiper-wrapper">
-                                        <!-- Slides -->
-                                        <div class="swiper-slide">
-                                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
-
-                                        </div>
-                                        <div class="swiper-slide">Slide 3</div>
-                                        ...
-                                    </div>
-                                    <!-- If we need pagination -->
-                                    <div class="swiper-pagination"></div>
-
-                                    <!-- If we need navigation buttons -->
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-
-                                    <!-- If we need scrollbar -->
-                                    <div class="swiper-scrollbar"></div>
-                                </div>
-                            </div>
-                            <h5 class="category__product-title">Даймохк</h5>
-                            <p class="category__product-price">16 000 ₽</p>
-                        </div>
-                        <div class="category__product">
-                            <div class="category__photo-container">
-                                <!-- Slider main container -->
-                                <div class="swiper">
-                                    <!-- Additional required wrapper -->
-                                    <div class="swiper-wrapper">
-                                        <!-- Slides -->
-                                        <div class="swiper-slide">
-                                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="images/png/scarves.png" class="category__photo" alt="Фото Коллекции" />
-
-                                        </div>
-                                        <div class="swiper-slide">Slide 3</div>
-                                        ...
-                                    </div>
-                                    <!-- If we need pagination -->
-                                    <div class="swiper-pagination"></div>
-
-                                    <!-- If we need navigation buttons -->
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-
-                                    <!-- If we need scrollbar -->
-                                    <div class="swiper-scrollbar"></div>
-                                </div>
-                            </div>
-                            <h5 class="category__product-title">Даймохк</h5>
-                            <p class="category__product-price">16 000 ₽</p>
+                        <div class="modal__wrapper">
+                            <div class="modal__button modal__button--black"> Перейти к оформлению </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
+</main>
 <footer class="footer">
     <div class="wrapper">
         <div class="footer__logo-container">
-            <img src="images/svg/logo-white.svg" alt="AMAT" />
+            <img src="images/svg/logo-white.svg" alt="AMAT"/>
         </div>
         <h3 class="footer__title anim-blocks">Узнавайте первыми о новинках</h3>
 
@@ -744,8 +874,8 @@
                     name="email"
                     placeholder="Эл. почта"
             />
-            <input id="send-mail__button" type="submit" />
-            <img src="images/svg/arrow-right.svg" class="arrow-right" />
+            <input id="send-mail__button" type="submit"/>
+            <img src="images/svg/arrow-right.svg" class="arrow-right"/>
         </form>
         <p class="footer__text">
             Нажимая на кнопку «Подписаться», вы соглашаетесь c
@@ -867,7 +997,7 @@
         </a>
         <a href="tel:79889088787" class="footer__phone"> +7 988 908-87-87</a>
         <div class="seryonse">
-            Сайт разработан с любовью <br />
+            Сайт разработан с любовью <br/>
             в веб-студии <a href="https://seryonse.com/">SERYONSE</a>
         </div>
     </div>
@@ -876,13 +1006,14 @@
         <a href="policy.html">Политика конфиденциальности</a>
     </div>
     <div class="arrow-up" id="arrow-up">
-        <img src="images/svg/arrow-up.svg" />
+        <img src="images/svg/arrow-up.svg"/>
     </div>
 </footer>
 <script src="js/categories.js"></script>
 <script src="js/script.js"></script>
 <script src="./js/accordion.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!--<script src="./js/swiper.js"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>-->
 
 
 </body>
