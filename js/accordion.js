@@ -2,11 +2,27 @@ const productAccordionItems = document.querySelectorAll(
   ".product-description__accordion > .accordion-item"
 );
 
+const footerInfoAccordionItems = document.querySelectorAll(
+  ".footer-info__mobile > .accordion-item"
+);
+
+
+const modalAccordionItems = document.querySelectorAll(
+    ".modal__accordion > .accordion-item"
+);
+
+modalAccordionItems.forEach((item) =>
+    accordionAnimate(item, productAccordionItems)
+);
 productAccordionItems.forEach((item) =>
   accordionAnimate(item, productAccordionItems)
 );
 
-function accordionAnimate(item, items) {
+footerInfoAccordionItems.forEach((item) =>
+  accordionAnimate(item, footerInfoAccordionItems, false)
+);
+
+function accordionAnimate(item, items, scroll = true) {
   item.querySelector(".accordion-header").addEventListener("click", () => {
     items.forEach((accItem) => {
       if (accItem !== item) {
@@ -25,13 +41,15 @@ function accordionAnimate(item, items) {
       ).offsetHeight;
       description.style.height = `${bodyHeight}px`;
 
-      setTimeout(() => {
-        const scrollToPosition = item.offsetTop - 120;
-        window.scrollTo({
-          top: scrollToPosition,
-          behavior: "smooth", // Добавляет плавность скролла
-        });
-      }, 250);
+      if (scroll) {
+        setTimeout(() => {
+          const scrollToPosition = item.offsetTop - 120;
+          window.scrollTo({
+            top: scrollToPosition,
+            behavior: "smooth", // Добавляет плавность скролла
+          });
+        }, 250);
+      }
     }
   });
 }

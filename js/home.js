@@ -1,67 +1,86 @@
 const mainVideoBlock = document.querySelector(".home-video");
-
-const map = document.querySelector("#modal-map");
-const openMap = document.querySelector("#open-map");
-const closeMap = document.querySelector(".close-map");
-const backdrop = document.querySelector("#backdrop");
 const body = document.querySelector("body");
 
-const animItems = document.querySelectorAll(".animItems");
-const animBlocks = document.querySelectorAll(".anim-blocks");
+const animatedMainPageSections = document.querySelectorAll(".animated-section");
 
-openMap.addEventListener("click", openMapFunction);
-closeMap.addEventListener("click", closeMapFunction);
-backdrop.addEventListener("click", closeMapFunction);
+const mapLink = document.querySelector("#map-link");
+const map = document.querySelector(".about-amat__map");
 
-function closeMapFunction() {
-  document.querySelector("#modal-map").style.display = "none";
-  document.querySelector("#backdrop").style.display = "none";
-  document.querySelector("body").style.overflow = "visible";
-}
+mapLink.addEventListener("click", () => {
+  mapLink.classList.add("map--active");
+  map.classList.add("is--active");
+});
 
-function openMapFunction() {
-  document.querySelector("#modal-map").style.display = "block";
-  document.querySelector("#backdrop").style.display = "block";
-  document.querySelector("body").style.overflow = "hidden";
-}
+const favoriteSwiperOptionsMobile = {
+  effect: "coverflow",
+  slidesPerView: "auto",
+  loop: true,
+  speed: 1000,
+  centeredSlides: true,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 3.5,
+    slideShadows: false,
+  },
+  pagination: {
+    el: ".favorite-shawls__list .swiper-pagination",
+  },
+  autoplay: {
+    delay: 0,
+    pauseOnMouseEnter: true,
+  },
+};
 
-// //const animItem = animItems.length; //для себя запись сделала
-function offset(el) {
-  const rect = el.getBoundingClientRect(),
-    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
-}
+const favoriteSwiperOptionsDesktop = {
+  slidesPerView: "auto",
+  loop: true,
+  speed: 1000,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  spaceBetween: 8,
+  autoplay: {
+    delay: 0,
+    pauseOnMouseEnter: true,
+  },
+};
 
-//Появление блоков при прокрутке
-//const animItem = animItems.length; //для себя запись сделала
-if (animBlocks.length > 0) {
-  window.addEventListener("scroll", animOnScrolling);
-  function animOnScrolling() {
-    for (let index = 0; index < animBlocks.length; index++) {
-      const animBlock = animBlocks[index];
-      const animBlockHeight = animBlock.offsetHeight;
-      const animBlockOffset = offset(animBlock).top;
-      const animStartBlock = 4;
+let favoritesSwiper;
+let perSwiperEffect;
 
-      let animBlockPoint =
-        window.innerHeight - animBlockHeight / animStartBlock;
-      if (
-        pageYOffset > animBlockOffset - animBlockPoint &&
-        pageYOffset < animBlockOffset + animBlockHeight
-      ) {
-        animBlock.classList.add("active");
-      }
+function favoritesSwiperMode() {
+  let screenWidth = window.innerWidth;
+  let swiperEffect = screenWidth < 768 ? "coverflow" : "slide";
+  let options =
+    screenWidth < 768
+      ? favoriteSwiperOptionsMobile
+      : favoriteSwiperOptionsDesktop;
+
+  if (!perSwiperEffect && !favoritesSwiper) {
+    perSwiperEffect = swiperEffect;
+    favoritesSwiper = new Swiper(".favorite-shawls__list .swiper", options);
+    return;
+  }
+
+  if (perSwiperEffect !== swiperEffect) {
+    perSwiperEffect = swiperEffect;
+    if (favoritesSwiper && favoritesSwiper.destroy) {
+      favoritesSwiper.destroy(true, true);
     }
+    favoritesSwiper = new Swiper(".favorite-shawls__list .swiper", options);
   }
 }
 
+window.addEventListener("resize", () => {
+  favoritesSwiperMode();
+});
+
 document.addEventListener("DOMContentLoaded", () => {
+  favoritesSwiperMode();
   setTimeout(() => {
     MainPageHeaderAnimationOn();
   }, 600);
-
-  MarqueeOn();
 });
 
 function MainPageHeaderAnimationOn() {
@@ -69,26 +88,22 @@ function MainPageHeaderAnimationOn() {
   mainHeader.classList.add("is--active");
 }
 
-function MarqueeOn() {
-  const marquee = document.getElementById("marquee");
-  let marqueeContent = marquee.innerHTML;
-  marquee.innerHTML = marqueeContent + marqueeContent; // Дублируем контент для непрерывности
+window.addEventListener("scroll", () => {
+  const windowHeight = window.innerHeight;
+  animatedMainPageSections.forEach((block) => {
+    const blockPosition = block.getBoundingClientRect().top;
+    if (blockPosition <= 0.4 * windowHeight) {
+      const transfromAnimatedItems = block.querySelectorAll(
+        ".transform-text__animated"
+      );
+      const blockAnimatedItems = block.querySelectorAll(".block__animated");
 
-  let marqueePos = 0;
-  const speed = 1; // Скорость движения
-
-  function moveMarquee() {
-    marqueePos -= speed;
-
-    // Проверяем, достиг ли текст конца
-    if (-marqueePos >= marquee.offsetWidth / 3) {
-      marqueePos = 0;
+      transfromAnimatedItems.forEach((item) => {
+        item.classList.add("is--active");
+      });
+      blockAnimatedItems.forEach((item) => {
+        item.classList.add("is--active");
+      });
     }
-
-    marquee.style.transform = `translateX(${marqueePos}px)`;
-
-    requestAnimationFrame(moveMarquee);
-  }
-
-  moveMarquee();
-}
+  });
+});

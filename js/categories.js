@@ -7,6 +7,7 @@ let modal= document.querySelector(".modal");
 let backdropModal=document.querySelector(".modal__backdrop");
 let openWishlist = document.querySelector('.open-wishlist');
 let openCart = document.querySelector('.open-cart');
+let modalOptions = document.querySelectorAll('.modal__option');
 
 
 //открываем модальное окошко
@@ -14,6 +15,7 @@ openFilter.addEventListener('click',()=> {
   document.querySelector("body").classList.toggle('overflow-hidden');
   filterModal.classList.toggle('modal-active');
   backdropModal.style.display = "block";
+  filterModal.style.overflow = "scroll";
 });
 
 openWishlist.addEventListener('click',()=> {
@@ -87,7 +89,18 @@ deleteButtons.forEach(function(button) {
   });
 });
 
-new Swiper('.swiper');
+modalOptions.forEach((function (chooseEl) {
+  chooseEl.addEventListener('click', function (){
+    chooseEl.classList.toggle('modal__option--active');
+    let chooseElNumber = document.querySelectorAll('.modal__option--active');
+    // if (chooseElNumber.length > 0) {
+    //
+    // }
+  })
+}))
+
+
+// new Swiper('.swiper');
 
 //закрываем модальное окошко
 // closeModal.addEventListener('click',()=> {

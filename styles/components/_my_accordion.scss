@@ -3,11 +3,9 @@
 
   h3 {
     opacity: 1;
-    transform: none;
-    text-align: left;
     font-size: 18px;
     font-weight: 500;
-    line-height: normal;
+    text-transform: uppercase;
   }
 
   &-item {
@@ -22,6 +20,18 @@
         span:last-child {
           opacity: 0;
         }
+      }
+    }
+  }
+
+  &.accordion--white {
+    color: $backWhite;
+
+    .accordion-item {
+      border-top: 1px solid $graphicWhite50;
+
+      &:last-child {
+        border-bottom: 1px solid $graphicWhite50;
       }
     }
   }
@@ -55,15 +65,15 @@
     span {
       display: block;
       &:first-child {
-        width: 8px;
+        width: 10px;
         height: 1px;
         position: absolute;
-        top: 50%;
+        top: calc(50% - 0.5px);
       }
 
       &:last-child {
         width: 1px;
-        height: 8px;
+        height: 10px;
         transition: opacity 0.3s ease;
       }
     }

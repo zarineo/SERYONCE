@@ -139,6 +139,7 @@ p {
       span:nth-child(1) {
         transform: rotate(90deg);
         transform-origin: center;
+        transition: 0.3s;
       }
     }
   }
@@ -149,16 +150,14 @@ p {
     padding: 0 24px 40px;
   }
   &__content {
-    display: none;
-    //display: flex;
+    display: flex;
     flex-wrap: wrap;
     padding: 0 24px 48px 24px;
     text-align: left;
     gap: 8px;
     color: $textBlack60;
     &--block {
-      display: none;
-      //display: block;
+      display: block;
     }
   }
   &__list {
@@ -170,10 +169,12 @@ p {
   }
   &__option {
     width: 48%;
+    cursor: pointer;
+    &--active {
+      color: $textgold;
+    }
   }
-  &__option:active {
-    color: $textgold;
-  }
+
   &__footer {
     .modal__wrapper {
       padding-top: 0;
@@ -236,6 +237,9 @@ p {
 #reset {
   display: none;
   border: none;
+}
+.border-none {
+  border-bottom: none;
 }
 .filter-active {
   display: block;
