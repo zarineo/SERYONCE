@@ -3214,7 +3214,7 @@ a {
     width: 280px;
     margin-bottom: 67px; }
   .main-article .text-block {
-    width: 635px;
+    max-width: 635px;
     margin: 0 auto; }
   .main-article__text {
     font-size: 16px;
@@ -3227,6 +3227,10 @@ a {
     display: flex;
     gap: 30px;
     max-width: 100%; }
+    .main-article__photos .photo-container {
+      max-width: 100%; }
+      .main-article__photos .photo-container img {
+        width: 100%; }
     .main-article__photos--margin {
       margin: 0 -80px; }
   .main-article__photo-container {
@@ -3235,6 +3239,8 @@ a {
       width: 100%; }
     .main-article__photo-container--cover {
       max-width: 100%; }
+    .main-article__photo-container--padding {
+      padding: 0 120px; }
   .main-article__signature-name {
     font-size: 16px;
     font-weight: 600;
@@ -3250,6 +3256,34 @@ a {
     text-transform: uppercase;
     margin-top: 8px; }
 
+@media screen and (max-width: 800px) {
+  .main-article .section-wrapper {
+    padding-bottom: 120px;
+    padding-top: 60px; }
+  .main-article__title {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: -0.01em;
+    text-align: center; }
+  .main-article__subtitle {
+    margin-bottom: 30px;
+    width: 100%;
+    border-right: none; }
+  .main-article .text-block {
+    max-width: 536px; }
+  .main-article__photos {
+    flex-direction: column; }
+    .main-article__photos--margin {
+      margin: 0; }
+  .main-article__photo-container--padding {
+    padding: 0 50px; } }
+@media screen and (max-width: 538px) {
+  .main-article .section-wrapper {
+    padding-bottom: 120px; }
+  .main-article__title {
+    font-size: 20px;
+    line-height: 24px; } }
 * {
   box-sizing: border-box;
   font-family: "Tilda Sans", sans-serif; }

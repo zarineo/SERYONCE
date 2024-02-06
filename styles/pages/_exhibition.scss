@@ -28,7 +28,7 @@
     margin-bottom: 67px;
   }
   .text-block {
-    width: 635px;
+    max-width: 635px;
     margin: 0 auto;
   }
   &__text {
@@ -43,6 +43,12 @@
     display: flex;
     gap: 30px;
     max-width: 100%;
+    .photo-container {
+      max-width: 100%;
+      img {
+        width: 100%;
+      }
+    }
     &--margin {
       margin: 0 -80px;
     }
@@ -54,6 +60,9 @@
     }
     &--cover {
       max-width: 100%;
+    }
+    &--padding {
+      padding: 0 120px;
     }
   }
   &__signature {
@@ -72,6 +81,53 @@
       color: $textBlack60;
       text-transform: uppercase;
       margin-top: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main-article {
+    .section-wrapper {
+      padding-bottom: 120px;
+      padding-top: 60px;
+    }
+    &__title {
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 38px;
+      letter-spacing: -0.01em;
+      text-align: center;
+    }
+    &__subtitle {
+      margin-bottom: 30px;
+      width: 100%;
+      border-right: none;
+    }
+    .text-block {
+      max-width: 536px;
+    }
+    &__photos {
+      flex-direction: column;
+      &--margin {
+        margin: 0;
+      }
+    }
+    &__photo-container {
+      &--padding {
+        padding: 0 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 538px) {
+  .main-article {
+    .section-wrapper {
+      padding-bottom: 120px;
+    }
+    &__title {
+      font-size: 20px;
+      line-height: 24px;
     }
   }
 }
