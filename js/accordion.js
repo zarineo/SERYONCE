@@ -6,16 +6,14 @@ const footerInfoAccordionItems = document.querySelectorAll(
   ".footer-info__mobile > .accordion-item"
 );
 
-
-const modalAccordionItems = document.querySelectorAll(
-    ".modal__accordion > .accordion-item"
+const filterAccordionItems = document.querySelectorAll(
+  ".modal-filter__accordion .accordion-item"
 );
 
-modalAccordionItems.forEach((item) =>
-    accordionAnimate(item, productAccordionItems)
-);
+filterAccordionItems.forEach((item) => accordionAnimate(item, [], false));
+
 productAccordionItems.forEach((item) =>
-  accordionAnimate(item, productAccordionItems)
+  accordionAnimate(item, [])
 );
 
 footerInfoAccordionItems.forEach((item) =>

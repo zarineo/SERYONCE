@@ -1,85 +1,65 @@
-let openFilter = document.querySelector("#open-filter");
-let closeModal = document.querySelectorAll(".close");
-let filterModal = document.querySelector("#filter");
-let wishlist = document.querySelector("#wishlist");
-let cart = document.querySelector("#cart");
-let modal= document.querySelector(".modal");
-let backdropModal=document.querySelector(".modal__backdrop");
-let openWishlist = document.querySelector('.open-wishlist');
-let openCart = document.querySelector('.open-cart');
-let modalOptions = document.querySelectorAll('.modal__option');
+const modalFilter = document.querySelector("#modal-filter");
+const modalFilterClose = modalFilter.querySelector(".modal-header__button");
+const filterButton = document.querySelector("#filter-button");
 
-
-//открываем модальное окошко
-openFilter.addEventListener('click',()=> {
-  document.querySelector("body").classList.toggle('overflow-hidden');
-  filterModal.classList.toggle('modal-active');
-  backdropModal.style.display = "block";
-  filterModal.style.overflow = "scroll";
+filterButton.addEventListener("click", () => {
+  modalFilter.classList.add("is--active");
+  backdrop.classList.add("is--active");
+  document.body.classList.add("overflow-hidden");
 });
 
-openWishlist.addEventListener('click',()=> {
-  document.querySelector("body").classList.toggle('overflow-hidden');
-  wishlist.classList.toggle('modal-active');
-  backdropModal.style.display = "block";
-  wishlist.style.overflow = "scroll";
-});
-openCart.addEventListener('click',()=> {
-  document.querySelector("body").classList.toggle('overflow-hidden');
-  cart.classList.toggle('modal-active');
-  backdropModal.style.display = "block";
-  cart.style.overflow = "scroll";
+modalFilterClose.addEventListener("click", () => {
+  modalFilter.classList.remove("is--active");
+  backdrop.classList.remove("is--active");
+  document.body.classList.remove("overflow-hidden");
 });
 
-//Костыльно закрываем модальные окна
-closeModal.forEach(el => {
-  el.addEventListener('click',()=> {
-    wishlist.classList.remove('modal-active');
-    modal.classList.remove('modal-active');
-    cart.classList.remove('modal-active');
-    modal.style.transform="100%";
-    backdropModal.style.display = "none"
-    // backdropModal.classList.remove('modal-active');
-    document.querySelector("body").classList.remove('overflow-hidden');
-  });
+const productSwiper = new Swiper(".category-product__swiper.swiper", {
+  loop: true,
+  navigation: {
+    nextEl: ".category-product__swiper .swiper-button-next",
+    prevEl: ".category-product__swiper .swiper-button-prev",
+  },
 });
 
 // Счетчик на товары в корзине
-const counters = document.querySelectorAll('[data-counter]');
+const counters = document.querySelectorAll("[data-counter]");
 
 if (counters) {
-  counters.forEach(counter => {
-    counter.addEventListener('click', e => {
+  counters.forEach((counter) => {
+    counter.addEventListener("click", (e) => {
       const target = e.target;
 
-      if (target.closest('.counter__button')) {
-        let value = parseInt(target.closest('.counter').querySelector('input').value);
+      if (target.closest(".counter__button")) {
+        let value = parseInt(
+          target.closest(".counter").querySelector("input").value
+        );
 
-        if (target.classList.contains('counter__button--plus')) {
-          value++
+        if (target.classList.contains("counter__button--plus")) {
+          value++;
         } else {
-          --value
+          --value;
         }
 
         if (value <= 1) {
-          value = 1
+          value = 1;
         }
-        target.closest('.counter').querySelector('input').value = value;
+        target.closest(".counter").querySelector("input").value = value;
       }
-    })
-  })
+    });
+  });
 }
 
-//удаляем из корзины товар
+// удаляем из корзины товар
 
 // Получаем все элементы с классом "cart__product-delete"
-let deleteButtons = document.querySelectorAll('.cart__product-delete');
+let deleteButtons = document.querySelectorAll(".cart__product-delete");
 
 // Добавляем обработчик клика к каждой кнопке удаления
-deleteButtons.forEach(function(button) {
-  button.addEventListener('click', function() {
+deleteButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
     // Получаем родительский элемент (в данном случае, блок .cart__item)
-    let cartItem = this.closest('.cart__item');
+    let cartItem = this.closest(".cart__item");
 
     // Проверяем, что родительский элемент найден, прежде чем удалять
     if (cartItem) {
@@ -88,51 +68,3 @@ deleteButtons.forEach(function(button) {
     }
   });
 });
-
-modalOptions.forEach((function (chooseEl) {
-  chooseEl.addEventListener('click', function (){
-    chooseEl.classList.toggle('modal__option--active');
-    let chooseElNumber = document.querySelectorAll('.modal__option--active');
-    // if (chooseElNumber.length > 0) {
-    //
-    // }
-  })
-}))
-
-
-// new Swiper('.swiper');
-
-//закрываем модальное окошко
-// closeModal.addEventListener('click',()=> {
-//   modal.classList.remove('modal-active');
-//   modal.style.transform="100%";
-//   backdropModal.classList.remove('modal-active');
-//   document.querySelector("body").style.overflow = "scroll";
-// });
-
-
-
-//будем посмотреть подключить свайпер, чтоб его
-// const swiper = new Swiper('.swiper', {
-//   // Optional parameters
-//   direction: 'vertical',
-//   loop: true,
-//
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-//
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-//
-//   // And if we need scrollbar
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//   },
-// });
-
-

@@ -1,25 +1,6 @@
-const arrowUp = document.querySelector("#arrow-up");
 const mainHeader = document.querySelector(".main-header");
-const menuButton = document.querySelector(".main-nav__item--mobile");
-const hamburger = document.querySelector(".hamburger");
-const menuMobile = document.querySelector(".mobile-menu");
-const headerCollectionsItem = document.querySelector(
-  ".main-nav__item--collections"
-);
-const headerCollectionsSubmenu = document.querySelector(
-  ".main-header .submenu"
-);
-const menuMobileToggleItem = document.querySelector(
-  ".mobile-nav__item--collection"
-);
-const menuMobileSubmenu = document.querySelector(".mobile-nav__item--submenu");
 
-const footerInfoDesktopBlock = document.querySelector(".footer-info__desktop");
-const footerDesktopItems = document.querySelectorAll(".footer-info__item");
-const footerDesktopItemsBody = document.querySelectorAll(
-  ".footer-info__body--item"
-);
-
+// content loaded
 document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", HeaderHandleScroll);
 
@@ -33,14 +14,27 @@ function HeaderHandleScroll() {
   if (scrollTop === 0) {
     // Прокрутка вниз
     mainHeader.classList.remove("white-bg--v");
-    mainHeader.classList.remove("scroll");
   } else {
     mainHeader.classList.add("white-bg--v");
-    mainHeader.classList.add("scroll");
     // Прокрутка вверх
   }
   return scrollTop;
 }
+
+// header
+const menuButton = document.querySelector(".main-nav__item--mobile");
+const hamburger = document.querySelector(".hamburger");
+const menuMobile = document.querySelector(".mobile-menu");
+const headerCollectionsItem = document.querySelector(
+  ".main-nav__item--collections"
+);
+const headerCollectionsSubmenu = document.querySelector(
+  ".main-header .submenu"
+);
+const menuMobileToggleItem = document.querySelector(
+  ".mobile-nav__item--collection"
+);
+const menuMobileSubmenu = document.querySelector(".mobile-nav__item--submenu");
 
 headerCollectionsItem.addEventListener("click", () => {
   headerCollectionsSubmenu.classList.toggle("is--active");
@@ -56,6 +50,13 @@ menuButton.addEventListener("click", () => {
 menuMobileToggleItem.addEventListener("click", () => {
   menuMobileSubmenu.classList.toggle("is--active");
 });
+
+// footer
+const arrowUp = document.querySelector("#arrow-up");
+const footerDesktopItems = document.querySelectorAll(".footer-info__item");
+const footerDesktopItemsBody = document.querySelectorAll(
+  ".footer-info__body--item"
+);
 
 arrowUp.addEventListener("click", () => {
   window.scrollTo({
@@ -76,3 +77,54 @@ footerDesktopItems.forEach((item, index) => {
     footerDesktopItemsBody[index].classList.toggle("is--active");
   });
 });
+
+// modals
+// search
+const modalSearch = document.querySelector("#modal-search");
+const modalSearchClose = modalSearch.querySelector(".modal-header__button");
+const searchButton = document.querySelector(
+  ".main-nav__item--icon.icon-search"
+);
+
+// favorites
+const modalFavorites = document.querySelector("#modal-favorites");
+const modalFavoritesClose = modalFavorites.querySelector(
+  ".modal-header__button"
+);
+const favoritesButton = document.querySelector(
+  ".main-nav__item--icon.icon-favor"
+);
+
+const modalCart = document.querySelector("#modal-cart");
+const modalCartClose = modalCart.querySelector(".modal-header__button");
+const cartButton = document.querySelector(".main-nav__item--icon.icon-bag");
+
+const backdrop = document.querySelector(".backdrop");
+
+searchButton.addEventListener("click", () => {
+  modalSearch.classList.add("is--active");
+  backdrop.classList.add("is--active");
+  document.body.classList.add("overflow-hidden");
+});
+
+favoritesButton.addEventListener("click", () => {
+  modalFavorites.classList.add("is--active");
+  backdrop.classList.add("is--active");
+  document.body.classList.add("overflow-hidden");
+});
+
+cartButton.addEventListener("click", () => {
+  modalCart.classList.add("is--active");
+  backdrop.classList.add("is--active");
+  document.body.classList.add("overflow-hidden");
+});
+
+modalSearchClose.addEventListener("click", () => CloseModal(modalSearch));
+modalFavoritesClose.addEventListener("click", () => CloseModal(modalFavorites));
+modalCartClose.addEventListener("click", () => CloseModal(modalCart));
+
+function CloseModal(item) {
+  item.classList.remove("is--active");
+  backdrop.classList.remove("is--active");
+  document.body.classList.remove("overflow-hidden");
+}

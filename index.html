@@ -13,9 +13,6 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Подключение основного файла JavaScript Swiper и файла JavaScript для эффекта coverflow -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
     <title>AMAT</title>
     <link
       type="image/x-icon"
@@ -53,22 +50,73 @@
           </div>
           <ul class="main-nav__items flex-child">
             <li class="main-nav__item main-nav__item--icon icon-search">
-              <a href="/index.html">
-                <img src="images/svg/search-black.svg" />
-                <img src="images/svg/search-white.svg" />
-              </a>
+              <span class="icon icon--black">
+                <img
+                  class="black icon--default"
+                  src="images/svg/search-black.svg"
+                />
+              </span>
+              <span class="icon icon--white">
+                <img
+                  class="white icon--default"
+                  src="images/svg/search-white.svg"
+                />
+              </span>
+              <span class="icon icon--gold">
+                <img
+                  class="gold icon--default"
+                  src="images/svg/search-gold.svg"
+                />
+                <span class="icon-text">Поиск</span>
+              </span>
             </li>
             <li class="main-nav__item main-nav__item--icon icon-favor">
-              <a href="/index.html">
-                <img src="images/svg/favor-black.svg" />
-                <img src="images/svg/favor-white.svg" />
-              </a>
+              <span class="icon icon--black">
+                <img
+                  class="black icon--default"
+                  src="images/svg/favor-black.svg"
+                />
+              </span>
+              <span class="icon icon--white">
+                <img
+                  class="white icon--default"
+                  src="images/svg/favor-white.svg"
+                />
+              </span>
+              <span class="icon icon--gold">
+                <img
+                  class="gold icon--default"
+                  src="images/svg/favor-gold.svg"
+                />
+                <span class="icon-text">Избранное</span>
+              </span>
             </li>
-            <li class="main-nav__item main-nav__item--icon icon-bag">
-              <a href="/index.html">
-                <img src="images/svg/shopping-bag.svg" />
-                <img src="images/svg/shopping-bag-white.svg" />
-              </a>
+            <li class="main-nav__item main-nav__item--icon icon-bag is--active">
+              <span class="icon icon--black">
+                <img
+                  class="black icon--default"
+                  src="images/svg/bag-black.svg"
+                />
+                <img
+                  class="black icon--active"
+                  src="images/svg/bag-black-active.svg"
+                />
+              </span>
+              <span class="icon icon--white">
+                <img
+                  class="white icon--default"
+                  src="images/svg/bag-white.svg"
+                />
+                <img
+                  class="white icon--active"
+                  src="images/svg/bag-white-active.svg"
+                />
+              </span>
+              <span class="icon icon--gold">
+                <img class="gold icon--default" src="images/svg/bag-gold.svg" />
+                <span class="icon-text">Корзина</span>
+              </span>
+              <span class="quantity">3</span>
             </li>
             <li class="main-nav__item main-nav__item--mobile">
               <div class="hamburger">
@@ -96,7 +144,7 @@
               <li class="mobile-nav__item mobile-nav__item--collection">
                 <span
                   >Коллекции
-                  <img src="/images/svg/arrow-bottom-black.svg" alt=""
+                  <img src="images/svg/arrow-bottom-black.svg" alt=""
                 /></span>
                 <div class="mobile-nav__item--submenu">
                   <ul class="collections-list">
@@ -184,7 +232,18 @@
             <a href="category.html">
               <button class="submenu-button button">
                 Посмотреть все коллекции
-                <img src="images/svg/arrow-right-black-button.svg" alt="" />
+                <span class="arrow">
+                  <img
+                    class="black"
+                    src="images/svg/arrow-right-black-button.svg"
+                    alt=""
+                  />
+                  <img
+                    class="gold"
+                    src="images/svg/arrow-right-gold-button.svg"
+                    alt=""
+                  />
+                </span>
               </button>
             </a>
           </div>
@@ -223,7 +282,7 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="">
+                <a href="/product.html">
                   <div class="favorite-shawls__item">
                     <img src="images/png/title1.png" alt="" />
                     <div class="description">
@@ -237,7 +296,7 @@
               </div>
 
               <div class="swiper-slide">
-                <a href="">
+                <a href="/product.html">
                   <div class="favorite-shawls__item">
                     <img src="images/png/title2.png" alt="" />
                     <div class="description">
@@ -250,7 +309,7 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="">
+                <a href="/product.html">
                   <div class="favorite-shawls__item">
                     <img src="images/png/title3.png" alt="" />
                     <div class="description">
@@ -264,7 +323,7 @@
               </div>
 
               <div class="swiper-slide">
-                <a href="">
+                <a href="/product.html">
                   <div class="favorite-shawls__item">
                     <img src="images/png/carousel-middle.png" alt="" />
                     <div class="description">
@@ -277,7 +336,7 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="">
+                <a href="/product.html">
                   <div class="favorite-shawls__item">
                     <img src="images/png/title4.png" alt="" />
                     <div class="description">
@@ -291,7 +350,7 @@
               </div>
 
               <div class="swiper-slide">
-                <a href="">
+                <a href="/product.html">
                   <div class="favorite-shawls__item">
                     <img src="images/png/title5.png" alt="" />
                     <div class="description">
@@ -304,7 +363,7 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="">
+                <a href="/product.html">
                   <div class="favorite-shawls__item">
                     <img src="images/png/title1.png" alt="" />
                     <div class="description">
@@ -528,44 +587,6 @@
           </div>
         </div>
       </section>
-
-      <!-- <section class="fitting">
-        <div class="fitting__flex-box section-wrapper">
-          <h3 class="fitting__title anim-blocks fitting__title--mobile">
-            Примерка платков
-          </h3>
-          <div class="fitting__photo-container">
-            <img src="images/png/store.png" alt="Магазин" />
-          </div>
-          <div class="flex-box">
-            <h3 class="fitting__title anim-blocks fitting__title--desktop">
-              Примерка платков
-            </h3>
-            <p class="fitting__text anim-blocks bold">12:00−21:00 ежедневно</p>
-            <p class="fitting__text anim-blocks">
-              Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж
-            </p>
-            <div class="fitting__links links">
-              <a href="#modal-map" id="open-map"> Посмотреть на карте </a>
-              <div id="backdrop"></div>
-              <div id="modal-map">
-                <div class="close-map">
-                  <img src="images/svg/close.svg" />
-                </div>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1152.1486041971975!2d45.69956996964888!3d43.30939049464909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4051d3f76825b0bf%3A0xb4639001e07cfd29!2sGrand%20Park!5e0!3m2!1sru!2sru!4v1702750981293!5m2!1sru!2sru"
-                  width="100%"
-                  height="100%"
-                  style="border: 0"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
     </main>
     <footer class="footer">
       <div class="footer-logo__container">

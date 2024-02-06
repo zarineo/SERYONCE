@@ -37,8 +37,6 @@ const favoriteSwiperOptionsDesktop = {
   slidesPerView: "auto",
   loop: true,
   speed: 1000,
-  centeredSlides: true,
-  slidesPerView: "auto",
   spaceBetween: 8,
   autoplay: {
     delay: 0,

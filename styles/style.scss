@@ -3,14 +3,18 @@
 @import "components/my_accordion.scss";
 @import "components/footer.scss";
 @import "components/header.scss";
+@import "components/cart";
+@import "components/modals";
 
 @import "pages/home";
+@import "pages/search";
 @import "pages/product";
 @import "pages/category";
-@import "pages/modals";
 @import "pages/falls";
 @import "pages/thanks";
-@import "pages/cart";
+@import "pages/aboutus";
+@import "pages/checkout";
+@import "pages/exhibition";
 
 * {
   box-sizing: border-box;
@@ -31,12 +35,22 @@ ul {
   list-style: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 h5 {
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
   letter-spacing: 0;
-  text-align: left;
+  //text-align: left;
   text-transform: uppercase;
 }
 
@@ -57,8 +71,6 @@ a {
 }
 
 .button {
-  // width: 305px;
-  //background: $backWhite;
   padding: 12px 24px;
   border-radius: 2px;
   gap: 8px;
@@ -69,7 +81,7 @@ a {
   letter-spacing: -0.02em;
   text-align: center;
   margin: 0;
-  margin-top: 53px;
+  //margin-top: 53px;
   cursor: pointer;
   border: none;
   &:hover {
@@ -79,8 +91,17 @@ a {
     background: $graphicWhite30;
   }
   &:disabled {
-    background: $graphicWhite50;
-    color: $textBlack60;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  &--black {
+    color: $textWhite100;
+    background-color: $textBlack10;
+
+    &:hover {
+      background-color: $graphicBlack50;
+    }
   }
 }
 
@@ -131,5 +152,22 @@ a {
 
   &:hover:after {
     left: 0;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.sections-title {
+  font-size: 40px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $textBlack10;
+}
+
+@media (max-width: 528px) {
+  .sections-title {
+    font-size: 20px;
   }
 }

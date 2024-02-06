@@ -1,9 +1,10 @@
 ﻿.main-header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 1000;
   color: $textBlack10;
   transition: color 1s, background-color 1s ease;
+  border-bottom: 1px solid #ffffff00;
   &.animated {
     transition: transform 1s ease;
     transform: translateY(-100%);
@@ -54,16 +55,87 @@
 
       &--icon {
         position: relative;
-        img {
-          display: block;
-          &:first-child {
-            opacity: 1;
-          }
-          &:last-child {
-            position: absolute;
-            top: 0;
-            left: 0;
+        width: 24px;
+        height: 24px;
+        .icon {
+          position: absolute;
+          left: 0;
+          transition: opacity 0.3s ease;
+
+          &--white {
             opacity: 0;
+          }
+
+          &--gold {
+            transition: opacity 0.3s ease !important;
+            opacity: 0;
+
+            .icon-text {
+              color: $graphicgold;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              text-transform: none;
+              position: absolute;
+              bottom: -8px;
+              left: 50%;
+              transform: translateX(-50%);
+              white-space: nowrap;
+            }
+          }
+        }
+
+        &:hover {
+          color: $graphicgold;
+          .icon {
+            &--black {
+              opacity: 0;
+            }
+
+            &--white {
+              opacity: 0;
+            }
+
+            &--gold {
+              opacity: 1;
+            }
+          }
+        }
+
+        &.icon-bag {
+          .icon--black {
+            .icon--active {
+              display: none;
+            }
+          }
+          .icon--white {
+            .icon--active {
+              display: none;
+            }
+          }
+
+          .quantity {
+            position: absolute;
+            bottom: 0;
+            font-size: 8px;
+            font-weight: 400;
+            right: -3px;
+            display: none;
+          }
+
+          &.is--active {
+            .quantity {
+              display: block;
+            }
+            .icon--black,
+            .icon--white {
+              .icon--default {
+                display: none;
+              }
+              .icon--active {
+                display: block;
+              }
+            }
           }
         }
       }
@@ -105,7 +177,7 @@
     overflow: hidden;
     left: 0;
     right: 0;
-    top: 56px;
+    top: 54px;
     margin: 0 auto;
     padding-top: 20px;
     transition: height 0.5s ease;
@@ -130,9 +202,45 @@
       border: 1px solid $textBlack10;
       display: flex;
       align-items: center;
+      transition: all 0.3s ease;
 
-      img {
+      &:hover {
+        border: 1px solid $graphicgold;
+        color: $graphicgold;
+
+        .arrow {
+          img {
+            &.black {
+              opacity: 0;
+            }
+            &.gold {
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      .arrow {
         display: block;
+        position: relative;
+        width: 16px;
+        height: 16px;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          transition: opacity 0.3s ease;
+          &.black {
+            opacity: 1;
+            width: 16px;
+            height: 16px;
+          }
+          &.gold {
+            opacity: 0;
+          }
+        }
       }
     }
 
@@ -160,6 +268,7 @@
     }
   }
 
+  // здесь
   &.home {
     color: $backWhite;
     .main-nav {
@@ -197,23 +306,37 @@
         }
 
         &__item--icon {
-          img:first-child {
+          .icon {
             transition: opacity 1s ease;
-            opacity: 0;
+            &--white {
+              opacity: 1;
+            }
+
+            &--black {
+              opacity: 0;
+            }
           }
-          img:last-child {
-            transition: opacity 1s ease;
-            opacity: 1;
+
+          &:hover {
+            .icon {
+              &--white {
+                opacity: 0;
+              }
+
+              &--black {
+                opacity: 0;
+              }
+            }
           }
         }
       }
     }
   }
 
-  &.scroll {
-    position: fixed;
-    border-bottom: 1px solid $graphicBlack10;
-  }
+  // &.scroll {
+  //   position: fixed;
+  //   border-bottom: 1px solid $graphicBlack10;
+  // }
 
   .mobile-menu {
     height: 0;
@@ -357,7 +480,7 @@
       width: 15px;
       height: 1.5px;
       background-color: $textBlack10;
-      transition: all 1s ease;
+      transition: all 0.5s ease;
     }
 
     &.is--active {
@@ -383,9 +506,11 @@
     color: $textBlack10;
   }
 
+  // здесь
   &.white-bg--v {
     background-color: $backWhite !important;
     color: $textBlack10;
+    border-bottom: 1px solid $graphicBlack10;
 
     .main-nav {
       .logo-container {
@@ -400,11 +525,26 @@
 
       &__item {
         &--icon {
-          img:first-child {
-            opacity: 1 !important;
+          .icon {
+            &--white {
+              opacity: 0 !important;
+            }
+
+            &--black {
+              opacity: 1 !important;
+            }
           }
-          img:last-child {
-            opacity: 0 !important;
+
+          &:hover {
+            .icon {
+              &--white {
+                opacity: 0 !important;
+              }
+
+              &--black {
+                opacity: 0 !important;
+              }
+            }
           }
         }
       }
@@ -417,6 +557,7 @@
     }
   }
 
+  // здесь
   &.black-bg--v {
     background-color: $textBlack10 !important;
     color: $backWhite;
@@ -434,11 +575,26 @@
 
       &__item {
         &--icon {
-          img:first-child {
-            opacity: 0 !important;
+          .icon {
+            &--white {
+              opacity: 1 !important;
+            }
+
+            &--black {
+              opacity: 0 !important;
+            }
           }
-          img:last-child {
-            opacity: 1 !important;
+
+          &:hover {
+            .icon {
+              &--white {
+                opacity: 0 !important;
+              }
+
+              &--black {
+                opacity: 0 !important;
+              }
+            }
           }
         }
       }
@@ -454,7 +610,7 @@
   @media (min-width: 790px) {
     &.menu-active--submenu {
       background-color: $backWhite !important;
-      color: $textBlack10 !important;
+      color: $textBlack10;
 
       .main-nav {
         .logo-container {
@@ -468,15 +624,32 @@
         }
 
         &__item {
-          span {
-            color: $textgold;
+          &--collections {
+            span {
+              color: $textgold;
+            }
           }
           &--icon {
-            img:first-child {
-              opacity: 1 !important;
+            .icon {
+              &--white {
+                opacity: 0 !important;
+              }
+
+              &--black {
+                opacity: 1 !important;
+              }
             }
-            img:last-child {
-              opacity: 0 !important;
+
+            &:hover {
+              .icon {
+                &--white {
+                  opacity: 0 !important;
+                }
+
+                &--black {
+                  opacity: 0 !important;
+                }
+              }
             }
           }
         }

@@ -5,8 +5,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="swiper/css/swipe.css" />
     <link rel="stylesheet" href="fonts/font/stylesheet.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <title>AMAT</title>
     <link
       type="image/x-icon"
@@ -23,7 +29,7 @@
               <span> Коллекции </span>
             </li>
             <li class="main-nav__item" id="brand">
-              <a href="/index.html"> О бренде </a>
+              <a href="404.html"> О бренде </a>
             </li>
           </ul>
           <div class="logo-container">
@@ -44,22 +50,73 @@
           </div>
           <ul class="main-nav__items flex-child">
             <li class="main-nav__item main-nav__item--icon icon-search">
-              <a href="/index.html">
-                <img src="images/svg/search-black.svg" />
-                <img src="images/svg/search-white.svg" />
-              </a>
+              <span class="icon icon--black">
+                <img
+                  class="black icon--default"
+                  src="images/svg/search-black.svg"
+                />
+              </span>
+              <span class="icon icon--white">
+                <img
+                  class="white icon--default"
+                  src="images/svg/search-white.svg"
+                />
+              </span>
+              <span class="icon icon--gold">
+                <img
+                  class="gold icon--default"
+                  src="images/svg/search-gold.svg"
+                />
+                <span class="icon-text">Поиск</span>
+              </span>
             </li>
             <li class="main-nav__item main-nav__item--icon icon-favor">
-              <a href="#" class="open-wishlist">
-                <img src="images/svg/favor-black.svg" />
-                <img src="images/svg/favor-white.svg" />
-              </a>
+              <span class="icon icon--black">
+                <img
+                  class="black icon--default"
+                  src="images/svg/favor-black.svg"
+                />
+              </span>
+              <span class="icon icon--white">
+                <img
+                  class="white icon--default"
+                  src="images/svg/favor-white.svg"
+                />
+              </span>
+              <span class="icon icon--gold">
+                <img
+                  class="gold icon--default"
+                  src="images/svg/favor-gold.svg"
+                />
+                <span class="icon-text">Избранное</span>
+              </span>
             </li>
-            <li class="main-nav__item main-nav__item--icon icon-bag">
-              <a href="#" class="open-cart">
-                <img src="images/svg/shopping-bag.svg" />
-                <img src="images/svg/shopping-bag-white.svg" />
-              </a>
+            <li class="main-nav__item main-nav__item--icon icon-bag is--active">
+              <span class="icon icon--black">
+                <img
+                  class="black icon--default"
+                  src="images/svg/bag-black.svg"
+                />
+                <img
+                  class="black icon--active"
+                  src="images/svg/bag-black-active.svg"
+                />
+              </span>
+              <span class="icon icon--white">
+                <img
+                  class="white icon--default"
+                  src="images/svg/bag-white.svg"
+                />
+                <img
+                  class="white icon--active"
+                  src="images/svg/bag-white-active.svg"
+                />
+              </span>
+              <span class="icon icon--gold">
+                <img class="gold icon--default" src="images/svg/bag-gold.svg" />
+                <span class="icon-text">Корзина</span>
+              </span>
+              <span class="quantity">3</span>
             </li>
             <li class="main-nav__item main-nav__item--mobile">
               <div class="hamburger">
@@ -87,7 +144,7 @@
               <li class="mobile-nav__item mobile-nav__item--collection">
                 <span
                   >Коллекции
-                  <img src="/images/svg/arrow-bottom-black.svg" alt=""
+                  <img src="images/svg/arrow-bottom-black.svg" alt=""
                 /></span>
                 <div class="mobile-nav__item--submenu">
                   <ul class="collections-list">
@@ -175,7 +232,18 @@
             <a href="category.html">
               <button class="submenu-button button">
                 Посмотреть все коллекции
-                <img src="images/svg/arrow-right-black-button.svg" alt="" />
+                <span class="arrow">
+                  <img
+                    class="black"
+                    src="images/svg/arrow-right-black-button.svg"
+                    alt=""
+                  />
+                  <img
+                    class="gold"
+                    src="images/svg/arrow-right-gold-button.svg"
+                    alt=""
+                  />
+                </span>
               </button>
             </a>
           </div>
@@ -184,7 +252,28 @@
     </header>
     <main class="product-page">
       <section class="product">
-        <div class="product-photos"></div>
+        <div class="product-photos">
+          <div class="product-photos__list">
+            <div class="product-photos__item" draggable="false">
+              <img src="images/png/product.png" alt="" />
+            </div>
+            <div class="product-photos__item" draggable="false">
+              <img src="images/png/product.png" alt="" />
+            </div>
+            <div class="product-photos__item" draggable="false">
+              <img src="images/png/product.png" alt="" />
+            </div>
+            <div class="product-photos__item" draggable="false">
+              <img src="images/png/product.png" alt="" />
+            </div>
+            <div class="product-photos__item" draggable="false">
+              <img src="images/png/product.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="product-photos__pagination" id="pagination">
+          <div class="pagination-dots"></div>
+        </div>
         <div class="product-properties">
           <div class="product-properties__wrapper">
             <header class="product-header">
@@ -222,7 +311,13 @@
                 </li>
               </ul>
             </div>
-            <button class="button">Оформить предзаказ</button>
+            <div class="message is--active">
+              Оформите предзаказ сейчас и получите до 12.02.2024. Сумма заказа
+              будет списана после оформления заказа.
+            </div>
+            <button class="button product-checkout__button">
+              Оформить предзаказ
+            </button>
           </div>
         </div>
       </section>
@@ -336,6 +431,286 @@
           </div>
         </div>
       </section>
+      <section class="recommendations">
+        <h2 class="sections-title">вам может понравиться</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="/product.html" class="category__product">
+                <div class="category__photo-container">
+                  <img
+                    src="images/png/scarves.png"
+                    class="category__photo"
+                    alt="Фото Коллекции"
+                  />
+                </div>
+                <h5 class="category__product-title">Даймохк</h5>
+                <p class="category__product-price">16 000 ₽</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/product.html" class="category__product">
+                <div class="category__photo-container">
+                  <img
+                    src="images/png/scarves.png"
+                    class="category__photo"
+                    alt="Фото Коллекции"
+                  />
+                </div>
+                <h5 class="category__product-title">Даймохк</h5>
+                <p class="category__product-price">16 000 ₽</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/product.html" class="category__product">
+                <div class="category__photo-container">
+                  <img
+                    src="images/png/scarves.png"
+                    class="category__photo"
+                    alt="Фото Коллекции"
+                  />
+                </div>
+                <h5 class="category__product-title">Даймохк</h5>
+                <p class="category__product-price">16 000 ₽</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/product.html" class="category__product">
+                <div class="category__photo-container">
+                  <img
+                    src="images/png/scarves.png"
+                    class="category__photo"
+                    alt="Фото Коллекции"
+                  />
+                </div>
+                <h5 class="category__product-title">Даймохк</h5>
+                <p class="category__product-price">16 000 ₽</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/product.html" class="category__product">
+                <div class="category__photo-container">
+                  <img
+                    src="images/png/scarves.png"
+                    class="category__photo"
+                    alt="Фото Коллекции"
+                  />
+                </div>
+                <h5 class="category__product-title">Даймохк</h5>
+                <p class="category__product-price">16 000 ₽</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/product.html" class="category__product">
+                <div class="category__photo-container">
+                  <img
+                    src="images/png/scarves.png"
+                    class="category__photo"
+                    alt="Фото Коллекции"
+                  />
+                </div>
+                <h5 class="category__product-title">Даймохк</h5>
+                <p class="category__product-price">16 000 ₽</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/product.html" class="category__product">
+                <div class="category__photo-container">
+                  <img
+                    src="images/png/scarves.png"
+                    class="category__photo"
+                    alt="Фото Коллекции"
+                  />
+                </div>
+                <h5 class="category__product-title">Даймохк</h5>
+                <p class="category__product-price">16 000 ₽</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/product.html" class="category__product">
+                <div class="category__photo-container">
+                  <img
+                    src="images/png/scarves.png"
+                    class="category__photo"
+                    alt="Фото Коллекции"
+                  />
+                </div>
+                <h5 class="category__product-title">Даймохк</h5>
+                <p class="category__product-price">16 000 ₽</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/product.html" class="category__product">
+                <div class="category__photo-container">
+                  <img
+                    src="images/png/scarves.png"
+                    class="category__photo"
+                    alt="Фото Коллекции"
+                  />
+                </div>
+                <h5 class="category__product-title">Даймохк</h5>
+                <p class="category__product-price">16 000 ₽</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/product.html" class="category__product">
+                <div class="category__photo-container">
+                  <img
+                    src="images/png/scarves.png"
+                    class="category__photo"
+                    alt="Фото Коллекции"
+                  />
+                </div>
+                <h5 class="category__product-title">Даймохк</h5>
+                <p class="category__product-price">16 000 ₽</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/product.html" class="category__product">
+                <div class="category__photo-container">
+                  <img
+                    src="images/png/scarves.png"
+                    class="category__photo"
+                    alt="Фото Коллекции"
+                  />
+                </div>
+                <h5 class="category__product-title">Даймохк</h5>
+                <p class="category__product-price">16 000 ₽</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/product.html" class="category__product">
+                <div class="category__photo-container">
+                  <img
+                    src="images/png/scarves.png"
+                    class="category__photo"
+                    alt="Фото Коллекции"
+                  />
+                </div>
+                <h5 class="category__product-title">Даймохк</h5>
+                <p class="category__product-price">16 000 ₽</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/product.html" class="category__product">
+                <div class="category__photo-container">
+                  <img
+                    src="images/png/scarves.png"
+                    class="category__photo"
+                    alt="Фото Коллекции"
+                  />
+                </div>
+                <h5 class="category__product-title">Даймохк</h5>
+                <p class="category__product-price">16 000 ₽</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/product.html" class="category__product">
+                <div class="category__photo-container">
+                  <img
+                    src="images/png/scarves.png"
+                    class="category__photo"
+                    alt="Фото Коллекции"
+                  />
+                </div>
+                <h5 class="category__product-title">Даймохк</h5>
+                <p class="category__product-price">16 000 ₽</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/product.html" class="category__product">
+                <div class="category__photo-container">
+                  <img
+                    src="images/png/scarves.png"
+                    class="category__photo"
+                    alt="Фото Коллекции"
+                  />
+                </div>
+                <h5 class="category__product-title">Даймохк</h5>
+                <p class="category__product-price">16 000 ₽</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="photos-preview">
+        <div class="photos-preview__header">
+          <span class="close-button">
+            <img src="images/svg/close.svg" alt="close" />
+          </span>
+        </div>
+        <div class="preview-photo">
+          <div class="preview-photo__wrapper">
+            <img src="images/png/home.png" alt="" />
+          </div>
+
+          <div class="photos-list">
+            <div class="photos-list__item is--active">
+              <img src="images/png/home.png" alt="" />
+              <span class="shadow"></span>
+            </div>
+            <div class="photos-list__item">
+              <img src="images/png/title1.png" alt="" />
+              <span class="shadow"></span>
+            </div>
+            <div class="photos-list__item">
+              <img src="images/png/title2.png" alt="" />
+              <span class="shadow"></span>
+            </div>
+            <div class="photos-list__item">
+              <img src="images/png/title3.png" alt="" />
+              <span class="shadow"></span>
+            </div>
+            <div class="photos-list__item">
+              <img src="images/png/title4.png" alt="" />
+              <span class="shadow"></span>
+            </div>
+          </div>
+
+          <div class="navigation-buttons">
+            <span class="prev-button">
+              <img src="images/svg/slider-left-arrow.svg" alt="" />
+            </span>
+            <span class="next-button">
+              <img src="images/svg/slider-rigth-arrow.svg" alt="" />
+            </span>
+          </div>
+        </div>
+
+        <div class="photos-preview__bottom">
+          <div class="product-name">Платок «Алфавит»</div>
+          <ul class="property-items">
+            <li class="property-item">
+              <div class="property-item__value">
+                <span>Синий</span>
+                <img src="images/svg/arrow-right-black.svg" alt="" />
+              </div>
+            </li>
+            <li class="property-item">
+              <div class="property-item__value">
+                <span>60*60</span>
+                <img src="images/svg/arrow-right-black.svg" alt="" />
+              </div>
+            </li>
+            <li class="property-item">
+              <div class="property-item__value">
+                <span>Шёлк</span>
+                <img src="images/svg/arrow-right-black.svg" alt="" />
+              </div>
+            </li>
+          </ul>
+          <div class="button-wrapper">
+            <p class="product-price">16 000 ₽</p>
+            <button class="button button--black">добавить в корзину</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="added-message">
+        <p>Товар успешно добавлен в корзину</p>
+        <a class="border-animation" href="">перейти</a>
+      </div>
     </main>
     <footer class="footer">
       <div class="footer-logo__container">
