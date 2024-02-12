@@ -145,9 +145,9 @@
           }
         }
       }
-    }
 
-    &-four {
+      &-four {
+      }
     }
 
     .selections {
@@ -312,11 +312,21 @@
   position: relative;
   margin-bottom: 40px;
 
+  &.disabled {
+    opacity: 0.5;
+  }
+
+  .input-tips {
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+
   input {
     width: 100%;
     padding: 13px 0;
     border: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid $textBlack60;
     outline: none;
     font-size: 16px;
     margin: 12px 0 0;
@@ -337,6 +347,76 @@
       bottom: 44px;
       font-size: 14px;
       color: $textBlack60;
+    }
+  }
+
+  .input-description {
+    position: absolute;
+    font-size: 12px;
+    color: $textBlack60;
+    top: 64px;
+  }
+
+  &.is--error {
+    .error-message {
+      display: flex;
+    }
+  }
+}
+
+.error-message {
+  position: absolute;
+  align-items: center;
+  gap: 8px;
+  bottom: -28px;
+  display: none;
+  span {
+    font-size: 12px;
+    color: $error;
+  }
+}
+
+.select {
+  position: relative;
+  margin-bottom: 40px;
+  &-preview {
+    padding: 14px 0;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+  &-items {
+    position: absolute;
+    top: 56px;
+    z-index: 100;
+    background-color: $backWhite;
+    box-shadow: 0px 0px 4px 0px #b2aaaa40;
+    width: 100%;
+    padding: 4px;
+    border-radius: 2px;
+    display: none;
+
+    &.is--active {
+      display: block;
+    }
+
+    .select-item {
+      padding: 6px 8px;
+      cursor: pointer;
+      border-radius: 1px;
+      font-size: 14px;
+
+      &.is--active,
+      &:hover {
+        background-color: $textBlack10;
+        color: $backWhite;
+      }
+    }
+  }
+
+  &.is--error {
+    .error-message {
+      display: flex;
     }
   }
 }

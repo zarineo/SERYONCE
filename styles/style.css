@@ -2437,7 +2437,7 @@ a {
 
 .brand-history .no-padding {
   display: flex;
-  padding: 100px 0 0; }
+  padding: 75px 0 0; }
 .brand-history__photo-container {
   height: 714px;
   width: 50%;
@@ -2875,7 +2875,8 @@ a {
         height: 100%;
         object-fit: cover; }
     .create .description {
-      text-align: left; } }
+      text-align: left;
+      height: 75px; } }
 @media screen and (max-width: 520px) {
   .about-title {
     font-size: 20px;
@@ -3165,11 +3166,17 @@ a {
 .input-container {
   position: relative;
   margin-bottom: 40px; }
+  .input-container.disabled {
+    opacity: 0.5; }
+  .input-container .input-tips {
+    position: absolute;
+    left: 0;
+    width: 100%; }
   .input-container input {
     width: 100%;
     padding: 13px 0;
     border: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgba(15, 14, 14, 0.6);
     outline: none;
     font-size: 16px;
     margin: 12px 0 0;
@@ -3186,6 +3193,53 @@ a {
       bottom: 44px;
       font-size: 14px;
       color: rgba(15, 14, 14, 0.6); }
+  .input-container .input-description {
+    position: absolute;
+    font-size: 12px;
+    color: rgba(15, 14, 14, 0.6);
+    top: 64px; }
+  .input-container.is--error .error-message {
+    display: flex; }
+
+.error-message {
+  position: absolute;
+  align-items: center;
+  gap: 8px;
+  bottom: -28px;
+  display: none; }
+  .error-message span {
+    font-size: 12px;
+    color: #dd5060; }
+
+.select {
+  position: relative;
+  margin-bottom: 40px; }
+  .select-preview {
+    padding: 14px 0;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer; }
+  .select-items {
+    position: absolute;
+    top: 56px;
+    z-index: 100;
+    background-color: white;
+    box-shadow: 0px 0px 4px 0px #b2aaaa40;
+    width: 100%;
+    padding: 4px;
+    border-radius: 2px;
+    display: none; }
+    .select-items.is--active {
+      display: block; }
+    .select-items .select-item {
+      padding: 6px 8px;
+      cursor: pointer;
+      border-radius: 1px;
+      font-size: 14px; }
+      .select-items .select-item.is--active, .select-items .select-item:hover {
+        background-color: #0f0e0e;
+        color: white; }
+  .select.is--error .error-message {
+    display: flex; }
 
 .main-article {
   padding-top: 70px; }

@@ -41,7 +41,7 @@
   &-history {
     .no-padding {
       display: flex;
-      padding: 100px 0 0;
+      padding: 75px 0 0;
     }
 
     &__photo-container {
@@ -627,7 +627,6 @@
       }
     }
   }
-
   .articles {
     padding-bottom: 100px;
 
@@ -728,6 +727,7 @@
 
     .description {
       text-align: left;
+      height: 75px;
     }
   }
 }

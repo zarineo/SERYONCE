@@ -95,6 +95,20 @@ function eventsSwiperMode() {
 
 new Swiper(".articles .swiper", {
   slidesPerView: "auto",
+  breakpoints: {
+    320: {
+      spaceBetween: 80
+    },
+    580: {
+      spaceBetween: 120
+    },
+    720: {
+      spaceBetween: 130
+    },
+    880: {
+      spaceBetween: 130
+    }
+  },
   loop: true,
   spaceBetween: 156,
   effect: "coverflow",
@@ -139,39 +153,6 @@ console.log(favoritesSwiperBullets.pagination);
 
 const bullets = document.querySelectorAll('.create .swiper-pagination-bullet');
 console.log(bullets);
-
-// const check = () => {
-//   for (let i = 0; i < textBlocks.length; i++){
-//     if (bullets[i].classList.contains('swiper-pagination-bullet-active')){
-//       textBlocks[i].classList.add('is--active');
-//     } else {
-//       textBlocks[i].classList.remove('is--active');
-//     }
-//   }
-// }
-
-//for (let i = 0; i < textBlocks.length; i++){
-//bullets[i].addEventListener('click', () =>{
-//   textBlocks.forEach(block =>{
-//    block.classList.remove('is--active');
-//   })
-//   textBlocks[i].classList.add('is--active');
-//})
-//}
-
-// for (let bullet of bullets){
-//   bullet.addEventListener('click', check);
-// }
-
-
-//for (let i = 0; i < textBlocks.length; i++){
-//bullets[i].addEventListener('click', () =>{
-//    textBlocks.forEach(block =>{
-//    block.classList.remove('is--active');
-//    })
-//    textBlocks[i].classList.add('is--active');
-//})
-//}
 
 
 for (let i = 0; i < textBlocks.length; i++) {

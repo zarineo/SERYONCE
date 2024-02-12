@@ -259,111 +259,167 @@
                 <span class="border-animation change-button">Изменить</span>
               </header>
               <div class="filling-v">
-                <div class="input-container">
+                <div class="input-container" id="name-input">
                   <input
                     type="text"
                     id="animated-input"
                     required
-                    placeholder=" "
+                    value="Мария"
+                    placeholder=""
                   />
                   <label for="animated-input">Имя</label>
+                  <div class="error-message">
+                    <img src="images/svg/input-error-icon.svg" alt="" />
+                    <span class="error-message__text"></span>
+                  </div>
                 </div>
-                <div class="input-container">
+                <div class="input-container" id="surname-input">
                   <input
                     type="text"
                     id="animated-input"
                     required
-                    placeholder=" "
+                    value="Иванова"
+                    placeholder=""
                   />
                   <label for="animated-input">Фамилия</label>
+                  <div class="error-message">
+                    <img src="images/svg/input-error-icon.svg" alt="" />
+                    <span class="error-message__text"></span>
+                  </div>
                 </div>
-                <div class="input-container">
+                <div class="input-container" id="patronymic-input">
                   <input
                     type="text"
                     id="animated-input"
                     required
-                    placeholder=" "
+                    value="Ивановна"
+                    placeholder=""
                   />
                   <label for="animated-input">Отчество</label>
+                  <div class="error-message">
+                    <img src="images/svg/input-error-icon.svg" alt="" />
+                    <span class="error-message__text"></span>
+                  </div>
                 </div>
-                <div class="input-container">
+                <div class="input-container" id="email-input">
                   <input
                     type="text"
                     id="animated-input"
                     required
-                    placeholder=" "
+                    value="mail@gmail.com"
+                    placeholder=""
                   />
                   <label for="animated-input">Эл. адрес</label>
+                  <div class="error-message">
+                    <img src="images/svg/input-error-icon.svg" alt="" />
+                    <span class="error-message__text"></span>
+                  </div>
                 </div>
-                <div class="input-container">
+                <div class="input-container" id="phone-input">
                   <input
                     type="text"
                     id="animated-input"
                     required
-                    placeholder=" "
+                    value="900 900 9090"
+                    placeholder=""
                   />
                   <label for="animated-input">Мобильный номер</label>
+                  <div class="error-message">
+                    <img src="images/svg/input-error-icon.svg" alt="" />
+                    <span class="error-message__text"></span>
+                  </div>
                 </div>
               </div>
               <div class="filled-v">
-                <p class="name">Маша</p>
-                <p class="surname">Иванова</p>
-                <p class="patronymic">Ивановна</p>
-                <p class="email">masha@mail.ru</p>
-                <p class="number">+7 908 890-89-78</p>
+                <p class="name"></p>
+                <p class="surname"></p>
+                <p class="patronymic"></p>
+                <p class="email"></p>
+                <p class="phone"></p>
               </div>
             </div>
             <div class="stage stage-two">
               <header class="stage-header">
-                <h3><span>2/4</span> Данные получателя</h3>
+                <h3><span>2/4</span>Адрес доставки</h3>
                 <span class="border-animation change-button">Изменить</span>
               </header>
               <div class="filling-v">
-                <div class="input-container">
-                  <input
-                    type="text"
-                    id="animated-input"
-                    required
-                    placeholder=" "
-                  />
-                  <label for="animated-input">Страна</label>
+                <div class="select country-select">
+                  <div class="select-preview country-select__preview">
+                    Страна
+                  </div>
+                  <div class="select-items country-select__items">
+                    <ul class="select-items__wrapper country-list">
+                      <li class="select-item country-list__item">Россия</li>
+                      <li class="select-item country-list__item">Беларусь</li>
+                      <li class="select-item country-list__item">Казахстан</li>
+                    </ul>
+                  </div>
+
+                  <div class="error-message">
+                    <img src="images/svg/input-error-icon.svg" alt="" />
+                    <span class="error-message__text">
+                      Это поле не может быть пустым
+                    </span>
+                  </div>
                 </div>
-                <div class="input-container">
+                <div class="input-container disabled" id="city-input">
                   <input
                     type="text"
                     id="animated-input"
                     required
-                    placeholder=" "
+                    placeholder=""
+                    list="city-values"
+                    disabled
                   />
                   <label for="animated-input">Город</label>
+
+                  <div class="error-message">
+                    <img src="images/svg/input-error-icon.svg" alt="" />
+                    <span class="error-message__text"></span>
+                  </div>
+
+                  <datalist class="input-tips" id="city-values"></datalist>
                 </div>
-                <div class="input-container">
+                <div class="input-container" id="street-input">
                   <input
                     type="text"
                     id="animated-input"
                     required
-                    placeholder=" "
+                    placeholder=""
                   />
                   <label for="animated-input">Улица</label>
+
+                  <div class="error-message">
+                    <img src="images/svg/input-error-icon.svg" alt="" />
+                    <span class="error-message__text"></span>
+                  </div>
                 </div>
                 <div class="home-inputs">
-                  <div class="input-container">
+                  <div class="input-container" id="house-input">
                     <input
                       type="text"
                       id="animated-input"
                       required
-                      placeholder=" "
+                      placeholder=""
                     />
                     <label for="animated-input">Номер дома</label>
+
+                    <div class="error-message">
+                      <img src="images/svg/input-error-icon.svg" alt="" />
+                      <span class="error-message__text"></span>
+                    </div>
                   </div>
-                  <div class="input-container">
+                  <div class="input-container" id="apartment-input">
                     <input
                       type="text"
                       id="animated-input"
                       required
-                      placeholder=" "
+                      placeholder=""
                     />
                     <label for="animated-input">Квартира / офис</label>
+
+                    <div class="input-description">необязательно</div>
                   </div>
                 </div>
               </div>
@@ -753,7 +809,8 @@
         </div>
       </div>
     </footer>
-    <script src="js/checkout.js"></script>
+    <script src="js/checkout-n.js"></script>
+    <!-- <script src="js/checkout.js"></script> -->
     <script src="js/script.js"></script>
   </body>
 </html>
