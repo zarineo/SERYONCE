@@ -201,3 +201,74 @@ const previewImage = previewPhotoWrapper.querySelector("img");
 previewPhotoWrapper.addEventListener("click", () => {
   previewPhotoWrapper.classList.toggle("zoomed");
 });
+
+// My crazy code for modals
+// Три переменные, по клику на которые будут открываться три окошка - выбор цвета, ткани и размера
+const chooseColor = document.querySelector(".property-item-color");
+const chooseSize = document.querySelector("#property-item-size");
+const chooseFabric = document.querySelector("#property-item-fabric");
+
+// Переменные-модалки
+const modalColor = document.querySelector("#modal-color");
+const modalSize = document.querySelector("#modal-size");
+const modalFabric = document.querySelector("#modal-material");
+
+// Переменные для кнопок закрытия модалок
+const modalColorClose = modalColor.querySelector(".modal-header__button");
+const modalSizeClose = modalSize.querySelector(".modal-header__button");
+const modalFabricClose = modalFabric.querySelector(".modal-header__button");
+
+// Три события для открытия модальных окон
+chooseColor.addEventListener("click", () => OpenModal(modalColor));
+chooseSize.addEventListener("click", () => OpenModal(modalSize));
+chooseFabric.addEventListener("click", () => OpenModal(modalFabric));
+
+modalColorClose.addEventListener("click", () => CloseModal(modalColor));
+modalSizeClose.addEventListener("click", () => CloseModal(modalSize));
+modalFabricClose.addEventListener("click", () => CloseModal(modalFabric));
+backdrop.addEventListener("click", () => {
+  CloseModal(modalColor);
+  CloseModal(modalSize);
+  CloseModal(modalFabric);
+});
+
+// Выбираем цвет и окно закрывается
+const modalColorItems = modalColor.querySelectorAll(
+  ".modal-color__product-container"
+);
+
+for (let item of modalColorItems) {
+  item.addEventListener("click", () => {
+    for (let item2 of modalColorItems) {
+      item2.classList.remove("is--active");
+    }
+    item.classList.add("is--active");
+    CloseModal(modalColor);
+  });
+}
+
+// Выбираем размер и модальное окно закрывается
+const modalSizeItems = modalSize.querySelectorAll(".modal__item");
+
+for (let item of modalSizeItems) {
+  item.addEventListener("click", () => {
+    for (let item2 of modalSizeItems) {
+      item2.classList.remove("is--active");
+    }
+    item.classList.add("is--active");
+    CloseModal(modalSize);
+  });
+}
+
+// Выбираем материал и окно закрывается
+const modalFabricItems = modalFabric.querySelectorAll(".modal__item");
+
+for (let item of modalFabricItems) {
+  item.addEventListener("click", () => {
+    for (let item2 of modalFabricItems) {
+      item2.classList.remove("is--active");
+    }
+    item.classList.add("is--active");
+    CloseModal(modalFabric);
+  });
+}

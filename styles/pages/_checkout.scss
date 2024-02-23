@@ -5,6 +5,23 @@
 
   &__subheader {
     padding: 40px 0;
+    &--mobile {
+      display: none;
+      .breadcrumbs {
+        display: flex;
+        justify-content: space-between;
+        &__text {
+          opacity: 0;
+        }
+        &__title {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 25px;
+          color: $graphicBlack;
+          text-transform: uppercase;
+        }
+      }
+    }
   }
 
   &__body {
@@ -142,6 +159,14 @@
               background-color: rgba($color: $textgold, $alpha: 0.25);
               font-size: 14px;
             }
+
+            .delivery-item__selected {
+              display: none;
+
+              &.is--active {
+                display: block;
+              }
+            }
           }
         }
       }
@@ -202,6 +227,11 @@
       align-items: center;
       width: 472px;
       color: $graphicBlack;
+      &-cont {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
 
       p {
         font-size: 14px;
@@ -306,6 +336,10 @@
   font-size: 14px;
   color: $textBlack60;
   text-align: center;
+  &-cont {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .input-container {
@@ -364,6 +398,10 @@
   }
 }
 
+.display-none {
+  display: none;
+}
+
 .error-message {
   position: absolute;
   align-items: center;
@@ -417,6 +455,74 @@
   &.is--error {
     .error-message {
       display: flex;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .checkout-page {
+    padding: 75px 24px;
+
+    &__body {
+      gap: 74px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .checkout-page {
+    padding: 75px 24px;
+    max-width: 1278px;
+    margin: 0 auto;
+
+    &__subheader {
+      display: none;
+      &--mobile {
+        display: block;
+      }
+    }
+
+    &__body {
+      flex-direction: column;
+      gap: 64px;
+    }
+    .checkout-products {
+      width: 100%;
+      order: -1;
+      position: static;
+      &__header {
+        width: 100%;
+      }
+
+      &__header-cont {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 528px) {
+  .checkout-page {
+    &__subheader {
+      //padding: 40px 0;
+      &--mobile {
+        .breadcrumbs {
+          flex-direction: column;
+          gap: 32px;
+          &__text {
+            display: none;
+          }
+          &__title {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: -0.01em;
+          }
+        }
+      }
+    }
+    .checkout-products {
+      position: static;
     }
   }
 }

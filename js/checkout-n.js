@@ -21,13 +21,25 @@ const countryInput = document.querySelector(".country-select .select-preview");
 const countryList = document.querySelector(".country-select .select-items");
 const countryItems = document.querySelectorAll(".country-select .select-item");
 
+// STAGE THREE
+const deliveryItems = document.querySelectorAll(".delivery-item");
+const deliveryItemsSelected = document.querySelectorAll(
+  ".delivery-item__selected"
+);
+
+// STAGE FOUR
+const paymentItems = document.querySelectorAll(".payment-item");
+
+// SHUTDOWN
+const thanksModal = document.querySelector(".thanks-modal");
+
 const formData = {
   userInfo: {
-    name: inputName.querySelector("input").value,
-    surname: inputSurname.querySelector("input").value,
-    patronymic: inputPatronymic.querySelector("input").value,
-    email: inputEmail.querySelector("input").value,
-    phone: inputPhone.querySelector("input").value,
+    name: "",
+    surname: "",
+    patronymic: "",
+    email: "",
+    phone: "",
   },
   addressInfo: {
     country: "",
@@ -36,6 +48,11 @@ const formData = {
     house: "",
     apartment: "",
   },
+  delivery: {
+    choice: "",
+    address: "",
+  },
+  payment: "",
 };
 
 let stage = 0;
@@ -64,6 +81,12 @@ button.addEventListener("click", (e) => {
     if (stage === 3) {
       button.innerHTML = "Оплатить";
     }
+    return;
+  }
+  if (stage === 3 && checkValidations(stage)) {
+    thanksModal.classList.add("is--active");
+    backdrop.classList.add("is--active");
+    document.body.classList.add("overflow-hidden");
   }
 });
 
@@ -160,6 +183,13 @@ function checkValidations(stage) {
   if (stage === 1) {
     return checkAddressInfoValidation();
   }
+  if (stage === 2) {
+    return checkDeliveryValidation();
+  }
+
+  if (stage === 3) {
+    return checkPaymentValidation();
+  }
 }
 
 function checkUserInfoValidation() {
@@ -202,10 +232,25 @@ function checkAddressInfoValidation() {
   return isValid;
 }
 
+function checkDeliveryValidation() {
+  if (formData.delivery.choice) {
+    return true;
+  }
+  false;
+}
+
+function checkPaymentValidation() {
+  if (formData.payment) {
+    return true;
+  }
+  false;
+}
+
 // validate value functions
 function checkText(text) {
   console.log(formData, text);
-  const textRegular = /^[А-Яа-я\s-]{2,}$/;
+  //const textRegular = /^[А-Яа-я\s-]{2,}$/;
+  const textRegular = /^([А-Яа-я\s-]+|[A-Za-z\s-]+)$/;
 
   if (text.length === 0) {
     return {
@@ -224,7 +269,7 @@ function checkText(text) {
   if (!textRegular.test(text.trim())) {
     return {
       isValid: false,
-      message: 'Поле может содержать только кириллицу и символ "-"',
+      message: 'Поле может содержать только буквы и символ "-"',
     };
   }
 
@@ -332,6 +377,107 @@ function updateStage() {
     activeStage.querySelector(".filled-v .street").textContent = street;
   }
 
+  if (stage === 2) {
+    activeStage.querySelector(".filled-v .choice").textContent =
+      formData.delivery.choice;
+    if (formData.delivery.address) {
+      activeStage.querySelector(".filled-v .address").textContent =
+        formData.delivery.address;
+    }
+  }
+
   stage++;
   stages[stage].classList.add("is--active");
 }
+
+// STAGE THREE
+deliveryItems.forEach((delivery, index) => {
+  delivery.addEventListener("click", () => {
+    deliveryItems.forEach((delivery) => {
+      delivery.classList.remove("is--active");
+    });
+    deliveryItemsSelected.forEach((delivery) => {
+      delivery.classList.remove("is--active");
+    });
+    delivery.classList.add("is--active");
+    deliveryItemsSelected[index]?.classList.add("is--active");
+
+    formData.delivery.choice = delivery.querySelector("p").textContent;
+    if (index === 0 || index === 2) {
+      formData.delivery.address = deliveryItemsSelected[index]
+        .querySelector(".address-description")
+        .textContent.trim();
+    } else {
+      formData.delivery.address = "";
+    }
+  });
+});
+
+// STAGE FOUR
+paymentItems.forEach((payment) => {
+  payment.addEventListener("click", () => {
+    paymentItems.forEach((item) => {
+      item.classList.remove("is--active");
+    });
+    payment.classList.add("is--active");
+    formData.payment = payment.querySelector("p").textContent;
+    console.log(formData);
+  });
+});
+
+backdrop.addEventListener("click", () => {
+  thanksModal.classList.remove("is--active");
+  backdrop.classList.remove("is--active");
+  document.body.classList.remove("overflow-hidden");
+});
+
+thanksModal
+  .querySelector(".modal-header__button")
+  .addEventListener("click", () => {
+    thanksModal.classList.remove("is--active");
+    backdrop.classList.remove("is--active");
+    document.body.classList.remove("overflow-hidden");
+  });
+
+//Открываем и закрываем модальное окно с картой
+const openMapBtn = document.querySelector("#open-map-btn");
+const mapModal = document.querySelector("#modal-checkout-map");
+const mapModalCloseBtn = mapModal.querySelector(".modal-header__button");
+
+openMapBtn.addEventListener("click", () => {
+  mapModal.classList.add("is--active");
+  backdrop.classList.add("is--active");
+  document.body.classList.add("overflow-hidden");
+});
+
+const modalMapCloseFun = () => {
+  mapModal.classList.remove("is--active");
+  backdrop.classList.remove("is--active");
+  document.body.classList.remove("overflow-hidden");
+};
+mapModalCloseBtn.addEventListener("click", modalMapCloseFun);
+
+//Открываем и закрываем список покупок
+
+const productsListBtn = document.querySelector(
+  ".checkout-products__header-cont"
+);
+const productsList = document.querySelector(".checkout-products__list");
+const productsBottom = document.querySelector(".checkout-products__bottom");
+productsListBtn.addEventListener("click", () => {
+  productsList.classList.toggle("display-none");
+  productsBottom.classList.toggle("display-none");
+});
+
+const openSdekBtn = document.querySelector("#open-sdek-btn");
+const sdekModal = document.querySelector("#modal-checkout-sdek");
+
+openSdekBtn.addEventListener("click", () => {
+  sdekModal.classList.add("is--active");
+});
+
+sdekModal
+  .querySelector(".modal-header__button")
+  .addEventListener("click", () => {
+    sdekModal.classList.remove("is--active");
+  });

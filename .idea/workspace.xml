@@ -6,19 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="347b2572-5bc0-4145-acd7-a1f0ed7a5eda" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aboutus.html" beforeDir="false" afterPath="$PROJECT_DIR$/aboutus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exhibition.html" beforeDir="false" afterPath="$PROJECT_DIR$/exhibition.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/aboutus.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/aboutus.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/pages/_aboutus.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/pages/_aboutus.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thanksorder.html" beforeDir="false" afterPath="$PROJECT_DIR$/thanksorder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viewall.html" beforeDir="false" afterPath="$PROJECT_DIR$/viewall.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/checkout-n.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/checkout-n.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +96,11 @@
       <workItem from="1707249070981" duration="1504000" />
       <workItem from="1707418712820" duration="3150000" />
       <workItem from="1707768186790" duration="1263000" />
+      <workItem from="1707829052223" duration="619000" />
+      <workItem from="1708293300982" duration="2602000" />
+      <workItem from="1708372895716" duration="8720000" />
+      <workItem from="1708540326170" duration="9464000" />
+      <workItem from="1708622566814" duration="15109000" />
     </task>
     <servers />
   </component>
@@ -142,7 +135,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/js/aboutus.js</url>
-          <line>78</line>
+          <line>94</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
