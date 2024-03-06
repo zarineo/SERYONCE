@@ -63,6 +63,7 @@ function favoritesSwiperMode() {
 window.addEventListener("resize", () => {
   favoritesSwiperMode();
   eventsSwiperMode();
+  changeHeaderStyle();
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -166,4 +167,14 @@ const brandHistory = document.querySelector(".brand-history");
 
 function ActiveBrandHistoryAnimate() {
   brandHistory.classList.add("is--active");
+  changeHeaderStyle();
+}
+
+function changeHeaderStyle() {
+  const width = window.innerWidth;
+  if (width <= 1024) {
+    mainHeader.classList.add("white--v");
+  } else {
+    mainHeader.classList.remove("white--v");
+  }
 }

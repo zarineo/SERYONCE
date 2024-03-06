@@ -45,7 +45,7 @@ headerCollectionsItem.addEventListener("click", () => {
 menuButton.addEventListener("click", () => {
   mainHeader.classList.toggle("menu-active");
   hamburger.classList.toggle("is--active");
-  document.body.classList.toggle("scroll-disabled");
+  document.body.classList.toggle("overflow-hidden");
 });
 
 menuMobileToggleItem.addEventListener("click", () => {
