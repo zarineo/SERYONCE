@@ -779,7 +779,10 @@
   height: 32px;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  cursor: pointer; }
+  .cart__product-add-to-favorite:hover {
+    opacity: 0.6; }
 .cart__product-delete {
   display: flex;
   justify-content: center;
@@ -787,7 +790,10 @@
   position: relative;
   width: 32px;
   height: 32px;
-  padding: 6px; }
+  padding: 6px;
+  cursor: pointer; }
+  .cart__product-delete:hover {
+    opacity: 0.6; }
   .cart__product-delete span {
     display: block;
     position: absolute;
@@ -859,20 +865,25 @@
     display: flex;
     justify-content: center;
     height: 20px;
-    background: #f7f7f7; }
+    background: #f7f7f7;
+    cursor: pointer; }
+    .counter__button:active {
+      opacity: 0.4; }
     .counter__button--minus {
       -webkit-border-bottom-left-radius: 4px;
       -webkit-border-top-left-radius: 4px; }
     .counter__button--plus {
       -webkit-border-bottom-right-radius: 4px;
       -webkit-border-top-right-radius: 4px; }
-  .counter__input input {
-    width: 24px;
-    height: 20px;
-    background: #f7f7f7;
-    border: none;
-    text-align: center;
-    color: #0f0e0e; }
+  .counter__input {
+    display: inline-flex; }
+    .counter__input input {
+      width: 24px;
+      height: 20px;
+      background: #f7f7f7;
+      border: none;
+      text-align: center;
+      color: #0f0e0e; }
 
 @media screen and (max-width: 528px) {
   .cart__item {
@@ -1548,7 +1559,7 @@
     letter-spacing: -1.6px;
     margin: 40px 0 24px 0;
     color: #cc4958;
-    max-width: 500px; }
+    max-width: 550px; }
   .home-page .amat-history__info,
   .page .amat-history__info {
     font-size: 16px;
@@ -1643,6 +1654,9 @@
           width: 12px;
           height: 12px;
           background: #f0485b; }
+  .home-page .collections .collections-ticker .ticker__item,
+  .page .collections .collections-ticker .ticker__item {
+    animation: ticker 12s linear infinite; }
 @keyframes ticker {
   0% {
     transform: translateZ(0); }
@@ -2111,7 +2125,7 @@
     .product-page .product-photos__list {
       display: flex;
       flex-direction: column;
-      cursor: url("/images/svg/slider-zoom-plus.svg"), auto; }
+      cursor: url("../images/svg/slider-zoom-plus.svg"), auto; }
     .product-page .product-photos__item img {
       display: block;
       width: 100%;
@@ -2321,16 +2335,18 @@
       justify-content: center;
       width: 100%;
       height: 100%;
-      overflow: hidden;
-      cursor: url("/images/svg/slider-zoom-plus.svg"), auto; }
+      overflow: hidden; }
       .product-page .photos-preview .preview-photo__wrapper img {
         width: auto;
         height: 100%;
-        transition: transform 0.3s ease-in-out; }
-      .product-page .photos-preview .preview-photo__wrapper.zoomed {
-        cursor: url("/images/svg/slider-zoom-minus.svg"), auto; }
-        .product-page .photos-preview .preview-photo__wrapper.zoomed img {
-          transform: scale(2); }
+        transition: transform 0.3s ease-in-out;
+        cursor: url("../images/svg/slider-zoom-plus.svg"), auto; }
+      .product-page .photos-preview .preview-photo__wrapper.zoomed img {
+        transform: scale(2);
+        position: relative;
+        top: 0;
+        left: 0;
+        cursor: url("../images/svg/slider-zoom-minus.svg"), auto; }
   .product-page .photos-preview .photos-list {
     position: absolute;
     display: flex;
@@ -2358,6 +2374,8 @@
   .product-page .photos-preview .navigation-buttons .prev-button,
   .product-page .photos-preview .navigation-buttons .next-button {
     cursor: pointer; }
+  .product-page .photos-preview .navigation-buttons span img:last-child {
+    display: none; }
   .product-page .photos-preview .navigation-buttons .prev-button {
     position: absolute;
     top: calc(50%);
@@ -2416,7 +2434,21 @@
     .product-page .recommendations .sections-title {
       font-size: 32px; }
     .product-page .recommendations .swiper-slide {
-      margin-bottom: 16px; } }
+      margin-bottom: 16px; }
+  .product-page .photos-preview .photos-list__item {
+    width: 42px;
+    height: 54px; }
+  .product-page .photos-preview__bottom {
+    padding: 16px 24px; }
+    .product-page .photos-preview__bottom .product-name,
+    .product-page .photos-preview__bottom .property-items {
+      display: none; }
+    .product-page .photos-preview__bottom .button-wrapper {
+      width: 100%; }
+      .product-page .photos-preview__bottom .button-wrapper .product-price {
+        display: none; }
+      .product-page .photos-preview__bottom .button-wrapper .button {
+        width: 100%; } }
 @media (max-width: 720px) {
   .product-page .product-photos {
     height: 594px; }
@@ -2437,7 +2469,17 @@
     justify-content: space-between; }
     .product-page .added-message p,
     .product-page .added-message a {
-      font-size: 14px; } }
+      font-size: 14px; }
+  .product-page .photos-preview .navigation-buttons span img:last-child {
+    display: block; }
+  .product-page .photos-preview .navigation-buttons span img:first-child {
+    display: none; }
+  .product-page .photos-preview .navigation-buttons .prev-button {
+    left: 0; }
+  .product-page .photos-preview .navigation-buttons .next-button {
+    right: 0; }
+  .product-page .photos-preview__bottom {
+    padding: 16px; } }
 
 body {
   overflow-x: hidden; }
@@ -2913,11 +2955,15 @@ a {
         display: flex;
         justify-content: flex-end; }
 
-.events .swiper-wrapper {
-  display: flex; }
+.events .section-wrapper {
+  padding-right: 0; }
+.events .swiper-slide {
+  width: 500px;
+  height: 520px; }
 .events__title {
   margin-bottom: 40px; }
 .events .event {
+  width: 500px;
   height: 520px;
   border: 1px solid rgba(12, 12, 12, 0.3);
   background: white;
@@ -2970,6 +3016,10 @@ a {
 
 .articles {
   background: #f7f7f7; }
+  .articles .section-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1592px; }
   .articles__title {
     text-align: center;
     margin-bottom: 64px; }
@@ -3157,10 +3207,14 @@ a {
 
   .events {
     padding-bottom: 80px; }
+    .events .swiper-slide {
+      width: 100%;
+      height: auto; }
     .events .swiper-wrapper {
       flex-direction: column;
       gap: 20px; }
-    .events__wrapper {
+    .events .section-wrapper {
+      padding-right: 24px;
       width: 100%;
       margin-right: 0;
       overflow-x: hidden; }
@@ -3169,8 +3223,7 @@ a {
       width: 100%; }
     .events .event {
       width: 100%;
-      height: auto;
-      overflow: hidden; }
+      height: auto; }
       .events .event__photos-big-photo {
         max-height: 254px; }
 
