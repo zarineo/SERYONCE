@@ -1441,13 +1441,24 @@
     align-items: flex-end; }
     .home-page .home-video__container .video,
     .page .home-video__container .video {
-      background-image: url("../images/png/home.png");
       background-position: center;
       background-size: cover;
       width: 88.8%;
       height: 55%;
       margin: 0 auto;
-      transition: 1s; }
+      transition: 1s;
+      object-fit: cover; }
+      @media screen and (max-width: 528px) {
+        .home-page .home-video__container .video,
+        .page .home-video__container .video {
+          display: none; } }
+      .home-page .home-video__container .video--mob,
+      .page .home-video__container .video--mob {
+        display: none; }
+        @media screen and (max-width: 528px) {
+          .home-page .home-video__container .video--mob,
+          .page .home-video__container .video--mob {
+            display: block; } }
   .home-page .home-video__description,
   .page .home-video__description {
     position: absolute;
@@ -1694,10 +1705,9 @@
   height: 900px; }
   .home-page .amat-video .about-amat__media > .video,
   .page .amat-video .about-amat__media > .video {
-    width: calc(100% - 311px - 80px);
-    height: 900px; }
-    .home-page .amat-video .about-amat__media > .video img,
-    .page .amat-video .about-amat__media > .video img {
+    width: calc(100% - 311px - 80px); }
+    .home-page .amat-video .about-amat__media > .video video,
+    .page .amat-video .about-amat__media > .video video {
       width: 100%;
       height: 100%;
       object-fit: cover; }
@@ -1849,8 +1859,7 @@
   .page .amat-gifts .about-amat__media > img,
   .page .amat-gifts .about-amat__media > iframe,
   .page .amat-gifts .about-amat__media > .video {
-    max-width: none;
-    height: 492px; }
+    max-width: none; }
   .home-page .amat-video .about-amat__description .about-amat__link,
   .home-page .amat-gifts .about-amat__description .about-amat__link,
   .page .amat-video .about-amat__description .about-amat__link,

@@ -1,5 +1,6 @@
 const mainHeader = document.querySelector(".main-header");
 const backdrop = document.querySelector(".backdrop");
+const body = document.querySelector("body");
 
 // content loaded
 document.addEventListener("DOMContentLoaded", () => {
@@ -173,33 +174,89 @@ deleteButtons.forEach(function (button) {
   });
 });
 
-
 // Модалки уход за изделиями, доставка и оплата, возврат, faq
 
+const modalProductCareBtn = document.querySelector("#product-care-btn");
+const modalProductCare = document.querySelector("#modal-product-care");
+const modalProductCareCloseBtn = modalProductCare.querySelector(
+  ".modal-header__button"
+);
+const modalFaq = document.querySelector("#modal-faq");
 
-const modalProductCareBtn = document.querySelector('#product-care-btn');
-const modalProductCare = document.querySelector('#modal-product-care');
-const modalProductCareCloseBtn = modalProductCare.querySelector('.modal-header__button');
-const modalFaq = document.querySelector('#modal-faq');
+const openFavoriteBtn = document.querySelector("#open-favorite-btn");
+const openFaqBtn = document.querySelector("#faq");
+const closeFaqBtn = modalFaq.querySelector(".modal-header__button");
+const modalContacts = document.querySelector(".modal-contacts");
+const openContactsBtn = document.querySelector("#open-contacts-btn");
+const closeContactsBtn = modalContacts.querySelector(".modal-header__button");
+const openAddressBtn = document.querySelector("#open-address");
+const modalAddress = document.querySelector("#modal-address");
+const closeModalAddress = modalAddress.querySelector(".modal-header__button");
 
-const openFavoriteBtn = document.querySelector('#open-favorite-btn');
-const openFaqBtn = document.querySelector('#faq');
-const closeFaqBtn = modalFaq.querySelector('.modal-header__button');
-const modalContacts = document.querySelector('.modal-contacts');
-const openContactsBtn = document.querySelector('#open-contacts-btn');
-const closeContactsBtn = modalContacts.querySelector('.modal-header__button');
-const openAddressBtn = document.querySelector('#open-address');
-const modalAddress = document.querySelector('#modal-address');
-const closeModalAddress = modalAddress.querySelector('.modal-header__button');
+modalProductCareBtn.addEventListener("click", () =>
+  OpenModal(modalProductCare)
+);
+modalProductCareCloseBtn.addEventListener("click", () =>
+  CloseModal(modalProductCare)
+);
+openFavoriteBtn.addEventListener("click", () => OpenModal(modalFavorites));
+openFaqBtn.addEventListener("click", () => OpenModal(modalFaq));
+closeFaqBtn.addEventListener("click", () => CloseModal(modalFaq));
+openContactsBtn.addEventListener("click", () => OpenModal(modalContacts));
+closeContactsBtn.addEventListener("click", () => CloseModal(modalContacts));
+openAddressBtn.addEventListener("click", () => OpenModal(modalAddress));
+closeModalAddress.addEventListener("click", () => CloseModal(modalAddress));
 
 
+// accordions
+const productAccordionItems = document.querySelectorAll(
+  ".product-description__accordion > .accordion-item"
+);
+const footerInfoAccordionItems = document.querySelectorAll(
+  ".footer-info__mobile > .accordion-item"
+);
+const filterAccordionItems = document.querySelectorAll(
+  ".modal-filter__accordion .accordion-item"
+);
+const sdekPointsItems = document.querySelectorAll(".points-list__item");
 
-modalProductCareBtn.addEventListener('click', () => OpenModal(modalProductCare));
-modalProductCareCloseBtn.addEventListener('click', () => CloseModal(modalProductCare));
-openFavoriteBtn.addEventListener('click', () => OpenModal(modalFavorites));
-openFaqBtn.addEventListener('click', () => OpenModal(modalFaq));
-closeFaqBtn.addEventListener('click', () => CloseModal(modalFaq));
-openContactsBtn.addEventListener('click', () => OpenModal(modalContacts));
-closeContactsBtn.addEventListener('click', () => CloseModal(modalContacts));
-openAddressBtn.addEventListener('click', () => OpenModal(modalAddress));
-closeModalAddress.addEventListener('click', () => CloseModal(modalAddress));
+filterAccordionItems.forEach((item) => accordionAnimate(item, [], false));
+productAccordionItems.forEach((item) => accordionAnimate(item, []));
+footerInfoAccordionItems.forEach((item) =>
+  accordionAnimate(item, footerInfoAccordionItems, false)
+);
+sdekPointsItems.forEach((item) =>
+  accordionAnimate(item, sdekPointsItems, false)
+);
+
+function accordionAnimate(item, items, scroll = true) {
+  item.querySelector(".accordion-header").addEventListener("click", () => {
+    items.forEach((accItem) => {
+      if (accItem !== item) {
+        accItem.classList.remove("is--active");
+        accItem.querySelector(".accordion-description").style.height = "";
+      }
+    });
+
+    item.classList.toggle("is--active");
+    const description = item.querySelector(".accordion-description");
+    if (description.style.height) {
+      description.style.height = "";
+    } else {
+      const bodyHeight = description.querySelector(
+        ".accordion-description__body"
+      ).offsetHeight;
+      description.style.height = `${bodyHeight}px`;
+
+      if (scroll) {
+        setTimeout(() => {
+          const scrollToPosition = item.offsetTop - 120;
+          window.scrollTo({
+            top: scrollToPosition,
+            behavior: "smooth", // Добавляет плавность скролла
+          });
+        }, 250);
+      }
+    }
+  });
+}

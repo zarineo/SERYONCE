@@ -254,7 +254,9 @@
     <main class="home-page">
       <section class="home-video">
         <div class="home-video__container">
-          <div class="video"></div>
+          <video class="video" src="video/desk.mp4" muted autoplay loop></video>
+          <video class="video video--mob" src="video/mob.mp4" muted autoplay loop></video>
+          <!-- <div class="video"></div> -->
         </div>
         <div class="home-video__description">
           <h1 class="title">Коллекция твилли</h1>
@@ -509,11 +511,15 @@
             элегантный стиль с амат
           </h3>
           <p class="about-amat__info transform-text__animated">
-            Стилист Aurea Donna рассказывает о модных трендах 2023
+            Стилист Медни рассказывает о модных трендах 2023
           </p>
         </header>
         <div class="about-amat__media">
-          <div class="video"><img src="images/png/style.png" alt="" /></div>
+          <div class="video">
+            <video controls autoplay muted class="video">
+              <source src="video/still.mp4">
+            </video>
+          </div>
           <div class="swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -837,7 +843,7 @@
           </h3>
         </header>
         <div class="about-amat__media">
-          <img src="images/png/store.png" alt="" />
+          <img src="images/png/grand.jpg" alt="" />
         </div>
         <div class="about-amat__description animated-section">
           <h3 class="sections-title transform-text__animated">
@@ -1820,7 +1826,9 @@
             <li class="footer-info__body--item"><p>Доставка и оплата</p></li>
             <li class="footer-info__body--item"><p>Возврат</p></li>
             <li class="footer-info__body--item"><p>Помощь</p></li>
-            <li class="footer-info__body--item"><p>Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд Парк», 1</p></li>
+            <li class="footer-info__body--item">
+              <p>Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд Парк», 1</p>
+            </li>
           </ul>
         </div>
 
@@ -1951,8 +1959,11 @@
         </div>
       </div>
     </footer>
-    <script src="./js/home.js"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/accordion.js"></script>
+    <script src="./js/home.js"></script>
+    <script src="./js/categories.js"></script>
+    <script src="./js/product.js"></script>
+    <script src="./js/checkout-n.js"></script>
+    <script src="./js/aboutus.js"></script>
   </body>
 </html>
