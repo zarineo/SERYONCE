@@ -1,0 +1,1698 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="fonts/font/stylesheet.css" />
+    <title>Оферта</title>
+    <link type="image/x-icon" href="images/favicon.svg" rel="shortcut icon" />
+  </head>
+  <body>
+    <header class="main-header animated">
+      <div class="main-header__wrapper">
+        <nav class="main-nav">
+          <ul class="main-nav__items flex-child">
+            <li class="main-nav__item main-nav__item--collections">
+              <span> Коллекции </span>
+            </li>
+            <li class="main-nav__item" id="brand">
+              <a href="aboutus.html"> О бренде </a>
+            </li>
+          </ul>
+          <div class="logo-container">
+            <a href="index.html">
+              <img
+                src="images/svg/logo-white.svg"
+                alt="logo"
+                class="logo-white"
+                id="logo"
+              />
+              <img
+                src="images/svg/logo-black.svg"
+                alt="logo"
+                class="logo-black"
+                id="logo-white"
+              />
+            </a>
+          </div>
+          <ul class="main-nav__items flex-child">
+            <li class="main-nav__item main-nav__item--icon icon-search">
+              <span class="icon icon--black">
+                <img
+                  class="black icon--default"
+                  src="images/svg/search-black.svg"
+                />
+              </span>
+              <span class="icon icon--white">
+                <img
+                  class="white icon--default"
+                  src="images/svg/search-white.svg"
+                />
+              </span>
+              <span class="icon icon--gold">
+                <img
+                  class="gold icon--default"
+                  src="images/svg/search-gold.svg"
+                />
+                <span class="icon-text">Поиск</span>
+              </span>
+            </li>
+            <li class="main-nav__item main-nav__item--icon icon-favor">
+              <span class="icon icon--black">
+                <img
+                  class="black icon--default"
+                  src="images/svg/favor-black.svg"
+                />
+              </span>
+              <span class="icon icon--white">
+                <img
+                  class="white icon--default"
+                  src="images/svg/favor-white.svg"
+                />
+              </span>
+              <span class="icon icon--gold">
+                <img
+                  class="gold icon--default"
+                  src="images/svg/favor-gold.svg"
+                />
+                <span class="icon-text">Избранное</span>
+              </span>
+            </li>
+            <li class="main-nav__item main-nav__item--icon icon-bag is--active">
+              <span class="icon icon--black">
+                <img
+                  class="black icon--default"
+                  src="images/svg/bag-black.svg"
+                />
+                <img
+                  class="black icon--active"
+                  src="images/svg/bag-black-active.svg"
+                />
+              </span>
+              <span class="icon icon--white">
+                <img
+                  class="white icon--default"
+                  src="images/svg/bag-white.svg"
+                />
+                <img
+                  class="white icon--active"
+                  src="images/svg/bag-white-active.svg"
+                />
+              </span>
+              <span class="icon icon--gold">
+                <img class="gold icon--default" src="images/svg/bag-gold.svg" />
+                <span class="icon-text">Корзина</span>
+              </span>
+              <span class="quantity">3</span>
+            </li>
+            <li class="main-nav__item main-nav__item--mobile">
+              <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="mobile-menu">
+          <nav class="mobile-nav">
+            <div class="search-container">
+              <form>
+                <img src="images/svg/search-in.svg" class="search-in" />
+                <input
+                  type="text"
+                  name="text"
+                  class="search"
+                  placeholder="Тип изделия, название..."
+                />
+              </form>
+            </div>
+            <ul class="mobile-nav__items">
+              <li class="mobile-nav__item mobile-nav__item--collection">
+                <span
+                  >Коллекции
+                  <img src="images/svg/arrow-bottom-black.svg" alt=""
+                /></span>
+                <div class="mobile-nav__item--submenu">
+                  <ul class="collections-list">
+                    <li class="collections-list__item">
+                      <a href="category.html#theme-scarves"
+                        >Тематические платки</a
+                      >
+                    </li>
+                    <li class="collections-list__item">
+                      <a href="category.html#base-scarves">Базовые платки</a>
+                    </li>
+                    <li class="collections-list__item"><a href="">Шали</a></li>
+                    <li class="collections-list__item">
+                      <a href="category.html#gradients">Градиенты</a>
+                    </li>
+                    <li class="collections-list__item">
+                      <a href="category.html#twills">Твилли</a>
+                    </li>
+                    <li class="collections-list__item">
+                      <a href="category.html#scarfs">Шарфы</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mobile-nav__item">
+                <a href="aboutus.html">О нас</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a id="product-care-btn">Уход за изделиями</a>
+              </li>
+            </ul>
+            <ul class="mobile-nav__items--bottom">
+              <li class="mobile-nav__item">
+                <p id="open-favorite-btn">Избранное</p>
+                <img src="images/png/mobile-favor.png" />
+              </li>
+              <li class="mobile-nav__item">
+                <p id="open-address">Адрес</p>
+              </li>
+              <li class="mobile-nav__item">
+                <p id="faq">Помощь</p>
+              </li>
+              <li class="mobile-nav__item">
+                <p id="open-contacts-btn">Контакты</p>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="submenu">
+          <div class="submenu-wrapper">
+            <ul class="collections-list">
+              <li class="collections-list__item">
+                <a href="category.html#theme-scarves">
+                  <img src="images/png/title1.png" alt="" />
+                  <h3>Тематические платки</h3>
+                </a>
+              </li>
+              <li class="collections-list__item">
+                <a href="category.html#base-scarves">
+                  <img src="images/png/title2.png" alt="" />
+                  <h3>базовые платки</h3>
+                </a>
+              </li>
+              <li class="collections-list__item">
+                <a href="category.html#shawls">
+                  <img src="images/png/title3.png" alt="" />
+                  <h3>шали</h3>
+                </a>
+              </li>
+              <li class="collections-list__item">
+                <a href="category.html#gradients">
+                  <img src="images/png/title4.png" alt="" />
+                  <h3>градиенты</h3>
+                </a>
+              </li>
+              <li class="collections-list__item">
+                <a href="category.html#twills">
+                  <img src="images/png/title1.png" alt="" />
+                  <h3>твилли</h3>
+                </a>
+              </li>
+              <li class="collections-list__item">
+                <a href="category.html#scarfs">
+                  <img src="images/png/title2.png" alt="" />
+                  <h3>шарфы</h3>
+                </a>
+              </li>
+            </ul>
+            <a href="category.html">
+              <button class="submenu-button button">
+                Посмотреть все коллекции
+                <span class="arrow">
+                  <img
+                    class="black"
+                    src="images/svg/arrow-right-black-button.svg"
+                    alt=""
+                  />
+                  <img
+                    class="gold"
+                    src="images/svg/arrow-right-gold-button.svg"
+                    alt=""
+                  />
+                </span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="oferta">
+      <div class="section-wrapper">
+        <h1>Публичная оферта интернет-магазина</h1>
+        <h3>1. Общие положения и основные термины</h3>
+        <p class="text-block">  
+          1.1. Продавец - общество с ограниченной ответственностью "АМАТ" (ОГРН
+          1222000006018) адрес: 364024, г. Грозный, пр. А.А. Кадырова, д. 36, кв.
+          27, телефон: +7(988)9088787, электронная почта: amat.textile@gmail.com
+        </p>
+        <p class="text-block">
+          1.2. Интернет-магазин - интернет-сайт "АМАТ ТЕКСТИЛЬ" по
+          интернет-адресу: <a href="amatcollection.com" target="_blank"> amatcollection.com </a>.  С его помощью продавец ведет
+          торговлю, на нем представлены товары, которые продавец предлагает
+          покупателям, условия приобретения, доставки, оплаты, возврата и обмена
+          товаров. Интернет-сайт доступен круглосуточно. Рабочие часы магазина
+          (обработка и выполнение заказов и пр.): с 09:00 до 21:00 по московскому
+          времени в рабочие дни.
+        </p>
+        <p class="text-block">
+          1.3. Покупатель - любое физическое или
+          юридическое лицо, которое оформило заказ на приобретение товара у
+          продавца в установленном разд. 3 оферты порядке. Покупатель-потребитель
+          - физическое лицо, которое приобретает товар для личных, семейных,
+          домашних и иных нужд, которые не связаны с его предпринимательской
+          деятельностью.
+        </p>
+        <p class="text-block">
+          1.4. Оферта - публичное предложение продавца любому лицу
+          заключить на ее условиях договор купли-продажи товара (далее - договор).
+          Оферта является публичной (п. 2 ст. 437 ГК РФ). Оферта вступает в силу с
+          момента ее размещения на сайте интернет-магазина по адресу:
+          <a href="amatcollection.com" target="_blank"> amatcollection.com </a>.  и действует до ее отзыва.
+        </p>
+        <p class="text-block">
+          Продавец вправе изменить
+          или отозвать оферту в одностороннем порядке. Все изменения вступают в
+          силу и считаются доведенными до сведения покупателя в момент размещения
+          на указанной интернет-странице. Заказы, которые уже оформлены к моменту
+          изменения или отзыва оферты, исполняются на условиях оферты, которая
+          действовала на момент их оформления.
+        </p>
+
+        <h3>2. Предмет договора </h3>
+        <p class="text-block">
+          2.1. Продавец обязуется передать в собственность покупателю, а покупатель обязуется
+          оплатить и принять товар, заказанный на условиях оферты в
+          интернет-магазине. 
+        </p>
+        <p class="text-block">
+          2.2. Товар - любой товар, который продавец предлагает
+          к продаже на сайте интернет-магазина с помощью каталога с наименованиями
+          позиций товара, которые снабжены его описанием (включая цену, сведения
+          об изготовителе) и фотоснимками. Действующая редакция каталога размещена
+          на сайте интернет-магазина по адресу: 
+          <a href="amatcollection.com" target="_blank"> amatcollection.com </a>. 
+          Все товары являются непродовольственными. 
+        </p>
+        <h3>  3. Порядок заключения договора, оформление заказа </h3>
+        <p class="text-block">
+          3.1. Акцептом оферты признается момент, когда
+          покупатель оформил заказ товара у продавца. С этого момента договор
+          считается заключенным.
+        </p>
+        <p class="text-block">
+          3.2. Покупатель может сделать заказ по телефону
+          интернет-магазина в его рабочие часы или самостоятельно на его сайте
+          через форму заказа. Заказ можно оформить на любой товар из каталога на
+          сайте интернет-магазина по адресу: <a href="amatcollection.com" target="_blank"> amatcollection.com </a>, который есть в
+          наличии на складе продавца.
+        </p>
+        <p class="text-block">
+          3.3. Для оформления заказа покупатель
+          регистрируется на сайте интернет-магазина самостоятельно, или его
+          регистрирует менеджер интернет-магазина при приеме заказа по телефону.
+          При регистрации создается личный кабинет покупателя с уникальным логином
+          и паролем. 
+        </p>
+        <p class="text-block">
+          3.4. При оформлении заказа покупатель сообщает продавцу свое
+          полное имя (наименование), контактный телефон и адрес электронной почты,
+          адрес доставки товара, желаемые дату, время и способы доставки, способы
+          оплаты заказа. Эти желаемые показатели покупатель выбирает с учетом
+          условий оферты, а также территории и временных интервалов доставки,
+          размещенных на сайте интернет-магазина по адресу: <a href="amatcollection.com" target="_blank"> amatcollection.com </a>. 
+        </p>
+        <p class="text-block">
+          3.5. Заказ считается оформленным в момент: 
+          <ul>
+            <li class="paragraph">
+              нажатия кнопки "Подтвердить заказ" на последнем этапе оформления заказа - при самостоятельном
+              оформлении на сайте интернет-магазина. В течение 4 (четырех) рабочих
+              часов с момента оформления заказа с покупателем связывается по телефону
+              менеджер интернет-магазина, чтобы подтвердить наличие товара, сообщить
+              номер заказа и согласовать его доставку; 
+            </li>
+            <li class="paragraph">
+              устного подтверждения заказа менеджеру по телефону интернет-магазина - при заказе по телефону. Заказ
+              считается подтвержденным после того, как менеджер подтвердил наличие
+              заказанных товаров и стоимость заказа, зафиксировал всю необходимую для
+              доставки информацию и сообщил покупателю номер заказа. 
+            </li>
+          </ul>
+        </p>
+        <p class="text-block">
+          3.6. В подтверждение заказа и заключения договора на условиях оферты продавец
+          направляет дату и номер оформленного заказа электронным письмом и
+          СМС-сообщением на электронный адрес и номер телефона, предоставленные
+          покупателем. 
+        </p>
+        <p class="text-block">
+          3.7. Оформляя заказ, покупатель подтверждает, что:
+          <ul>
+            <li class="paragraph">
+              является дееспособным гражданином или уполномоченным на заказ товара
+              представителем юридического лица;
+            </li>
+            <li class="paragraph">
+              ознакомлен с действующей редакцией оферты и согласен с ее условиями; 
+            </li>
+            <li class="paragraph">
+              принимает на себя обязательство оплатить заказанный товар и принять его;
+            </li>
+            <li class="paragraph">
+              предоставил достоверную информацию при регистрации на сайте 
+              интернет-магазина и оформлении заказа; 
+            </li>
+            <li class="paragraph">
+              передает продавцу для обработки в целях заключения и исполнения
+              договора свои персональные данные: полное имя, номер телефона, адреса
+              электронной почты и доставки товара (для покупателя-гражданина) (п. 5 ч.
+              1 ст. 6 Закона о персональных данных);
+            </li>
+            <li class="paragraph">
+              дает согласие на обработку
+              переданных персональных данных в целях направления ему сообщений
+              рекламного характера о товаре, проведения опросов и розыгрышей призов
+              среди покупателей, контроля удовлетворенности покупателя (для
+              покупателя-гражданина) (п. 1 ч. 1 ст. 6 Закона о персональных данных).
+              Покупатель вправе отозвать согласие, уведомив продавца письменно по
+              адресу его электронной почты;
+            </li>
+            <li class="paragraph">
+              дает предварительное согласие на
+              получение рекламно-информационных сообщений в форме рассылок по
+              электронной почте и СМС-сообщений на электронный адрес и номер телефона,
+              предоставленные при регистрации в интернет-магазине (ч. 1 ст. 18 Закона
+              о рекламе). Покупатель вправе отозвать согласие, уведомив продавца
+              письменно по адресу его электронной почты. 
+            </li>
+          </ul>
+        </p>
+        <br>
+        <h3>
+          4. Стоимость заказа и его оплата
+        </h3>
+        <p class="text-block">
+          4.1. Стоимость заказа состоит из цены товара и стоимости его
+          доставки, которые определяет продавец в одностороннем порядке. Если
+          продавец изменил цену товара или стоимость доставки после оформления
+          заказа, заказ оплачивается по стоимости на момент его оформления. 
+        </p>
+        <p class="text-block">
+          4.2. Цена товара определяется по каталогу на сайте интернет-магазина по адресу: 
+          <a href="amatcollection.com" target="_blank"> amatcollection.com </a>.        
+        </p>
+        <p class="text-block">
+          4.3. Стоимость доставки не входит в цену
+          товара и оплачивается отдельно. Тарифы на доставку с учетом ее способа,
+          временных интервалов и территории указаны на сайте интернет-магазина по
+          адресу: <a href="amatcollection.com" target="_blank"> amatcollection.com </a>.  
+        </p>
+        <p class="text-block">
+          4.4. Покупатель может оплатить заказ в
+          наличной или безналичной форме. Способ оплаты выбирается при оформлении
+          заказа с учетом установленных законодательством РФ лимитов на расчеты
+          наличными.
+        </p>
+        <p class="text-block">
+          4.5. При расчетах наличными покупатель оплачивает стоимость
+          заказа в момент передачи товара. Продавец выдает покупателю кассовый чек
+          или иной подтверждающий оплату товара документ.
+        </p>
+        <p class="text-block">
+          4.6. При безналичной форме оплаты покупатель производит полную предоплату заказа в течение 24
+          часов с момента его оформления, но не позднее чем за 3 часа до начала
+          согласованного временного интервала доставки заказа. Обязанность
+          покупателя оплатить заказ считается исполненной в момент поступления
+          полной суммы предоплаты на расчетный счет продавца. Если оплата не
+          поступит в указанный срок, заказ считается отмененным, о чем продавец
+          уведомляет покупателя электронным письмом и СМС-сообщением.
+        </p>
+        <h3> 5. Доставка товара </h3>
+        <p class="text-block">
+          5.1. Продавец доставляет товар в согласованные с покупателем при
+          подтверждении заказа сроки курьером на адрес покупателя, также
+          покупатель в праве забрать товар из пункта самовывоза(действующий
+          магазин),по адресу указанный на сайте интернет-магазина,адрес
+          интернет-магазина: <a href="amatcollection.com" target="_blank"> amatcollection.com </a>. 
+          Способ доставки выбирает покупатель при оформлении заказа. 
+        </p>
+        <p class="text-block">
+          5.2. При получении товара покупатель
+          обязан сообщить курьеру или менеджеру пункта самовывоза номер заказа и
+          предъявить документ, удостоверяющий личность. Если покупатель -
+          юридическое лицо, его представитель предъявляет доверенность на
+          получение товара и документ, удостоверяющий его личность. 
+        </p>
+        <p class="text-block">
+          5.3. При передаче товара покупатель проверяет его внешний вид и комплектность и
+          ставит подпись в бланке заказа, чем подтверждает, что получил товар и не
+          имеет претензий по его внешнему виду, количеству и комплектности. 
+        </p>
+        <p class="text-block">
+          5.4. Право собственности на товар переходит к покупателю в момент фактической
+          передачи ему товара при условии его полной оплаты. 
+        </p>
+        <p class="text-block">
+          5.5. Если покупатель в согласованный при оформлении заказа срок не явится за товаром в пункт
+          самовывоза или не совершит иные необходимые для принятия товара
+          действия, продавец доставляет товар заново, в новые сроки, согласованные
+          с покупателем по телефону. За повторную доставку с покупателя взимается
+          плата по тарифам продавца, указанным на сайте интернет-магазина по
+          адресу: <a href="amatcollection.com" target="_blank"> amatcollection.com </a>. 
+        </p>
+        <h3>6. Изменение заказа и отказ от него </h3>
+        <p class="text-block">
+          6.1. Если после оформления заказа продавец выявит отсутствие заказанного
+          товара или его нужного количества на складе, то незамедлительно извещает
+          об этом покупателя по телефону. Покупатель вправе заменить отсутствующий
+          товар аналогичным или отказаться от заказа полностью или только в части
+          отсутствующего товара. 
+        </p>
+        <p class="text-block">
+          6.2. Покупатель вправе по телефону или по
+          электронной почте отказаться от оформленного заказа полностью или в
+          части в любое время до его передачи. Оплата за такой заказ (или часть
+          заказа) не производится. Если покупатель, который не является
+          потребителем, заявил о полном отказе от заказа в момент, когда заказ уже
+          передан на доставку, то обязан оплатить согласованную ранее стоимость
+          доставки заказа. 
+        </p>
+        <p class="text-block">
+          6.3. Если покупатель отказывается в предусмотренном п.
+          п. 6.1, 6.2 оферты порядке от предоплаченного заказа, продавец
+          возвращает уплаченную за заказ сумму (а в случае частичного отказа -
+          сумму переплаты) на те же банковские реквизиты, с которых она поступила
+          продавцу, либо на иные реквизиты, которые покупатель письменно сообщит
+          продавцу. Возврат производится в течение 7 (семи) рабочих дней с даты
+          отказа от заказа. 
+        </p>
+        <p class="text-block">
+          6.4. По согласованию с продавцом покупатель вправе
+          изменить заказ не позднее чем за 24 часа до начала согласованного
+          временного интервала доставки. Если заказ предоплачен, продавец
+          корректирует его стоимость и сообщает покупателю сумму, которую
+          необходимо доплатить, либо возвращает переплату на счет покупателя в
+          порядке, предусмотренном п. 6.3 оферты. 
+        </p>
+        <h3>7. Возврат и обмен товара  </h3>
+        <p class="text-block">
+          7.1. Если покупатель обнаружит у товара недостатки(товар ненадлежащего
+          качества), то вправе предъявить продавцу требования, предусмотренные
+          Гражданским кодексом РФ и иными правовыми актами. В том числе он вправе
+          отказаться от договора, вернуть некачественный товар продавцу и
+          потребовать возврата уплаченных денег. Покупатель-потребитель также
+          имеет право предъявить требования, предусмотренные Законом РФ "О защите
+          прав потребителей" от 07.02.1992 N 2300-1, Правилами продажи товаров по
+          договору розничной купли-продажи, утвержденными Постановлением
+          Правительства РФ от 31.12.2020 N 2463, и иными правовыми актами в сфере
+          защиты прав потребителей. Порядок предъявления требований определяется
+          указанными правовыми актами. 
+        </p>
+        <p class="text-block">
+          7.2. Претензии по качеству товара
+          направляются в письменном виде на электронный адрес продавца. В
+          претензии необходимо указать полное имя (наименование) покупателя, номер
+          и дату заказа, дату оплаты и дату передачи товара, а также описать
+          выявленные недостатки, дату и обстоятельства их обнаружения. К претензии
+          должны быть приложены фотографии. 
+        </p>
+        <p class="text-block">
+          7.3. Покупатель-потребитель вправе
+          отказаться от товара надлежащего качества в течение 1-2 дней со дня его
+          передачи, если сохранены его товарный вид, потребительские свойства и
+          документ, который подтверждает факт и условия покупки. Если документ не
+          сохранен, можно предъявить другие доказательства покупки. Покупатель
+          составляет заявление о возврате товара, с указанием своего полного
+          имени, номера и даты заказа, даты оплаты и даты передачи товара. 
+        </p>
+        <p class="text-block">
+          7.4. Товар (как надлежащего качества, так и с недостатками в случае его
+          возврата на условиях оферты) покупатель может вернуть, передав его по
+          своему выбору: 
+          <ul>
+            <li class="paragraph">
+              в магазин , из пункта самовывоза(действующий магазин),по
+              адресу указанный на сайте интернет-магазина адрес интернет-магазина:
+              <a href="amatcollection.com" target="_blank"> amatcollection.com </a>.  
+            </li>
+            <li class="paragraph">
+              курьеру продавца в месте нахождения покупателя.
+              Заявка на возврат данным способом оформляется по телефону продавца. Если
+              возвращается товар надлежащего качества, покупатель оплачивает возврат
+              через курьера по тарифам продавца, указанным на сайте интернет-магазина
+              по адресу: <a href="amatcollection.com" target="_blank"> amatcollection.com </a>.  
+            </li>
+          </ul>
+        </p>
+        <p class="text-block">
+          7.5. При возврате товара (как надлежащего
+          качества, так и с недостатками) продавец возвращает покупателю стоимость
+          товара не позднее чем через 14 (четырнадцать) дней с момента, когда
+          покупатель потребует вернуть деньги, на банковские реквизиты, с которых
+          деньги поступили продавцу или которые письменно сообщит покупатель. Если
+          возвращен качественный товар, из суммы к возврату вычитается стоимость
+          обратной доставки курьером продавцу возвращенного товара. 
+        </p>      
+        <h3>
+          8. Прочие положения 
+        </h3> 
+        <p class="text-block">
+          8.1. Все, что не урегулировано офертой, определяется в
+          соответствии с законодательством Российской Федерации.
+        </p>
+        <p class="text-block">
+          8.2. Реквизиты продавца:
+        </p>
+        <p>
+          Общество с ограниченной ответственностью «АМАТ»
+        <p>
+          г.Грозный, пр. А.А. Кадырова, д. 36, кв.
+        </p>
+        <p>
+          Телефон: +7(988)908-87-87
+        </p>
+        <p>
+          Электронная почта: amat.textile@gmail.com
+        </p>
+        <p>
+          ОГРН 1222000006018
+        </p>
+        <p>
+          ИНН 201434807 КПП 201401001
+        </p>
+        <p>
+          Р/с 40702810060360004896 в ПАО «СБЕРБАНК», г. Грозный
+        </p>
+        <p>
+          К/с 30101810907020000615 
+        </p>
+        <p>
+          БИК 040702615 
+        </p>
+        <p>
+          Генеральный Директор
+        </p>
+        <p>
+          _______________/Газиева М.А./
+        </p>
+        </p>
+      </div>
+    </main>
+
+    <!-- Поиск, модальное окно -->
+    <div class="modal modal-search" id="modal-search">
+      <div class="modal-header">
+        <h3 class="modal-header__title">Поиск</h3>
+        <div class="modal-header__button">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="modal-content">
+        <div class="modal-content__wrapper">
+          <form class="modal-search__container">
+            <input type="search" class="modal-search__input" value="" />
+            <input type="text" class="modal-search__reset" value="Очистить" />
+            <div class="modal-search__button-wrap modal-bottom">
+              <div class="modal-search__button button button--white">Найти</div>
+            </div>
+          </form>
+
+          <!--Этот блок для пустого окошка, показывает, какие запросы были сделаны ранее-->
+          <div class="last-results">
+            <p class="last-results__title">Вы искали:</p>
+            <div class="last-results__item">
+              <p>платок</p>
+              <img
+                src="images/svg/delete-last-item.svg"
+                alt="Удалить элемент"
+              />
+              <div class="last-result__delete">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="last-results__item">
+              <p>шаль</p>
+              <img
+                src="images/svg/delete-last-item.svg"
+                alt="Удалить элемент"
+              />
+              <div class="last-result__delete">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <!--Блок, когда по запросу не найдено результатов-->
+          <div class="modal-search__not-found">
+            <p class="modal-search__not-found-text">
+              Мы ничего не нашли по запросу "<span>владыа</span>"
+            </p>
+            <p class="modal-search__not-found-text">
+              Попробуйте изменить запрос.
+            </p>
+            <h5 class="modal__heading">Вам может быть интересно</h5>
+          </div>
+
+          <!-- Строка показывает, сколько найдено товаров, далее товары-->
+          <p class="modal-search__text">
+            Найдено 13 товаров по запросу «платок»
+          </p>
+
+          <div class="modal-search__result">
+            <div class="category-flex">
+              <div class="category__product">
+                <div class="category__photo-container">
+                  <div class="favorite-icon-wrap">
+                    <img
+                      src="images/svg/favor-gold-empty.svg"
+                      alt="Добавить в избранное"
+                    />
+                    <img
+                      src="images/svg/favor-gold.svg"
+                      alt="Добавить в избранное"
+                    />
+                  </div>
+                  <img
+                    src="images/png/scarves.png"
+                    class="category__photo"
+                    alt="Фото Коллекции"
+                  />
+                  <div class="category-product__swiper swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img
+                          src="images/png/title1.png"
+                          class="category__photo"
+                          alt="Фото Коллекции"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="images/png/title2.png"
+                          class="category__photo"
+                          alt="Фото Коллекции"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="images/png/title3.png"
+                          class="category__photo"
+                          alt="Фото Коллекции"
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-button-prev">
+                      <img
+                        src="images/svg/arrow-left-category-swiper.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="swiper-button-next">
+                      <img
+                        src="images/svg/arrow-right-category-swiper.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <a href="/product.html">
+                  <h5 class="category__product-title">Даймохк</h5>
+                  <p class="category__product-price">16 000 ₽</p>
+                </a>
+              </div>
+              <div class="category__product">
+                <div class="category__photo-container">
+                  <div class="favorite-icon-wrap">
+                    <img
+                      src="images/svg/favor-gold-empty.svg"
+                      alt="Добавить в избранное"
+                    />
+                    <img
+                      src="images/svg/favor-gold.svg"
+                      alt="Добавить в избранное"
+                    />
+                  </div>
+                  <img
+                    src="images/png/scarves.png"
+                    class="category__photo"
+                    alt="Фото Коллекции"
+                  />
+                  <div class="category-product__swiper swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img
+                          src="images/png/title1.png"
+                          class="category__photo"
+                          alt="Фото Коллекции"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="images/png/title2.png"
+                          class="category__photo"
+                          alt="Фото Коллекции"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="images/png/title3.png"
+                          class="category__photo"
+                          alt="Фото Коллекции"
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-button-prev">
+                      <img
+                        src="images/svg/arrow-left-category-swiper.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="swiper-button-next">
+                      <img
+                        src="images/svg/arrow-right-category-swiper.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <a href="/product.html">
+                  <h5 class="category__product-title">Даймохк</h5>
+                  <p class="category__product-price">16 000 ₽</p>
+                </a>
+              </div>
+              <div class="category__product">
+                <div class="category__photo-container">
+                  <div class="favorite-icon-wrap">
+                    <img
+                      src="images/svg/favor-gold-empty.svg"
+                      alt="Добавить в избранное"
+                    />
+                    <img
+                      src="images/svg/favor-gold.svg"
+                      alt="Добавить в избранное"
+                    />
+                  </div>
+                  <img
+                    src="images/png/scarves.png"
+                    class="category__photo"
+                    alt="Фото Коллекции"
+                  />
+                  <div class="category-product__swiper swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img
+                          src="images/png/title1.png"
+                          class="category__photo"
+                          alt="Фото Коллекции"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="images/png/title2.png"
+                          class="category__photo"
+                          alt="Фото Коллекции"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="images/png/title3.png"
+                          class="category__photo"
+                          alt="Фото Коллекции"
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-button-prev">
+                      <img
+                        src="images/svg/arrow-left-category-swiper.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="swiper-button-next">
+                      <img
+                        src="images/svg/arrow-right-category-swiper.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <a href="/product.html">
+                  <h5 class="category__product-title">Даймохк</h5>
+                  <p class="category__product-price">16 000 ₽</p>
+                </a>
+              </div>
+              <div class="category__product">
+                <div class="category__photo-container">
+                  <div class="favorite-icon-wrap">
+                    <img
+                      src="images/svg/favor-gold-empty.svg"
+                      alt="Добавить в избранное"
+                    />
+                    <img
+                      src="images/svg/favor-gold.svg"
+                      alt="Добавить в избранное"
+                    />
+                  </div>
+                  <img
+                    src="images/png/scarves.png"
+                    class="category__photo"
+                    alt="Фото Коллекции"
+                  />
+                  <div class="category-product__swiper swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img
+                          src="images/png/title1.png"
+                          class="category__photo"
+                          alt="Фото Коллекции"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="images/png/title2.png"
+                          class="category__photo"
+                          alt="Фото Коллекции"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="images/png/title3.png"
+                          class="category__photo"
+                          alt="Фото Коллекции"
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-button-prev">
+                      <img
+                        src="images/svg/arrow-left-category-swiper.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="swiper-button-next">
+                      <img
+                        src="images/svg/arrow-right-category-swiper.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <a href="/product.html">
+                  <h5 class="category__product-title">Даймохк</h5>
+                  <p class="category__product-price">16 000 ₽</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-bottom">
+        <a href="viewall.html" class="modal-bottom__button button button--white"
+          >Показать все
+        </a>
+      </div>
+    </div>
+
+    <!-- Избранное модальное окно -->
+    <div class="modal modal-favorites" id="modal-favorites">
+      <div class="modal-header">
+        <h3 class="modal-header__title">Избранное</h3>
+        <div class="modal-header__button">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="modal-content">
+        <div class="modal-content__wrapper">
+          <!-- Пустое избранное -->
+          <div class="modal-content__empty">
+            <div class="modal__view-height">
+              <div class="flex-wrapper">
+                <div class="photo__container">
+                  <img src="images/svg/favor-hearts.svg" alt="Сердечки" />
+                </div>
+                <h5 class="modal__heading">
+                  Добавляйте понравивишиеся товары в избранное, чтобы не
+                  потерять.
+                </h5>
+              </div>
+            </div>
+          </div>
+          <!-- Непустое избранное -->
+          <div class="modal__category-wrapper modal-content__filled is--active">
+            <div class="category-flex">
+              <div class="category__product">
+                <a href="product.html">
+                  <div class="category__photo-container">
+                    <div class="favorite-icon-wrap">
+                      <img
+                        src="images/svg/favor-gold-empty.svg"
+                        alt="Добавить в избранное"
+                      />
+                      <img
+                        src="images/svg/favor-gold.svg"
+                        alt="Добавить в избранное"
+                      />
+                    </div>
+                    <img
+                      src="images/png/scarves.png"
+                      class="category__photo"
+                      alt="Фото Коллекции"
+                    />
+                  </div>
+                  <h5 class="category__product-title">Даймохк</h5>
+                  <p class="category__product-price">16 000 ₽</p>
+                </a>
+              </div>
+              <div class="category__product">
+                <a href="product.html">
+                  <div class="category__photo-container">
+                    <div class="favorite-icon-wrap">
+                      <img
+                        src="images/svg/favor-gold-empty.svg"
+                        alt="Добавить в избранное"
+                      />
+                      <img
+                        src="images/svg/favor-gold.svg"
+                        alt="Добавить в избранное"
+                      />
+                    </div>
+                    <img
+                      src="images/png/scarves.png"
+                      class="category__photo"
+                      alt="Фото Коллекции"
+                    />
+                  </div>
+                  <h5 class="category__product-title">Даймохк</h5>
+                  <p class="category__product-price">16 000 ₽</p>
+                </a>
+              </div>
+              <div class="category__product">
+                <a href="product.html">
+                  <div class="category__photo-container">
+                    <div class="favorite-icon-wrap">
+                      <img
+                        src="images/svg/favor-gold-empty.svg"
+                        alt="Добавить в избранное"
+                      />
+                      <img
+                        src="images/svg/favor-gold.svg"
+                        alt="Добавить в избранное"
+                      />
+                    </div>
+                    <img
+                      src="images/png/scarves.png"
+                      class="category__photo"
+                      alt="Фото Коллекции"
+                    />
+                  </div>
+                  <h5 class="category__product-title">Даймохк</h5>
+                  <p class="category__product-price">16 000 ₽</p>
+                </a>
+              </div>
+              <div class="category__product">
+                <a href="product.html">
+                  <div class="category__photo-container">
+                    <div class="favorite-icon-wrap">
+                      <img
+                        src="images/svg/favor-gold-empty.svg"
+                        alt="Добавить в избранное"
+                      />
+                      <img
+                        src="images/svg/favor-gold.svg"
+                        alt="Добавить в избранное"
+                      />
+                    </div>
+                    <img
+                      src="images/png/scarves.png"
+                      class="category__photo"
+                      alt="Фото Коллекции"
+                    />
+                  </div>
+                  <h5 class="category__product-title">Даймохк</h5>
+                  <p class="category__product-price">16 000 ₽</p>
+                </a>
+              </div>
+              <div class="category__product">
+                <a href="product.html">
+                  <div class="category__photo-container">
+                    <div class="favorite-icon-wrap">
+                      <img
+                        src="images/svg/favor-gold-empty.svg"
+                        alt="Добавить в избранное"
+                      />
+                      <img
+                        src="images/svg/favor-gold.svg"
+                        alt="Добавить в избранное"
+                      />
+                    </div>
+                    <img
+                      src="images/png/scarves.png"
+                      class="category__photo"
+                      alt="Фото Коллекции"
+                    />
+                  </div>
+                  <h5 class="category__product-title">Даймохк</h5>
+                  <p class="category__product-price">16 000 ₽</p>
+                </a>
+              </div>
+              <div class="category__product">
+                <a href="product.html">
+                  <div class="category__photo-container">
+                    <div class="favorite-icon-wrap">
+                      <img
+                        src="images/svg/favor-gold-empty.svg"
+                        alt="Добавить в избранное"
+                      />
+                      <img
+                        src="images/svg/favor-gold.svg"
+                        alt="Добавить в избранное"
+                      />
+                    </div>
+                    <img
+                      src="images/png/scarves.png"
+                      class="category__photo"
+                      alt="Фото Коллекции"
+                    />
+                  </div>
+                  <h5 class="category__product-title">Даймохк</h5>
+                  <p class="category__product-price">16 000 ₽</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-bottom">
+        <a
+          href="category.html"
+          class="modal-bottom__button button button--white"
+        >
+          Посмотреть коллекции
+        </a>
+      </div>
+    </div>
+
+    <!-- Корзина модальное окно -->
+    <div class="modal modal-cart" id="modal-cart">
+      <div class="modal-header">
+        <h3 class="modal-header__title">Корзина</h3>
+        <div class="modal-header__button">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="modal-content">
+        <div class="modal-content__wrapper">
+          <!-- Пустая корзина-->
+          <div class="modal-content__empty">
+            <div class="modal__view-height">
+              <div class="flex-wrapper">
+                <div class="photo__container">
+                  <img src="images/svg/cart.svg" alt="Корзина" />
+                </div>
+                <h5 class="modal__heading">
+                  Наполните вашу корзину товарами, о которых давно мечтали.
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div class="cart modal-content__filled is--active">
+            <div class="modal__wrapper cart__wrapper">
+              <div class="cart__items">
+                <div class="cart__item">
+                  <a href="product.html">
+                    <div class="cart__product-photo">
+                      <img src="images/png/scarves.png" alt="Платок" />
+                    </div>
+                  </a>
+                  <div class="cart__characteristics">
+                    <div class="cart__characteristics-scarve">
+                      <div class="cart__product-name">
+                        <a href="product.html">Платок "Алфавит"</a>
+                      </div>
+                      <div class="cart__product-details">
+                        <span class="cart__product-details-size">90*90 см</span>
+                        <div class="cart__product-details-dott"></div>
+                        <span class="cart__product-details-color">Синий</span>
+                      </div>
+                      <div class="counter" data-counter>
+                        <div class="counter__button counter__button--minus">
+                          -
+                        </div>
+                        <div class="counter__input">
+                          <input type="text" value="1" disabled />
+                        </div>
+                        <div class="counter__button counter__button--plus">
+                          +
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart__characteristics-right">
+                      <div class="cart__product-control">
+                        <div class="cart__product-add-to-favorite">
+                          <img src="images/svg/add-to-favorite.svg" />
+                        </div>
+                        <div class="cart__product-delete">
+                          <span> </span>
+                          <span> </span>
+                        </div>
+                      </div>
+                      <div class="cart__product-price">16 000 ₽</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart__item">
+                  <a href="product.html">
+                    <div class="cart__product-photo">
+                      <img src="images/png/scarves.png" alt="Платок" />
+                    </div>
+                  </a>
+                  <div class="cart__characteristics">
+                    <div class="cart__characteristics-scarve">
+                      <div class="cart__product-name">
+                        <a href="product.html">Платок "Алфавит"</a>
+                      </div>
+                      <div class="cart__product-details">
+                        <span class="cart__product-details-size">90*90 см</span>
+                        <div class="cart__product-details-dott"></div>
+                        <span class="cart__product-details-color">Синий</span>
+                      </div>
+                      <div class="counter" data-counter>
+                        <div class="counter__button counter__button--minus">
+                          -
+                        </div>
+                        <div class="counter__input">
+                          <input type="text" value="1" disabled />
+                        </div>
+                        <div class="counter__button counter__button--plus">
+                          +
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart__characteristics-right">
+                      <div class="cart__product-control">
+                        <div class="cart__product-add-to-favorite">
+                          <img src="images/svg/add-to-favorite.svg" />
+                        </div>
+                        <div class="cart__product-delete">
+                          <span> </span>
+                          <span> </span>
+                        </div>
+                      </div>
+                      <div class="cart__product-price">16 000 ₽</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart__item">
+                  <a href="product.html">
+                    <div class="cart__product-photo">
+                      <img src="images/png/scarves.png" alt="Платок" />
+                    </div>
+                  </a>
+                  <div class="cart__characteristics">
+                    <div class="cart__characteristics-scarve">
+                      <div class="cart__product-name">
+                        <a href="product.html">Платок "Алфавит"</a>
+                      </div>
+                      <div class="cart__product-details">
+                        <span class="cart__product-details-size">90*90 см</span>
+                        <div class="cart__product-details-dott"></div>
+                        <span class="cart__product-details-color">Синий</span>
+                      </div>
+                      <div class="counter" data-counter>
+                        <div class="counter__button counter__button--minus">
+                          -
+                        </div>
+                        <div class="counter__input">
+                          <input type="text" value="1" disabled />
+                        </div>
+                        <div class="counter__button counter__button--plus">
+                          +
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart__characteristics-right">
+                      <div class="cart__product-control">
+                        <div class="cart__product-add-to-favorite">
+                          <img src="images/svg/add-to-favorite.svg" />
+                        </div>
+                        <div class="cart__product-delete">
+                          <span> </span>
+                          <span> </span>
+                        </div>
+                      </div>
+                      <div class="cart__product-price">16 000 ₽</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-bottom">
+        <div class="cart__total">
+          <p class="cart__total-title">Сумма заказа</p>
+          <div class="cart__total-price">15 000 ₽</div>
+        </div>
+        <div class="discount-block">
+          <div class="cart__total cart__total--discount">
+            <div class="cart__total-subtitles">
+              <p class="cart__total-subtitle cart__total-subtitle--discount">
+                Товары
+              </p>
+              <p class="cart__total-subtitle cart__total-subtitle--discount">
+                Скидка
+              </p>
+            </div>
+            <div class="cart__total-prices">
+              <p class="cart__total-price cart__total-price">16 000 ₽</p>
+              <p class="cart__total-price cart__total-price--discount">
+                - 1 000 ₽
+              </p>
+            </div>
+          </div>
+          <div class="cart__total cart__total--result">
+            <p class="Итого">Итого</p>
+            <div class="cart__total-price">15 000 ₽</div>
+          </div>
+        </div>
+        <p class="cart__total-subtitle">Без учета стоимости доставки</p>
+        <!--        Отображается, когда корзина пустая-->
+        <a
+          href="category.html"
+          class="modal-bottom__button button button--white"
+          >Продолжить покупки</a
+        >
+        <!--        Отображается, когда в корзине есть товары-->
+        <a
+          href="checkout.html"
+          class="modal-bottom__button button button--black"
+          >Перейти к оформлению</a
+        >
+      </div>
+    </div>
+
+    <!-- Возврат модальное окно -->
+    <div class="modal modal-return" id="modal-return">
+      <div class="modal-header">
+        <h3 class="modal-header__title">Возврат</h3>
+        <div class="modal-header__button">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="modal-content">
+        <div class="modal-content__wrapper">
+          <div class="modal__text">
+            Чеченский язык один из самых древнейших, красивейших и богатейших
+            языков в мире. Скудным его может считать только тот, кто
+            по-настоящему не познал всю его глубину, изобилие и разнообразие.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Оплата и доставка - модальное окно -->
+    <div class="modal modal-ship-and-pay" id="modal-ship-and-pay">
+      <div class="modal-header">
+        <h3 class="modal-header__title">Доставка и оплата</h3>
+        <div class="modal-header__button">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="modal-content">
+        <div class="modal-content__wrapper">
+          <div class="modal__text">
+            Чеченский язык один из самых древнейших, красивейших и богатейших
+            языков в мире. Скудным его может считать только тот, кто
+            по-настоящему не познал всю его глубину, изобилие и разнообразие.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Часто задаваемые вопросы-->
+    <div class="modal modal-faq" id="modal-faq">
+      <div class="modal-header">
+        <h3 class="modal-header__title">Часто задаваемые вопросы</h3>
+        <div class="modal-header__button">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="modal-content">
+        <div class="modal-content__wrapper">
+          <p class="modal__question">Зачем мне приобретать ваш товар?</p>
+          <p class="modal__answer">
+            У нас уникальные изделия, натуральный состав, ручная работа.
+          </p>
+          <p class="modal__question">Зачем мне приобретать ваш товар?</p>
+          <p class="modal__answer">
+            У нас уникальные изделия, натуральный состав, ручная работа.
+          </p>
+          <p class="modal__question">Зачем мне приобретать ваш товар?</p>
+          <p class="modal__answer">
+            У нас уникальные изделия, натуральный состав, ручная работа.
+          </p>
+          <p class="modal__question">Зачем мне приобретать ваш товар?</p>
+          <p class="modal__answer">
+            У нас уникальные изделия, натуральный состав, ручная работа.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--Уход за изделиями-->
+    <div class="modal modal-product-care" id="modal-product-care">
+      <div class="modal-header">
+        <h3 class="modal-header__title">Уход за изделиями</h3>
+        <div class="modal-header__button">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="modal-content">
+        <div class="modal-content__wrapper">
+          Спасибо, что Вы Выбрали нас! Издавна натуральный шелк являлся одной из
+          самых дорогих и элитных материй. Ткань из шелкового волокна очень
+          мягкая и приятная на ощупь и при этом гипоаллергенна. Несмотря на
+          прочность шелка, уход за ним должен быть очень деликатным, так же это
+          касается и обращения с шелковыми изделиями, так как шелк боится
+          зацепок и затяжек. Чтобы сохранить изделие в превосходном состоянии,
+          храните его в развязанном виде и избегайте соприкосновения с
+          украшениями и аксессуарами, которые могут оставить зацепки. Берегите
+          изделие от дождя, избегайте контакта с агрессивными веществами и
+          желательно осуществляйте уход за изделием в специализированных
+          химчистках. С уважением, “AMAТ”
+        </div>
+      </div>
+    </div>
+
+    <!--Контакты-->
+    <div class="modal modal-contacts" id="modal-contacts">
+      <div class="modal-header">
+        <h3 class="modal-header__title">Контакты</h3>
+        <div class="modal-header__button">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="modal-content">
+        <div class="modal-content__wrapper">
+          <div class="modal-contacts-flex">
+            <div class="messengers">
+              <a target="_blank" href="https://+7%20(988)%20908-87-87/"
+                >WhatsApp</a
+              >
+              <a target="_blank" href="https://t.me/+k-noRbhXTWZlN2Ni"
+                >Telegram</a
+              >
+              <a target="_blank" href="https://vk.com/amat_scarves">VK</a>
+            </div>
+            <a
+              target="_blank"
+              href="mailto:amat.textile@gmail.com"
+              class="email"
+              >amat.textile@gmail.com
+            </a>
+            <a href="tel:79889088787" class="footer-contacts__phone">
+              +7 988 908-87-87</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Карта (адрес)-->
+    <div class="modal modal-address" id="modal-address">
+      <div class="modal-header">
+        <h3 class="modal-header__title">Наш адрес</h3>
+        <div class="modal-header__button">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="modal-content">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1152.1486041971975!2d45.69956996964888!3d43.30939049464909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4051d3f76825b0bf%3A0xb4639001e07cfd29!2sGrand%20Park!5e0!3m2!1sru!2sru!4v1702750981293!5m2!1sru!2sru"
+          width="100%"
+          height="100%"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="modal-bottom">
+        <p class="modal-header__title">12:00−21:00 ежедневно</p>
+        <p class="modal-text">
+          Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд парк», 1 этаж, напротив
+          магазина Лэтуаль.
+        </p>
+      </div>
+    </div>
+    <div class="backdrop"></div>
+
+    <footer class="footer">
+      <div class="footer-logo__container">
+        <img class="logo" src="images/svg/logo-white.svg" alt="AMAT" />
+
+        <div class="arrow-up" id="arrow-up">
+          <img src="images/svg/arrow-up.svg" />
+        </div>
+      </div>
+
+      <div class="footer-subscription footer-subscription--mobile">
+        <h3 class="footer-subscription__title footer-title">
+          Узнавайте первыми о новинках
+        </h3>
+
+        <form
+          class="footer-subscription__form"
+          method="post"
+          action="http://localhost/dashboard/send.php"
+        >
+          <input type="email" name="email" placeholder="Эл. почта" />
+          <button type="submit">
+            <img src="images/svg/arrow-right.svg" class="arrow-right" />
+          </button>
+        </form>
+        <p class="footer-subscription__text">
+          Нажимая на кнопку «Подписаться», вы соглашаетесь c
+          <a href="policy.html">Политикой конфиденциальности</a> и
+          <a href="oferta.html">офертой</a>.
+        </p>
+      </div>
+
+      <div class="footer-info">
+        <div class="footer-info__desktop">
+          <ul class="footer-info__items">
+            <li class="footer-info__item">
+              Уход за изделиями
+              <div class="button-plus">
+                <span></span>
+                <span></span>
+              </div>
+            </li>
+            <li class="footer-info__item">
+              Доставка и оплата
+              <div class="button-plus">
+                <span></span>
+                <span></span>
+              </div>
+            </li>
+            <li class="footer-info__item">
+              Возврат
+              <div class="button-plus">
+                <span></span>
+                <span></span>
+              </div>
+            </li>
+            <li class="footer-info__item">
+              Помощь
+              <div class="button-plus">
+                <span></span>
+                <span></span>
+              </div>
+            </li>
+            <li class="footer-info__item">
+              Адрес
+              <div class="button-plus">
+                <span></span>
+                <span></span>
+              </div>
+            </li>
+          </ul>
+          <ul class="footer-info__body--items">
+            <li class="footer-info__body--item">
+              <p>
+                Чтобы сохранить изделие в превосходном состоянии, храните
+                его в развязанном виде и избегайте соприкосновения с украшениями
+                и аксессуарами, которые могут оставить зацепки. Берегите изделие
+                от дождя, избегайте контакта с агрессивными веществами
+                и желательно осуществляйте уход за изделием в специализированных
+                химчистках.
+              </p>
+            </li>
+            <li class="footer-info__body--item"><p>Доставка и оплата</p></li>
+            <li class="footer-info__body--item"><p>Возврат</p></li>
+            <li class="footer-info__body--item"><p>Помощь</p></li>
+            <li class="footer-info__body--item">
+              <p>Грозный, проспект А.А. Кадырова 40, ТЦ «Гранд Парк», 1</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-info__mobile accordion accordion--white">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3 class="accordion-title">Уход за изделиями</h3>
+              <div class="accordion-button accordion-button--white">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="accordion-description">
+              <div class="accordion-description__body">
+                Чтобы сохранить изделие в превосходном состоянии, храните
+                его в развязанном виде и избегайте соприкосновения с украшениями
+                и аксессуарами, которые могут оставить зацепки. Берегите изделие
+                от дождя, избегайте контакта с агрессивными веществами
+                и желательно осуществляйте уход за изделием в специализированных
+                химчистках.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3 class="accordion-title">Доставка и оплата</h3>
+              <div class="accordion-button accordion-button--white">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="accordion-description">
+              <div class="accordion-description__body">Доставка и оплата</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3 class="accordion-title">Возврат</h3>
+              <div class="accordion-button accordion-button--white">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="accordion-description">
+              <div class="accordion-description__body">gdfgdfg</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3 class="accordion-title">Помощь</h3>
+              <div class="accordion-button accordion-button--white">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="accordion-description">
+              <div class="accordion-description__body">Помощь</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3 class="accordion-title">Адрес</h3>
+              <div class="accordion-button accordion-button--white">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="accordion-description">
+              <div class="accordion-description__body">Адрес</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-description">
+        <div class="footer-subscription">
+          <h3 class="footer-subscription__title footer-title">
+            Узнавайте первыми о новинках
+          </h3>
+
+          <form
+            class="footer-subscription__form"
+            method="post"
+            action="http://localhost/dashboard/send.php"
+          >
+            <input type="email" name="email" placeholder="Эл. почта" />
+            <button type="submit">
+              <img src="images/svg/arrow-right.svg" class="arrow-right" />
+            </button>
+          </form>
+          <p class="footer-subscription__text">
+            Нажимая на кнопку «Подписаться», вы соглашаетесь c
+            <a href="policy.html">Политикой конфиденциальности</a> и
+            <a href="oferta.html">офертой</a>.
+          </p>
+        </div>
+        <div class="footer-contacts">
+          <h3 class="footer-title">Контакты</h3>
+          <div class="footer-contacts__list">
+            <a target="_blank" href="https://+7%20(988)%20908-87-87/"
+              >WhatsApp</a
+            >
+            <a target="_blank" href="https://t.me/+k-noRbhXTWZlN2Ni"
+              >Telegram</a
+            >
+            <a target="_blank" href="https://vk.com/amat_scarves">VK</a>
+            <a
+              target="_blank"
+              href="mailto:amat.textile@gmail.com"
+              class="email"
+              >amat.textile@gmail.com
+            </a>
+          </div>
+          <a href="tel:79889088787" class="footer-contacts__phone">
+            +7 988 908-87-87</a
+          >
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="seryonse">
+          Сайт разработан с любовью в веб-студии
+          <a class="seryonse-link" href="https://seryonse.com/">SERYONSE</a>
+        </div>
+        <div class="copyright">
+          <p class="copyright__text">© АМАТ. Все права защищены</p>
+          <a href="policy.html">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+    <script src="./js/product.js"></script>
+    <script src="./js/accordion.js"></script>
+  </body>
+</html>

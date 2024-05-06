@@ -3792,6 +3792,17 @@ a {
     text-transform: uppercase;
     margin-top: 8px; }
 
+.oferta .text-block {
+  margin: 25px 0;
+  text-align: left; }
+.oferta ul {
+  padding-left: 30px;
+  text-align: left; }
+.oferta .paragraph {
+  list-style: disc; }
+.oferta p {
+  text-align: left; }
+
 @media screen and (max-width: 800px) {
   .main-article .section-wrapper {
     padding-bottom: 120px;

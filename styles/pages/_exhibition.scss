@@ -85,6 +85,23 @@
   }
 }
 
+.oferta {
+  .text-block {
+    margin: 25px 0;
+    text-align: left;
+  } 
+  ul {
+    padding-left: 30px;
+    text-align: left;
+  }
+  .paragraph {
+    list-style: disc;
+  }
+  p {
+    text-align: left;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .main-article {
     .section-wrapper {
