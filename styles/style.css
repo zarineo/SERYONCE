@@ -3792,15 +3792,19 @@ a {
     text-transform: uppercase;
     margin-top: 8px; }
 
-.oferta .text-block {
+.oferta .text-block,
+.policy .text-block {
   margin: 25px 0;
   text-align: left; }
-.oferta ul {
+.oferta ul,
+.policy ul {
   padding-left: 30px;
   text-align: left; }
-.oferta .paragraph {
+.oferta .paragraph,
+.policy .paragraph {
   list-style: disc; }
-.oferta p {
+.oferta p,
+.policy p {
   text-align: left; }
 
 @media screen and (max-width: 800px) {
